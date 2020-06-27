@@ -22,7 +22,7 @@
 
 ## 思维导图
 
-![](https://cdn.142vip.cn/408CSFamily/summary.png)
+![](https://cdn.142vip.cn/408CSFamily/summary.jpg)
 
 ## 目录（善用Ctrl+F）
 

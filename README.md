@@ -1,6 +1,6 @@
 > 408CSFamily 我的理解是：408计算机专业课”全家桶“，而408详细考研er都知道计算机考研专业课代码；在最新的高校计算机研究生招考中，已经越来越多的学校该考408。可见408所涉及到的专业课举足轻重的地位；不论是在考研或者找工作，我相信408的专业基础必定是难以避免的，所以话不多说、形势复杂，唯一能做的就是不停的学习、巩固基础知识，加油！
 >
-> 另外，本仓库收录的大部分内容将来源我自己的学习输出和相关资料的整理，将会站在工作者的角度进行分类、输出，若有任何疑惑和问题，欢迎在github仓库集中pr或issues提出
+> 另外，本仓库收录的大部分内容将来源我自己的学习输出和相关资料的整理，将会站在上班族的角度进行分类、输出，若有任何疑惑和问题，欢迎在github仓库集中pr或issues提出
 
 **阅读之前必看：**
 
@@ -17,7 +17,7 @@
 <a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/gitee-码云-4ed.svg"></a>
 <a href="https://blog.csdn.net/Mmdapl" target="_blank"><img src="https://img.shields.io/badge/csdn-CSDN-8ea.svg"></a>
 </p>
-[Github文档](https://mmdapl.github.io/408CSFamily/) | 云文档
+[Github文档](https://mmdapl.github.io/408CSFamily/)  |  [gitee文档【速度快】]()
 
 ## 思维导图
 
@@ -31,7 +31,7 @@
 
 > 参考资料：
 >
-> 1. 《数据结构》 第七版  谢希仁著.
+> 1. 《数据结构》 .
 > 2. 《大话数据结构》.
 > 3. 《数据结构与算法景点问题解析》 第二版  Narasimha Karumanchi著.
 > 4. 《计算机网络-王道考研》 2019 王道论坛著.
@@ -154,7 +154,7 @@
 
 ## 赞赏支持
 
-若系列文章对你有帮助，不如请作者喝一杯奶茶...赞赏过得一定要扫下方右侧微信跟我说呀！！！！！！
+若系列文章对你有帮助，不如请作者喝一杯伏见桃山...赞赏过得一定要扫下方右侧微信跟我说呀！！！！！！
 <a name="wechat"></a>
 
 <p align="center">
@@ -167,6 +167,13 @@
 
 以下排名不分先后!
 
+<div>
+  <a href="https://github.com/ChiefPing" target="_blank">
+  	<img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px"/>
+  </a>  <a href="https://github.com/xiaoliuxin" target="_blank">
+  	<img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4" width="50px"/>
+  </a>
+</div>
 
 
 

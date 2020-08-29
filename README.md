@@ -7,15 +7,17 @@
 1. 长期更新
 2. 内容基本跟思维导图同步
 
+
 <p align="center">
+  <a href="#gzh" target="_blank"><img src="https://img.shields.io/badge/WeChat-公众号-5wd.svg"></a> 
 <a href="#wechat" target="_blank"><img src="https://img.shields.io/badge/WeChat-微信-yellow.svg"></a> 
 <a href="https://space.bilibili.com/350937042" target="_blank"><img src="https://img.shields.io/badge/Bilibili-哔哩哔哩-green.svg"></a> 
-<a href="https://142vip.cn" target="_blank"><img src="https://img.shields.io/badge/142vip-个人网站-orange.svg"></a>
-<a href="http://yapi.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/yapi-接口系统-8fe.svg"></a>
-<a href="https://blog.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/blog-我的博客-blue.svg"></a>
+<a href="https://142vip.cn" target="_blank"><img src="https://img.shields.io/badge/142vip-网站-orange.svg"></a>
+<a href="https://blog.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/blog-博客-blue.svg"></a>
 <a href="https://github.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/github-Github-9ac.svg"></a>
 <a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/gitee-码云-4ed.svg"></a>
 <a href="https://blog.csdn.net/Mmdapl" target="_blank"><img src="https://img.shields.io/badge/csdn-CSDN-8ea.svg"></a>
+<a href="http://yapi.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/juejin-掘金-8fe.svg"></a>
 </p>
 [Github文档](https://mmdapl.github.io/408CSFamily/)  |  [gitee文档【速度快】]()
 
@@ -152,47 +154,69 @@
 
 
 
+
 ## 赞赏支持
 
-若系列文章对你有帮助，不如请作者喝一杯伏见桃山...赞赏过得一定要扫下方右侧微信跟我说呀！！！！！！
+
+> 相逢不用忙归去，明日黄花蝶也愁；若系列文章对你有帮助，不如请作者喝一杯伏见桃山...
+>
+> **赞赏过的一定要扫下方右侧微信跟我说呀！！！！！！**
+
+
 <a name="wechat"></a>
 
-<p align="center">
-<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="320" height="320" align="center" style="margin-right:20px;" /><img src="https://cdn.142vip.cn/article-notes/img/wechat.jpg" width="320" height="320" align="center" />
+
+<div align="left">
+<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="300" height="300" style="border-radius:10px;" />
 
 
-</p>
-
-## 鸣谢
-
-以下排名不分先后!
-
-<div>
-  <a href="https://github.com/ChiefPing" target="_blank">
-  	<img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px"/>
-  </a>  <a href="https://github.com/xiaoliuxin" target="_blank">
-  	<img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4" width="50px"/>
-  </a>
 </div>
 
 
+## 联系我
 
+
+> 对仓库有任何问题或建议，欢迎微信“骚扰”，商务合作请备注！
+<div align="left">
+<img src="https://cdn.142vip.cn/article-notes/img/wechat.jpg" width="300" height="300"  style="border-radius:10px;"/>
+</div>
+
+
+## 鸣谢
+
+
+以下排名不分先后!
+
+
+<div>
+  <a href="https://github.com/ChiefPing" target="_blank">
+    <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="brder-radius:5px;"/>
+  </a>  <a href="https://github.com/xiaoliuxin" target="_blank">
+    <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
+  </a>
+</div>
 
 
 ## 赞助列表
 
 以下排名不分先后!
 
-<div style="text-align:left">
-    <a href="https://space.bilibili.com/350937042" target="_blank">
-        <img src="http://image14.m1905.cn/uploadfile/2016/0405/20160405030532647376.jpeg"  style="width:20%;margin:10px" width="100px"/>
-    </a>
-    <a href="" target="_blank">
-        <img src="https://img.kaikeba.com/web/kkb_index/img_index_logo.png" style="width:20%;margin:10px" width="100px"/>
-    </a>
-</div>
 
 
+
+
+## 公众号
+
+
+如果大家想要实时关注我更新的文章以及我的日常的话，可以关注我的公众号，基本每天都会更新技术和各种吹水文章，就当做是记录心情、成长的地方吧
+
+
+<a name="gzh"></a>
+
+
+<p>
+  <img src="http://youpai.142vip.cn/article/images/gzh.png"  style="border-radius:10px;">
+</p>
 
 
 

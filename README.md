@@ -40,8 +40,9 @@
 
 #### 基础入门
 
-- 数据结构基本概念
-- 算法与算法评价
+- [基础概念](/数据结构/基础入门/1.基础概念.md)
+- [数据结构三要素](/数据结构/基础入门/2.数据结构三要素.md)
+- [算法与算法评价](/数据结构/基础入门/3.算法和算法评价.md)
 
 #### 线性表
 
@@ -157,17 +158,14 @@
 
 ## 赞赏支持
 
-
-> 相逢不用忙归去，明日黄花蝶也愁；若系列文章对你有帮助，不如请作者喝一杯伏见桃山...
->
-> **赞赏过的一定要扫下方右侧微信跟我说呀！！！！！！**
+- **赞赏过的一定要扫下方右侧微信跟我说呀！！！！！！**
 
 
 <a name="wechat"></a>
 
 
 <div align="left">
-<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="300" height="300" style="border-radius:10px;" />
+<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="300" height="300" style="border-radius:5px;" />
 
 
 </div>
@@ -176,9 +174,10 @@
 ## 联系我
 
 
-> 对仓库有任何问题或建议，欢迎微信“骚扰”，商务合作请备注！
+- 有任何问题或建议，欢迎微信“骚扰”，商务合作请备注！
+
 <div align="left">
-<img src="https://cdn.142vip.cn/article-notes/img/wechat.jpg" width="300" height="300"  style="border-radius:10px;"/>
+<img src="https://cdn.142vip.cn/article-notes/img/wechat.jpg" width="300" height="300"  style="border-radius:5px;"/>
 </div>
 
 
@@ -207,15 +206,16 @@
 
 ## 公众号
 
+- 相逢不用忙归去，明日黄花蝶也愁....
 
-如果大家想要实时关注我更新的文章以及我的日常的话，可以关注我的公众号，基本每天都会更新技术和各种吹水文章，就当做是记录心情、成长的地方吧
+- 若系列文章对你有所帮助，不如来公众号交个朋友吧.
 
 
 <a name="gzh"></a>
 
 
 <p>
-  <img src="http://youpai.142vip.cn/article/images/gzh.png"  style="border-radius:10px;">
+  <img src="https://www.142vip.cn/assets/gzh.png"  style="border-radius:10px;">
 </p>
 
 

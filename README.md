@@ -19,13 +19,15 @@
 <a href="https://blog.csdn.net/Mmdapl" target="_blank"><img src="https://img.shields.io/badge/csdn-CSDN-8ea.svg"></a>
 <a href="http://yapi.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/juejin-掘金-8fe.svg"></a>
 </p>
-[Github文档](https://mmdapl.github.io/408CSFamily/)  |  [gitee文档【速度快】]()
+
+
+[Github文档](https://mmdapl.github.io/408CSFamily/) |  [gitee文档（国内访问快）]()
 
 ## 思维导图
 
 > 更新优化中...
 
-![数据结构](/数据结构/数据结构和算法.png)
+
 ## 目录（善用Ctrl+F）
 
 > 注意：没有链接的没写

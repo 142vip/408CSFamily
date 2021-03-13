@@ -4,8 +4,8 @@
 
 **阅读之前必看：**
 
-1. 长期更新
-2. 内容基本跟思维导图同步
+1. 长期更新、维护
+2. 建议结合思维导图进行学习
 
 
 <p align="center">
@@ -169,7 +169,7 @@
 
 
 <div align="left">
-<img src="https://cdn.142vip.cn/article-notes/img/weChatDonate.jpg" width="300" height="300" style="border-radius:5px;" />
+<img src="https://s3.ax1x.com/2021/03/13/6wdNy4.jpg" width="300" height="300" style="border-radius:5px;" />
 
 
 </div>
@@ -181,7 +181,7 @@
 - 有任何问题或建议，欢迎微信“骚扰”，商务合作请备注！
 
 <div align="left">
-<img src="https://cdn.142vip.cn/article-notes/img/wechat.jpg" width="300" height="300"  style="border-radius:5px;"/>
+<img src="https://s3.ax1x.com/2021/03/13/6wdDFx.jpg" width="300" height="300"  style="border-radius:5px;"/>
 </div>
 
 

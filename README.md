@@ -5,16 +5,16 @@
 <a href="https://space.bilibili.com/350937042" target="_blank"><img src="https://img.shields.io/badge/Bilibili-哔哩哔哩-green.svg"></a> 
 <a href="https://142vip.cn" target="_blank"><img src="https://img.shields.io/badge/142vip-网站-orange.svg"></a>
 <a href="https://blog.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/blog-博客-blue.svg"></a>
-<a href="https://github.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/github-Github-9ac.svg"></a>
-<a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/gitee-码云-4ed.svg"></a>
+<a href="https://github.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/Github-Github-9ac.svg"></a>
+<a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/Gitee-码云-4ed.svg"></a>
 <a href="https://blog.csdn.net/Mmdapl" target="_blank"><img src="https://img.shields.io/badge/csdn-CSDN-8ea.svg"></a>
 <a href="http://yapi.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/juejin-掘金-8fe.svg"></a>
 </p>
 
 
-[Github文档](https://mmdapl.github.io/408CSFamily/) |  [Gitee文档（国内访问快）]()
+<!-- [Github文档](https://mmdapl.github.io/408CSFamily/) |  [Gitee文档（国内访问快）]() -->
 ## 写最前面
-> 408CSFamily 我的理解是：408计算机专业课”全家桶“，而408详细考研er都知道计算机考研专业课代码；在最新的高校计算机研究生招考中，已经越来越多的学校该考408。可见408所涉及到的专业课举足轻重的地位；不论是在考研或者找工作，我相信408的专业基础必定是难以避免的，所以话不多说、形势复杂，唯一能做的就是不停的学习、巩固基础知识，加油！
+>   `408CSFamily` 我的理解是：408计算机专业课”全家桶“，而408详细考研er都知道计算机考研专业课代码；在最新的高校计算机研究生招考中，已经越来越多的学校该考408。可见408所涉及到的专业课举足轻重的地位；不论是在考研或者找工作，我相信408的专业基础必定是难以避免的，所以话不多说、形势复杂，唯一能做的就是不停的学习、巩固基础知识，加油！
 >
 > 另外，本仓库收录的大部分内容将来源我自己的学习输出和相关资料的整理，将会站在上班族的角度进行分类、输出，若有任何疑惑和问题，欢迎在github仓库集中pr或issues提出
 
@@ -34,7 +34,7 @@
 > 更新优化中...
 
 
-## 目录（善用Ctrl+F）
+## 大纲目录（善用Ctrl+F）
 
 > 注意：没有链接的没写
 

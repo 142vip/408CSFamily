@@ -12,9 +12,8 @@
 <a href="https://github.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/Github-Github-9ac.svg"></a>
 <a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/Gitee-码云-4ed.svg"></a>
 <a href="https://blog.csdn.net/Mmdapl" target="_blank"><img src="https://img.shields.io/badge/csdn-CSDN-8ea.svg"></a>
-<a href="http://yapi.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/juejin-掘金-8fe.svg"></a>
+<a href="https://juejin.im/user/448256476724807" target="_blank"><img src="https://img.shields.io/badge/JueJin-掘金-75c.svg"></a>
 </p>
-
 
 <!-- [Github文档](https://mmdapl.github.io/408CSFamily/) |  [Gitee文档（国内访问快）]() -->
 ## 写最前面
@@ -51,20 +50,20 @@
 > 3. 《数据结构与算法景点问题解析》 第二版  Narasimha Karumanchi著.
 > 4. 《计算机网络-王道考研》 2019 王道论坛著.
 
-#### 基础入门
+#### [基础入门]()
 
 - [基础概念](https://mp.weixin.qq.com/s/M8MOCVnbVxQ3GRuxRaEKIg)
 - [数据结构三要素](https://mp.weixin.qq.com/s/7sCoHDFtI-Qp0wBcvMH6kQ)
 - [算法与算法评价](https://mp.weixin.qq.com/s/58fBAwoyg2Ali-HqOJ6t9g)
 
-#### 线性表
+#### [线性表]()
 
 - [基础概念和基本操作](https://mp.weixin.qq.com/s/3e5LX9HbnjfT980zV3veXA)
 - [线性表的顺序表示](https://mp.weixin.qq.com/s/gaXmF3tqZxxFXhhDyPZv-A)
 - [线性表的链式表示之单链表](https://mp.weixin.qq.com/s/KQDEexdiHHdsFfLmRgNCug)
 - [线性表的链式表示之双链表](https://mp.weixin.qq.com/s/2R4ZKTSALaR5kVe04UY_Xg)
-- [线性表的链式表示之循环链表](/数据结构/线性表/5.线性表的链式表示【循环链表】.md)
-- [线性表的链式表示之静态链表](/数据结构/线性表/6.线性表的链式表示【静态链表】.md)
+- [线性表的链式表示之循环链表](https://mp.weixin.qq.com/s/BbDFhNl018UQAAc7g2PIMg)
+- [线性表的链式表示之静态链表](https://mp.weixin.qq.com/s/JYabNgsHQnEcuJmwOwEB6g)
 - [顺序表和链表的比较](/数据结构/线性表/7.顺序表和链表的比较.md)
 - [存储结构的选取](/数据结构/线性表/8.存储结构的选取.md)
 - [零碎知识补充](/数据结构/线性表/9.零碎知识补充.md)

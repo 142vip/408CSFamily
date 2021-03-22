@@ -50,13 +50,13 @@
 > 3. 《数据结构与算法景点问题解析》 第二版  Narasimha Karumanchi著.
 > 4. 《计算机网络-王道考研》 2019 王道论坛著.
 
-#### [基础入门]()
+#### [基础入门](/数据结构/基础入门/Readme.md)
 
 - [基础概念](https://mp.weixin.qq.com/s/M8MOCVnbVxQ3GRuxRaEKIg)
 - [数据结构三要素](https://mp.weixin.qq.com/s/7sCoHDFtI-Qp0wBcvMH6kQ)
 - [算法与算法评价](https://mp.weixin.qq.com/s/58fBAwoyg2Ali-HqOJ6t9g)
 
-#### [线性表]()
+#### [线性表](/数据结构/线性表/Readme.md)
 
 - [基础概念和基本操作](https://mp.weixin.qq.com/s/3e5LX9HbnjfT980zV3veXA)
 - [线性表的顺序表示](https://mp.weixin.qq.com/s/gaXmF3tqZxxFXhhDyPZv-A)
@@ -68,8 +68,8 @@
 - [存储结构的选取](/数据结构/线性表/8.存储结构的选取.md)
 - [零碎知识补充](/数据结构/线性表/9.零碎知识补充.md)
 
-<!-- ![](https://cdn.142vip.cn/xmind/7955aae10073aa8a9945ab0869cb9f2b.png) -->
-#### [栈和队列]()
+
+#### [栈和队列](/数据结构/栈和队列/Readme.md)
 
 - [栈的基本概念和基本操作](/数据结构/栈和队列/1.栈的基本概念和基本操作.md)
 - [栈的顺序存储结构](/数据结构/栈和队列/2.栈的顺序存储结构.md)
@@ -80,7 +80,7 @@
 - [栈和队列的应用](/数据结构/栈和队列/栈和队列的应用.md)
 - [特殊矩阵的压缩存储](/数据结构/栈和队列/8.特殊矩阵的压缩存储.md)
 
-<!-- ![](https://cdn.142vip.cn/xmind/079f0c0d4dd6e2f4035ac0b3c606de18.png) -->
+
 #### 树与二叉树
 
 - 树

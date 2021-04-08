@@ -65,8 +65,8 @@
 - [线性表的链式表示之循环链表](https://mp.weixin.qq.com/s/BbDFhNl018UQAAc7g2PIMg)
 - [线性表的链式表示之静态链表](https://mp.weixin.qq.com/s/JYabNgsHQnEcuJmwOwEB6g)
 - [顺序表和链表的比较](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&amp;mid=2247485537&amp;idx=1&amp;sn=7e40e933d96b3b68187ecdd9b022e165&amp;chksm=fcdfb1edcba838fbe23eb3b463a55b1ee160cd7dea53c54200838ba85f3230c2b9accdf5a05b&token=1697862929&lang=zh_CN#wechat_redirect)
-- [存储结构的选取](/数据结构/线性表/8.存储结构的选取.md)
-- [零碎知识补充](/数据结构/线性表/9.零碎知识补充.md)
+- [存储结构的选取](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&amp;mid=2247485549&amp;idx=1&amp;sn=4b7091696c40874a7dcfc682ca18db61&amp;chksm=fcdfb1e1cba838f7e611341fe3b6f3c45fc6efcdce18e79be244a349c87a8e6abcbbd33c250c&token=1697862929&lang=zh_CN#rd)
+- [零碎知识补充](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&amp;mid=2247485549&amp;idx=2&amp;sn=5282cd006b6c33e4bfe992298602e053&amp;chksm=fcdfb1e1cba838f743a335bad530cf415eef57a417b807257d8ed6983047c2d57d5552b34cb0&token=1697862929&lang=zh_CN#rd)
 
 
 #### [栈和队列](/数据结构/栈和队列/Readme.md)
@@ -110,9 +110,7 @@
 #### 排序
 
 - 排序的基础概念
-- 直接排序之插入排序
-- 直接排序之折半排序
-- 直接排序之希尔排序
+- 直接排序
 - 交换排序之冒泡排序
 - 交换排序之快速排序
 - 归并排序

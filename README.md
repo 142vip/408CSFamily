@@ -32,14 +32,31 @@
 
 
 
-## 思维导图【关键知识】
+## 思维导图【MD文档版本】
 
-> 更新优化中...
+> 主要是关键知识，更新优化中...
 
-- [数据结构（MD文档版本）](./数据结构/数据结构和算法.md)
+- [数据结构](./数据结构/数据结构和算法.md)
 - 计算机组成原理（TBD）
 - 操作系统（TBD）
 - 计算机网络（TBD）
+
+
+## 电子书PDF
+
+### 王道
+
+
+- 数据结构2019: https://pan.baidu.com/s/18x8AIfOkZxz197eY7HLRMg  密码: euja
+
+- 计算机组成原理2019: https://pan.baidu.com/s/1DiOBJMt9ZnZ6GK4CRCETJg  密码: wic5
+
+- 计算机网络2019: https://pan.baidu.com/s/1mmIZDugwY5YyytzIJoGQFw  密码: dpkb
+
+- 操作系统2019: https://pan.baidu.com/s/1gzuUqq09xqi8wQ8JJRF69g  密码: o9b3
+
+
+
 
 ## 学习视频
 
@@ -51,7 +68,7 @@
 -  [计算机网络](https://www.bilibili.com/video/BV19E411D78Q)
 
 
-我自己是不是王道工作人员，没有做任何推销，只是感觉看书不太行的话还是得找找视频辅助下，就发现了王道视频，唯一要推销的可能是我的B站ID：**Rong姐姐好可爱**，哈哈哈哈啊哈噗呲
+我自己不是王道工作人员，不做任何推销，只是感觉看书不太行的话还是得找找视频辅助下，就发现了王道视频，唯一要推销的可能是我的B站ID：**Rong姐姐好可爱**，哈哈哈哈啊哈噗呲
 
 ## 大纲目录（善用Ctrl+F）
 

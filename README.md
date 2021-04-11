@@ -41,6 +41,17 @@
 - 操作系统（TBD）
 - 计算机网络（TBD）
 
+## 学习视频
+
+> 视频都是王道官方的，我自己有时也会用这个，如果链接失效可以去B站搜搜哈
+
+-  [数据结构](https://www.bilibili.com/video/BV1b7411N798)
+-  [计算机组成原理](https://www.bilibili.com/video/BV1BE411D7ii)
+-  [操作系统](https://www.bilibili.com/video/BV1YE411D7nH)
+-  [计算机网络](https://www.bilibili.com/video/BV19E411D78Q)
+
+
+我自己是不是王道工作人员，没有做任何推销，只是感觉看书不太行的话还是得找找视频辅助下，就发现了王道视频，唯一要推销的可能是我的B站ID：**Rong姐姐好可爱**，哈哈哈哈啊哈噗呲
 
 ## 大纲目录（善用Ctrl+F）
 

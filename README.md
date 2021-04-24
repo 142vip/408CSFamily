@@ -315,7 +315,7 @@
 
 
 <p>
-  <img src="https://static01.imgkr.com/temp/648d5cb3d1844193a70d1a59ec7e3c9e.jpg"  style="border-radius:10px;">
+  <img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/gongzhonghao.jpg"  style="border-radius:10px;">
 </p>
 
 

@@ -1,6 +1,7 @@
 
+<!-- <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png"> -->
 <p align="center">
-    <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png">
+    <img src="https://static01.imgkr.com/temp/f0108d7c178b4ce196e43ebec14fbf23.png">
 </p>
 
 <p align="center">
@@ -160,12 +161,16 @@
 > 刷题部分来源于自己在牛客网的刷题练习，编程语言大部分采用的是javascript
 
 
-#### 剑指
+#### [剑指真题](https://www.nowcoder.com/ta/coding-interviews)
 
-#### 前端
+- 
 
 
-#### 后端
+
+#### [前端常考](https://www.nowcoder.com/activity/oj?tab=3)
+
+
+#### [后端常考](https://www.nowcoder.com/activity/oj?tab=0)
 
 
 
@@ -269,7 +274,7 @@
 ## 联系我
 
 
-有任何问题或建议，欢迎微信“骚扰”，商务合作请备注！
+有任何问题或建议，欢迎微信`骚扰`，商务合作请备注！
 
 <div align="left">
 <img src="https://s3.ax1x.com/2021/03/13/6wdDFx.jpg" width="300" height="300"  style="border-radius:5px;"/>
@@ -310,7 +315,7 @@
 
 
 <p>
-  <img src="https://www.142vip.cn/assets/gzh.png"  style="border-radius:10px;">
+  <img src="https://static01.imgkr.com/temp/648d5cb3d1844193a70d1a59ec7e3c9e.jpg"  style="border-radius:10px;">
 </p>
 
 

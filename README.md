@@ -265,7 +265,7 @@
 
 
 <div align="left">
-<img src="https://s3.ax1x.com/2021/03/13/6wdNy4.jpg" width="300" height="300" style="border-radius:5px;" />
+<img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/wechat_donate.png" width="300" height="300" style="border-radius:5px;" />
 
 
 </div>
@@ -277,7 +277,7 @@
 有任何问题或建议，欢迎微信`骚扰`，商务合作请备注！
 
 <div align="left">
-<img src="https://s3.ax1x.com/2021/03/13/6wdDFx.jpg" width="300" height="300"  style="border-radius:5px;"/>
+<img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/wechat_code.jpg" width="300" height="300"  style="border-radius:5px;"/>
 </div>
 
 
@@ -315,7 +315,7 @@
 
 
 <p>
-  <img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/gongzhonghao.jpg"  style="border-radius:10px;">
+  <img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/gongzhonghao.jpg"  style="border-radius:10px;">
 </p>
 
 

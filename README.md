@@ -163,7 +163,14 @@
 
 #### [剑指真题](https://www.nowcoder.com/ta/coding-interviews)
 
-- 
+### 数组和矩阵
+
+ - [【简单】数组中重复的数字](./算法/剑指/数组和矩阵/duplicate.js)
+ - [【中等】二维数组中的查找](./算法/剑指/数组和矩阵/Find.js)
+ - [【较难】替换空格](./算法/剑指/数组和矩阵/replaceSpace.js)
+ - [【较难】顺时针打印矩阵](./算法/剑指/数组和矩阵/printMatrix.js)
+ - [【简单】第一个只出现一次的字符位置](./算法/剑指/数组和矩阵/FirstNotRepeatingChar.js)
+
 
 
 

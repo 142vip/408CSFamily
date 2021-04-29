@@ -166,22 +166,21 @@
 ### 数组和矩阵
 
  - [【简单】数组中重复的数字](./算法/剑指/数组和矩阵/duplicate.js)
- - [【简单】第一个只出现一次的字符位置](./算法/剑指/数组和矩阵/FirstNotRepeatingChar.js)
  - [【中等】二维数组中的查找](./算法/剑指/数组和矩阵/Find.js)
  - [【较难】替换空格](./算法/剑指/数组和矩阵/replaceSpace.js)
  - [【较难】顺时针打印矩阵](./算法/剑指/数组和矩阵/printMatrix.js)
+ - [【简单】第一个只出现一次的字符位置](./算法/剑指/数组和矩阵/FirstNotRepeatingChar.js)
 
 
 ### 栈队列堆
 
-- [【中等】最小的k个数](./栈队列堆/GetLeastNumbers_Solution.js)
-- 用两个栈实现队列
-- 包含min函数的栈
+- [【简单】两个栈实现队列](./算法/剑指/栈队列堆/JSStackToQueue.js)
+- [【中等】最小的k个数](./算法/剑指/栈队列堆/GetLeastNumbers_Solution.js)
+- [【中等】数据流中的中位数](./算法/剑指/栈队列堆/InsertAndGetMedian.js)
+- [【中等】字符流中的第一个不重复的字符](./算法/剑指/栈队列堆/FirstAppearingOnce.js)
+- [【较难】滑动窗口的最大值](./算法/剑指/栈队列堆/maxInWindows.js)
+- [【较难】包含min函数的栈](./算法/剑指/栈队列堆/GetMinInJSStack.js)
 - 栈的压入、弹出序列
-- 最小的k个数
-- 数据流中的中位数
-- 字符流中的第一个不重复的字符
-- 滑动窗口的最大值
 
 
 ### 双指针

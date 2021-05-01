@@ -4,7 +4,7 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2021-04-27 08:39:46
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-29 22:09:29
+ * @LastEditTime: 2021-04-30 22:15:20
 -->
 
 
@@ -36,10 +36,11 @@
 
 ### 双指针
 
-- 【中等】和为S的两个数字
-- 和为S的连续正数序列
-- 翻转单词顺序列
-- 左旋转字符串
+- [【中等】和为S的两个数字](./双指针/FindNumbersWithSum.js)
+- [【中等】和为S的连续正数序列](./双指针/FindContinuousSequence.js)
+- [【中等】左旋转字符串](./双指针/LeftRotateString.js)
+- [【较难】翻转单词顺序列](./双指针/ReverseSentence.js)
+
 
 
 ### 链表

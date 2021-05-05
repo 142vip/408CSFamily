@@ -1,10 +1,10 @@
 /*
- * @Description: 
+ * @Description: 【中等】从1到n整数中1出现的次数
  * @Version: Beta1.0
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2021-04-26 22:23:17
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-26 22:27:23
+ * @LastEditTime: 2021-05-05 15:15:56
  */
 
 
@@ -28,7 +28,7 @@ function NumberOf1Between1AndN_Solution(n)
     return count;
 }
 
-console.log(NumberOf1Between1AndN_Solution(13))
+// console.log(NumberOf1Between1AndN_Solution(13))
 module.exports = {
     NumberOf1Between1AndN_Solution : NumberOf1Between1AndN_Solution
 };

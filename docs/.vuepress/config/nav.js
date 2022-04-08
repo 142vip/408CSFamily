@@ -4,26 +4,42 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2021-01-19 08:04:19
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-08 00:07:29
+ * @LastEditTime: 2022-04-09 00:27:32
  */
 
 module.exports = [
-  // Nav 1
+  // {
+  //   text: "考研规划",
+  //   link: "/DS1/"
+  // },
+  {
+    text: "算法",
+    link: "/CN/"
+  },
   {
     text: "数据结构",
-    link: "/DataStructure/"
-  },
-  // Nav 2
-  {
-    text: "计算机组成原理",
-    link: "/ComputerComposePrinciple/"
+    link: "/DS/"
   },
   {
     text: "操作系统",
-    link: "/OperatingSystem/"
+    link: "/OS/"
   },
   {
-    text: "计算机网络",
-    link: "/ComputerNetwork/"
-  }
+    text: "计组",
+    link: "/CCP/"
+  },
+
+  {
+    text: "计网",
+    link: "/CN/"
+  },
+  {
+    text: "思维导图",
+    link: "/CN/"
+  },
+  {
+    text: "重要资料",
+    link: "/CN/"
+  },
+
 ];

@@ -4,7 +4,7 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2021-01-19 08:04:19
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-09 00:27:32
+ * @LastEditTime: 2022-04-13 09:20:00
  */
 
 module.exports = [
@@ -13,7 +13,11 @@ module.exports = [
   //   link: "/DS1/"
   // },
   {
-    text: "算法",
+    text:'首页',
+    link:'/'
+  },
+  {
+    text: "恶补算法",
     link: "/CN/"
   },
   {
@@ -25,21 +29,21 @@ module.exports = [
     link: "/OS/"
   },
   {
-    text: "计组",
+    text: "计算机组成原理",
     link: "/CCP/"
   },
 
   {
-    text: "计网",
+    text: "计算机网络",
     link: "/CN/"
   },
   {
     text: "思维导图",
-    link: "/CN/"
+    link: "/brans/"
   },
   {
     text: "重要资料",
-    link: "/CN/"
+    link: "/source/"
   },
 
 ];

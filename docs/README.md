@@ -23,10 +23,10 @@ footerWrap:
     details: 考研最新消息
 - headline: 开源共享
   items:
-  - title: axios
+  - title: 408Family
     link: https://github.com/zpfz/vuepress-theme-antdocs
     details: egg-axios-plus
-  - title: grpc
+  - title: JavaScriptCollection
     link: https://github.com/zpfz/vuepress-theme-antdocs
     details: egg-grpc-plus
   - title: mysql

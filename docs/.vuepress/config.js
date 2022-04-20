@@ -4,7 +4,7 @@
  * @Author: 【B站&公众号】Rong姐姐好可爱
  * @Date: 2021-01-19 08:04:19
  * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-20 09:30:22
+ * @LastEditTime: 2022-04-20 09:31:56
  */
 module.exports = {
   title: "计算机应试全家桶",
@@ -15,10 +15,10 @@ module.exports = {
   //   ["link",{ rel: "icon",href: "/assets/fight_favicon.ico" }]
   // ],
   head: [
-    ["link", { rel: "icon", href: "/fight_favicon.ico" }]
+    ["link", { rel: "icon", href: "/assets/fight_favicon.ico" }]
   ],
   themeConfig: {
-    logo: "/fight_favicon.ico",
+    logo: "/assets/fight_favicon.ico",
     darkMode: false, // 禁用夜色
     navbar: require("./config/navbar"),  // 注意这个关键字有所改变
     sidebar: require("./config/sidebar"),

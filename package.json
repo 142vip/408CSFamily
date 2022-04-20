@@ -1,17 +1,15 @@
 {
-  "name": "408CSFamily",
-  "version": "Beta0.0.1",
-  "description": "一本有趣的JavaScript合集",
-  "keywords": [],
-  "author": "Feng L.H.",
-  "license": "MIT",
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@vuepress/plugin-docsearch": "^2.0.0-beta.38",
-    "@vuepress/plugin-search": "^2.0.0-beta.38",
     "vuepress": "^2.0.0-beta.39"
   }
 }

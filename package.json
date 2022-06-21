@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "408CSFamily",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,9 +7,11 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Rong姐姐好可爱",
+  "license": "MIT",
   "devDependencies": {
     "vuepress": "^2.0.0-beta.39"
+  },
+  "dependencies": {
   }
 }

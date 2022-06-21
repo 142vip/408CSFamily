@@ -73,3 +73,5 @@ package-lock.json
 
 # useless files
 templete
+/docs/.vuepress/.temp/
+/docs/.vuepress/.cache/

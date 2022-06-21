@@ -15,7 +15,7 @@ function Permutation (str) {
   while(i<str.length){
     let j=0
     while(j<=i){
-      result.push(str[])
+      result.push(str[j])
     }
 
   }

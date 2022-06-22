@@ -16,5 +16,6 @@ FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:latest
 # 将dist文件中的内容复制到 /usr/share/nginx/html/ 这个目录下面 注意：--from参数
 COPY  --from=build_base /apps/docs/.vuepress/dist/  /usr/share/nginx/html/
 
-## 暴露端口
-EXPOSE 80
+COPY nginx.conf /etc/nginx/
+EXPOSE 7000
+CMD ["nginx", "-g", "daemon off;"]

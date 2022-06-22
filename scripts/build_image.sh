@@ -15,6 +15,8 @@ readonly warnLogger="\033[1;33m"
 readonly currentTime=$(date "+%Y-%m-%d %H:%M:%S")
 ## 项目名称
 readonly projectName="408CSFamily"
+## 仓库地址
+readonly repoAddress="registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:"
 ## 版本号
 version=${1}
 
@@ -28,7 +30,7 @@ prepare_check(){
 
 run(){
   echo -e "${successLogger}---------------- shell doc_book start ---------------- "
-    docker build  -t  registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:"${projectName}_${version}" .
+    docker build  -t  "${repoAddress}${projectName}_${version}" .
   echo -e "${successLogger}---------------- shell doc_book end   ---------------- "
   push_docker_image
 }
@@ -38,14 +40,14 @@ run(){
 
 
 push_docker_image(){
-    if [[ "$(docker images -q  registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:"${projectName}_${version}" 2> /dev/null)" != "" ]];
+    if [[ "$(docker images -q  "${repoAddress}${projectName}_${version}" 2> /dev/null)" != "" ]];
       then
         ## 推送
-        docker push registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:"${projectName}_${version}"
+        docker push "${repoAddress}${projectName}_${version}"
         echo -e "${successLogger}---------------- 上传镜像成功，删除本地镜像 ---------------- "
-        docker rmi registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:"${projectName}_${version}"
+        docker rmi "${repoAddress}${projectName}_${version}"
     else
-        echo -e "${errorLogger}${currentTime}：镜像：registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:${projectName}_${version}不存在"
+        echo -e "${errorLogger}${currentTime}：镜像：${repoAddress}${projectName}_${version}不存在"
     fi
   exit 0
 }

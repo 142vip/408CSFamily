@@ -1,0 +1,26 @@
+version: '2'
+services:
+  ### 408CSFamily服务，ip范围 172.30.0.200
+  408CSFamily:
+    image: registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:408CSFamily_0.0.1
+    container_name: 408CSFamily
+    restart: on-failure
+    hostname: 408CSFamily
+    ports:
+      - "7000:80"
+    networks:
+      net:
+        ipv4_address: 172.30.0.200
+
+## 创建桥接网络
+networks:
+  ## 桥接网络名称，配合文件前缀，最后为dev_test_env_net  参考：https://www.jianshu.com/p/d70c61d45364
+  net:
+    driver: bridge
+    # external: true
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.30.0.0/24
+          ## 网关
+          gateway: 172.30.0.1

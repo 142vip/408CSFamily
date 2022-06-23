@@ -38,7 +38,7 @@ run(){
 
 
 
-
+## 推送镜像
 push_docker_image(){
     if [[ "$(docker images -q  "${repoAddress}${projectName}_${version}" 2> /dev/null)" != "" ]];
       then

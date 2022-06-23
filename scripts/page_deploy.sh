@@ -31,7 +31,7 @@ git commit -m "refactor:${commitInfo}"
 
 
 ## 配置个人信息
-git config user.name "喜欢吃芝士葡萄的妹妹"
+git config user.name "晚上吃芝士+葡萄的妹妹"
 git config user.email "fairy0115@2925.com"
 
 # if you are deploying to https://<USERNAME>.github.io

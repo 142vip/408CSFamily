@@ -54,7 +54,7 @@ run(){
       echo -e "${successLogger}---------------- shell rm start ---------------- "
     exit 0;
   else
-    echo -e "${errorLogger}当前操作不支持,目前只支持:ls/init/rm"
+      echo -e "${errorLogger}当前操作不支持,目前只支持:ls/init/rm"
     exit 0
   fi
 }
@@ -78,7 +78,8 @@ init_network(){
       "${defaultNetworkName}"
     echo -e "${successLogger}---------------- 创建后 ---------------------"
     docker network ls
-    docker netwrok inspect "${networkName}"
+    echo -e "${successLogger}---------------- 网络信息 ---------------------"
+    docker netwrok inspect "${defaultNetworkName}"
   fi
 }
 
@@ -96,7 +97,7 @@ remove_network(){
   fi
 
   echo -e "${successLogger}----------------删除前---------------------"
-  docker network ls
+    docker network ls
     docker network rm "${networkName}"
   echo -e "${successLogger}----------------删除后---------------------"
   docker network ls

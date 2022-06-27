@@ -13,7 +13,7 @@ module.exports = {
   // theme: path.resolve(__dirname, './theme'),
   title: "计算机应试全家桶",
   description: "磨刀不误砍柴工，读完硕士再打工",
-  base: "/408CSFamily/",
+  // base: "/408CSFamily/",
   port: 4200,
   head: [
     ["link", { rel: "icon", href: "/408_favicon.ico" }]

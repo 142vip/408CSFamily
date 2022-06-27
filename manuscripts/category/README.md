@@ -733,25 +733,25 @@ tags:
 ### 技术类
 > 待整理
 
-#### [狼书 - 了不起的Node.js](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/Readme.md)
+#### [狼书 - 了不起的Node.js](docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/Readme.md)
 
-- [第一章 Node.js初识](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第一章%20Node.js初识.md)
-- [第二章 Nodejs安装与入门](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第二章%20Nodejs安装与入门.md)
-- [第三章 更了不起的Node.js](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第三章%20更了不起的Node.js.md)
-- [第四章 更好的Node.js](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第四章%20更好的Node.js.md)
-- [第五章 Node.js是如何执行的](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第五章%20Node.js是如何执行的.md)
-- [第六章 模块与核心](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第六章%20模块与核心.md)
-- [第七章 异步写法与流程控制](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第七章%20异步写法与流程控制.md)
+- [第一章 Node.js初识](docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第一章%20Node.js初识.md)
+- [第二章 Nodejs安装与入门](docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第二章%20Nodejs安装与入门.md)
+- [第三章 更了不起的Node.js](docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第三章%20更了不起的Node.js.md)
+- [第四章 更好的Node.js](docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第四章%20更好的Node.js.md)
+- [第五章 Node.js是如何执行的](docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第五章%20Node.js是如何执行的.md)
+- [第六章 模块与核心](docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第六章%20模块与核心.md)
+- [第七章 异步写法与流程控制](docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/第七章%20异步写法与流程控制.md)
 
-- [全部笔记](./docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/全部笔记.md)
+- [全部笔记](docs/读书笔记/../article-records/读书笔记/狼书-了不起的Node.js/全部笔记.md)
 
 
 #### [ES6标准入门——阮一峰]()
 
 > 本书内容较多，很多基础细节都有说明，难度中等、适合入门，书中很多例子我也摘抄了很多，主要是我认为重要的，笔记按照自己学习逻辑整理的，请君慢用
-- [1.ECMAScript 6 简介](./docs/article-records/读书笔记/ES6标准入门/1.ECMAScript%206%20简介.md)
-- [2.let和const命令](./docs/article-records/读书笔记/ES6标准入门/2.let和const的命令.md)
-- [3.变量的解构赋值](./docs/article-records/读书笔记/ES6标准入门/3.变量的解构赋值.md)
+- [1.ECMAScript 6 简介](docs/article-records/读书笔记/ES6标准入门/1.ECMAScript%206%20简介.md)
+- [2.let和const命令](docs/article-records/读书笔记/ES6标准入门/2.let和const的命令.md)
+- [3.变量的解构赋值](docs/article-records/读书笔记/ES6标准入门/3.变量的解构赋值.md)
 - [4.字符串详解]()
 ### 非技术类
 

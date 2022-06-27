@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
+    "build-image": "bash scripts/build_image.sh $npm_package_version",
     "ali": "bash scripts/deploy.bash ali $npm_package_version",
     "github": "bash scripts/deploy.bash github"
   },

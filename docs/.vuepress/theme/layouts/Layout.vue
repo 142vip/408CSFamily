@@ -7,8 +7,7 @@
  * @LastEditTime: 2022-04-24 08:47:23
 -->
 <script setup>
-import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'
-</script>
+import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'</script>
 
 <template>
   <ParentLayout>

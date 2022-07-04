@@ -7,7 +7,7 @@ RUN mkdir -p /apps
 COPY . /apps
 WORKDIR /apps
 ## 安装依赖
-RUN npm ci --registry https://registry.npmmirror.com && npm run build
+RUN npm i --registry https://registry.npmmirror.com && npm run build
 
 # 设置部署镜像
 FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:latest

@@ -31,14 +31,16 @@ git commit -m "refactor:${commitInfo}"
 
 
 ## 配置个人信息
-git config user.name "晚上吃芝士+葡萄的妹妹"
-git config user.email "fairy0115@2925.com"
+git config user.name '妹妹手上有抹茶'
+git config user.email 'fairy_408@2925.com'
+
+git config --list
 
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/mmdapl/JavaScriptCollection.git master:pages/github
+git push   https://github.com/142vip/408CSFamily.git master:pages/github
 
 
 cd -

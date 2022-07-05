@@ -7,8 +7,8 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "build-image": "bash scripts/build_image.sh $npm_package_version",
-    "ali": "bash scripts/deploy.bash ali $npm_package_version",
-    "github": "bash scripts/deploy.bash github"
+    "ali": "bash scripts/deploy.sh ali $npm_package_version",
+    "github": "bash scripts/page_deploy.sh"
   },
   "author": "Rong姐姐好可爱",
   "license": "MIT",

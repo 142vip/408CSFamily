@@ -7,11 +7,11 @@ RUN mkdir -p /apps
 COPY . /apps
 WORKDIR /apps
 ## 安装依赖
-RUN npm i --registry https://registry.npmmirror.com && npm run build
+RUN npm ci --registry https://registry.npmmirror.com && npm run build
 
-# 设置部署镜像
-FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:latest
 
+
+FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.23.0-alpine
 # 将dist文件中的内容复制到 /usr/share/nginx/html/ 这个目录下面 注意：--from参数
 COPY  --from=build_base /apps/docs/.vuepress/dist/  /usr/share/nginx/html/
 

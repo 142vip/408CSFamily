@@ -1,16 +1,4 @@
-/*
- * @Description: 
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-01-19 08:04:19
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-24 22:47:58
- */
-
-// const { path } = require('@vuepress/utils')
 module.exports = {
-  // 自定义主题
-  // theme: path.resolve(__dirname, './theme'),
   title: "计算机应试全家桶",
   description: "磨刀不误砍柴工，读完硕士再打工",
   // base: "/408CSFamily/",
@@ -39,7 +27,7 @@ module.exports = {
     lastUpdated: true,
     lastUpdatedText: "最近更新",
     contributorsText: '贡献者',
-    notFound: ['宝贝不要急，我努力更新就会慢慢有的哟...想要什么，也欢迎微信后台私信哟！'],// 自定义404页面提示语，数组
+    notFound: ['宝贝不要急，我努力更新就会慢慢有的哟...想要什么，也欢迎微信后台私信！'],// 自定义404页面提示语，数组
     backToHome: '返回首页', // 返回首页
     repo: "https://github.com/mmdapl/408CSFamily",
     sidebarDepth: 1,

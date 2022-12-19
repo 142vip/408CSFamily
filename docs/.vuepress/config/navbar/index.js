@@ -1,17 +1,4 @@
-/*
- * @Description: 
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-01-19 08:04:19
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-24 08:25:28
- */
-
 module.exports = [
-  // {
-  //   text: "考研规划",
-  //   link: "/DS1/"
-  // },
   {
     text: '首页',
     link: '/'
@@ -81,5 +68,4 @@ module.exports = [
     text: "大事记",
     link: "/Big_Event_History/"
   },
-
 ];

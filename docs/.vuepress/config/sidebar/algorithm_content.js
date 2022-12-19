@@ -1,22 +1,3 @@
-/*
- * @Description: 
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2022-04-24 08:15:07
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-24 08:17:32
- */
-
-/*
- * @Description: 配置左侧菜单栏
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-01-12 07:37:28
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-24 08:08:47
- */
-
-
 module.exports = [
   // 'basic_introduction',
   // 'linear_table',

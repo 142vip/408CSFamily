@@ -1,9 +1,11 @@
 ---
 home: true
 heroImage: https://static01.imgkr.com/temp/f0108d7c178b4ce196e43ebec14fbf23.png
+heroImageDark:https://vuejs.org/images/logo.png
 heroText: 计算机应试全家桶
 externalLinkIcon: false 
 tagline: 磨刀不误砍柴工、读完硕士再打工，笔记内容持续更新...
+
 actions:
   - text: 快速开始→
     link: /guide/
@@ -12,12 +14,12 @@ actions:
     link: /gangg
     type: secondary
 features:
-- title: 基础概览
-  details: 与官网同步的Egg.js框架基础知识整理，有效地降低日常开发和复习巩固的查询、学习时间。
-- title: 整理强化
-  details: 官方插件的基础上，抽象、封装出适合自己功能的plus插件，能够快速集成、使用在新的项目中。
-- title: 反复反复
-  details: 通过以项目Demo示例的方式，对框架常用的功能进行Code编写和整理，提供有效且易用的代码封装。
+  - title: 基础概览
+    details: 与官网同步的Egg.js框架基础知识整理，有效地降低日常开发和复习巩固的查询、学习时间。
+  - title: 整理强化
+    details: 官方插件的基础上，抽象、封装出适合自己功能的plus插件，能够快速集成、使用在新的项目中。
+  - title: 反复反复
+    details: 通过以项目Demo示例的方式，对框架常用的功能进行Code编写和整理，提供有效且易用的代码封装。
 
 footerColumn: 3
 footerWrap: 
@@ -69,9 +71,8 @@ footerWrap:
     link: https://space.bilibili.com/350937042
     details: 不定期更新
 #  <a href="https://tongji.baidu.com/web/welcome/login" target="_blank">百度统计</a>
-footer:    Copyrights © 2019-2022 妍荣姑娘网络工作室 | <a href="https://github.com/mmdapl" target="_blank">Rong姐姐好可爱</a> 
-# footer:    Copyrights © 2019-2022 妍荣姑娘网络工作室 Rong姐姐好可爱
-footerHtml: true
+footer:    Copyrights © 2015-2021 妍荣姑娘网络工作室 | <a href="https://github.com/mmdapl" target="_blank">Chu·Fan</a> 
+
 ---
 
 

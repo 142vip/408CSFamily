@@ -2,11 +2,13 @@ lockfileVersion: 5.3
 
 specifiers:
   '@vuepress/client': ^2.0.0-beta.59
+  '@vuepress/theme-default': 2.0.0-beta.59
   vue: ^3.2.45
   vuepress: ^2.0.0-beta.59
 
 devDependencies:
   '@vuepress/client': 2.0.0-beta.59
+  '@vuepress/theme-default': 2.0.0-beta.59
   vue: 3.2.45
   vuepress: 2.0.0-beta.59_cd0e7e888ac665075fdbca7621041a6e
 

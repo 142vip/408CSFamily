@@ -1,14 +1,5 @@
 #!/usr/bin/env sh
 
-###
- # @Description: 静态资源网站部署脚本
- # @Version: Beta1.0
- # @Author: 【B站&公众号】Rong姐姐好可爱
- # @Date: 2021-02-19 22:34:57
- # @LastEditors: 【B站&公众号】Rong姐姐好可爱
- # @LastEditTime: 2022-04-18 23:35:15
-### 
-
 commitInfo=${1}
 
 set -e
@@ -40,7 +31,7 @@ git config --list
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push   https://github.com/142vip/408CSFamily.git master:pages/github
+git push -f   https://github.com/mmdapl/408CSFamily.git pages/github
 
 
 cd -

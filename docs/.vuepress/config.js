@@ -1,4 +1,6 @@
-module.exports = {
+import { defaultTheme } from '@vuepress/theme-default'
+
+export default {
   title: "计算机应试全家桶",
   description: "磨刀不误砍柴工，读完硕士再打工",
   // base: "/408CSFamily/",
@@ -7,7 +9,8 @@ module.exports = {
     [
         "link", { rel: "icon", href: "/408_favicon.ico" }
     ],
-    [// 百度统计
+    [
+        // 百度统计
       'script',{},`
       var _hmt = _hmt || [];
       (function() {
@@ -18,7 +21,7 @@ module.exports = {
       })();`
     ]
   ],
-  themeConfig: {
+  theme: defaultTheme({
     logo: "/assets/408_logo.png",
     darkMode: false, // 禁用夜色
     navbar: require("./config/navbar/index"),  // 注意这个关键字有所改变
@@ -37,7 +40,7 @@ module.exports = {
     displayAllHeaders: true,// 默认值：false 显示所有页面的标题链接
     search: true,
     searchMaxSuggestions: 10,
-  },
+  }),
   // plugins: [
   //   // 全文搜索 参考配置：https://github.com/vuepress/vuepress-next/blob/main/docs/.vuepress/config.ts
   //   ['@vuepress/docsearch',

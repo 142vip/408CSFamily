@@ -4,10 +4,11 @@ LABEL version="Beta1.0"  description="408CSFamily合集"
 LABEL author="【Github&公众号】：Rong姐姐好可爱" email="fairy@2925.com"
 RUN mkdir -p /apps
 ## 确定工作空间 /apps
-COPY . /apps
 WORKDIR /apps
+COPY . /apps
+
 ## 安装依赖
-RUN npm ci --registry https://registry.npmmirror.com && npm run build
+RUN npm i pnpm@6 -g && pnpm i -D && npm run build
 
 
 
@@ -16,5 +17,7 @@ FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.23.0-alpine
 COPY  --from=build_base /apps/docs/.vuepress/dist/  /usr/share/nginx/html/
 
 COPY nginx.conf /etc/nginx/
+
 EXPOSE 7000
-CMD ["nginx", "-g", "daemon off;"]
+
+#CMD ["nginx", "-g", "daemon off;"]

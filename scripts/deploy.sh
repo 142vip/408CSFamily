@@ -2,7 +2,7 @@
 
 ## 功能：清除容器，删除旧镜像，创建新的容器
 ## 参考：https://blog.csdn.net/Dontla/article/details/125210694
-## 作者：Rong姐姐好可爱
+## 作者：储凡
 ## 使用示例：bash xxx.sh 容器名称  镜像地址
 ##
 
@@ -88,11 +88,11 @@ deploy_to_ali(){
   echo -e "${successLogger}---------------- deploy ${containerName} ali start ---------------- "
 
   docker run -d --name "${containerName}" \
-  -p 7000:7000 \
+  -p 7000:80 \
   --network="${networkName}"  \
   --restart=unless-stopped \
-  --ip=172.30.0.200 \
-  "${repoAddress}:${containerName}_${version}"
+  --ip=172.30.0.100 \
+  "${repoAddress}:${containerName}-${version}"
 
   echo -e "${successLogger}---------------- deploy ${containerName} ali end ------------------ "
   docker ps

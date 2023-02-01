@@ -1,4 +1,4 @@
-import { defaultTheme } from '@vuepress/theme-default'
+import { hopeTheme } from "vuepress-theme-hope";
 
 export default {
   title: "计算机应试全家桶",
@@ -21,12 +21,27 @@ export default {
       })();`
     ]
   ],
-  theme: defaultTheme({
+  // 参考主题：https://theme-hope.vuejs.press/zh/config/intro.html#%E9%85%8D%E7%BD%AE%E6%A6%82%E5%BF%B5
+  theme: hopeTheme({
+    hostname:'https://408.142vip.cn',
+    author:{
+      name:'ChuFan',
+      email:'fairy_408@2925.com',
+      url:'https://www.142vip.cn'
+    },
+    favicon:"/408_favicon.ico",
     logo: "/assets/408_logo.png",
-    darkMode: false, // 禁用夜色
     navbar: require("./config/navbar/index"),  // 注意这个关键字有所改变
     sidebar: require("./config/sidebar/index"),
-    smoothScroll: true,
+    // 博客配置
+    blog:{
+      name:'',
+      medias:{
+        "BiliBili": "哔哩哔哩"
+      }
+    },
+
+
     lastUpdated: true,
     lastUpdatedText: "最近更新",
     contributorsText: '贡献者',
@@ -37,9 +52,12 @@ export default {
     editLink: false,
     // 默认为 "Edit this page"
     // editLinkText: '帮助我们改善此页面！',
-    displayAllHeaders: true,// 默认值：false 显示所有页面的标题链接
     search: true,
     searchMaxSuggestions: 10,
+    plugins:{
+      // 开启博客功能
+      blog:true
+    }
   }),
   // plugins: [
   //   // 全文搜索 参考配置：https://github.com/vuepress/vuepress-next/blob/main/docs/.vuepress/config.ts

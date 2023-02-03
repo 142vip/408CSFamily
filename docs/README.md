@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: https://static01.imgkr.com/temp/f0108d7c178b4ce196e43ebec14fbf23.png
-heroImageDark: ://vuejs.org/images/logo.png
+heroImageDark: http://vuejs.org/images/logo.png
 heroText: 计算机应试全家桶
 externalLinkIcon: false 
 tagline: 磨刀不误砍柴工、读完硕士再打工，笔记内容持续更新...
@@ -82,9 +82,8 @@ footer:    Copyrights © 2015-2021 妍荣姑娘网络工作室 | <a href="https:
 
 由于平台、网络等原因，在线浏览容易出现加载面、加载不出来等常见问题，因此非常建议在本地进行浏览、学习；**下面指令默认你已经安装[Git](https://git-scm.com/download)、[NPM](https://www.npmjs.com/)、[PNPM](https://www.pnpm.cn/)、[Yarn](https://yarn.bootcss.com/)、[Node](http://nodejs.cn)等环境，并对此有一定了解!**
 
-<CodeGroup>
-
-<CodeGroupItem title="PNPM（推荐）" >
+::: code-tabs#shell
+@tab PNPM（推荐）
 
 ```bash:no-line-numbers
 ## 进入cmd命令行，直接克隆仓库
@@ -103,9 +102,8 @@ pnpm install
 pnpm dev
 
 ```
-</CodeGroupItem>
 
-<CodeGroupItem title="  NPM  ">
+@tab NPM
 
 ```bash:no-line-numbers
 ## 进入cmd命令行，直接克隆仓库
@@ -125,12 +123,7 @@ npm run dev
 
 ```
 
-
-
-</CodeGroupItem>
-
-
-<CodeGroupItem title=" YARN ">
+@tab YARN
 
 ```bash:no-line-numbers
 ## 进入cmd命令行，直接克隆仓库
@@ -149,10 +142,7 @@ yarn install
 yarn run dev
 
 ```
-</CodeGroupItem>
-
-
-</CodeGroup>
+:::
 
 查看项目启动日志并访问：[http://127.0.0.1:4200](http://localhost:4200)，开启学习之旅吧~
 
@@ -192,7 +182,6 @@ yarn run dev
 ### 赞助商
 
 以下排名不分先后!  哈哈哈，还木有收到赞助，先留坑
-
 
 
 

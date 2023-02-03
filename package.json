@@ -1,7 +1,6 @@
 {
   "name": "408CSFamily",
-  "version": "1.0.0",
-  "description": "",
+  "description": "专业代号408 ，计算机基础知识点合集",
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
@@ -11,12 +10,16 @@
     "github": "bash scripts/page_deploy.sh",
     "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +"
   },
-  "author": "Rong姐姐好可爱",
-  "license": "MIT",
+  "author":{
+    "name": "Chu Fan",
+    "email": "fairy_408@2925.com",
+    "url": "https://github.com/142vip"
+  },
   "devDependencies": {
     "@vuepress/client": "2.0.0-beta.60",
     "vue": "^3.2.45",
     "vuepress": "2.0.0-beta.60",
     "vuepress-theme-hope": "^2.0.0-beta.171"
-  }
+  },
+  "license": "MIT"
 }

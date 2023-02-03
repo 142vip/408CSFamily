@@ -33,31 +33,45 @@ export default {
     logo: "/assets/408_logo.png",
     navbar: require("./config/navbar/index"),  // 注意这个关键字有所改变
     sidebar: require("./config/sidebar/index"),
+
+    // 主题布局选项
+    repo: "https://github.com/mmdapl/408CSFamily",
+    logoDark:"/assets/408_logo.png",
+
+
     // 博客配置
     blog:{
-      name:'',
-      medias:{
-        "BiliBili": "哔哩哔哩"
-      }
+      name:'测试',
+      avatar:'',
+      description:'',
+      intro:'',
+      roundAvatar:true,
+      timeline:"时间轴的顶部文字",
+      // articleInfo:"",
+      // medias:{
+      //   "BiliBili": "哔哩哔哩"
+      // }
     },
-
-
     lastUpdated: true,
     lastUpdatedText: "最近更新",
     contributorsText: '贡献者',
     notFound: ['宝贝不要急，我努力更新就会慢慢有的哟...想要什么，也欢迎微信后台私信！'],// 自定义404页面提示语，数组
     backToHome: '返回首页', // 返回首页
-    repo: "https://github.com/mmdapl/408CSFamily",
+
     sidebarDepth: 1,
     editLink: false,
     // 默认为 "Edit this page"
     // editLinkText: '帮助我们改善此页面！',
     search: true,
     searchMaxSuggestions: 10,
-    plugins:{
+    plugins: {
       // 开启博客功能
-      blog:true
-    }
+      // blog:true,
+      // 代码块
+      mdEnhance: {
+        codetabs: true,
+      },
+    },
   }),
   // plugins: [
   //   // 全文搜索 参考配置：https://github.com/vuepress/vuepress-next/blob/main/docs/.vuepress/config.ts

@@ -40,7 +40,7 @@ export default {
 
 
     // 博客配置
-    blog:{
+    blog_:{
       name:'测试',
       avatar:'',
       description:'',

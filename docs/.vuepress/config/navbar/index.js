@@ -51,21 +51,21 @@ module.exports = [
       text: "思维导图",
       children: [{
         text: '数据结构',
-        link: '/note-map/DS_Map'
+        link: '/note-map/ds-map'
       }, {
         text: '操作系统',
-        link: '/note-map/OS_Map'
+        link: '/note-map/os-map'
       }, {
         text: '计算机组成原理',
-        link: '/note-map/CCP_Map'
+        link: '/note-map/ccp-map'
       }, {
         text: '计算机网络',
-        link: '/note-map/CN_Map'
+        link: '/note-map/cn-map'
       }]
     }]
   },
   {
     text: "大事记",
-    link: "/big-event-history/"
+    link: "/big-event-history"
   },
 ];

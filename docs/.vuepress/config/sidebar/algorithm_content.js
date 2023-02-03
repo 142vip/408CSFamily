@@ -1,6 +1,4 @@
 module.exports = [
-  // 'basic_introduction',
-  // 'linear_table',
   {
     text: '基础入门',
     link: "/ds/basic_introduction",

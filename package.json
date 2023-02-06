@@ -17,17 +17,11 @@
     "url": "https://github.com/142vip"
   },
   "devDependencies": {
-    "@vuepress/client": "2.0.0-beta.60",
-    "eslint": "8",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
     "vue": "^3.2.45",
     "vuepress": "2.0.0-beta.60",
     "vuepress-plugin-search-pro": "^2.0.0-beta.172",
-    "vuepress-theme-hope": "^2.0.0-beta.171"
+    "vuepress-theme-hope": "^2.0.0-beta.171",
+    "@vuepress/client": "2.0.0-beta.60"
   },
   "license": "MIT"
 }

@@ -20,6 +20,9 @@ readonly repoAddress="registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:"
 ## 版本号
 version=${1}
 
+## 镜像名称
+imageTagName=${repoAddress}${projectName}-${version}
+
 
 prepare_check(){
   if test -z "${version}";then
@@ -30,7 +33,7 @@ prepare_check(){
 
 run(){
   echo -e "${successLogger}---------------- shell ${projectName} start ---------------- "
-    docker build  -t  "${repoAddress}${projectName}-${version}" .
+    docker build  -t  "${imageTagName}" .
   echo -e "${successLogger}---------------- shell ${projectName} end   ---------------- "
   push_docker_image
 }
@@ -40,14 +43,14 @@ run(){
 
 ## 推送镜像
 push_docker_image(){
-    if [[ "$(docker images -q  "${repoAddress}${projectName}-${version}" 2> /dev/null)" != "" ]];
+    if [[ "$(docker images -q  "${imageTagName}" 2> /dev/null)" != "" ]];
       then
         ## 推送
-        docker push "${repoAddress}${projectName}-${version}"
+        docker push "${imageTagName}"
         echo -e "${successLogger}---------------- 上传镜像成功，删除本地镜像 ---------------- "
-        docker rmi "${repoAddress}${projectName}-${version}"
+        docker rmi "${imageTagName}"
     else
-        echo -e "${errorLogger}${currentTime}：镜像：${repoAddress}${projectName}-${version}不存在"
+        echo -e "${errorLogger}${currentTime}：[镜像] ${imageTagName}不存在"
     fi
   exit 0
 }

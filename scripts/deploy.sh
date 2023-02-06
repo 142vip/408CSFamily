@@ -72,7 +72,7 @@ run(){
       ## 删除容器
       delete_container  "${containerName}"
       ## 删除镜像
-      delete_image "${repoAddress}:${containerName}_${version}"
+      delete_image "${repoAddress}:${containerName}-${version}"
       ## 部署
       deploy_to_ali
       exit 0;

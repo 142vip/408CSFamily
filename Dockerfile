@@ -1,5 +1,6 @@
 ## 注意：vite构建需要支持node14以上，安装node16较为稳妥
 FROM registry.cn-hangzhou.aliyuncs.com/142vip/node:16.12.0-alpine AS build_base
+
 LABEL version="Beta1.0"  description="408CSFamily合集"
 LABEL author="【Github&公众号】：Rong姐姐好可爱" email="fairy@2925.com"
 

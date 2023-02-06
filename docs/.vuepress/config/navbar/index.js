@@ -1,4 +1,5 @@
-module.exports = [
+// 参考：https://theme-hope.vuejs.press/zh/guide/layout/navbar.html#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F
+export default [
   {
     text: '主页',
     link: '/'
@@ -6,7 +7,7 @@ module.exports = [
   {
     text: "算法恶补",
     children: [{
-      text: '习题练手',
+      text: '习题狂刷',
       link: '/algorithm/topic_practice'
     }, {
       text: '刷题笔记',

@@ -1,4 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
+import navbar from "./config/navbar";
+import sidebar from "./config/sidebar";
+import {searchProPlugin} from "vuepress-plugin-search-pro";
 
 export default {
   title: "计算机应试全家桶",
@@ -23,6 +26,11 @@ export default {
   ],
   // 参考主题：https://theme-hope.vuejs.press/zh/config/intro.html#%E9%85%8D%E7%BD%AE%E6%A6%82%E5%BF%B5
   theme: hopeTheme({
+    darkmode:"toggle",
+    // 支持全屏
+    fullscreen: true,
+    // 纯净模式
+    // pure: true,
     hostname:'https://408.142vip.cn',
     author:{
       name:'ChuFan',
@@ -31,26 +39,32 @@ export default {
     },
     favicon:"/408_favicon.ico",
     logo: "/assets/408_logo.png",
-    navbar: require("./config/navbar/index"),  // 注意这个关键字有所改变
-    sidebar: require("./config/sidebar/index"),
+    navbar: navbar,
+    // 导航栏布局
+    navbarLayout:{
+      start: ["Brand"],
+      center: ["Links"],
+      end: ["Language","Search","Repo", "Outlook", ]
+    },
+    sidebar: sidebar,
+    // sidebar: "heading",
 
     // 主题布局选项
     repo: "https://github.com/mmdapl/408CSFamily",
     logoDark:"/assets/408_logo.png",
 
-
     // 博客配置
-    blog_:{
+    blog:{
       name:'测试',
       avatar:'',
       description:'',
       intro:'',
       roundAvatar:true,
       timeline:"时间轴的顶部文字",
-      // articleInfo:"",
-      // medias:{
-      //   "BiliBili": "哔哩哔哩"
-      // }
+      articleInfo:"",
+      medias:{
+        "BiliBili": "https://space.bilibili.com/350937042?spm_id_from=333.1007.0.0"
+      }
     },
     lastUpdated: true,
     lastUpdatedText: "最近更新",
@@ -66,82 +80,32 @@ export default {
     searchMaxSuggestions: 10,
     plugins: {
       // 开启博客功能
-      // blog:true,
+      blog:true,
       // 代码块
       mdEnhance: {
         codetabs: true,
       },
+      copyCode: {
+        showInMobile:true
+      },
     },
   }),
-  // plugins: [
-  //   // 全文搜索 参考配置：https://github.com/vuepress/vuepress-next/blob/main/docs/.vuepress/config.ts
-  //   ['@vuepress/docsearch',
-  //     {
-  //       apiKey: '<API_KEY>',
-  //       indexName: '<INDEX_NAME>',
-  //       locales: {
-  //         '/': {
-  //           placeholder: '搜索一下',
-  //           translations: {
-  //             button: {
-  //               buttonText: '搜索一下',
-  //               buttonAriaLabel: '搜索一下',
-  //             },
-  //             modal: {
-  //               searchBox: {
-  //                 resetButtonTitle: '清除查询条件',
-  //                 resetButtonAriaLabel: '清除查询条件',
-  //                 cancelButtonText: '取消',
-  //                 cancelButtonAriaLabel: '取消'
-  //               },
-  //               startScreen: {
-  //                 recentSearchesTitle: '搜索历史',
-  //                 noRecentSearchesText: '没有搜索历史',
-  //                 saveRecentSearchButtonTitle: '保存至搜索历史',
-  //                 removeRecentSearchButtonTitle: '从搜索历史中移除',
-  //                 favoriteSearchesTitle: '收藏',
-  //                 removeFavoriteSearchButtonTitle: '从收藏中移除',
-  //               },
-  //               errorScreen: {
-  //                 titleText: '无法获取结果',
-  //                 helpText: '你可能需要检查你的网络连接',
-  //               },
-  //               footer: {
-  //                 selectText: '查询',
-  //                 selectKeyAriaLabel: 'Enter key',
-  //                 navigateText: '切换',
-  //                 navigateUpKeyAriaLabel: 'Arrow up',
-  //                 navigateDownKeyAriaLabel: 'Arrow down',
-  //                 closeText: '关闭',
-  //                 closeKeyAriaLabel: 'Escape key',
-  //                 searchByText: '技术支持',
-  //               },
-  //               noResultsScreen: {
-  //                 noResultsText: '无法找到相关结果',
-  //                 suggestedQueryText: '你可以尝试查询',
-  //                 openIssueText: '你认为该查询应该有结果？',
-  //                 openIssueLinkText: '点击反馈',
-  //               },
-  //             },
-  //           }
-  //         }
-  //       }
-  //     }],
-  //   // other plugins
-  //   // [
-  //   //   // 本地全文搜索
-  //   //   '@vuepress/plugin-search',
-  //   //   {
-  //   //     locales: {
-  //   //       '/': {
-  //   //         placeholder: '搜索',
-  //   //       },
-  //   //       '/zh/': {
-  //   //         placeholder: '搜索',
-  //   //       },
-  //   //     },
-  //   //     maxSuggestions: 10 // 显示最大搜索
-  //   //   },
-  //   // ],
-  // ]
+  // 插件配置
+  plugins: [
+    searchProPlugin({
+      // 索引全部内容
+      indexContent: true,
+      // 为分类和标签添加索引
+      customFields: [
+        {
+          getter: (page) => page.frontmatter.category,
+          formatter: "分类：$content",
+        },
+        {
+          getter: (page) => page.frontmatter.tag,
+          formatter: "标签：$content",
+        },
+      ],
+    }),
+  ],
 };

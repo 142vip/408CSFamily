@@ -1,11 +1,10 @@
 #!/bin/bash
 ## 功能：本地前后端项目构建、打包镜像，上传docker仓库
 ## 参考：https://blog.csdn.net/Dontla/article/details/125210694
+## 使用示例：bash xxx.sh  版本号 faster[可选]
+##    -  bash build_image.sh  0.0.1 faster
 ## 作者：储凡
-## 使用示例：bash xxx.sh  版本号
-##    -  bash build_image.sh  0.0.1
 ##
-
 
 ## 日志颜色定义
 readonly successLogger="\033[36m"
@@ -16,9 +15,13 @@ readonly currentTime=$(date "+%Y-%m-%d %H:%M:%S")
 ## 项目名称
 readonly projectName="408CSFamily"
 ## 仓库地址
-readonly repoAddress="registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:"
+readonly repoAddress="registry.cn-hangzhou.aliyuncs.com/142vip/doc_book"
 ## 版本号
 version=${1}
+## 是否先本地构建，执行npm run build操作
+isFaster=${2}
+## 镜像名称
+imageTagName=${repoAddress}:${projectName}-${version}
 
 
 prepare_check(){
@@ -30,7 +33,15 @@ prepare_check(){
 
 run(){
   echo -e "${successLogger}---------------- shell ${projectName} start ---------------- "
-    docker build  -t  "${repoAddress}${projectName}-${version}" .
+
+  if [ "${isFaster}" == "faster" ];then
+    ## 本地构建、快速制作镜像
+    npm run build && docker build -f Faster.Dockerfile --build-arg APP_VERSION="${version}" -t "${imageTagName}"  .
+  else
+    ## ci流程构建
+    docker build -f Dockerfile --build-arg APP_VERSION="${version}" -t "${imageTagName}"  .
+  fi
+
   echo -e "${successLogger}---------------- shell ${projectName} end   ---------------- "
   push_docker_image
 }
@@ -40,14 +51,14 @@ run(){
 
 ## 推送镜像
 push_docker_image(){
-    if [[ "$(docker images -q  "${repoAddress}${projectName}-${version}" 2> /dev/null)" != "" ]];
+    if [[ "$(docker images -q  "${imageTagName}" 2> /dev/null)" != "" ]];
       then
         ## 推送
-        docker push "${repoAddress}${projectName}-${version}"
+        docker push "${imageTagName}"
         echo -e "${successLogger}---------------- 上传镜像成功，删除本地镜像 ---------------- "
-        docker rmi "${repoAddress}${projectName}-${version}"
+        docker rmi "${imageTagName}"
     else
-        echo -e "${errorLogger}${currentTime}：镜像：${repoAddress}${projectName}-${version}不存在"
+        echo -e "${errorLogger}${currentTime}：[镜像] ${imageTagName}不存在"
     fi
   exit 0
 }

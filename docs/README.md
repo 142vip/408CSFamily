@@ -1,17 +1,13 @@
 ---
 home: true
-heroImage: https://static01.imgkr.com/temp/f0108d7c178b4ce196e43ebec14fbf23.png
-heroImageDark: http://vuejs.org/images/logo.png
 heroText: 计算机应试全家桶
-externalLinkIcon: false 
-tagline: 磨刀不误砍柴工、读完硕士再打工，笔记内容持续更新...
-
+tagline: 磨刀不误砍柴工、读完硕士再打工...
 actions:
   - text: 快速开始→
     link: /guide/
     type: primary
   - text: 工作机会
-    link: /gangg
+    link: /work/
     type: secondary
 features:
   - title: 基础概览
@@ -70,11 +66,9 @@ footerWrap:
     - title: 哔哩哔哩
       link: https://space.bilibili.com/350937042
       details: 不定期更新
-#  <a href="https://tongji.baidu.com/web/welcome/login" target="_blank">百度统计</a>
-footer:    Copyrights © 2015-2021 妍荣姑娘网络工作室 | <a href="https://github.com/mmdapl" target="_blank">Chu·Fan</a> 
+  
 
 ---
-
 
 ---
 
@@ -90,7 +84,7 @@ footer:    Copyrights © 2015-2021 妍荣姑娘网络工作室 | <a href="https:
 git clone https://github.com/mmdapl/408CSFamily.git
 
 ## 进入408CSFamily文件夹中
-cd 408CSFamily/
+cd 408CSFamily
 
 ## tips: 如果本地已经clone过仓库，建议执行pull指令，获取最新
 git pull
@@ -99,6 +93,7 @@ git pull
 pnpm install
 
 ## 执行dev指令，本地启动项目，打开http://localhost:4200即可访问文档
+
 pnpm dev
 
 ```
@@ -110,7 +105,7 @@ pnpm dev
 git clone https://github.com/mmdapl/408CSFamily.git
 
 ## 进入408CSFamily文件夹中
-cd 408CSFamily/
+cd 408CSFamily
 
 ## tips: 如果本地已经clone过仓库，建议执行pull指令，获取最新
 git pull
@@ -154,8 +149,6 @@ yarn run dev
 
 
 ### 提交记录
-
-
 
 
 ---

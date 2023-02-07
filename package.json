@@ -1,25 +1,28 @@
 {
   "name": "408CSFamily",
   "description": "专业代号408 ，计算机基础知识点合集",
+  "version": "0.0.0",
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "build-image": "bash scripts/build_image.sh $npm_package_version",
+    "image": "bash scripts/build_image.sh $npm_package_version",
+    "faster-image": "bash scripts/build_image.sh $npm_package_version faster",
     "ali": "bash scripts/deploy.sh ali $npm_package_version",
     "github": "bash scripts/page_deploy.sh",
     "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +"
   },
-  "author":{
+  "author": {
     "name": "Chu Fan",
     "email": "fairy_408@2925.com",
     "url": "https://github.com/142vip"
   },
   "devDependencies": {
     "@vuepress/client": "2.0.0-beta.60",
-    "vue": "^3.2.45",
+    "vue": "^3.2.47",
     "vuepress": "2.0.0-beta.60",
-    "vuepress-theme-hope": "^2.0.0-beta.171"
+    "vuepress-plugin-search-pro": "^2.0.0-beta.172",
+    "vuepress-theme-hope": "^2.0.0-beta.172"
   },
   "license": "MIT"
 }

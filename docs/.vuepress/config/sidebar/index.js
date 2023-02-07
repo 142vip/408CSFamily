@@ -1,8 +1,7 @@
-module.exports = {
-  // "/category/": require("../../category/sidebar_contents"),
-  // "/DataStructure/": require("../../category/sidebar_contents"),
-  "/ds": require("./ds_content.js"),
-  "/ds/coding": require("./algorithm_content")
+import dsSidebar from "./ds.sidebar";
+import algorithmSidebar from "./algorithm.sidebar";
 
-
+export default{
+  "/ds": dsSidebar,
+  "/ds/coding": algorithmSidebar
 };

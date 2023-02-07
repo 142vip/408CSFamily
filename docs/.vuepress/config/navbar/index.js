@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     text: '主页',
     link: '/'
@@ -6,7 +6,7 @@ module.exports = [
   {
     text: "算法恶补",
     children: [{
-      text: '习题练手',
+      text: '习题狂刷',
       link: '/algorithm/topic_practice'
     }, {
       text: '刷题笔记',

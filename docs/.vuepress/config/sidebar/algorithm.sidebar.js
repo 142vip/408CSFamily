@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     text: '基础入门',
     link: "/ds/basic_introduction",

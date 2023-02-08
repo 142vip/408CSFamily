@@ -1,6 +1,7 @@
 import themeConfig from "./config/theme.config";
 import pluginsConfig from "./config/plugins.config";
 
+
 export default {
   title: "计算机应试全家桶",
   description: "磨刀不误砍柴工，读完硕士再打工",
@@ -22,6 +23,6 @@ export default {
       })();`
     ]
   ],
-  theme: themeConfig,
-  plugins: pluginsConfig
+  ...themeConfig,
+  ...pluginsConfig
 }

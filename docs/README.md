@@ -6,7 +6,7 @@ actions:
   - text: 快速开始→
     link: /guide/
     type: primary
-  - text: 工作机会
+  - text: 工作机会 💡
     link: /work/
     type: secondary
 features:

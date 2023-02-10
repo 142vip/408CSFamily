@@ -1,11 +1,13 @@
 import themeConfig from "./config/theme.config";
 import pluginsConfig from "./config/plugins.config";
 
+// 用于区分base路径，是否nginx代理
+const PROXY_DOMAIN=process.env.PROXY_DOMAIN||false
 
 export default {
   title: "计算机应试全家桶",
   description: "磨刀不误砍柴工，读完硕士再打工",
-  // base: "/408CSFamily/",
+  base: PROXY_DOMAIN ? "/408CSFamily/":"/",
   port: 4200,
   head: [
     [

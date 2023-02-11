@@ -1,29 +1,16 @@
-/*
- * @Description: 
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-01-19 08:04:19
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-24 08:25:28
- */
-
-module.exports = [
-  // {
-  //   text: "考研规划",
-  //   link: "/DS1/"
-  // },
+export default [
   {
-    text: '首页',
+    text: '主页',
     link: '/'
   },
   {
-    text: "恶补算法",
+    text: "算法恶补",
     children: [{
-      text: '习题练手',
-      link: '/Algorithm/topic_practice'
+      text: '习题狂刷',
+      link: '/algorithm/topic_practice'
     }, {
       text: '刷题笔记',
-      link: '/Algorithm/algorithm_note'
+      link: '/algorithm/algorithm_note'
     }, {
       text: '在线刷题',
       children: [{
@@ -38,20 +25,20 @@ module.exports = [
   },
   {
     text: "数据结构",
-    link: "/DS/basic_introduction"
+    link: "/ds/basic_introduction"
   },
   {
     text: "操作系统",
-    link: "/OS/"
+    link: "/os/"
   },
   {
     text: "计算机组成原理",
-    link: "/CCP/"
+    link: "/ccp/"
   },
 
   {
     text: "计算机网络",
-    link: "/CN/"
+    link: "/cn/"
   }, {
     text: '其他资料',
     children: [{
@@ -64,22 +51,21 @@ module.exports = [
       text: "思维导图",
       children: [{
         text: '数据结构',
-        link: '/NoteMap/DS_Map'
+        link: '/note-map/ds-map'
       }, {
         text: '操作系统',
-        link: '/NoteMap/OS_Map'
+        link: '/note-map/os-map'
       }, {
         text: '计算机组成原理',
-        link: '/NoteMap/CCP_Map'
+        link: '/note-map/ccp-map'
       }, {
         text: '计算机网络',
-        link: '/NoteMap/CN_Map'
+        link: '/note-map/cn-map'
       }]
     }]
   },
   {
     text: "大事记",
-    link: "/Big_Event_History/"
+    link: "/big-event-history"
   },
-
 ];

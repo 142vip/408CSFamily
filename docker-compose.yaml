@@ -2,7 +2,7 @@ version: '2'
 services:
   ### 408CSFamily服务，ip范围 172.30.0.200
   408CSFamily:
-    image: registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:408CSFamily_0.0.1
+    image: registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:408CSFamily-0.0.1
     container_name: 408CSFamily
     restart: on-failure
     hostname: 408CSFamily
@@ -10,7 +10,7 @@ services:
       - "7000:80"
     networks:
       net:
-        ipv4_address: 172.30.0.200
+        ipv4_address: 172.30.0.100
 
 ## 创建桥接网络
 networks:

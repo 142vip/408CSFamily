@@ -1,19 +1,10 @@
 #!/usr/bin/env sh
 
-###
- # @Description: 静态资源网站部署脚本
- # @Version: Beta1.0
- # @Author: 【B站&公众号】Rong姐姐好可爱
- # @Date: 2021-02-19 22:34:57
- # @LastEditors: 【B站&公众号】Rong姐姐好可爱
- # @LastEditTime: 2022-04-18 23:35:15
-### 
-
 commitInfo=${1}
 
 set -e
 
-# 进入上级目录，并编译
+## 进入上级目录，并编译
 npm run build
 
 ## 切换到dist文件目录
@@ -29,16 +20,17 @@ fi
 
 git commit -m "refactor:${commitInfo}"
 
-
 ## 配置个人信息
-git config user.name "晚上吃芝士+葡萄的妹妹"
-git config user.email "fairy0115@2925.com"
+git config user.name '妹妹手上有抹茶'
+git config user.email 'fairy_408@2925.com'
+
+git config --list
 
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/mmdapl/JavaScriptCollection.git master:pages/github
+git push -f   https://github.com/mmdapl/408CSFamily.git master:pages/github
 
 
 cd -

@@ -36,7 +36,7 @@ run(){
 
   if [ "${isFaster}" == "faster" ];then
     ## 本地构建、快速制作镜像
-    npm run build && docker build -f Faster.Dockerfile --build-arg APP_VERSION="${version}" -t "${imageTagName}"  .
+    pnpm build && docker build -f Faster.Dockerfile --build-arg APP_VERSION="${version}" -t "${imageTagName}"  .
   else
     ## ci流程构建
     docker build -f Dockerfile --build-arg APP_VERSION="${version}" -t "${imageTagName}"  .

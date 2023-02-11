@@ -15,16 +15,15 @@ if [ "${commitInfo}" -eq "" ]; then
     commitInfo="408CSFamily page init"
 fi
 
+## 配置个人信息
+git config user.name 'chu fan' && git config user.email 'fairy_408@2925.com' && git config --list
+
 git commit -m "refactor:${commitInfo}"
 
-## 配置个人信息
-git config user.name '妹妹脸上有抹茶' && git config user.email 'fairy_408@2925.com' && git config --list
 
+# git push -f https://github.com/mmdapl/408CSFamily.git main
 
-
-# git push -f   https://@github.com/mmdapl/408CSFamily.git main
-
-git push -f   https://@github.com/mmdapl/408CSFamily.git main:pages/github
+git push -f https://github.com/mmdapl/408CSFamily.git main:pages/github
 
 
 cd -

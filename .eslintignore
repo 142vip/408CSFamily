@@ -1,0 +1,7 @@
+node_modules
+manuscript
+.github
+.idea
+.dockerignore
+.gitignore
+

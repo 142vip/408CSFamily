@@ -1,7 +1,7 @@
 export const algorithmSidebar = [
   {
     text: '基础入门',
-    link: "/ds/basic_introduction",
+    link: '/ds/basic_introduction',
     collapsible: false,
     children: [{
       text: '1.1 基本概念',
@@ -12,5 +12,5 @@ export const algorithmSidebar = [
     }, {
       text: '1.3 算法和算法评价',
       link: '/ds/basic_introduction/3.algorithm_and_algorithm_evaluation.md'
-    }],
+    }]
   }]

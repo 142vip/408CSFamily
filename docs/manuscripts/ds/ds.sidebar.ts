@@ -1,7 +1,7 @@
 export const dsSidebar = [
   {
     text: '基础入门',
-    prefix: "basic-introduction",
+    prefix: 'basic-introduction',
     collapsible: false,
     children: [
       {
@@ -16,12 +16,12 @@ export const dsSidebar = [
         text: '1.3 算法和算法评价',
         link: '3.algorithm_and_algorithm_evaluation.md'
       }
-    ],
+    ]
   },
   {
     text: '线性表',
     collapsible: false,
-    prefix: "linear-table",
+    prefix: 'linear-table',
     children: [
       {
         text: '2.1 基础概念和操作',
@@ -58,11 +58,11 @@ export const dsSidebar = [
         text: '2.9 零碎知识补充',
         link: '9.piecemeal_knowledge_supplement.md'
       }
-    ],
+    ]
   },
   {
-    text: "栈和队列",
-    prefix: "栈和队列",
+    text: '栈和队列',
+    prefix: '栈和队列',
     collapsible: false,
     children: [
       {

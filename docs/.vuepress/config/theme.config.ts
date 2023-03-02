@@ -14,13 +14,13 @@ export default {
     locales: langConfig,
     darkmode:"toggle",
     // 支持全屏
-    // fullscreen: true,
-    // 纯净模式
+    fullscreen: true,
+    // 纯净模式s
     // pure: true,
     print: false, // 打印按钮
     hostname:'https://408.142vip.cn',
     author:{
-      name:'ChuFan',
+      name:'Chu Fan',
       email:'fairy_408@2925.com',
       url:'https://www.142vip.cn'
     },

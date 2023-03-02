@@ -67,6 +67,6 @@ export const navbar = [
     },
     {
         text: "大事记",
-        link: "/manuscripts/big-event-history"
+        link: "/big-event-history"
     },
 ];

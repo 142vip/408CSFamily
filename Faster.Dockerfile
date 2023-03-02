@@ -9,6 +9,5 @@ ARG APP_VERSION
 LABEL version=$APP_VERSION  description="408CSFamily合集"
 LABEL author="【Github&公众号】：Rong姐姐好可爱" email="fairy_408@2925.com"
 
-# 将dist文件中的内容复制到 /usr/share/nginx/html/
 COPY ./docs/.vuepress/dist/  /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/

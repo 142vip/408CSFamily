@@ -37,7 +37,7 @@ export default {
     // sidebar: "heading",
 
     // 主题布局选项
-    repo: "https://github.com/mmdapl/408CSFamily",
+    repo: "https://github.com/142vip/408CSFamily",
     logoDark:"/assets/408_logo.png",
 
     // 博客配置

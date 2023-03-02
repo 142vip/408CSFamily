@@ -16,9 +16,10 @@ export default defineUserConfig({
     base: PROXY_DOMAIN ? "/408CSFamily/" : "/",
     port: 4200,
     head: [
-        ["link", {rel: "icon", href: "/fight_favicon.ico"}],
         // vercel统计 相关配置
-        ['script', {type: 'text/javascript', src: '/_vercel/insights/script.js'}],
+        [
+            'script', {type: 'text/javascript', src: '/_vercel/insights/script.js'}
+        ],
         [
             "link", {rel: "icon", href: "/408_favicon.ico"}
         ],

@@ -41,32 +41,12 @@ export const navbar = [
         link: "/manuscripts/cn"
     },
     {
-        text: '其他资料',
-        children: [{
-            text: '考研相关',
-            children: [{
-                text: '111',
-                link: '/333'
-            }]
-        }, {
-            text: "思维导图",
-            children: [{
-                text: '数据结构',
-                link: '/note-map/ds-map'
-            }, {
-                text: '操作系统',
-                link: '/note-map/os-map'
-            }, {
-                text: '计算机组成原理',
-                link: '/note-map/ccp-map'
-            }, {
-                text: '计算机网络',
-                link: '/note-map/cn-map'
-            }]
-        }]
-    },
-    {
         text: "大事记",
         link: "/big-event-history"
     },
+    {
+        text: '其他',
+        link: "/manuscripts/note-map"
+    },
+
 ];

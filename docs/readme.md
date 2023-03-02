@@ -4,10 +4,10 @@ heroText: 计算机应试全家桶
 tagline: 磨刀不误砍柴工、读完硕士再打工...
 actions:
   - text: 快速开始→
-    link: /guide/
+    link: /quick-start.md
     type: primary
   - text: 工作机会 💡
-    link: /work/
+    link: /job-poster-bytedance.md
     type: secondary
 features:
   - title: 基础概览
@@ -68,7 +68,6 @@ footerWrap:
       details: 不定期更新
   
 
----
 
 ---
 
@@ -159,7 +158,7 @@ yarn run dev
 ### 提交记录
 
 
-## 赞赏列表
+### 赞赏列表
 
 
 以下排名不分先后!  [传送门→]() **赞赏过的一定要微信跟我说呀！！！！！！**
@@ -176,14 +175,14 @@ yarn run dev
 
 
 
-## 赞助商
+### 赞助商
 
 **以下排名不分先后! 还木有收到赞助，哈哈哈，先留坑**
 
 
 
 
-## 联系作者
+### 联系作者
 
 若系列文章对你有所帮助，欢迎订阅公众号或微信”骚扰“，获取更多内容。**商务合作请备注来意**
 
@@ -192,9 +191,11 @@ yarn run dev
         <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
             <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg" 
                 width="250px"
+                style="margin:10px"
                 title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
             <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
                 width="250px"
+                style="margin:10px"
                 title="欢迎添加微信：chufan443 " alt="联系作者"/>
         </table>
     </div>

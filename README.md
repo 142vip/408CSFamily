@@ -1,22 +1,4 @@
 
-<!-- <img src="https://cdn.142vip.cn/article-notes/img/image-20200605224832237.png"> -->
-<p align="center">
-    <img src="https://static01.imgkr.com/temp/f0108d7c178b4ce196e43ebec14fbf23.png">
-</p>
-
-<p align="center">
-  <a href="#gzh" target="_blank"><img src="https://img.shields.io/badge/WeChat-公众号-5wd.svg"></a> 
-<a href="#wechat" target="_blank"><img src="https://img.shields.io/badge/WeChat-微信-yellow.svg"></a> 
-<a href="https://space.bilibili.com/350937042" target="_blank"><img src="https://img.shields.io/badge/Bilibili-哔哩哔哩-green.svg"></a> 
-<a href="https://142vip.cn" target="_blank"><img src="https://img.shields.io/badge/142vip-网站-orange.svg"></a>
-<a href="https://blog.142vip.cn" target="_blank"><img src="https://img.shields.io/badge/blog-博客-blue.svg"></a>
-<a href="https://github.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/Github-Github-9ac.svg"></a>
-<a href="https://gitee.com/mmdapl" target="_blank"><img src="https://img.shields.io/badge/Gitee-码云-4ed.svg"></a>
-<a href="https://blog.csdn.net/Mmdapl" target="_blank"><img src="https://img.shields.io/badge/csdn-CSDN-8ea.svg"></a>
-<a href="https://juejin.im/user/448256476724807" target="_blank"><img src="https://img.shields.io/badge/JueJin-掘金-75c.svg"></a>
-</p>
-
-<!-- [Github文档](https://mmdapl.github.io/408CSFamily/) |  [Gitee文档（国内访问快）]() -->
 ## 写最前面
 >   `408CSFamily` 我的理解是：408计算机专业课”全家桶“，而408相信考研er都知道计算机考研专业课代码；在最新的高校计算机研究生招考中，已经越来越多的学校改考408。可见408所涉及到的专业课举足轻重的地位；不论是在考研或者找工作，我相信408的专业基础必定是难以避免的，所以话不多说、形势复杂，唯一能做的就是不停的学习、巩固基础知识，加油！
 >
@@ -28,21 +10,21 @@
 2. 建议结合思维导图进行学习
 
 
-## 在线阅读
+### 在线浏览
 
-[https://408.142vip.cn](https://408.142vip.cn)
+- 稳定版： <https://408.142vip.cn>
 
 
 网站无法访问时，建议通过科学上网访问备用网络
 
-- Github： [https://142vip.github.io/408CSFamily](https://142vip.github.io/408CSFamily)
-- Netlify： [https://408-family.netlify.app](https://408-family.netlify.app)
-- Vercel： [https://408-family.vercel.app](https://408-family.vercel.app)
+- Github： <https://142vip.github.io/408CSFamily>
+- Netlify： <https://408-family.netlify.app>
+- Vercel： <https://408-family.vercel.app>
 
 
 
 
-## 思维导图【MD文档版本】
+### 思维导图【MD文档版本】
 
 > 主要是关键知识，更新优化中...
 
@@ -114,16 +96,16 @@
 - [零碎知识补充](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&amp;mid=2247485549&amp;idx=2&amp;sn=5282cd006b6c33e4bfe992298602e053&amp;chksm=fcdfb1e1cba838f743a335bad530cf415eef57a417b807257d8ed6983047c2d57d5552b34cb0&token=1697862929&lang=zh_CN#rd)
 
 
-#### [栈和队列](/数据结构/栈和队列/Readme.md)
+#### [栈和队列](Readme.md)
 
-- [栈的基本概念和基本操作](/数据结构/栈和队列/1.栈的基本概念和基本操作.md)
-- [栈的顺序存储结构](/数据结构/栈和队列/2.栈的顺序存储结构.md)
-- [栈的链式存储结构](/数据结构/栈和队列/3.栈链式存储结构.md)
-- [队列的基本概念和基础操作](/数据结构/栈和队列/4.队列的基本概念和基础操作.md)
-- [队列的顺序存储](/数据结构/栈和队列/5.队列的顺序存储结构.md)
-- [队列的链式存储](/数据结构/栈和队列/6.队列的链式存储结构.md)
-- [栈和队列的应用](/数据结构/栈和队列/栈和队列的应用.md)
-- [特殊矩阵的压缩存储](/数据结构/栈和队列/8.特殊矩阵的压缩存储.md)
+- [栈的基本概念和基本操作](1.栈的基本概念和基本操作.md)
+- [栈的顺序存储结构](2.栈的顺序存储结构.md)
+- [栈的链式存储结构](3.栈链式存储结构.md)
+- [队列的基本概念和基础操作](4.队列的基本概念和基础操作.md)
+- [队列的顺序存储](5.队列的顺序存储结构.md)
+- [队列的链式存储](6.队列的链式存储结构.md)
+- [栈和队列的应用](栈和队列的应用.md)
+- [特殊矩阵的压缩存储](8.特殊矩阵的压缩存储.md)
 
 
 #### 树与二叉树
@@ -537,68 +519,101 @@
 - 有安全相关工作背景者优先，有大型网站架构经验者优先，具备全栈/跨端开发能力者优先。 -->
 
 
-
-## 赞赏支持
-
-**赞赏过的一定要微信跟我说呀！！！！！！**
+## 赞赏列表
 
 
-<a name="wechat"></a>
-
-
-<div align="left">
-<img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/wechat_donate.png" width="300" height="300" style="border-radius:5px;" />
-
-
-</div>
-
-
-## 联系我
-
-
-有任何问题或建议，欢迎微信`骚扰`，商务合作请备注！
-
-<div align="left">
-<img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/wechat_code.jpg" width="300" height="300"  style="border-radius:5px;"/>
-</div>
-
-
-## 鸣谢
-
-
-以下排名不分先后!
+以下排名不分先后!  [传送门→]() **赞赏过的一定要微信跟我说呀！！！！！！**
 
 
 <div>
-  <a href="https://github.com/ChiefPing" target="_blank">
+  <a href="https://github.com/ChiefPing" target="_blank" style="margin: 5px">
     <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="brder-radius:5px;"/>
-  </a>  <a href="https://github.com/xiaoliuxin" target="_blank">
+  </a> 
+   <a href="https://github.com/xiaoliuxin" target="_blank" style="margin: 5px">
     <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
   </a>
 </div>
 
 
-## 赞助列表
 
-以下排名不分先后!
+## 赞助商
 
-
-
+**以下排名不分先后! 还木有收到赞助，哈哈哈，先留坑**
 
 
-## 公众号
-
-- 相逢不用忙归去，明日黄花蝶也愁....
-
-- 若系列文章对你有所帮助，不如来公众号交个朋友吧.
 
 
-<a name="gzh"></a>
+## 联系作者
+
+若系列文章对你有所帮助，欢迎订阅公众号或微信”骚扰“，获取更多内容。**商务合作请备注来意**
+
+<div style="text-align: center">
+    <div  align="center" >
+        <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
+            <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg" 
+                width="250px"
+                title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
+            <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
+                width="250px"
+                title="欢迎添加微信：chufan443 " alt="联系作者"/>
+        </table>
+    </div>
+    <div  style="text-align: center;padding: 10px" align="center">
+        <a
+          href="https://github.com/mmdapl"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转Github主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/github.svg"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+        <a
+          href="https://gitee.com/Mmdapl"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转码云主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+        <a
+          href="https://juejin.im/user/448256476724807"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转掘金主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+        <a
+          href="https://space.bilibili.com/350937042"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转B站主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+        <a
+          href="https://blog.csdn.net/Mmdapl"
+          rel="nofollow noreferrer"
+          target="_blank"
+          title="点击跳转CSDN博客主页"
+        >
+          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
+            title="点击跳转CSDN博客主页"
+            style="margin: 5px;width: 24px;height: 24px;">
+        </a>
+    </div>
+</div>
+
+交流/加群/互看朋友圈
+当然：**聊天 /提问 /建议 /提需求** 可以在本公众号直接**私信**，后台可以看到，有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。
 
 
-<p>
-  <img src="https://cdn.jsdelivr.net/gh/lir0115/images@main/qr_code/gongzhonghao.jpg"  style="border-radius:10px;">
-</p>
+
+
 
 
 

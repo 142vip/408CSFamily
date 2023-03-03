@@ -40,7 +40,7 @@ jobs:
           # 缓存 pnpm 依赖
           cache: pnpm
       - name: Build And Push Docker image
-        run: PROXY_DOMAIN=true pnpm faster-image
+        run:  pnpm faster-image
 
   Deploy-ESC:
     needs: Docker-Image

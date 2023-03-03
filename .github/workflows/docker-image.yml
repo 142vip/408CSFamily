@@ -1,0 +1,52 @@
+# 构建Docker镜像
+name: Docker-Image
+
+## 触发条件
+on:
+#  push:
+#      branches:
+#        - master
+#        - next
+   # Publish semver tags as releases.
+#      tags: [ 'v*.*.*' ]
+  # 手动触发部署
+  workflow_dispatch:
+#  pull_request:
+#    branches:
+#      - master
+#      - next
+
+## 环境变量
+env:
+  REGISTRY: registry.cn-hangzhou.aliyuncs.com
+  UserName: mmdapl
+
+jobs:
+  Docker-Image:
+    name: "构建Docker镜像"
+    runs-on: ubuntu-latest
+    if: github.repository == '142vip/408CSFamily'
+    permissions:
+      actions: read
+      pull-requests: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Login Docker
+        run: |
+          docker version
+          echo "-----------Docker Login-----------"
+          docker login --username=${{ env.UserName }} --password=${{ secrets.DOCKER_PASSWORD }} ${{env.REGISTRY}}
+
+      - name: PNPM Install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          node-version: 14.20.1
+          run_install: true
+          # 缓存 pnpm 依赖
+          cache: pnpm
+      - name: Build And Push Docker image
+        run: PROXY_DOMAIN=true pnpm faster-image

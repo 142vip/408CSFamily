@@ -1,10 +1,11 @@
-import pluginsConfig from "./config/plugins.config";
-import themeConfig from "./config/theme.config";
+import { getDirname, path } from "@vuepress/utils";
 import { defineUserConfig } from "vuepress";
-import { fileURLToPath } from "node:url";
-import { path } from "@vuepress/utils";
+
+import pluginsConfig from "./config/plugins.config.js";
+import themeConfig from "./config/theme.config.js";
+
 // @ts-ignore
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = getDirname(import.meta.url);
 
 // 用于区分base路径，是否nginx代理
 const PROXY_DOMAIN = process.env.PROXY_DOMAIN || false;

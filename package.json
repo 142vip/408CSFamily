@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lintfix\" && chmod +x .husky/pre-commit",
+    "prepare": "rm -rf .husky &&  husky install && npx husky add .husky/pre-commit \"npm run lintfix && git add .\" && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "build-proxy": "PROXY_DOMAIN=true vuepress build docs",

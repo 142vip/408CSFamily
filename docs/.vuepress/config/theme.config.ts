@@ -14,7 +14,7 @@ export default {
         locales: langConfig,
         darkmode: "toggle",
         // 支持全屏
-        fullscreen: true,
+        // fullscreen: true,
         // 纯净模式s
         // pure: true,
         print: false, // 打印按钮
@@ -61,12 +61,12 @@ export default {
         // copyright:false,
 
         // 主题色选择器
-        themeColor: {
-            blue: "#2196f3",
-            red: "#f26d6d",
-            green: "#3eaf7c",
-            orange: "#fb9b5f",
-        },
+        // themeColor: {
+        //     blue: "#2196f3",
+        //     red: "#f26d6d",
+        //     green: "#3eaf7c",
+        //     orange: "#fb9b5f",
+        // },
 
         plugins: {
             blog: true,

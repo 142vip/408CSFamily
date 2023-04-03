@@ -40,13 +40,16 @@ jobs:
           echo "-----------Docker Login-----------"
           docker login --username=${{ env.UserName }} --password=${{ secrets.DOCKER_PASSWORD }} ${{env.REGISTRY}}
 
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14.20.1
+
       - name: PNPM Install
         uses: pnpm/action-setup@v2
         with:
           version: 7
-          node-version: 14.20.1
           run_install: true
-          # 缓存 pnpm 依赖
-          cache: pnpm
+
       - name: Build And Push Docker image
         run: PROXY_DOMAIN=true pnpm faster-image

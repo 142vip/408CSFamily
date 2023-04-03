@@ -18,19 +18,16 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      - name: Setup PNPM
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14.20.1
+
+      - name: PNPM Install
         uses: pnpm/action-setup@v2
         with:
           version: 7
           run_install: true
-
-      - name: Setup Node Version
-        uses: actions/setup-node@v3
-        with:
-          # 选择要使用的 node 版本
-          node-version: 14.20.1
-          # 缓存 pnpm 依赖
-          cache: pnpm
 
       # 运行构建脚本
       - name: Build VuePress Site
@@ -38,7 +35,7 @@ jobs:
           PROXY_DOMAIN=true pnpm build
 
       - name: Deploy to GitHub Page
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: pages/github
           build_dir: docs/.vuepress/dist

@@ -2,7 +2,7 @@
   "name": "408CSFamily",
   "description": "专业代号408 ，计算机基础知识点合集",
   "version": "0.0.0",
-  "main": "index.js",
+  "packageManager": "pnpm@7.2.1",
   "scripts": {
     "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lintfix\" && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",

@@ -9,7 +9,7 @@
 ## 日志颜色定义
 readonly successLogger="\033[36m"
 readonly errorLogger="\033[1;31m"
-readonly warnLogger="\033[1;33m"
+
 ## 定义时间
 readonly currentTime=$(date "+%Y-%m-%d %H:%M:%S")
 ## 项目名称
@@ -24,6 +24,7 @@ isFaster=${2}
 imageTagName=${repoAddress}:${projectName}-${version}
 
 
+## 预检查
 prepare_check(){
   if test -z "${version}";then
       echo -e "${errorLogger}${currentTime}:参数错误 版本号不能为空。参考版本： 0.0.x"
@@ -31,15 +32,29 @@ prepare_check(){
   fi
 }
 
+
+## 运行命令
 run(){
   echo -e "${successLogger}---------------- shell ${projectName} start ---------------- "
 
   if [ "${isFaster}" == "faster" ];then
     ## 本地构建、快速制作镜像
-    pnpm build && docker build -f Faster.Dockerfile --build-arg APP_VERSION="${version}" -t "${imageTagName}"  .
+    pnpm build && docker build  \
+    --build-arg APP_VERSION="${version}" \
+    --build-arg CONTAINER_BUILD=false \
+    -t "${imageTagName}"  .
   else
-    ## ci流程构建
-    docker build -f Dockerfile --build-arg APP_VERSION="${version}" -t "${imageTagName}"  .
+    ## ci流程，容器构建打包
+    docker build  \
+    --build-arg APP_VERSION="${version}" \
+    --build-arg CONTAINER_BUILD=true \
+    -t "${imageTagName}"  .
+
+    echo  12312
+    echo     docker build  \
+             --build-arg APP_VERSION="${version}" \
+             --build-arg CONTAINER_BUILD=true \
+             -t "${imageTagName}"  .
   fi
 
   echo -e "${successLogger}---------------- shell ${projectName} end   ---------------- "

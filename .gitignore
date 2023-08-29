@@ -58,7 +58,6 @@ typings/
 .git
 .vscode
 .env
-.idea
 .DS_Store
 dist
 lib
@@ -72,3 +71,4 @@ package-lock.json
 templete
 /docs/.vuepress/.temp/
 /docs/.vuepress/.cache/
+/.husky/

@@ -1,0 +1,22 @@
+name: Sync with Upstream
+
+on:
+  push:
+    branches:
+      - main  # 指定触发同步的分支
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Sync with Upstream
+        run: |
+          git remote add upstream https://github.com/142vip/408CSFamily.git
+          git fetch upstream
+          git checkout main
+          git merge upstream/main
+          git push origin main

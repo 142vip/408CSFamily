@@ -2,7 +2,7 @@
 
 ## 功能：设置docker自定义network，并指定网关、IP范围
 ## 参考：https://blog.csdn.net/Dontla/article/details/125210694
-## 作者：Rong姐姐好可爱
+## 作者：储凡
 ## 使用示例：bash xxx.sh 容器名称  镜像地址
 ##
 
@@ -70,7 +70,7 @@ init_network(){
      docker network ls
      exit ;
   else
-    echo -e "${successLogger}---------------- 网络${networdefaultNetworkNamekName},现进行初始化 ---------------- "
+    echo -e "${successLogger}---------------- 网络${defaultNetworkName},现进行初始化 ---------------- "
     docker network ls
     docker network create \
       --subnet="${subnet}" \

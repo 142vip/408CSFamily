@@ -7,14 +7,14 @@
     "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lintfix\" && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "build-proxy": "PROXY_DOMAIN=true vuepress build docs",
+    "build:proxy": "PROXY_DOMAIN=true vuepress build docs",
     "image": "bash scripts/build_image.sh $npm_package_version",
-    "faster-image": "bash scripts/build_image.sh $npm_package_version faster",
-    "ali": "bash scripts/deploy.sh ali $npm_package_version",
-    "github": "bash scripts/page_deploy.sh",
-    "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +",
+    "image:faster": "bash scripts/build_image.sh $npm_package_version faster",
+    "deploy:ali": "bash scripts/deploy.sh ali $npm_package_version",
+    "deploy:github": "bash scripts/page_deploy.sh",
     "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore .",
-    "lintfix": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore ."
+    "lintfix": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .",
+    "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +"
   },
   "author": {
     "name": "Chu Fan",

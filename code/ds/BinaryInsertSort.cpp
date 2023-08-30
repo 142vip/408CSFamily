@@ -8,7 +8,6 @@ void BinaryInsertSort(ElemType Arr[],int n){
 
     lowIndex=1;         // 左侧子表 折半查找起始位置
     highIndex=i-1;     // 左侧子表 折半查找结束位置
-
     while(lowIndex<=highIndex){
 
       // 左侧有序子表的中间位置角标
@@ -23,7 +22,8 @@ void BinaryInsertSort(ElemType Arr[],int n){
       }
     }
 
-    // 跳出循环需要（lowIndex>heightIndex），说明待插入位置的角标在heightIndex之后，为 heightIndex+1,此时需要将（heightIndex，i）之间的所有元素后移
+    // 跳出循环需要（lowIndex>heightIndex），
+   //  说明待插入位置的角标在heightIndex之后，为 heightIndex+1,此时需要将（heightIndex，i）之间的所有元素后移
 
     for(j=i-1;j>highIndex;--j){
       Arr[j+1]=Arr[j]

@@ -2,11 +2,7 @@
 # 计算机网络
 
 <iframe
-src="https://142vip-cn.feishu.cn/mindnotes/OMjpbKakpmQRiinGNEZc0qywng9"
+src="https://142vip-cn.feishu.cn/share/base/view/shrcnpso8R4vCid01wmg66hFjae"
 width="100%"
-height="100%"
-frameborder="0"
-scrolling="No"
-leftmargin="0"
-topmargin="0"
+height="600px"
 />

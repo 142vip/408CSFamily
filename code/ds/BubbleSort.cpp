@@ -1,13 +1,4 @@
-/*
- * @Description: 冒泡排序
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-03-31 08:24:18
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-06 07:26:15
- */
-
-
+// 冒泡排序
 void BubbleSwapSort(ElemType A[], int n){
 
   for(i=0;i<n-1;i++){
@@ -18,7 +9,7 @@ void BubbleSwapSort(ElemType A[], int n){
 
     for(j=n-1;j>i;j--){
       if(A[j-1].key>A[j].key){
-        
+
         // 将两个元素A[j-1]、A[j]进行交换，有多种方法
         swap(A[j-1],A[j])
         // 确认已发生交换
@@ -35,7 +26,7 @@ void BubbleSwapSort(ElemType A[], int n){
 
 /**
  * 加减法实现两个元素值互换
- * 
+ *
  */
 void swap(int a, int b){
   // 此时a为两值的和
@@ -48,8 +39,8 @@ void swap(int a, int b){
 
 /**
  *  临时变量实现两个元素值的互换
- * 
- */ 
+ *
+ */
 void swap(int a,int b){
   int temp;
   temp=a;

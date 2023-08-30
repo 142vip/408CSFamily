@@ -9,7 +9,6 @@
 
 
 void QuickSort(ElemType A[] , int low , int high){
-  
   // low > high 表角标越界，low=high 子表只有一个元素，不需要进行快排，已经有序
   if(low<high){
 
@@ -36,7 +35,7 @@ int Partition(ElemType A ,int low , int high){
     while(low<high && A[high]>=pivot) --high
     A[low]=A[high]  // 比pivot小的都移到左表 注意--high 从后往前遍历
 
-    while(low<high && A[low]<=pivot ) ++low 
+    while(low<high && A[low]<=pivot ) ++low
     A[high]=A[low]  // 比pivot大的都移到右表，注意++low 从前往后遍历
   }
 

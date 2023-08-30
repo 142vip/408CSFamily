@@ -15,14 +15,14 @@ typedef struct LinkNode{
 
 // 更为详细的定义
 
-typedef struct StackNode 
+typedef struct StackNode
 {
 	int data;//结点数据域
 	struct StackNode* next;//结点指针域
 }StackNode,* Linktop;
- 
+
 //链栈的数据结构
-typedef struct LinkStack 
+typedef struct LinkStack
 {
 	Linktop top;   //栈顶结点,定义了一个指向上个结构体的指针
 	int count;//元素个数
@@ -47,18 +47,16 @@ bool linkStackPushNode(LinkStack* linkStack,int e){
   // 开辟栈结点元素内存控件
   StackNode* node = (StackNode*)malloc(sizeof(StackNode));
   // 新结点指针域指向链表，即栈顶指针位置，元素加入链表
-  node->next = linkStack->top;           
+  node->next = linkStack->top;
   // 新结点数据域赋值
   node->data = e;
   // 元素进栈，移动栈顶指针，指向新入栈的元素
-  linkStack->top = node; 
-  // 链栈元素总数+1                
+  linkStack->top = node;
+  // 链栈元素总数+1
   linkStack->count++;
   //链栈入栈成功，返回true
   return true;
 }
-
-
 
 
 /*
@@ -81,10 +79,10 @@ bool linkStackPopNode(LinkStack* linkStack,int *e){
   // 结点元素数据域赋值给变量e
   *e = linkStack->data;
   // 移动栈顶指向，栈顶指针指向待出栈结点的后继结点
-  linkStack->top = node->next;   
+  linkStack->top = node->next;
   // 变量e已被赋值，释放链栈出栈元素的内存控件
-  free(node);      
-  // 链栈元素个数-1          
+  free(node);
+  // 链栈元素个数-1
   linkStack->count--;
   // 出栈成功，返回true.
   return true;

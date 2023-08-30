@@ -1,14 +1,3 @@
-/*
- * @Description: 循环队列操作
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2019-09-27 14:17:28
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-03-18 23:52:10
- */
-
-
-
 // 队列最大存储元素个数
 #define MaxSize 50
 

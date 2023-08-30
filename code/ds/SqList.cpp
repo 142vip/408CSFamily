@@ -1,11 +1,5 @@
-/*
- * @Description: 顺序表的基础操作
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-02-23 07:48:26
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-02-23 07:48:26
- */
+// 顺序表的基础操作
+
 
 
 // 基础结构体

@@ -1,13 +1,4 @@
-/*
- * @Description: 快速排序【伪代码】
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2020-03-23 08:23:20
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-08 21:51:28
- */
-
-
+// 快速排序【伪代码】
 void QuickSort(ElemType A[] , int low , int high){
   // low > high 表角标越界，low=high 子表只有一个元素，不需要进行快排，已经有序
   if(low<high){
@@ -22,9 +13,7 @@ void QuickSort(ElemType A[] , int low , int high){
     QuickSort(A,pivotKey+1,high)
 
   }
-
   return A
-
 }
 
 int Partition(ElemType A ,int low , int high){

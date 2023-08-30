@@ -1,12 +1,3 @@
-/*
- * @Description: 链栈的相关操作
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2020-01-15 9:19:56
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-03-13 12:27:36
- */
-
 // 链栈类型定义【基础】
 typedef struct LinkNode{
   ElemType data;                // 栈元素结点数据域
@@ -29,14 +20,7 @@ typedef struct LinkStack
 }LinkStack;
 
 
-/*
- * @Description: 基于单链表链栈的进栈操作
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2020-03-04 07:36:04
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-03-04 11:39:16
- */
+// 基于单链表链栈的进栈操作
 bool linkStackPushNode(LinkStack* linkStack,int e){
 
   // 判断链栈是否存在

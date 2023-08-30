@@ -1,13 +1,3 @@
-/*
- * @Description: 希尔排序
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2020-02-21 08:07:13
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-03-28 11:37:29
- */
-
-
 /**
  *
  * 数组的希尔排序
@@ -71,7 +61,6 @@ console.log('插入排序后：', sortResult)
  * 简化的希尔排序
  * - 返回已排序号的数组，从小到大
  * @param {Array} arr
- * @returns
  */
 function shellSortBetter(arr) {
   const len = arr.length

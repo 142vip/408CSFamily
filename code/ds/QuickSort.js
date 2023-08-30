@@ -1,19 +1,9 @@
-/*
- * @Description: 快速排序【JavaScript版本】
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-04-08 08:20:35
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-08 21:50:12
- */
-
 
 /**
  * 基于分治法思想，将数组进行快速排序
  * @param {Array} arr 待排序的数组
  * @param {int} low   数组低位角标   左指针
  * @param {int} high  数组高位角标   右指针
- * @returns
  */
 function QuickSort(arr, low, high) {
   // low=high 说明只有一个元素，理解为有序，不做处理
@@ -37,7 +27,6 @@ function QuickSort(arr, low, high) {
  * @param {Array} arr 分治思想处理后的数组
  * @param {int} low   数组低位角标   左指针
  * @param {int} high  数组高位角标   右指针
- * @returns
  */
 function Partition(arr, low, high) {
   // 假设低位指针对应数组角标元素为基准pivot

@@ -1,14 +1,3 @@
-/*
- * @Description: 单链表
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-03-04 23:38:04
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-03-05 21:30:58
- */
-
-
-
 // 单链表头插法
 LinkList CreateListWithStartNode(LinkList &L){
 

@@ -13,7 +13,7 @@ function binaryInsertSort(arr, len) {
 
     while (lowIndex <= highIndex) {
       // 注意：取整,javascript这里取整，会出现空指针
-      const mid = parseInt((lowIndex + highIndex) / 2)
+      const mid = Math.ceil((lowIndex + highIndex) / 2)
 
       if (arr[mid] <= temp) {
         // 右侧
@@ -24,7 +24,6 @@ function binaryInsertSort(arr, len) {
       }
     }
     // 元素后移
-
     for (let j = i - 1; j > highIndex; --j) {
       arr[j + 1] = arr[j]
     }

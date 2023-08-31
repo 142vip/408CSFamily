@@ -66,10 +66,11 @@ footerWrap:
     - title: 哔哩哔哩
       link: https://space.bilibili.com/350937042
       details: 不定期更新
-  
-
-
 ---
+
+--- 
+
+
 
 ### 本地浏览【推荐】
 
@@ -92,7 +93,6 @@ git pull
 pnpm install
 
 ## 执行dev指令，本地启动项目，打开http://localhost:4200即可访问文档
-
 pnpm dev
 
 ```
@@ -143,14 +143,14 @@ yarn run dev
 
 ### 在线浏览
 
-[https://408.142vip.cn](https://408.142vip.cn)
+- 稳定版： <https://408.142vip.cn>
 
 
-网站无法访问时，建议通过科学上网访问备用网络
+> 网站无法访问时，建议通过科学上网访问备用网络
 
-- Github： [https://142vip.github.io/408CSFamily](https://142vip.github.io/408CSFamily)
-- Netlify： [https://408-family.netlify.app](https://408-family.netlify.app)
-- Vercel： [https://408-family.vercel.app](https://408-family.vercel.app)
+- Github： <https://142vip.github.io/408CSFamily>
+- Netlify： <https://408-family.netlify.app>
+- Vercel： <https://408-family.vercel.app>
 
 
 
@@ -179,6 +179,18 @@ yarn run dev
 
 **以下排名不分先后! 还木有收到赞助，哈哈哈，先留坑**
 
+
+### 贡献
+
+感谢向仓库提交mr的所有开发者
+
+[![contributors](https://contrib.rocks/image?repo=142vip/408CSFamily)](https://github.com/142vip/408CSFamily/graphs/contributors)
+
+### 趋势
+
+<div style="text-align: center" align="center">
+<img alt="Star History" src="https://api.star-history.com/svg?repos=142vip/408CSFamily&type=Date" >
+</div>
 
 
 
@@ -247,10 +259,27 @@ yarn run dev
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
     </div>
+    <div align="center">
+        <div id="">
+             <a href="https://github.com/mmdapl" target="_blank">
+              <img alt="作者: 储凡" src="https://img.shields.io/badge/Author-Chu·Fan-8A2BE2.svg?style=for-the-badge" style="text-align: center;">
+             </a>
+        </div>
+        <div style="padding: 5px">
+             <a href="https://app.netlify.com/sites/408-family/deploys" target="_blank" style="padding: 5px">
+              <img alt="Netlify" src="https://api.netlify.com/api/v1/badges/75a7251a-f873-4aff-b387-6449ca241ef7/deploy-status">
+             </a>
+             <a href="https://vercel.com/142vip/408/deployments" target="_blank" style="padding: 5px">
+              <img alt="Vercel" src="https://therealsujitk-vercel-badge.vercel.app/?app=408">
+             </a>
+        </div>
+    </div>
 </div>
 
 交流/加群/互看朋友圈
 当然：**聊天 /提问 /建议 /提需求** 可以在本公众号直接**私信**，后台可以看到，有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。
+
+
 
 
 

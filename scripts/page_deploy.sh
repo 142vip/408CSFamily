@@ -6,8 +6,6 @@ set -e
 
 npm run build-proxy && cd docs/.vuepress/dist
 
-
-
 git init && git add -A
 
 ## 如果没有输入commit信息，则采用默认

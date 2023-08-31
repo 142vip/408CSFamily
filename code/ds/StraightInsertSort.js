@@ -1,17 +1,5 @@
-/*
- * @Description: 直接插入排序【JavaScript版本】
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-03-25 08:14:07
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-03-26 07:29:47
- */
-
-
 /**
- * 插入排序
- * @param{Array} arr 待排序的数组
- * @param{int} len 数组arr的长度，可以用arr.length()计算得到
+ * 直接插入排序【JavaScript版本】
  */
 function straightInsertSort(arr, len) {
   // 重新确定数组长度
@@ -29,7 +17,6 @@ function straightInsertSort(arr, len) {
         arr[j + 1] = arr[j]
       }
       // 跳出循环逻辑，出现arr[j] > arr[j-1]
-
       // 哨兵即待排序的
       arr[j + 1] = temp
     }

@@ -52,4 +52,4 @@ jobs:
           run_install: true
 
       - name: Build And Push Docker image
-        run: PROXY_DOMAIN=true pnpm faster-image
+        run: PROXY_DOMAIN=true pnpm image:faster

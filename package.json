@@ -1,8 +1,13 @@
 {
   "name": "408CSFamily",
-  "description": "专业代号408 ，计算机基础知识点合集",
+  "description": "专业代号408，计算机基础知识点合集",
   "version": "0.0.1-alpha.0",
   "packageManager": "pnpm@7.2.1",
+  "author": {
+    "name": "Chu Fan",
+    "email": "fairy_408@2925.com",
+    "url": "https://github.com/142vip"
+  },
   "scripts": {
     "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lintfix\" && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",
@@ -12,14 +17,26 @@
     "image:faster": "bash scripts/build_image.sh $npm_package_version faster",
     "deploy:ali": "bash scripts/deploy.sh ali $npm_package_version",
     "deploy:github": "bash scripts/page_deploy.sh",
+    "version:alpha": "npm version prerelease --preid alpha",
+    "version:patch": "npm version patch",
     "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .",
     "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +"
   },
-  "author": {
-    "name": "Chu Fan",
-    "email": "fairy_408@2925.com",
-    "url": "https://github.com/142vip"
+  "scripts-info": {
+    "prepare": "安装依赖预执行脚本",
+    "dev": "本地启动项目",
+    "build": "构建、打包",
+    "build:proxy": "构建、打包，支持项目名代理，使用第三方托管平台",
+    "image": "容器打包、构建镜像",
+    "image:faster": "本地build后，快速构建镜像",
+    "deploy:ali": "部署到阿里云服务器",
+    "deploy:github": "部署到github平台，集成ci",
+    "version:alpha": "alpha测试版号更新，基于next分之操作",
+    "version:patch": "稳定版号更新，基于master分支操作",
+    "lint": "eslint校验代码，指出异常",
+    "lintfix": "格式化代码，自动化处理异常",
+    "clean": "快速删除本地依赖"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.54.0",

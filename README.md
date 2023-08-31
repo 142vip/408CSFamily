@@ -3,7 +3,7 @@
 <p>
   <img alt="408Logo图片" width="240" src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/doc_book/408/408_logo.png" style="text-align: center;">
 </p>
-<h2>408CSFamily</h2>
+<p style="font-size: 30px"><strong>408CSFamily</strong></p>
 <h4>计算机应试全家桶✨</h4>
 
 </div>
@@ -16,18 +16,18 @@
 		 </a>
 	</div>
 	<div>
-		 <a href="https://app.netlify.com/sites/408-family/deploys" target="_blank">
+		 <a href="https://app.netlify.com/sites/408-family/deploys" target="_blank" style="padding: 5px">
 		  <img alt="Netlify" src="https://api.netlify.com/api/v1/badges/75a7251a-f873-4aff-b387-6449ca241ef7/deploy-status">
 		 </a>
-		 <a href="" target="_blank">
+		 <a href="" target="_blank" style="padding: 5px">
 		  <img alt="Vercel" src="https://therealsujitk-vercel-badge.vercel.app/?app=408">
 		 </a>
 	</div>
 	<div>
-		<img alt="code size" src="https://img.shields.io/github/languages/code-size/142vip/408CSFamily">
-		<img alt="tag version" src="https://img.shields.io/github/v/tag/142vip/408CSFamily">
-		<img alt="release version" src="https://img.shields.io/github/v/release/142vip/408CSFamily">
-		<img alt="repo size" src="https://img.shields.io/github/repo-size/142vip/408CSFamily">
+		<img alt="code size" src="https://img.shields.io/github/languages/code-size/142vip/408CSFamily" style="padding: 5px">
+		<img alt="tag version" src="https://img.shields.io/github/v/tag/142vip/408CSFamily" style="padding: 5px">
+		<img alt="release version" src="https://img.shields.io/github/v/release/142vip/408CSFamily" style="padding: 5px">
+		<img alt="repo size" src="https://img.shields.io/github/repo-size/142vip/408CSFamily" style="padding: 5px">
 	</div>
 </div>
 

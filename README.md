@@ -3,8 +3,7 @@
 <p>
   <img alt="408Logo图片" width="240" src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/doc_book/408/408_logo.png" style="text-align: center;">
 </p>
-<p style="font-size: 30px"><strong>408CSFamily</strong></p>
-<h4>计算机应试全家桶✨</h4>
+<p style="font-size: 30px"><strong>✨计算机应试全家桶✨</strong></p>
 
 </div>
 

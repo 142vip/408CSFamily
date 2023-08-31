@@ -3,16 +3,16 @@
 <p>
   <img alt="408Logo图片" width="240" src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/doc_book/408/408_logo.png" style="text-align: center;">
 </p>
-<h1>408CSFamily</h1>
-<h3>计算机应试全家桶✨</h3>
+<h3>408CSFamily</h3>
+<h5>计算机应试全家桶✨</h5>
 
 </div>
 
 
 <div align="center">
 	<div id="">
-		 <a href="" target="_blank">
-		  <img alt="作者: 储凡" src="https://img.shields.io/badge/Author-Chu·Fan-blue.svg?style=for-the-badge" style="text-align: center;">
+		 <a href="https://github.com/mmdapl" target="_blank">
+		  <img alt="作者: 储凡" src="https://img.shields.io/badge/Author-Chu·Fan-8A2BE2.svg?style=for-the-badge" style="text-align: center;">
 		 </a>
 	</div>
 	<div>

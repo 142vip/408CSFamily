@@ -1,11 +1,4 @@
-/*
- * @Description: 直接插入排序【伪代码】
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-03-25 08:07:23
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-03-26 07:29:00
- */
+// 直接插入排序【伪代码】
 void straightInsertSort(ElemType A[], int n){
   int i,j;
 

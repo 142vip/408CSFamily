@@ -1,14 +1,17 @@
 import {searchProPlugin} from "vuepress-plugin-search-pro";
 
+/**
+ * 插件配置
+ */
 export default {
-  plugins:[
+  plugins: [
     searchProPlugin({
       // 索引全部内容
       indexContent: true,
       // 为分类和标签添加索引
       customFields: [
         {
-          getter: (page:any) => page.frontmatter.category,
+          getter: (page: any) => page.frontmatter.category,
           formatter: "分类：$content",
         },
         {

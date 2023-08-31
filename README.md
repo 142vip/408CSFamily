@@ -1,14 +1,40 @@
 
-## 写最前面
+<div style="text-align: center">
+<p>
+  <img alt="408Logo图片" width="240" src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/doc_book/408/408_logo.png" style="text-align: center;">
+</p>
+<h1>408CSFamily</h1>
+<h3>计算机应试全家桶✨</h3>
 
-`408CSFamily` 我的理解是：408计算机专业课”全家桶“，而408相信考研er都知道计算机考研专业课代码；在最新的高校计算机研究生招考中，已经越来越多的学校改考408。可见408所涉及到的专业课举足轻重的地位；不论是在考研或者找工作，我相信408的专业基础必定是难以避免的，所以话不多说、形势复杂，唯一能做的就是不停的学习、巩固基础知识，加油！
+</div>
 
-本仓库收录的大部分内容将来源我自己的学习输出和相关资料的整理，将会站在上班族的角度进行分类、输出，若有任何疑惑和问题，欢迎在github仓库集中pr或issues提出
 
-**阅读之前必看：**
+<div style="text-align: center">
+	<div id="">
+		 <a href="" target="_blank">
+		  <img alt="作者: 储凡" src="https://img.shields.io/badge/Author-Chu·Fan-blue.svg?style=for-the-badge" style="text-align: center;">
+		 </a>
+	</div>
+	<div>
+		 <a href="https://app.netlify.com/sites/408-family/deploys" target="_blank">
+		  <img alt="Netlify" src="https://api.netlify.com/api/v1/badges/75a7251a-f873-4aff-b387-6449ca241ef7/deploy-status">
+		 </a>
+		 <a href="" target="_blank">
+		  <img alt="Vercel" src="https://therealsujitk-vercel-badge.vercel.app/?app=408">
+		 </a>
+	</div>
+	<div>
+		<img alt="code size" src="https://img.shields.io/github/languages/code-size/142vip/408CSFamily">
+		<img alt="tag version" src="https://img.shields.io/github/v/tag/142vip/408CSFamily">
+		<img alt="release version" src="https://img.shields.io/github/v/release/142vip/408CSFamily">
+		<img alt="repo size" src="https://img.shields.io/github/repo-size/142vip/408CSFamily">
+	</div>
+</div>
 
-1. 长期更新、维护
-2. 建议结合思维导图进行学习
+
+
+
+
 
 
 ### 在线浏览
@@ -24,12 +50,26 @@
 
 
 
+## 写最前面
+
+`408CSFamily` 我的理解是：408计算机专业课”全家桶“，而408相信考研er都知道计算机考研专业课代码；在最新的高校计算机研究生招考中，已经越来越多的学校改考408。可见408所涉及到的专业课举足轻重的地位；不论是在考研或者找工作，我相信408的专业基础必定是难以避免的，所以话不多说、形势复杂，唯一能做的就是不停的学习、巩固基础知识，加油！
+
+本仓库收录的大部分内容将来源我自己的学习输出和相关资料的整理，将会站在上班族的角度进行分类、输出，若有任何疑惑和问题，欢迎在github仓库集中pr或issues提出
+
+**阅读之前必看：**
+
+1. 长期更新、维护
+2. 建议结合思维导图进行学习
+
+
+
+
 
 ### 思维导图【MD文档版本】
 
 > 主要是关键知识，更新优化中...
 
-- [数据结构](./数据结构/数据结构和算法.md)
+- [数据结构](./manuscripts/数据结构/数据结构和算法.md)
 - 计算机组成原理（TBD）
 - 操作系统（TBD）
 - 计算机网络（TBD）
@@ -70,7 +110,7 @@
 
 ## 大纲目录（善用Ctrl+F）
 
-> 注意：没有链接的，可以在仓库找找，只是选择性进行博客和公众号发表
+ **注意：没有链接的，可以在仓库找找，只是选择性进行博客和公众号发表**
 
 ### 数据结构
 
@@ -81,13 +121,13 @@
 > 3. 《数据结构与算法景点问题解析》 第二版  Narasimha Karumanchi著.
 > 4. 《计算机网络-王道考研》 2019 王道论坛著.
 
-#### [基础入门](/数据结构/基础入门/Readme.md)
+#### [基础入门](./manuscripts/数据结构/基础入门/readme.md)
 
 - [基础概念](https://mp.weixin.qq.com/s/M8MOCVnbVxQ3GRuxRaEKIg)
 - [数据结构三要素](https://mp.weixin.qq.com/s/7sCoHDFtI-Qp0wBcvMH6kQ)
 - [算法与算法评价](https://mp.weixin.qq.com/s/58fBAwoyg2Ali-HqOJ6t9g)
 
-#### [线性表](/数据结构/线性表/Readme.md)
+#### [线性表](./manuscripts/数据结构/线性表/readme.md)
 
 - [基础概念和基本操作](https://mp.weixin.qq.com/s/3e5LX9HbnjfT980zV3veXA)
 - [线性表的顺序表示](https://mp.weixin.qq.com/s/gaXmF3tqZxxFXhhDyPZv-A)
@@ -192,20 +232,18 @@
 
 #### I/O管理
 
-
-
-- [第一章：操作系统引论](计算机操作系统/第一章)
-- [第二章：进程的描述与控制](计算机操作系统/第二章)
-- [第三章：处理机调度与死锁](计算机操作系统/第三章)
-- [第四章：存储器管理](计算机操作系统/第四章)
-- [第五章：虚拟存储器](计算机操作系统/第一章)
-- [第六章：虚拟存储器](计算机操作系统/第一章)
-- [第七章：文件管理](计算机操作系统/第一章)
-- [第八章：磁盘存储器的管理](计算机操作系统/第一章)
-- [第九章：操作系统接口](计算机操作系统/第一章)
-- [第十章：多处理机操作系统](计算机操作系统/第一章)
-- [第十一章：多媒体操作系统](计算机操作系统/第一章)
-- [第十二章：保护与安全](计算机操作系统/第一章) 
+- 第一章：操作系统引论
+- 第二章：进程的描述与控制
+- 第三章：处理机调度与死锁
+- 第四章：存储器管理
+- 第五章：虚拟存储器
+- 第六章：虚拟存储器
+- 第七章：文件管理
+- 第八章：磁盘存储器的管理
+- 第九章：操作系统接口
+- 第十章：多处理机操作系统
+- 第十一章：多媒体操作系统
+- 第十二章：保护与安全
 
 
 
@@ -238,16 +276,15 @@
 
 ## 赞赏列表
 
-
 以下排名不分先后!  [传送门→]() **赞赏过的一定要微信跟我说呀！！！！！！**
 
 
 <div>
   <a href="https://github.com/ChiefPing" target="_blank" style="margin: 5px">
-    <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="brder-radius:5px;"/>
+    <img alt="ChiefPing" src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="brder-radius:5px;"/>
   </a> 
    <a href="https://github.com/xiaoliuxin" target="_blank" style="margin: 5px">
-    <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
+    <img alt="xiaoliuxin" src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
   </a>
 </div>
 
@@ -258,6 +295,18 @@
 **以下排名不分先后! 还木有收到赞助，哈哈哈，先留坑**
 
 
+
+
+
+## 贡献
+
+感谢向仓库提交mr的所有开发者
+
+[![contributors](https://contrib.rocks/image?repo=142vip/408CSFamily)](https://github.com/142vip/408CSFamily/graphs/contributors)
+
+## 趋势
+
+![star 趋势](https://api.star-history.com/svg?repos=142vip/408CSFamily&type=Date)
 
 
 ## 联系作者
@@ -332,8 +381,9 @@
 
 
 
+## Stargazers over time
 
-
+[![Stargazers over time](https://starchart.cc/142vip/408CSFamily.svg)](https://starchart.cc/142vip/408CSFamily)
 
 
 

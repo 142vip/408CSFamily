@@ -1,12 +1,5 @@
-/*
- * @Description: 希尔排序【伪代码】
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-04-13 13:05:22
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-03-27 17:03:41
- */
 
+// 希尔排序【伪代码】
 void ShellSort(ElemType Arr[] , int n){
   // k是增量
   for(k=n/2;k>=1;k=k/2){

@@ -1,13 +1,5 @@
-/*
- * @Description: 顺序表的基础操作
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-02-23 07:48:26
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-02-23 07:48:26
- */
+// 顺序表的基础操作
 
- 
 
 
 // 基础结构体
@@ -60,7 +52,7 @@ bool ListDelete(SqList &L, int i, ElemType &e){
   if(L.length >= MaxSize){
     return false;
   }
-  
+
   // 引用变量e赋值
   e=L.data[i-1]
 
@@ -70,7 +62,7 @@ bool ListDelete(SqList &L, int i, ElemType &e){
     L.data[j-1]=L.data[j];
   }
 
-  // 此时，表L中的表尾元素和倒数第二个元素值一样，将表的长度-1 
+  // 此时，表L中的表尾元素和倒数第二个元素值一样，将表的长度-1
 
   // 表长度减1
   L.length--;

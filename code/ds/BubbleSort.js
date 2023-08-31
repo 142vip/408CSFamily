@@ -1,13 +1,6 @@
-/*
- * @Description: 冒泡排序【JavaScript版本】
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-04-06 07:26:59
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-04-06 08:01:19
+/**
+ * 冒泡排序【JavaScript版本】
  */
-
-
 function BubbleSort(arr, len) {
   // 校正数组的长度
   len = arr.length === len ? len : arr.length
@@ -37,20 +30,6 @@ function BubbleSort(arr, len) {
 
   return arr
 }
-
-
-/**
- * 加减法交换元素的值
- * 注意：JavaScript中使用需要考虑到作用域的问题
- * @param a
- * @param b
- */
-function swap(a, b) {
-  a = a + b
-  b = a - b
-  a = a - b
-}
-
 
 const initArr = [1, 5, 8, 3, 2, 9, 16]
 console.log(`冒泡排序前：${initArr}`)

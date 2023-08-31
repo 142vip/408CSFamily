@@ -1,5 +1,5 @@
 
-<div style="text-align: center">
+<div align="center">
 <p>
   <img alt="408Logo图片" width="240" src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/doc_book/408/408_logo.png" style="text-align: center;">
 </p>
@@ -9,7 +9,7 @@
 </div>
 
 
-<div style="text-align: center">
+<div align="center">
 	<div id="">
 		 <a href="" target="_blank">
 		  <img alt="作者: 储凡" src="https://img.shields.io/badge/Author-Chu·Fan-blue.svg?style=for-the-badge" style="text-align: center;">
@@ -42,7 +42,7 @@
 - 稳定版： <https://408.142vip.cn>
 
 
-网站无法访问时，建议通过科学上网访问备用网络
+> 网站无法访问时，建议通过科学上网访问备用网络
 
 - Github： <https://142vip.github.io/408CSFamily>
 - Netlify： <https://408-family.netlify.app>
@@ -306,7 +306,9 @@
 
 ## 趋势
 
-![star 趋势](https://api.star-history.com/svg?repos=142vip/408CSFamily&type=Date)
+<div style="text-align: center" align="center">
+<img alt="Star History" src="https://api.star-history.com/svg?repos=142vip/408CSFamily&type=Date" >
+</div>
 
 
 ## 联系作者
@@ -379,11 +381,6 @@
 交流/加群/互看朋友圈
 当然：**聊天 /提问 /建议 /提需求** 可以在本公众号直接**私信**，后台可以看到，有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。
 
-
-
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/142vip/408CSFamily.svg)](https://starchart.cc/142vip/408CSFamily)
 
 
 

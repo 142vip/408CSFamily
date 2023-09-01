@@ -5,17 +5,20 @@ on:
     branches:
       - master
       - next
-  pull_request:
-    branches:
-      - master
-      - next
+#  pull_request:
+#    branches:
+#      - master
+#      - next
   workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
+          fetch-depth: 0
 
       - name: sync to vercel
         uses: amondnet/vercel-action@v20

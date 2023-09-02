@@ -20,6 +20,7 @@
     "image:faster": "bash scripts/build_image.sh $npm_package_version faster",
     "deploy:ali": "bash scripts/deploy.sh ali $npm_package_version",
     "deploy:github": "bash scripts/page_deploy.sh",
+    "deploy:vercel": "vercel --prod",
     "version:alpha": "npm version prerelease --preid alpha",
     "version:patch": "npm version patch",
     "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore .",

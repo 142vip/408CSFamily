@@ -72,4 +72,7 @@ templete
 /docs/.vuepress/.temp/
 /docs/.vuepress/.cache/
 /.husky/
+
+# Edgio generated build directory
+.edgio
 .vercel

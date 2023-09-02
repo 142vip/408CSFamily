@@ -9,6 +9,9 @@
     "url": "https://github.com/142vip"
   },
   "scripts": {
+    "edgio:dev": "edgio dev",
+    "edgio:build": "edgio build",
+    "edgio:deploy": "edgio deploy",
     "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lintfix\" && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
@@ -39,6 +42,14 @@
     "clean": "快速删除本地依赖"
   },
   "devDependencies": {
+    "@edgio/cli": "^7.2.2",
+    "@edgio/core": "^7.2.2",
+    "@edgio/devtools": "^7.2.2",
+    "@edgio/prefetch": "^7.2.2",
+    "@edgio/vue": "^7.2.2",
+    "@edgio/vue-cva": "^7.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vuepress/client": "2.0.0-beta.61",

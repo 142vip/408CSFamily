@@ -20,7 +20,7 @@ git commit -m "refactor:${commitInfo}"
 
 
 # git push -f https://github.com/mmdapl/408CSFamily.git main
-
+## 部署到github pages
 git push -f https://github.com/mmdapl/408CSFamily.git main:pages/github
 
 

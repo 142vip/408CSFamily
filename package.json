@@ -1,7 +1,7 @@
 {
   "name": "408CSFamily",
   "description": "专业代号408，计算机基础知识点合集",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1-alpha.4",
   "engines": {
     "node": "14.x || 16.x || 18.x",
     "pnpm": ">=7.2.1"
@@ -29,7 +29,7 @@
     "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' + ",
     "release": "commit-and-tag-version",
     "release:test": "bumpp  --preid alpha",
-    "release:bump": "bumpp  --preid alpha -r --execute=\"pnpm commit-and-tag-version && git add CHANGELOG.md\" --commit \"chore(release): publish v%s\" --all --tag --push"
+    "release:bump": "bumpp  --preid alpha  --execute=\"pnpm commit-and-tag-version && git add CHANGELOG.md\" --commit \"chore(release): publish v%s\" --all --tag \"v%s\"  --push"
   },
   "scripts-info": {
     "prepare": "安装依赖预执行脚本",

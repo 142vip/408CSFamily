@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+const {join} = require('path')
+const cwd = join(__dirname, '..')
+process.env.PATH = `${join(cwd, 'node_modules', '.bin')}:${process.env.PATH}`
+const  {exec,exit} = require('shelljs');
+
+
+/**
+ * 监听进程
+ * - 退出进程
+ */
+process.on('exit', () => {
+    exit()
+})
+
+/**
+ * 执行shell指令
+ * @param commands
+ */
+exports.execShell = commands => {
+    let runCommands=[]
+    if(typeof commands ==='string'){
+        runCommands.push(commands)
+    }
+
+    // 批量执行
+    if(Array.isArray(commands)){
+        runCommands=commands
+    }
+
+    for (const command of runCommands) {
+        console.log(`------- command: >>> ${command} <<< start -------`)
+        exec(command)
+        console.log(`------- command: >>> ${command} <<< ending -------`)
+    }
+}

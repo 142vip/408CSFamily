@@ -1,6 +1,6 @@
 // commit-and-tag-version 配置，参考：https://github.com/conventional-changelog/standard-version
 module.exports={
-  "header": "# Change Log\n\nAll notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.\n\n<!-- #region recent-beta -->\n",
+  "header": "# Release history\n\nAll notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.\n\n<!-- #region recent-beta -->\n",
   "releaseCommitMessageFormat": "chore(release): publish v{{currentTag}}",
   "types": [
     { "type": "feat", "section": "Features" },

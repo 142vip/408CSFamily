@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+const {execShell} = require("./.exec");
+
+(async ()=>{
+    await execShell(['pnpm build','pnpm build:proxy'])
+})()

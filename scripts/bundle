@@ -1,0 +1,79 @@
+#!/usr/bin/env node
+/**
+ *
+ * 将应用程序打包成可部署的包、文件、镜像
+ * 例如：
+ *   - ./scripts/bundle build              基础部署打包
+ *   - ./scripts/bundle build_proxy        用于三方平台部署打包
+ *   - ./scripts/bundle image              构建容器镜像
+ *   - ./scripts/bundle image_faster       本地build，快速构建容器镜像
+ *   - ./scripts/bundle xxx                其他参数，默认执行build命令
+ *   - ./scripts/bundle                    交互式选择执行的命令
+ */
+
+const { execShell } = require("./.exec");
+const { Select } = require('enquirer');
+
+
+/**
+ * 支持的脚本命令
+ */
+const SupportScripts={
+    build:'vuepress build docs',
+    build_proxy:'PROXY_DOMAIN=true vuepress build docs',
+    image:'bash scripts/build_image.sh $npm_package_version',
+    image_faster:'bash scripts/build_image.sh $npm_package_version faster'
+}
+
+
+async function getScriptCommand(){
+    let scriptName=process.argv[2];
+    let scriptCommand=SupportScripts.build
+
+    if(scriptName==null){
+        const prompt = new Select({
+            header: '======================== 408CSFamily Cli For Building ========================',
+            footer: '======================== 408CSFamily Cli For Building ========================',
+            name: 'color',
+            message: 'What script will you want to run ',
+            choices: [
+                {
+                    message: 'build',
+                    name: SupportScripts.build,
+                    value: '#00ffff'
+                },
+                {
+                    message: 'build for fixing proxy',
+                    name: SupportScripts.build_proxy,
+                    value: '#000000'
+                },
+                {
+                    message: 'build to docker image',
+                    name: SupportScripts.image,
+                    value: '#0000ff'
+                },
+                {
+                    message: 'build to docker image faster',
+                    name: SupportScripts.image_faster,
+                    value: '#0000ff'
+                },
+            ]
+        });
+        scriptCommand = await prompt.run()
+    }else{
+        // 命中支持的脚本
+        if(Object.keys(SupportScripts).includes(scriptName))
+            scriptCommand=SupportScripts[scriptName]
+    }
+    return scriptCommand
+}
+
+
+;(async ()=>{
+    const scriptCommand= await getScriptCommand()
+    console.log(`>>>> ${scriptCommand} `)
+
+    // 执行
+    await execShell(scriptCommand)
+})()
+

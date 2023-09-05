@@ -5,6 +5,19 @@ process.env.PATH = `${join(cwd, 'node_modules', '.bin')}:${process.env.PATH}`
 const  {exec,exit} = require('shelljs');
 
 
+async function printWithInterval() {
+  for (let count = 1; ; count++) {
+    if(count<5){
+      console.log('执行中'+'.'.repeat(count));
+    }else {
+      break;
+    }
+  }
+}
+
+
+
+
 /**
  * 监听进程
  * - 退出进程
@@ -13,11 +26,32 @@ process.on('exit', () => {
     exit()
 })
 
+async function syncExec(command){
+  let size=100
+  let count = 0;
+  const intervalId = setInterval(async () => {
+    console.log('执行中'+'.'.repeat(count),size,count);
+    count++;
+    size = await new Promise((resolve,reject)=>{
+      exec(command,(code)=>{
+        console.log(code)
+        console.log('Exit code:', code);
+        resolve()
+      })
+    })
+    console.log(size)
+    if (count > size) {
+      clearInterval(intervalId); // 停止打印
+    }
+  }, 1000);
+
+}
+
 /**
  * 执行shell指令
  * @param commands
  */
-exports.execShell = commands => {
+exports.execShell = async commands => {
     let runCommands=[]
     if(typeof commands ==='string'){
         runCommands.push(commands)
@@ -29,8 +63,9 @@ exports.execShell = commands => {
     }
 
     for (const command of runCommands) {
-        console.log(`------- command: >>> ${command} <<< start -------`)
-        exec(command)
-        console.log(`------- command: >>> ${command} <<< ending -------`)
+        console.log(`=== command: >>> ${command} <<< start === `)
+
+        await syncExec(command)
+        console.log(`=== command: >>> ${command} <<< ending === `)
     }
 }

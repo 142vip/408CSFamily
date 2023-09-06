@@ -1,0 +1,203 @@
+#!/usr/bin/env node
+
+/**
+ *
+ * 例如：
+ *  - ./scripts/network create
+ *  - ./scripts/network inspect
+ *  - ./scripts/network rm
+ *  - ./scripts/network ls
+ */
+const { execShell, BaseSetting} = require("./.exec");
+const scriptName=process.argv[2];
+
+
+/**
+ * 网络基础信息
+ * - 网络名称
+ * - 子网掩码
+ * - 网关地址
+ */
+const dockerNetworkInfo={
+  defaultName:'service_env_net',
+  subnet:'172.30.0.0/24',
+  gateway:'172.30.0.1',
+}
+
+const SupportScriptsInContainer={
+  run:'',
+  rm:'',
+  ps:'docker ps'
+}
+
+function getContainerCommand(){
+   const scriptName=process.argv[3];
+   if(scriptName==='rm')
+     return SupportScriptsInContainer.rm
+  if(scriptName==='run')
+    return SupportScriptsInContainer.run
+  if(scriptName==='ps')
+    return SupportScriptsInContainer.ps
+  return SupportScriptsInContainer.run
+}
+
+
+
+const SupportScriptsInImage={
+  rm:'docker rmi **',
+  ps:'docker images'
+}
+
+function getContainerCommand(){
+  const scriptName=process.argv[3];
+  if(scriptName==='rm')
+    return SupportScriptsInContainer.rm
+  if(scriptName==='run')
+    return SupportScriptsInContainer.run
+  if(scriptName==='ps')
+    return SupportScriptsInContainer.ps
+  return SupportScriptsInContainer.run
+}
+
+const SupportScriptsInNetWork={
+  ls:'docker network ls',
+  create:[
+    // 创建网关
+    `
+      docker network create \
+      --subnet=${dockerNetworkInfo.subnet} \
+      --gateway=${dockerNetworkInfo.gateway} \
+      ${dockerNetworkInfo.defaultName}
+    `,
+    // 查看创建后基本信息
+    `
+      docker network inspect ${dockerNetworkInfo.defaultName}
+    `
+  ],
+  rm:[
+    // 参数校验
+    `
+      if test -z "${dockerNetworkInfo.defaultName}";then 
+        echo "参数错误 网络名称不能为空。脚本执行eg： bash xxx.sh rm  网络名称" 
+        exit 1;
+      fi
+    `,
+    // 判断网络是否存在
+    `
+      docker network ls | grep -w "${dockerNetworkInfo.defaultName}"
+      if [ $? -eq 1 ] ;then
+          echo "容器网络:${dockerNetworkInfo.defaultName} 不存在，删除无效"
+        exit 1;
+      fi
+    `,
+    // 删除网络
+    `
+      docker network rm "${dockerNetworkInfo.defaultName}"
+    `
+  ],
+  inspect:
+    `
+      docker network inspect ${dockerNetworkInfo.defaultName}
+    `
+}
+
+function getNetworkCommand(){
+  const scriptName=process.argv[3];
+
+  if(SupportScriptsInNetWork.hasOwnProperty(scriptName)){
+    return SupportScriptsInNetWork[scriptName]
+  }
+  if(scriptName==='ls')
+    return SupportScriptsInNetWork.ls
+  if(scriptName==='run')
+    return SupportScriptsInNetWork.create
+  if(scriptName==='ps')
+    return SupportScriptsInNetWork.rm
+  if(scriptName==='inspect')
+  return SupportScriptsInNetWork.inspect
+}
+
+
+// 支持的命令
+const SupportScripts={
+  ls:'docker network ls',
+  create:[
+    // 创建网关
+    `
+      docker network create \
+      --subnet=${dockerNetworkInfo.subnet} \
+      --gateway=${dockerNetworkInfo.gateway} \
+      ${dockerNetworkInfo.defaultName}
+    `,
+    // 查看创建后基本信息
+    `
+      docker network inspect ${dockerNetworkInfo.defaultName}
+    `
+  ],
+  rm:[
+    // 参数校验
+    `
+      if test -z "${dockerNetworkInfo.defaultName}";then 
+        echo "参数错误 网络名称不能为空。脚本执行eg： bash xxx.sh rm  网络名称" 
+        exit 1;
+      fi
+    `,
+    // 判断网络是否存在
+    `
+      docker network ls | grep -w "${dockerNetworkInfo.defaultName}"
+      if [ $? -eq 1 ] ;then
+          echo "容器网络:${dockerNetworkInfo.defaultName} 不存在，删除无效"
+        exit 1;
+      fi
+    `,
+    // 删除网络
+    `
+      docker network rm "${dockerNetworkInfo.defaultName}"
+    `
+  ],
+  inspect:
+    `
+      docker network inspect ${dockerNetworkInfo.defaultName}
+    `
+}
+
+/**
+ * 获取需要执行的shell命令
+ * @param scriptName
+ * @returns {string}
+ */
+function getCommand(scriptName){
+  let deployCommand=SupportScripts.ls
+
+  switch (scriptName) {
+    case 'container':
+      return getContainerCommand();
+    case 'network':
+      break;
+    case 'image':
+      break;
+  }
+
+  if(scriptName==='ls'){
+    deployCommand=SupportScripts.ls
+  }
+
+  // 部署到Github
+  if(scriptName==='rm'){
+    deployCommand=SupportScripts.rm
+  }
+  if(scriptName==='create'){
+    deployCommand=SupportScripts.create
+  }
+  if(scriptName==='inspect'){
+    deployCommand=SupportScripts.inspect
+  }
+  return deployCommand
+}
+
+
+// 执行
+;(async ()=>{
+  const command=getCommand(scriptName)
+  await execShell(command)
+})()

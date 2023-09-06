@@ -1,14 +1,10 @@
 #!/usr/bin/env node
 /**
  *
- * 将应用程序打包成可部署的包、文件、镜像
+ * 格式化代码
  * 例如：
- *   - ./scripts/bundle build              基础部署打包
- *   - ./scripts/bundle build_proxy        用于三方平台部署打包
- *   - ./scripts/bundle image              构建容器镜像
- *   - ./scripts/bundle image_faster       本地build，快速构建容器镜像
- *   - ./scripts/bundle xxx                其他参数，默认执行build命令
- *   - ./scripts/bundle                    交互式选择执行的命令
+ *   - ./scripts/lint
+ *   - ./scripts/lint --fix
  */
 
 const { execShell } = require("./.exec");
@@ -20,8 +16,4 @@ if(scriptName!=null){
   fixed='--fix'
 }
 
-;(async ()=>{
-  const scriptCommand= `eslint ${fixed} --ext .js,.ts,.vue --ignore-path .gitignore .`
-  // 执行
-  await execShell(scriptCommand)
-})()
+;(async ()=>await execShell(`eslint ${fixed} --ext .js,.ts,.vue --ignore-path .gitignore .`))()

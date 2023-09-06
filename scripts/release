@@ -13,15 +13,4 @@ const generateChangeLog='pnpm commit-and-tag-version && git add CHANGELOG.md'
 // git提交信息
 const commitInfo='chore(release): publish v%s'
 
-const releaseCommands=
-    "bumpp " +
-    "--preid alpha "+
-    `--execute= "${generateChangeLog}" `+
-    `--commit "${commitInfo}" `+
-    "--all "+
-    "--tag "+
-    "--push "
-
-;(async ()=>{
-    await execShell(releaseCommands)
-})()
+;(async ()=>await execShell(`bumpp  --preid alpha  --execute="${generateChangeLog}" --commit "${commitInfo}" --all --tag --push`))()

@@ -1,12 +1,11 @@
 #!/usr/bin/env node
 
 /**
- *
+ * docker cli工具
  * 例如：
- *  - ./scripts/network create
- *  - ./scripts/network inspect
- *  - ./scripts/network rm
- *  - ./scripts/network ls
+ *  - ./scripts/docker container xxx    容器相关
+ *  - ./scripts/network image    xxx    镜像相关
+ *  - ./scripts/docker network   xxx    网络相关
  */
 const { execShell, BaseSetting} = require("./.exec");
 const scriptName=process.argv[2];
@@ -24,41 +23,26 @@ const dockerNetworkInfo={
   gateway:'172.30.0.1',
 }
 
+/**
+ * docker containers 容器相关指令
+ */
 const SupportScriptsInContainer={
   run:'',
   rm:'',
   ps:'docker ps'
 }
 
-function getContainerCommand(){
-   const scriptName=process.argv[3];
-   if(scriptName==='rm')
-     return SupportScriptsInContainer.rm
-  if(scriptName==='run')
-    return SupportScriptsInContainer.run
-  if(scriptName==='ps')
-    return SupportScriptsInContainer.ps
-  return SupportScriptsInContainer.run
+/**
+ * docker images 相关脚本指令
+ */
+const SupportScriptsInImage = {
+  rm: 'docker rmi **',
+  ps: 'docker images'
 }
 
-
-
-const SupportScriptsInImage={
-  rm:'docker rmi **',
-  ps:'docker images'
-}
-
-function getContainerCommand(){
-  const scriptName=process.argv[3];
-  if(scriptName==='rm')
-    return SupportScriptsInContainer.rm
-  if(scriptName==='run')
-    return SupportScriptsInContainer.run
-  if(scriptName==='ps')
-    return SupportScriptsInContainer.ps
-  return SupportScriptsInContainer.run
-}
-
+/**
+ * docker network 相关脚本指令
+ */
 const SupportScriptsInNetWork={
   ls:'docker network ls',
   create:[
@@ -96,26 +80,44 @@ const SupportScriptsInNetWork={
     `
   ],
   inspect:
-    `
+      `
       docker network inspect ${dockerNetworkInfo.defaultName}
     `
 }
 
-function getNetworkCommand(){
-  const scriptName=process.argv[3];
 
-  if(SupportScriptsInNetWork.hasOwnProperty(scriptName)){
+
+function getContainerCommand(){
+  const name=process.argv[3];
+
+  if(SupportScriptsInContainer.hasOwnProperty(name)){
+    return SupportScriptsInContainer[name]
+  }
+  // 默认查看所有容器
+  return SupportScriptsInContainer.ps
+}
+
+function getImageCommand(){
+  const name=process.argv[3];
+
+  if(SupportScriptsInImage.hasOwnProperty(name)){
+    return SupportScriptsInImage[name]
+  }
+  return SupportScriptsInImage.ps
+}
+
+
+
+function getNetworkCommand(){
+  const name=process.argv[3];
+  if(SupportScriptsInNetWork.hasOwnProperty(name)){
     return SupportScriptsInNetWork[scriptName]
   }
-  if(scriptName==='ls')
-    return SupportScriptsInNetWork.ls
-  if(scriptName==='run')
-    return SupportScriptsInNetWork.create
-  if(scriptName==='ps')
-    return SupportScriptsInNetWork.rm
-  if(scriptName==='inspect')
-  return SupportScriptsInNetWork.inspect
+  return SupportScriptsInNetWork.ls
 }
+
+
+
 
 
 // 支持的命令
@@ -161,38 +163,17 @@ const SupportScripts={
     `
 }
 
-/**
- * 获取需要执行的shell命令
- * @param scriptName
- * @returns {string}
- */
-function getCommand(scriptName){
-  let deployCommand=SupportScripts.ls
-
-  switch (scriptName) {
-    case 'container':
-      return getContainerCommand();
+function getCommand(){
+  const scriptName=process.argv[3];
+  switch (scriptName){
     case 'network':
-      break;
+      return getNetworkCommand()
+    case 'container':
+      return getContainerCommand()
     case 'image':
-      break;
+      return getImageCommand()
   }
 
-  if(scriptName==='ls'){
-    deployCommand=SupportScripts.ls
-  }
-
-  // 部署到Github
-  if(scriptName==='rm'){
-    deployCommand=SupportScripts.rm
-  }
-  if(scriptName==='create'){
-    deployCommand=SupportScripts.create
-  }
-  if(scriptName==='inspect'){
-    deployCommand=SupportScripts.inspect
-  }
-  return deployCommand
 }
 
 

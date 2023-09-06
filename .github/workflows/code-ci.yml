@@ -37,7 +37,7 @@ jobs:
           version: 7
           run_install: true
 
-      - name: Code ESlint Fix
-        run: pnpm lintfix
+      - name: Code Fix
+        run: ./scripts/lint --fix
       - name: Build Site
-        run: pnpm build
+        run: ./scripts/bundle build

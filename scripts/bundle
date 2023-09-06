@@ -23,19 +23,21 @@ const imageName=`${repoAddress}:${projectName}-${packageVersion}`
 
 /**
  * 获取构建镜像的脚本
- * - faster: "faster"
+ * @param containerBuild
+ * @param needProxy
  */
-function getBuildImageScript(faster){
-    // 是否容器构建
-    const isContainerBuild=faster==="faster"
-
+function getBuildImageScript({containerBuild,needProxy=false}){
+    // 基础构建脚本
+    const baseBuildScript=containerBuild?"":(
+        needProxy?"./scripts/bundle build_proxy":"./scripts/bundle build"
+    )
     return [
       // 构建镜像
       `
-        ${isContainerBuild? `./scripts/bundle build  && `:""} 
+        ${baseBuildScript} 
         docker build \
         --build-arg APP_VERSION=${packageVersion} \
-        --build-arg CONTAINER_BUILD=${!isContainerBuild} \
+        --build-arg CONTAINER_BUILD=${containerBuild} \
         -t ${imageName}  .
       `,
       // 推送镜像
@@ -61,8 +63,19 @@ function getBuildImageScript(faster){
 const SupportScripts={
     build:'vuepress build docs',
     build_proxy:'PROXY_DOMAIN=true vuepress build docs',
-    image:getBuildImageScript(),
-    image_faster:getBuildImageScript("faster")
+    image:getBuildImageScript({
+        containerBuild:true,
+        needProxy:false
+    }),
+    image_proxy:getBuildImageScript({
+        containerBuild:true,
+        needProxy:true
+    }),
+    // 直接从本地拿dist文件，生成镜像
+    image_faster:getBuildImageScript({
+        containerBuild:false,
+        needProxy:false
+    })
 }
 
 
@@ -93,6 +106,11 @@ async function getScriptCommand(){
                     value: '#0000ff'
                 },
                 {
+                    message: 'build to docker image with proxy',
+                    name: SupportScripts.image_proxy,
+                    value: '#0000ff'
+                },
+                {
                     message: 'build to docker image faster',
                     name: SupportScripts.image_faster,
                     value: '#0000ff'
@@ -111,9 +129,6 @@ async function getScriptCommand(){
 
 ;(async ()=>{
     const scriptCommand= await getScriptCommand()
-    console.log(`>>>> ${scriptCommand} `)
-
-    // 执行
-    // await execShell(scriptCommand)
+    await execShell(scriptCommand)
 })()
 

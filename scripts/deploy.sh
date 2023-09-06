@@ -1,9 +1,9 @@
 #!/bin/bash
-
 ## 功能：清除容器，删除旧镜像，创建新的容器
 ## 参考：https://blog.csdn.net/Dontla/article/details/125210694
 ## 作者：储凡
-## 使用示例：bash xxx.sh 容器名称  镜像地址
+## 使用示例：bash deploy.sh 部署平台 版本号
+##      -  bash deploy.sh ali 0.0.1
 ##
 
 ## 日志颜色定义
@@ -18,15 +18,21 @@ readonly networkName="service_env_net"
 ## 定义参数
 operationName=${1}
 version=${2}
+## 镜像名称
+imageName="${repoAddress}:${containerName}-${version}"
 
 
-
-
-## 参数检查
+## 参数预检查
 prepare_check(){
-  if test -z "${containerName}"
+  if test -z "${operationName}"
   then
     echo -e "${errorLogger}${currentTime}:参数错误 部署平台不能为空."
+    exit 0
+  fi
+
+  if test -z "${version}"
+  then
+    echo -e "${errorLogger}${currentTime}:参数错误 版本号不能为空."
     exit 0
   fi
 
@@ -72,7 +78,7 @@ run(){
       ## 删除容器
       delete_container  "${containerName}"
       ## 删除镜像
-      delete_image "${repoAddress}:${containerName}-${version}"
+      delete_image "${imageName}"
       ## 部署
       deploy_to_ali
       exit 0;
@@ -92,7 +98,7 @@ deploy_to_ali(){
   --network="${networkName}"  \
   --restart=unless-stopped \
   --ip=172.30.0.100 \
-  "${repoAddress}:${containerName}-${version}"
+  "${imageName}"
 
   echo -e "${successLogger}---------------- deploy ${containerName} ali end ------------------ "
   docker ps
@@ -102,29 +108,23 @@ deploy_to_ali(){
 deploy_to_github(){
   echo -e "${successLogger}---------------- deploy ${containerName} github start ---------------- "
 
-  # 当命令以非零状态退出时，则退出shell
   set -e
+  npm run build-proxy && cd docs/.vuepress/dist
+  git init && git add -A
 
-  # 进入上级目录，并编译
-  npm run build && cd docs/.vuepress/dist
-  git init && git add --all
-  ## 如果没有输入commit信息，则采用默认
-  if [ "${commitInfo}" -eq "" ]; then
-      commitInfo="408CSFamily Init"
-  fi
-  git commit -m "refactor:${commitInfo}"
-
-  ## 配置个人信息
-  git config user.name "晚上吃芝士+葡萄的妹妹"
-  git config user.email "fairy0115@2925.com"
-
+  ## 配置信息
+  git config user.name 'chu fan'
+  git config user.email 'fairy_408@2925.com'
   git config --list
 
-  # if you are deploying to https://<USERNAME>.github.io
-  # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
-  # if you are deploying to https://<USERNAME>.github.io/<REPO>
-  git push -f https://github.com/mmdapl/408CSFamily.git master:pages/github
+  git commit -m "release v${version}"
+
+
+  # git push -f https://github.com/mmdapl/408CSFamily.git main
+  ## 部署到github pages
+  git push -f https://github.com/mmdapl/408CSFamily.git main:pages/github
   cd -
+
   echo -e "${successLogger}---------------- deploy ${containerName} github end ------------------ "
 }
 

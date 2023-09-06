@@ -1,0 +1,47 @@
+#!/usr/bin/env node
+/**
+ *
+ * 例如：
+ *  - ./scripts/deploy ali
+ *  - ./scripts/deploy github
+ */
+const { execShell } = require("./.exec");
+const packageVersion=require('../package.json').version
+
+// 支持的命令
+const SupportScripts={
+    Github:`bash scripts/deploy.sh github ${packageVersion}`,
+    Github_Test:[
+        "set -e",
+        "./scripts/build proxy && cd docs/.vuepress/dist",
+        "git init && git add -A",
+        // 配置信息
+        "git config user.name 'chu fan'",
+        "git config user.email 'fairy_408@2925.com'",
+        "git config --list",
+        "git commit -m \"release v${version}\"",
+        // 部署到github pages
+        "git push -f https://github.com/mmdapl/408CSFamily.git main:pages/github",
+        "cd -"
+    ].join(' && '),
+    Ali:`bash scripts/deploy.sh ali ${packageVersion}`
+}
+
+const deployName=process.argv[2];
+
+let deployCommand=SupportScripts.Ali
+
+// 部署到阿里云服务器
+if(deployName==='ali'){
+    deployCommand=SupportScripts.Ali
+}
+
+// 部署到Github
+if(deployName==='github'){
+    deployCommand=SupportScripts.Github_Test
+}
+
+// 执行
+;(async ()=>{
+    await execShell(deployCommand)
+})()

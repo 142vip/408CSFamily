@@ -24,7 +24,7 @@ isFaster=${2}
 imageTagName=${repoAddress}:${projectName}-${version}
 
 
-## 预检查
+## 参数预检查
 prepare_check(){
   if test -z "${version}";then
       echo -e "${errorLogger}${currentTime}:参数错误 版本号不能为空。参考版本： 0.0.x"
@@ -49,12 +49,6 @@ run(){
     --build-arg APP_VERSION="${version}" \
     --build-arg CONTAINER_BUILD=true \
     -t "${imageTagName}"  .
-
-    echo  12312
-    echo     docker build  \
-             --build-arg APP_VERSION="${version}" \
-             --build-arg CONTAINER_BUILD=true \
-             -t "${imageTagName}"  .
   fi
 
   echo -e "${successLogger}---------------- shell ${projectName} end   ---------------- "
@@ -79,7 +73,6 @@ push_docker_image(){
 }
 
 prepare_check
-
 run
 
 

@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
+/**
+ * 脚本测试
+ * 链接：https://github.com/enquirer/enquirer
+ */
 // const {execShell} = require("./.exec");
 
 (async ()=>{
@@ -22,15 +26,6 @@
             'Coconut',
             'Cranberry',
             'Grape',
-            'Nougat',
-            'Orange',
-            'Pear',
-            'Pineapple',
-            'Raspberry',
-            'Strawberry',
-            'Vanilla',
-            'Watermelon',
-            'Wintergreen'
         ]
     });
 

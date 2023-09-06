@@ -20,7 +20,7 @@
     "image": "bash scripts/build_image.sh $npm_package_version",
     "image:faster": "bash scripts/build_image.sh $npm_package_version faster",
     "deploy:ali": "bash scripts/deploy.sh ali $npm_package_version",
-    "deploy:github": "bash scripts/page_deploy.sh",
+    "deploy:github": "bash scripts/deploy.sh github $npm_package_version",
     "deploy:vercel": "vercel --prod",
     "release": "bumpp  --preid alpha  --execute=\"pnpm commit-and-tag-version && git add CHANGELOG.md\" --commit \"chore(release): publish v%s\" --all --tag --push",
     "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore .",

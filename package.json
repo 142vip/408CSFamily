@@ -15,6 +15,8 @@
   "scripts": {
     "prepare": "husky install && npx husky add .husky/pre-commit \"./scripts/lint --fix\" && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",
+    "build": "./scripts/bundle build",
+    "build:proxy": "./scripts/bundle build_proxy",
     "deploy:vercel": "vercel --prod",
     "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' + "
   },

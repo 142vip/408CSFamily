@@ -14,6 +14,44 @@
 const { execShell } = require("./.exec");
 const { Select } = require('enquirer');
 
+const packageVersion=require('../package.json').version
+const  projectName="408CSFamily"
+// 仓库地址
+const  repoAddress="registry.cn-hangzhou.aliyuncs.com/142vip/doc_book"
+// 镜像地址
+const imageName=`${repoAddress}:${projectName}-${packageVersion}`
+
+/**
+ * 获取构建镜像的脚本
+ * - faster: "faster"
+ */
+function getBuildImageScript(faster){
+    // 是否容器构建
+    const isContainerBuild=faster==="faster"
+
+    return [
+      // 构建镜像
+      `
+        ${isContainerBuild? `./scripts/bundle build  && `:""} 
+        docker build \
+        --build-arg APP_VERSION=${packageVersion} \
+        --build-arg CONTAINER_BUILD=${!isContainerBuild} \
+        -t ${imageName}  .
+      `,
+      // 推送镜像
+      `
+        if [[ "$(docker images -q  ${imageName} 2> /dev/null)" != "" ]];then
+          ## 推送
+          docker push ${imageName}
+          echo  "---------------- 上传镜像成功，删除本地镜像 ---------------- "
+          docker rmi ${imageName}
+        else
+          echo "镜像: ${imageName} , 不存在"
+        fi
+      `
+    ]
+}
+
 
 /**
  * 支持的脚本命令
@@ -21,8 +59,8 @@ const { Select } = require('enquirer');
 const SupportScripts={
     build:'vuepress build docs',
     build_proxy:'PROXY_DOMAIN=true vuepress build docs',
-    image:'bash scripts/build_image.sh $npm_package_version',
-    image_faster:'bash scripts/build_image.sh $npm_package_version faster'
+    image:getBuildImageScript(),
+    image_faster:getBuildImageScript("faster")
 }
 
 

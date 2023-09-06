@@ -8,40 +8,73 @@
 const { execShell } = require("./.exec");
 const packageVersion=require('../package.json').version
 
+const dockerDeployInfo={
+    repoAddress:"registry.cn-hangzhou.aliyuncs.com/142vip/doc_book",
+    containerName:'408CSFamily',
+    networkName:'service_env_net',
+    imageName:`${this.repoAddress}:${this.containerName}-${packageVersion}`
+}
+
 // 支持的命令
 const SupportScripts={
-    Github:`bash scripts/deploy.sh github ${packageVersion}`,
-    Github_Test:[
-        "set -e",
-        "./scripts/build proxy && cd docs/.vuepress/dist",
-        "git init && git add -A",
-        // 配置信息
-        "git config user.name 'chu fan'",
-        "git config user.email 'fairy_408@2925.com'",
-        "git config --list",
-        "git commit -m \"release v${version}\"",
-        // 部署到github pages
-        "git push -f https://github.com/mmdapl/408CSFamily.git main:pages/github",
-        "cd -"
-    ].join(' && '),
-    Ali:`bash scripts/deploy.sh ali ${packageVersion}`
+    Github:`
+        set -e
+        ./scripts/build proxy && cd docs/.vuepress/dist
+        git init && git add -A
+        ## 配置信息
+        git config user.name 'chu fan'
+        git config user.email 'fairy_408@2925.com'
+        git config --list
+        git commit -m "release v${packageVersion}"
+        ## 部署到github pages
+        git push -f https://github.com/mmdapl/408CSFamily.git main:pages/github
+        cd -
+      `,
+    Ali:[
+      // 容器存在即删除
+      `
+        docker inspect ${dockerDeployInfo.containerName} -f '{{.Name}}' > /dev/null 
+        if [ $? -eq 0 ] ;then 
+          docker rm -f ${dockerDeployInfo.containerName}
+        fi
+      `,
+      // 镜像存在即删除
+      `
+        if [[ "$(docker images -q ${dockerDeployInfo.imageName} 2> /dev/null)" != "" ]];then 
+          docker rmi ${dockerDeployInfo.imageName}
+        fi
+      `,
+      // 运行容器
+      `
+        docker run -d --name ${dockerDeployInfo.containerName} 
+        -p 7000:80 
+        --network=${dockerDeployInfo.networkName}  
+        --restart=unless-stopped 
+        --ip=172.30.0.100 
+        ${dockerDeployInfo.imageName}`,
+    ]
 }
+
 
 const deployName=process.argv[2];
 
-let deployCommand=SupportScripts.Ali
 
-// 部署到阿里云服务器
-if(deployName==='ali'){
+function getDeployCommand(){
+  let deployCommand=SupportScripts.Ali
+  // 部署到阿里云服务器
+  if(deployName==='ali'){
     deployCommand=SupportScripts.Ali
+  }
+  // 部署到Github
+  if(deployName==='github'){
+    deployCommand=SupportScripts.Github
+  }
+  return deployCommand
 }
 
-// 部署到Github
-if(deployName==='github'){
-    deployCommand=SupportScripts.Github_Test
-}
 
 // 执行
 ;(async ()=>{
+    const deployCommand=getDeployCommand()
     await execShell(deployCommand)
 })()

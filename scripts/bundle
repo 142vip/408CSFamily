@@ -45,8 +45,10 @@ function getBuildImageScript(faster){
           docker push ${imageName}
           echo  "---------------- 上传镜像成功，删除本地镜像 ---------------- "
           docker rmi ${imageName}
+          exit 0;
         else
           echo "镜像: ${imageName} , 不存在"
+          exit 1;
         fi
       `
     ]
@@ -112,6 +114,6 @@ async function getScriptCommand(){
     console.log(`>>>> ${scriptCommand} `)
 
     // 执行
-    await execShell(scriptCommand)
+    // await execShell(scriptCommand)
 })()
 

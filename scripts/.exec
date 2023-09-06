@@ -52,16 +52,18 @@ exports.execShell = async commands => {
         runCommands=commands
     }
 
-    for (const command of runCommands) {
-      console.log(`>>>command:\n ${command} \n<<<start  === \n`)
+    for (let index=0;index<runCommands.length;index++) {
+      const command=runCommands[index]
+      const count=index+1
+      console.log(`>>>command--${count}:\n ${command} \n<<<command--${count}--start  === \n`)
       // await syncExec(command)
-      const {code}=await exec(command)
+      const execResult=await exec(command)
+
+      console.log(`<<<command--${count}--ending === `)
       // 指令异常，不执行后续指令
-      if(code!==0){
+      if(execResult.code!==0){
         break;
       }
-
-      console.log(`<<<ending === `)
     }
 }
 
@@ -76,3 +78,4 @@ exports.BaseSetting={
   // 定义时间
   currentTime:'$(date "+%Y-%m-%d %H:%M:%S")'
 }
+

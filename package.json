@@ -3,58 +3,36 @@
   "description": "专业代号408，计算机基础知识点合集",
   "version": "0.0.1-alpha.1",
   "packageManager": "pnpm@7.2.1",
+  "engines": {
+    "node": "14.x || 16.x || 18.x",
+    "pnpm": ">=7.2.1"
+  },
   "author": {
     "name": "Chu Fan",
     "email": "fairy_408@2925.com",
     "url": "https://github.com/142vip"
   },
   "scripts": {
-    "edgio:dev": "edgio dev",
-    "edgio:build": "edgio build",
-    "edgio:deploy": "edgio deploy",
-    "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lintfix\" && chmod +x .husky/pre-commit",
+    "prepare": "rm -f .husky/pre-commit && husky install && npx husky add .husky/pre-commit \"./scripts/lint --fix\" && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "build:proxy": "PROXY_DOMAIN=true vuepress build docs",
-    "image": "bash scripts/build_image.sh $npm_package_version",
-    "image:faster": "bash scripts/build_image.sh $npm_package_version faster",
-    "deploy:ali": "bash scripts/deploy.sh ali $npm_package_version",
-    "deploy:github": "bash scripts/page_deploy.sh",
+    "build": "./scripts/bundle build",
+    "build:proxy": "./scripts/bundle build_proxy",
     "deploy:vercel": "vercel --prod",
-    "version:alpha": "npm version prerelease --preid alpha",
-    "version:patch": "npm version patch",
-    "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore .",
-    "lintfix": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .",
-    "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +"
+    "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' + "
   },
   "scripts-info": {
     "prepare": "安装依赖预执行脚本",
     "dev": "本地启动项目",
-    "build": "构建、打包",
-    "build:proxy": "构建、打包，支持项目名代理，使用第三方托管平台",
-    "image": "容器打包、构建镜像",
-    "image:faster": "本地build后，快速构建镜像",
-    "deploy:ali": "部署到阿里云服务器",
-    "deploy:github": "部署到github平台，集成ci",
-    "version:alpha": "alpha测试版号更新，基于next分之操作",
-    "version:patch": "稳定版号更新，基于master分支操作",
-    "lint": "eslint校验代码，指出异常",
-    "lintfix": "格式化代码，自动化处理异常",
     "clean": "快速删除本地依赖"
   },
   "devDependencies": {
-    "@edgio/cli": "^7.2.2",
-    "@edgio/core": "^7.2.2",
-    "@edgio/devtools": "^7.2.2",
-    "@edgio/prefetch": "^7.2.2",
-    "@edgio/vue": "^7.2.2",
-    "@edgio/vue-cva": "^7.2.2",
-    "@typescript-eslint/eslint-plugin": "^5.54.0",
-    "@typescript-eslint/parser": "^5.54.0",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vuepress/client": "2.0.0-beta.61",
     "@vuepress/utils": "2.0.0-beta.61",
+    "bumpp": "^9.2.0",
+    "commit-and-tag-version": "11.2.3",
+    "enquirer": "^2.4.1",
     "eslint": "^8.48.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.28.1",
@@ -67,7 +45,8 @@
     "vue": "^3.3.4",
     "vuepress": "2.0.0-beta.61",
     "vuepress-plugin-search-pro": "2.0.0-beta.185",
-    "vuepress-theme-hope": "2.0.0-beta.185"
+    "vuepress-theme-hope": "2.0.0-beta.185",
+    "shelljs": "^0.8.5"
   },
   "license": "MIT"
 }

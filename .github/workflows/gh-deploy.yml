@@ -22,7 +22,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 14.20.1
+          node-version: 16.20.2
 
       - name: PNPM Install
         uses: pnpm/action-setup@v2
@@ -32,8 +32,7 @@ jobs:
 
       # 运行构建脚本
       - name: Build VuePress Site
-        run:
-          PROXY_DOMAIN=true pnpm build
+        run: ./scripts/bundle build_proxy
 
       - name: Deploy to GitHub Page
         uses: crazy-max/ghaction-github-pages@v3

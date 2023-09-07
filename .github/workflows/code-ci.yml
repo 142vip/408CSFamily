@@ -29,7 +29,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 14.20.1
+          node-version: 16.20.2
 
       - name: PNPM Install
         uses: pnpm/action-setup@v2
@@ -37,7 +37,7 @@ jobs:
           version: 7
           run_install: true
 
-      - name: Code ESlint Fix
-        run: pnpm lintfix
+      - name: Code Fix
+        run: ./scripts/lint --fix
       - name: Build Site
-        run: pnpm build
+        run: ./scripts/bundle build

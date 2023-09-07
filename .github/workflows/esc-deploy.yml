@@ -11,7 +11,6 @@ env:
   REGISTRY: registry.cn-hangzhou.aliyuncs.com
   UserName: mmdapl
 
-
 jobs:
   Docker-Image:
     name: "构建Docker镜像"
@@ -32,12 +31,15 @@ jobs:
         run: |
           docker version
           echo "-----------Docker Login-----------"
-          docker login --username=${{ env.UserName }} --password=${{ secrets.DOCKER_PASSWORD }} ${{env.REGISTRY}}
+          docker login \
+          --username=${{ env.UserName }} \
+          --password=${{ secrets.DOCKER_PASSWORD }} \
+          ${{env.REGISTRY}}
 
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 14.20.1
+          node-version: 16.20.2
 
       - name: PNPM Install
         uses: pnpm/action-setup@v2
@@ -46,7 +48,7 @@ jobs:
           run_install: true
 
       - name: Build And Push Docker image
-        run:  pnpm faster-image
+        run:  ./script/bundle image
 
   Deploy-ESC:
     needs: Docker-Image

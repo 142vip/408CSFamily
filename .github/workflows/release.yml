@@ -1,4 +1,4 @@
-name: Release New Version
+name: Github-Version-Release
 
 on:
   ## 当以 'v' 开头的标签推送到master时触发工作流程

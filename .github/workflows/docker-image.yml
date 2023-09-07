@@ -1,5 +1,5 @@
 # 构建Docker镜像
-name: Docker-Image
+name: Build-Docker-Image
 
 ## 触发条件
 on:

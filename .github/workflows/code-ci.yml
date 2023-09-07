@@ -3,13 +3,14 @@ name: Code-CI
 
 ## 触发条件
 on:
-  # 手动触发部署
-  workflow_dispatch:
   pull_request:
     branches:
       - 'master'
       - 'next'
       - '!pages/**'
+  # 手动触发部署
+  workflow_dispatch:
+
 
 jobs:
   Code-CI:

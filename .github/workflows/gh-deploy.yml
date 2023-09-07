@@ -1,5 +1,5 @@
 ## 参考资料：https://v2.vuepress.vuejs.org/zh/guide/deployment.html#github-pages
-name: gh-deploy
+name: Github-Page-Deploy
 on:
   push:
     branches:

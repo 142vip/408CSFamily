@@ -7,8 +7,8 @@
  *  - ./scripts/network image    xxx    镜像相关
  *  - ./scripts/docker network   xxx    网络相关
  */
-const { execShell, BaseSetting} = require("./.exec");
-const scriptName=process.argv[2];
+const { execShell, BaseSetting } = require('./.exec')
+const scriptName = process.argv[2]
 
 
 /**
@@ -17,19 +17,19 @@ const scriptName=process.argv[2];
  * - 子网掩码
  * - 网关地址
  */
-const dockerNetworkInfo={
-  defaultName:'service_env_net',
-  subnet:'172.30.0.0/24',
-  gateway:'172.30.0.1',
+const dockerNetworkInfo = {
+  defaultName: 'service_env_net',
+  subnet: '172.30.0.0/24',
+  gateway: '172.30.0.1'
 }
 
 /**
  * docker containers 容器相关指令
  */
-const SupportScriptsInContainer={
-  run:'',
-  rm:'',
-  ps:'docker ps'
+const SupportScriptsInContainer = {
+  run: '',
+  rm: '',
+  ps: 'docker ps'
 }
 
 /**
@@ -43,9 +43,9 @@ const SupportScriptsInImage = {
 /**
  * docker network 相关脚本指令
  */
-const SupportScriptsInNetWork={
-  ls:'docker network ls',
-  create:[
+const SupportScriptsInNetWork = {
+  ls: 'docker network ls',
+  create: [
     // 创建网关
     `
       docker network create \
@@ -58,7 +58,7 @@ const SupportScriptsInNetWork={
       docker network inspect ${dockerNetworkInfo.defaultName}
     `
   ],
-  rm:[
+  rm: [
     // 参数校验
     `
       if test -z "${dockerNetworkInfo.defaultName}";then 
@@ -86,44 +86,39 @@ const SupportScriptsInNetWork={
 }
 
 
+function getContainerCommand() {
+  const name = process.argv[3]
 
-function getContainerCommand(){
-  const name=process.argv[3];
-
-  if(SupportScriptsInContainer.hasOwnProperty(name)){
+  if (name in SupportScriptsInContainer) {
     return SupportScriptsInContainer[name]
   }
   // 默认查看所有容器
   return SupportScriptsInContainer.ps
 }
 
-function getImageCommand(){
-  const name=process.argv[3];
+function getImageCommand() {
+  const name = process.argv[3]
 
-  if(SupportScriptsInImage.hasOwnProperty(name)){
+  if (name in SupportScriptsInImage) {
     return SupportScriptsInImage[name]
   }
   return SupportScriptsInImage.ps
 }
 
 
-
-function getNetworkCommand(){
-  const name=process.argv[3];
-  if(SupportScriptsInNetWork.hasOwnProperty(name)){
+function getNetworkCommand() {
+  const name = process.argv[3]
+  if (name in SupportScriptsInNetWork) {
     return SupportScriptsInNetWork[scriptName]
   }
   return SupportScriptsInNetWork.ls
 }
 
 
-
-
-
 // 支持的命令
-const SupportScripts={
-  ls:'docker network ls',
-  create:[
+const SupportScripts = {
+  ls: 'docker network ls',
+  create: [
     // 创建网关
     `
       docker network create \
@@ -136,7 +131,7 @@ const SupportScripts={
       docker network inspect ${dockerNetworkInfo.defaultName}
     `
   ],
-  rm:[
+  rm: [
     // 参数校验
     `
       if test -z "${dockerNetworkInfo.defaultName}";then 
@@ -163,9 +158,9 @@ const SupportScripts={
     `
 }
 
-function getCommand(){
-  const scriptName=process.argv[3];
-  switch (scriptName){
+function getCommand() {
+  const scriptName = process.argv[3]
+  switch (scriptName) {
     case 'network':
       return getNetworkCommand()
     case 'container':
@@ -173,12 +168,11 @@ function getCommand(){
     case 'image':
       return getImageCommand()
   }
-
 }
 
 
 // 执行
-;(async ()=>{
-  const command=getCommand(scriptName)
+;(async() => {
+  const command = getCommand(scriptName)
   await execShell(command)
 })()

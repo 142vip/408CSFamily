@@ -1,16 +1,17 @@
-#!/usr/bin/env node
-/**
- * 版本发布脚本
- * 链接：https://jstools.dev/version-bump-prompt/
- * 使用: ./scripts/release
- */
+#!/bin/bash
 
-const {execShell} = require("./.exec");
+##
+## 版本发布脚本
+## 链接：https://jstools.dev/version-bump-prompt/
+## 使用: ./scripts/release
+##
 
 
-// 利用commit-and-tag-version生成changelog文档，并跳过commit、tag操作
-const generateChangeLog='pnpm commit-and-tag-version && git add CHANGELOG.md'
-// git提交信息
-const commitInfo='chore(release): publish v%s'
 
-;(async ()=>await execShell(`bumpp  --preid alpha  --execute="${generateChangeLog}" --commit "${commitInfo}" --all --tag --push`))()
+## 利用commit-and-tag-version生成changelog文档，并跳过commit、tag操作
+readonly generateChangeLog='pnpm commit-and-tag-version && git add CHANGELOG.md'
+## git提交信息
+readonly commitInfo='chore(release): publish v%s'
+
+
+bumpp  --preid alpha  --execute="$generateChangeLog" --commit "$commitInfo" --all --tag --push

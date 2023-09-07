@@ -5,19 +5,19 @@
  *  - ./scripts/deploy ali
  *  - ./scripts/deploy github
  */
-const { execShell } = require("./.exec");
-const packageVersion=require('../package.json').version
+const { execShell } = require('./.exec')
+const packageVersion = require('../package.json').version
 
-const dockerDeployInfo={
-    repoAddress:"registry.cn-hangzhou.aliyuncs.com/142vip/doc_book",
-    containerName:'408CSFamily',
-    networkName:'service_env_net',
+const dockerDeployInfo = {
+  repoAddress: 'registry.cn-hangzhou.aliyuncs.com/142vip/doc_book',
+  containerName: '408CSFamily',
+  networkName: 'service_env_net'
 }
-const imageName=`${dockerDeployInfo.repoAddress}:${dockerDeployInfo.containerName}-${packageVersion}`
+const imageName = `${dockerDeployInfo.repoAddress}:${dockerDeployInfo.containerName}-${packageVersion}`
 
 // 支持的命令
-const SupportScripts={
-    Github:`
+const SupportScripts = {
+  Github: `
         set -e
         ./scripts/build proxy && cd docs/.vuepress/dist
         git init && git add -A
@@ -30,7 +30,7 @@ const SupportScripts={
         git push -f https://github.com/mmdapl/408CSFamily.git master:pages/github
         cd -
       `,
-    Ali:[
+  Ali: [
       // 容器存在即删除
       `
         if docker inspect --format='{{.State.Running}}' ${dockerDeployInfo.containerName} >/dev/null 2>&1;then
@@ -59,31 +59,31 @@ const SupportScripts={
         --restart=unless-stopped \
         --ip=172.30.0.100 \
         ${imageName}
-       `,
-    ]
+       `
+  ]
 }
 
 
-const deployName=process.argv[2];
+const deployName = process.argv[2]
 
 
-function getDeployCommand(){
-  let deployCommand=SupportScripts.Ali
+function getDeployCommand() {
+  let deployCommand = SupportScripts.Ali
   // 部署到阿里云服务器
-  if(deployName==='ali'){
-    deployCommand=SupportScripts.Ali
+  if (deployName === 'ali') {
+    deployCommand = SupportScripts.Ali
   }
   // 部署到Github
-  if(deployName==='github'){
-    deployCommand=SupportScripts.Github
+  if (deployName === 'github') {
+    deployCommand = SupportScripts.Github
   }
   return deployCommand
 }
 
 
 // 执行
-;(async ()=>{
-    const deployCommand=getDeployCommand()
-    // console.log(deployCommand)
-    await execShell(deployCommand)
+;(async() => {
+  const deployCommand = getDeployCommand()
+  // console.log(deployCommand)
+  await execShell(deployCommand)
 })()

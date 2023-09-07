@@ -2,18 +2,18 @@
   "name": "408CSFamily",
   "description": "专业代号408，计算机基础知识点合集",
   "version": "0.0.1-alpha.0",
+  "packageManager": "pnpm@7.2.1",
   "engines": {
     "node": "14.x || 16.x || 18.x",
     "pnpm": ">=7.2.1"
   },
-  "packageManager": "pnpm@7.2.1",
   "author": {
     "name": "Chu Fan",
     "email": "fairy_408@2925.com",
     "url": "https://github.com/142vip"
   },
   "scripts": {
-    "prepare": "husky install && npx husky add .husky/pre-commit \"./scripts/lint --fix\" && chmod +x .husky/pre-commit",
+    "prepare": "rm -f .husky/pre-commit && husky install && npx husky add .husky/pre-commit \"./scripts/lint --fix\" && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",
     "build": "./scripts/bundle build",
     "build:proxy": "./scripts/bundle build_proxy",

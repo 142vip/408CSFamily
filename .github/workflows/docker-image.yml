@@ -41,12 +41,15 @@ jobs:
         run: |
           docker version
           echo "-----------Docker Login-----------"
-          docker login --username=${{ env.UserName }} --password=${{ secrets.DOCKER_PASSWORD }} ${{env.REGISTRY}}
+          docker login \
+          --username=${{ env.UserName }} \
+          --password=${{ secrets.DOCKER_PASSWORD }} \
+          ${{env.REGISTRY}}
 
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 14.20.1
+          node-version: 16.20.2
 
       - name: PNPM Install
         uses: pnpm/action-setup@v2
@@ -54,5 +57,10 @@ jobs:
           version: 7
           run_install: true
 
-      - name: Build And Push Docker image
-        run: PROXY_DOMAIN=true pnpm image:faster
+      ## 构建，支持domain
+      - name: Build To Dist
+        run: ./scripts/bundle build_proxy
+
+      - name: Push Docker image
+        run: ./scripts/bundle image_faster
+

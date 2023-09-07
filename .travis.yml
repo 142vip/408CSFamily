@@ -1,0 +1,19 @@
+# 参考链接： https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
+language: node_js
+node_js:
+  - 16
+#  环境变量
+#env:
+#  - EMBER_VERSION=default
+#  - EMBER_VERSION=release
+#  - EMBER_VERSION=beta
+#  - EMBER_VERSION=canary
+
+# 安装依赖前，先安装pnpm
+before_install:
+  - "npm install -g npm@7"
+install:
+  - pnpm i
+script:
+  - pnpm lintfix
+  - pnpm build

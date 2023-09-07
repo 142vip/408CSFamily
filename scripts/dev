@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+/**
+ *
+ * 本地启动
+ * 例如：
+ *   - ./scripts/dev
+ */
+
+const { execShell } = require('./.exec');
+(async() => await execShell('vuepress dev docs'))()

@@ -37,7 +37,7 @@ jobs:
       - name: Create Zip Archive
         run: |
           zip -r 408CSFamily.zip . \
-          -x "node_modules"
+          -x "node_modules/*"
 
       - name: Create Release
         id: create_release

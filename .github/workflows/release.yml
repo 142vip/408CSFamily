@@ -35,7 +35,8 @@ jobs:
       ### 打成压缩包
       - name: Create Zip Archive
         run: |
-          zip -r 408CSFamily.zip .
+          zip -r 408CSFamily.zip . \
+          -x "node_modules"
 
       - name: Create Release
         id: create_release

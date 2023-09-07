@@ -2,7 +2,8 @@
 name: Deploy-ESC
 
 on:
-  push: # 推送的时候触发
+  ## 推送到master
+  push:
       branches:
         - master
   workflow_dispatch:

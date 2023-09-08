@@ -14,8 +14,6 @@ jobs:
   release:
     name: Create Release
     runs-on: ubuntu-latest
-    permissions:
-      actions: write
 
     steps:
       - name: Checkout Code

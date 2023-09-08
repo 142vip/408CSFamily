@@ -44,14 +44,9 @@ jobs:
       - name: Cache Dependencies
         uses: actions/cache@v3
         with:
-          path: node_modules
+          path: |
+            node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
-
-      - name: Cache PNPM
-        uses: actions/cache@v3
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
 
   ## 部署到Github-Pages
   deploy-github:
@@ -68,7 +63,8 @@ jobs:
       - name: Restore Dependencies From cache
         uses: actions/cache@v3
         with:
-          path: node_modules
+          path: |
+            node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
 
 
@@ -99,20 +95,16 @@ jobs:
       - name: Restore Dependencies From Cache
         uses: actions/cache@v3
         with:
-          path: node_modules
+          path: |
+            node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
-
-      - name: Restore PNPM From Cache
-        uses: actions/cache@v3
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
 
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
+      ## 注意：安装pnpm
       - name: Build Project Artifacts
-        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: npm i pnpm@7 -g && vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
@@ -129,8 +121,12 @@ jobs:
       - name: Restore Dependencies From cache
         uses: actions/cache@v3
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: |
+            ~/.pnpm-store
+            node_modules
+          key: ${{ runner.os }}-cache-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-cache-
 
       ### 打成压缩包
       - name: Create Zip Package

@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - next
+      - feat/fix-ci
 #  pull_request:
 #    branches:
 #      - master
@@ -20,9 +21,18 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      - name: sync to vercel
-        uses: amondnet/vercel-action@v20
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
+#      - name: sync to vercel
+#        uses: amondnet/vercel-action@v20
+#        with:
+#          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+#          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
+#          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
+#
+
+      - name: Install Vercel CLI
+        run: npm install -g pnpm && pnpm i -D
+
+      - name: Deploy to Vercel
+        run: vercel --prod
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}

@@ -25,12 +25,6 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
-
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
@@ -41,6 +35,12 @@ jobs:
         with:
           version: 7
           run_install: true
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: .  # 缓存当前目录中的所有文件
+          key: ${{ runner.os }}-408CSFamily-${{ hashFiles('**') }}
 
   ## 部署到Github-Pages
   deploy-github:
@@ -57,12 +57,12 @@ jobs:
       - name: Restore dependencies from cache
         uses: actions/cache@v2
         with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          path: .
+          key: ${{ runner.os }}-408CSFamily-${{ hashFiles('**') }}
 
       # 运行构建脚本
       - name: Build VuePress Site
-        run: ./scripts/bundle build_proxy
+        run: ls -a && ./scripts/bundle build_proxy
 
       - name: Deploy to GitHub Page
         uses: crazy-max/ghaction-github-pages@v3
@@ -87,8 +87,8 @@ jobs:
       - name: Restore dependencies from cache
         uses: actions/cache@v2
         with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          path: . 
+          key: ${{ runner.os }}-408CSFamily-${{ hashFiles('**') }}
 
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}

@@ -5,14 +5,13 @@ on:
   push:
     tags:
       - 'v*'
-    branches:
-      - master
   workflow_dispatch:
 
 jobs:
   release:
     name: Create Release
     runs-on: ubuntu-latest
+    if: github.repository == '142vip/408CSFamily'
 
     steps:
       - name: Checkout Code
@@ -36,25 +35,30 @@ jobs:
       - name: Create Zip Archive
         run: |
           zip -r 408CSFamily.zip . \
-          -x "node_modules"
+          -x "node_modules/*"
 
+      # 提取版本号
+      - name: Extract Version
+        id: extract_version
+        run: echo "::set-output name=version::$(node -p "require('./package.json').version")"
+
+
+      # 创建发布版本
       - name: Create Release
         id: create_release
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
-#          body: |
-#            Release ${{ github.ref }}
-#            - Add feature A
-#            - Fix bug B
-          body_path: CHANGELOG.md
-          ## 是否为草稿、是否为预发布
-          draft: true
-          prerelease: true
+          tag_name: v${{ steps.extract_version.outputs.version }}
+          release_name: Release v${{ steps.extract_version.outputs.version }}
+          body: |
+            
+            ### Features
 
+            ### Bug Fixes
+
+      ## 更新资源
       - name: Upload Assets
         uses: actions/upload-release-asset@latest
         env:

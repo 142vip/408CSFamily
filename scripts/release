@@ -6,12 +6,10 @@
 ## 使用: ./scripts/release
 ##
 
-
-
 ## 利用commit-and-tag-version生成changelog文档，并跳过commit、tag操作
 readonly generateChangeLog='pnpm commit-and-tag-version && git add CHANGELOG.md'
 ## git提交信息
-readonly commitInfo='v%s'
+readonly commitInfo='chore(release): publish v%s'
 
 
 bumpp  --preid alpha  --execute="$generateChangeLog" --commit "$commitInfo" --all --tag --push

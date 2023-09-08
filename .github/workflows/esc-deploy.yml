@@ -1,5 +1,5 @@
 # 部署到服务器
-name: Deploy-ESC
+name: ESC-Deploy
 
 on:
   ## 推送到master

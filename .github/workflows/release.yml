@@ -49,13 +49,29 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
-#          body: |
-#            Release ${{ github.ref }}
-#            - Add feature A
-#            - Fix bug B
-          body_path: CHANGELOG.md
+          body: |
+            Release ${{ github.sha }}
+            Version: ${{ steps.extract_package_info.outputs.version }}
+            **概述**
+            本次发布包含了一些新功能、bug 修复和改进。
+            **新功能**
+            ${{ steps.generate_changelog.outputs.new_features }}
+            **Bug 修复**
+            ${{ steps.generate_changelog.outputs.bug_fixes }}
+            **改进和优化**
+            ${{ steps.generate_changelog.outputs.improvements }}
+            **重要提示**
+            - 注意：XXX 配置发生了变化，请更新您的配置文件。
+            - 请务必查看更新的操作指南，以获取有关如何使用新功能的详细信息。
+            **链接和资源**
+            - 项目文档：[链接](https://example.com/docs)
+            - 示例代码：[链接](https://github.com/example/repo/tree/${{ github.sha }}/examples)
+            **鸣谢**
+            感谢以下贡献者对本次发布的帮助和贡献：
+            ${{ steps.generate_contributors.outputs.contributors }}
+#          body_path: CHANGELOG.md
           ## 是否为草稿、是否为预发布
-          draft: true
+          draft: false
           prerelease: true
 
       - name: Upload Assets

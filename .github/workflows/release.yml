@@ -49,11 +49,11 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
-#          body: |
-#            Release ${{ github.ref }}
-#            - Add feature A
-#            - Fix bug B
-          body_path: CHANGELOG.md
+          body: |
+            Release ${{ github.ref }}
+            - Add feature A
+            - Fix bug B
+#          body_path: CHANGELOG.md
           ## 是否为草稿、是否为预发布
           draft: true
           prerelease: true

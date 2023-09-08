@@ -12,6 +12,12 @@ on:
       - next
   workflow_dispatch:
 
+
+## vercel 环境变量
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
 jobs:
   install-init:
     name: "依赖安装初始化"

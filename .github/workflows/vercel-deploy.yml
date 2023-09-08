@@ -29,8 +29,17 @@ jobs:
 #          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
 #
 
-      - name: Install Vercel CLI
-        run: npm install -g pnpm && pnpm i -D
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.20.2
+
+      - name: PNPM Install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: true
+
 
       - name: Deploy to Vercel
         run: vercel --prod

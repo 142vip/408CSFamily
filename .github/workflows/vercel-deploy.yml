@@ -40,8 +40,10 @@ jobs:
           version: 7
           run_install: true
 
+      - name: Login to Vercel
+        uses: vercel/login@v1
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy to Vercel
         run: vercel --prod
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}

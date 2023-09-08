@@ -72,7 +72,7 @@ jobs:
 #          body_path: CHANGELOG.md
           ## 是否为草稿、是否为预发布
           draft: false
-          prerelease: true
+          prerelease: false
 
       - name: Upload Assets
         uses: actions/upload-release-asset@latest

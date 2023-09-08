@@ -1,5 +1,5 @@
 # 构建Docker镜像
-name: Code-CI
+name: Code-LintFix
 
 ## 触发条件
 on:
@@ -40,5 +40,6 @@ jobs:
 
       - name: Code Fix
         run: ./scripts/lint --fix
+
       - name: Build Site
         run: ./scripts/bundle build

@@ -45,7 +45,7 @@ jobs:
           version: 7
           run_install: true
 
-      - name: Cache dependencies
+      - name: Cache Dependencies
         uses: actions/cache@v3
         with:
           path: node_modules

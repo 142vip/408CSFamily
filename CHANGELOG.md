@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-beta -->
 
+## [0.0.1-alpha.3](https://github.com/mmdapl/408CSFamily/compare/v0.0.1-alpha.1...v0.0.1-alpha.3) (2023-09-08)
+
+
+### Features
+
+* sync ([cbd014c](https://github.com/mmdapl/408CSFamily/commit/cbd014c163e93eed947509739c7a1b356b37f872))
+
 ## [0.0.1-alpha.2](https://github.com/mmdapl/408CSFamily/compare/v0.0.1-alpha.1...v0.0.1-alpha.2) (2023-09-08)
 
 

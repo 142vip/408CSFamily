@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - master
-#      - feat/test-release
+      - feat/test-release
     tags:
       - 'v*'
   workflow_dispatch:

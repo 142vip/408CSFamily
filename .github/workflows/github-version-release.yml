@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - master
-      - feat/test-release
+#      - feat/test-release
     tags:
       - 'v*'
   workflow_dispatch:
@@ -39,6 +39,29 @@ jobs:
           zip -r 408CSFamily.zip . \
           -x "node_modules/*"
 
+      # 提取版本号
+      - name: Extract Version
+        id: extract_version
+        run: echo "::set-output name=version::${GITHUB_REF/refs\/tags\/v/}"
+
+      # 生成变更日志
+      - name: Generate Changelog
+        id: generate_changelog
+        run: |
+          # 在这里根据 commit 记录生成变更日志
+          # 并将新功能、修复和改进分别存储在相应的输出变量中
+          echo "::set-output name=new_features::New Features"
+          echo "::set-output name=bug_fixes::Bug Fixes"
+          echo "::set-output name=improvements::Improvements"
+
+      # 生成贡献者列表
+      - name: Generate Contributors
+        id: generate_contributors
+        run: |
+          # 在这里生成贡献者列表
+          echo "::set-output name=contributors::Contributor 1, Contributor 2"
+
+      # 创建发布版本
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -46,32 +69,35 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
+          release_name: Release ${{ steps.extract_version.outputs.version }}
           body: |
-            Release ${{ github.sha }}
-            Version: ${{ steps.extract_package_info.outputs.version }}
+            Release ${{ steps.extract_version.outputs.version }}
+
             **概述**
-            本次发布包含了一些新功能、bug 修复和改进。
+            本次发布包含了一些新功能、Bug 修复和改进。
+
             **新功能**
             ${{ steps.generate_changelog.outputs.new_features }}
+
             **Bug 修复**
             ${{ steps.generate_changelog.outputs.bug_fixes }}
+
             **改进和优化**
             ${{ steps.generate_changelog.outputs.improvements }}
+
             **重要提示**
             - 注意：XXX 配置发生了变化，请更新您的配置文件。
             - 请务必查看更新的操作指南，以获取有关如何使用新功能的详细信息。
+
             **链接和资源**
             - 项目文档：[链接](https://example.com/docs)
             - 示例代码：[链接](https://github.com/example/repo/tree/${{ github.sha }}/examples)
+
             **鸣谢**
             感谢以下贡献者对本次发布的帮助和贡献：
             ${{ steps.generate_contributors.outputs.contributors }}
-#          body_path: CHANGELOG.md
-          ## 是否为草稿、是否为预发布
-          draft: false
-          prerelease: false
 
+      ## 更新资源
       - name: Upload Assets
         uses: actions/upload-release-asset@latest
         env:

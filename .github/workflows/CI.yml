@@ -47,7 +47,7 @@ jobs:
           run_install: true
 
       - name: Cache dependencies
-        uses: actions/cache@latest
+        uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -62,7 +62,7 @@ jobs:
           fetch-depth: 0
 
       - name: Restore Dependencies From Cache
-        uses: actions/cache@latest
+        uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -102,7 +102,7 @@ jobs:
           ${{env.REGISTRY}}
 
       - name: Restore Dependencies From Cache
-        uses: actions/cache@latest
+        uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}

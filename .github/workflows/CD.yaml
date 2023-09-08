@@ -43,6 +43,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       # 运行构建脚本
       - name: Build VuePress Site
         run: ./scripts/bundle build_proxy
@@ -62,6 +66,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.repository == '142vip/408CSFamily'
     steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 

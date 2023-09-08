@@ -1,6 +1,7 @@
-# 构建Docker镜像
-name: Code-LintFix
+## 代码CI快速集成流水线，lint、fix、build
 
+
+name: CI
 ## 触发条件
 on:
   pull_request:
@@ -11,9 +12,11 @@ on:
   # 手动触发部署
   workflow_dispatch:
 
+  schedule:
+    - cron: "0 0 1 * *"
 
 jobs:
-  Code-CI:
+  test:
     runs-on: ubuntu-latest
 #    if: github.repository == '142vip/408CSFamily'
     permissions:
@@ -38,8 +41,11 @@ jobs:
           version: 7
           run_install: true
 
-      - name: Code Fix
+      - name: Code LintFix
         run: ./scripts/lint --fix
 
       - name: Build Site
         run: ./scripts/bundle build
+
+      - name: Build Site With Proxy
+        run: ./scripts/bundle build_proxy

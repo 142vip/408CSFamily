@@ -1,0 +1,119 @@
+## CD交付流水线
+##    - 部署到Github Pages
+##    - 部署到Vercel托管平台
+##    - 发布新的Github Release
+## 参考资料：https://v2.vuepress.vuejs.org/zh/guide/deployment.html#github-pages
+
+name: CD
+on:
+  push:
+    branches:
+      - master
+      - next
+      - feat/fix-ci
+  workflow_dispatch:
+
+jobs:
+  install-init:
+    name: "依赖安装初始化"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+        with:
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
+          fetch-depth: 0
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.20.2
+
+      - name: PNPM Install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: true
+
+  ## 部署到Github-Pages
+  deploy-github:
+    name: "部署到Github-Pages"
+    needs: install-init
+    runs-on: ubuntu-latest
+
+    steps:
+      # 运行构建脚本
+      - name: Build VuePress Site
+        run: ./scripts/bundle build_proxy
+
+      - name: Deploy to GitHub Page
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: pages/github
+          build_dir: docs/.vuepress/dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  ## 部署到vercel平台
+  deploy-vercel:
+    name: "部署到Vercel平台"
+    needs: install-init
+    runs-on: ubuntu-latest
+    if: github.repository == '142vip/408CSFamily'
+    steps:
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+  ## 版本发布
+  release:
+    name: "创建Github发布"
+    runs-on: ubuntu-latest
+    needs: install-init
+    ## 主库且tag更新时执行
+    if: github.repository == '142vip/408CSFamily' && startsWith(github.ref, 'refs/tags/v')
+
+    steps:
+      ### 打成压缩包
+      - name: Create Zip Package
+        run: |
+          zip -r 408CSFamily.zip . \
+          -x "node_modules/*"
+
+      # 提取版本号
+      - name: Get New Version Number
+        id: extract_version
+        run: echo "::set-output name=version::$(node -p "require('./package.json').version")"
+
+      # 创建发布版本
+      - name: Create New Release
+        id: create_release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.extract_version.outputs.version }}
+          release_name: v${{ steps.extract_version.outputs.version }}
+          body: |
+            Release ${{ steps.extract_version.outputs.version }}
+            
+            ### Features
+
+            ### Bug Fixes
+
+      ## 更新资源
+      - name: Upload Resource Assets
+        uses: actions/upload-release-asset@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./408CSFamily.zip
+          asset_name: 408CSFamily.zip
+          asset_content_type: application/zip

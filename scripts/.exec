@@ -1,12 +1,11 @@
 #!/usr/bin/env node
+/**
+ * 脚本执行器，执行shell命令
+ */
 const {join} = require('path')
 const cwd = join(__dirname, '..')
 process.env.PATH = `${join(cwd, 'node_modules', '.bin')}:${process.env.PATH}`
 const  {exec,exit} = require('shelljs');
-
-
-
-
 
 /**
  * 监听进程
@@ -48,7 +47,6 @@ exports.execShell = async commands => {
 
 /**
  * 脚本基础设置
- * @type {{currentTime: string, errorLogger: string, successLogger: string, warnLogger: string}}
  */
 exports.BaseSetting={
   successLogger:"\033[36m",

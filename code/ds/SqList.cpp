@@ -1,7 +1,5 @@
 // 顺序表的基础操作
 
-
-
 // 基础结构体
 define MaxSize 50;
 typedef struct{

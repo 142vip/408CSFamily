@@ -10,12 +10,12 @@ typedef struct StackNode
 {
 	int data;//结点数据域
 	struct StackNode* next;//结点指针域
-}StackNode,* Linktop;
+}StackNode,* LinkTop;
 
 //链栈的数据结构
 typedef struct LinkStack
 {
-	Linktop top;   //栈顶结点,定义了一个指向上个结构体的指针
+	LinkTop top;   //栈顶结点,定义了一个指向上个结构体的指针
 	int count;//元素个数
 }LinkStack;
 

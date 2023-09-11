@@ -28,8 +28,8 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
-    "@vuepress/client": "2.0.0-beta.61",
-    "@vuepress/utils": "2.0.0-beta.61",
+    "@vuepress/client": "^2.0.0-beta.61",
+    "@vuepress/utils": "^2.0.0-beta.61",
     "bumpp": "^9.2.0",
     "commit-and-tag-version": "11.2.3",
     "enquirer": "^2.4.1",
@@ -44,9 +44,10 @@
     "typescript": "^3.9.10",
     "vercel": "^32.2.0",
     "vue": "^3.3.4",
-    "vuepress": "2.0.0-beta.61",
-    "vuepress-plugin-search-pro": "2.0.0-beta.185",
-    "vuepress-theme-hope": "2.0.0-beta.185"
+    "vuepress": "^2.0.0-beta.61",
+    "vuepress-plugin-search-pro": "^2.0.0-beta.185",
+    "vuepress-theme-hope": "^2.0.0-beta.185",
+    "webpack": "^5.0.0"
   },
   "license": "MIT"
 }

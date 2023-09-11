@@ -122,11 +122,8 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            ~/.pnpm-store
             node_modules
-          key: ${{ runner.os }}-cache-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-cache-
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       ### 打成压缩包
       - name: Create Zip Package

@@ -85,7 +85,7 @@ jobs:
   deploy-vercel:
     name: "部署到Vercel平台"
     needs: install-init
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     if: github.repository == '142vip/408CSFamily'
     steps:
       - name: Checkout Code

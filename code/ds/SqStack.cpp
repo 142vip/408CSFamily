@@ -1,13 +1,3 @@
-/*
- * @Description: 顺序栈的相关操作
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2020-03-07 11:15:04
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2021-03-13 12:30:18
- */
-
-
 // 定义栈中元素的最大个数
 # define MaxSize 50
 
@@ -43,7 +33,7 @@ bool Push(SqStack &S,ElemType x){
     }else{
         // 可进栈，栈顶指针+1，再元素入栈
         S.data[++S.top]=x;
-        
+
         // 入栈成功
         return true;
     }
@@ -58,7 +48,7 @@ bool Pop(SqStack &S,ElemType &x){
     }else{
         // 栈非空，先元素出栈，再进行指针-1
         x=S.data[S.top--];
-        
+
         // 出栈成功，返回true
         return true;
     }
@@ -66,15 +56,15 @@ bool Pop(SqStack &S,ElemType &x){
 
 // 读（获取）栈顶元素
 bool GetTop(SqStack S,ElemType &x){
-    
+
     if(S.top==-1){
         // 栈空，无栈顶元素,返回false
         return false;
     }else{
-    
+
         // 通过栈顶指针，获取栈顶元素，赋值给变量x
         x=S.data[S.top];
-        
+
         // 读取栈顶元素成功，返回true
         return true;
     }

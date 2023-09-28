@@ -9,9 +9,6 @@ typedef struct {
   int front,rear;
 } SqQueue;
 
-
-
-
 // 入队算法
 // 尾插法：Q.data[Q.rear]=x;Q.rear=(Q.rear+1)%Maxsize;Q.tag=1
 // 队空条件：Q.front== Q.rear且Q.tag==0
@@ -25,8 +22,8 @@ int EnLoopQueue(SqQueue &Q, ElemType x){
    return 1;
 }
 
- 
-        
+
+
 // 出队算法
 // 头结点删除：x=Q.data[Q.front];Q.front=(Q.front +1)%Maxsize;Q.tag=0
 // 队满条件：Q.front == Q.rear且Q.tag=1

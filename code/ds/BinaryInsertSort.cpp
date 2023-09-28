@@ -23,7 +23,7 @@ void BinaryInsertSort(ElemType Arr[],int n){
     }
 
     // 跳出循环需要（lowIndex>heightIndex），
-   //  说明待插入位置的角标在heightIndex之后，为 heightIndex+1,此时需要将（heightIndex，i）之间的所有元素后移
+    //  说明待插入位置的角标在heightIndex之后，为 heightIndex+1,此时需要将（heightIndex，i）之间的所有元素后移
 
     for(j=i-1;j>highIndex;--j){
       Arr[j+1]=Arr[j]

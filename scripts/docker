@@ -7,7 +7,7 @@
  *  - ./scripts/network image    xxx    镜像相关
  *  - ./scripts/docker network   xxx    网络相关
  */
-const { execShell, BaseSetting } = require('./.exec')
+const { execShell } = require('./.exec')
 const scriptName = process.argv[2]
 
 

@@ -4,7 +4,7 @@
   "version": "0.0.1-alpha.1",
   "packageManager": "pnpm@7.2.1",
   "engines": {
-    "node": "14.x || 16.x || 18.x",
+    "node": "^18.x",
     "pnpm": ">=7.2.1"
   },
   "author": {

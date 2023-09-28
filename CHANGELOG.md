@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-beta -->
 
+## [0.0.1-alpha.3](https://github.com/mmdapl/408CSFamily/compare/v0.0.1-alpha.2...v0.0.1-alpha.3) (2023-09-28)
+
+
+### Bug Fixes
+
+* 修复持续交付vercel异常 ([57473e5](https://github.com/mmdapl/408CSFamily/commit/57473e5e491a0133a2b5494c3b9e7e65b990dd23))
+
 ## [0.0.1-alpha.2](https://github.com/mmdapl/408CSFamily/compare/v0.0.1-alpha.1...v0.0.1-alpha.2) (2023-09-28)
 
 

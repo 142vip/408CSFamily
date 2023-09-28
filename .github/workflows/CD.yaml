@@ -21,7 +21,7 @@ env:
 jobs:
   install-init:
     name: "依赖安装初始化"
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
       - name: Checkout Code
@@ -54,7 +54,7 @@ jobs:
   deploy-github:
     name: "部署到Github-Pages"
     needs: install-init
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
       - name: Checkout Code
@@ -86,7 +86,7 @@ jobs:
   deploy-vercel:
     name: "部署到Vercel平台"
     needs: install-init
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     if: github.repository == '142vip/408CSFamily'
     steps:
       - name: Checkout Code
@@ -114,7 +114,7 @@ jobs:
   ## 版本发布
   release:
     name: "创建Github发布"
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     needs: install-init
     ## 主库master、next且执行release更新时执行
     if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')

@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-beta -->
 
+## [0.0.1-alpha.2](https://github.com/mmdapl/408CSFamily/compare/v0.0.1-alpha.1...v0.0.1-alpha.2) (2023-09-28)
+
+
+### Bug Fixes
+
+* 修复release CD异常 ([7ce3714](https://github.com/mmdapl/408CSFamily/commit/7ce3714f9bcfbcad40ef9df462a343b37742273a))
+
+
+### Performance Improvements
+
+* 升级依赖版本,支持锁定node18.18 ([a1dfbaf](https://github.com/mmdapl/408CSFamily/commit/a1dfbaf1d3c22ff5844d5c976e24b35d2578a62e))
+
 ## [0.0.1-alpha.1](https://github.com/mmdapl/408CSFamily/compare/v0.0.1-alpha.0...v0.0.1-alpha.1) (2023-09-08)
 
 
@@ -29,4 +41,3 @@ All notable changes to this project will be documented in this file. See [Conven
 ### Bug Fixes
 
 * 修复CI/CD流水线异常 ([edf222f](https://github.com/mmdapl/408CSFamily/commit/edf222f297dbe57782f46fd6d38dd7c92d59e3fe))
-

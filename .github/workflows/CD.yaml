@@ -31,17 +31,18 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      - name: PNPM Install
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
-          run_install: true
 
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18.18.0
           cache: 'pnpm'
+
+      - name: PNPM Install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: true
 
       - name: Cache Dependencies
         uses: actions/cache@v3
@@ -86,7 +87,7 @@ jobs:
   deploy-vercel:
     name: "部署到Vercel平台"
     needs: install-init
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     if: github.repository == '142vip/408CSFamily'
     steps:
       - name: Checkout Code
@@ -125,12 +126,6 @@ jobs:
     if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
 
     steps:
-      - name: Restore Dependencies From cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       ### 打成压缩包
       - name: Create Zip Package

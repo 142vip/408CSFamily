@@ -44,8 +44,8 @@ jobs:
         with:
           node-version: 18.18.0
           cache: 'pnpm'
-        run: |
-          pnpm i --frozen-lockfile --registry https://registry.npmmirror.com
+
+      - run: pnpm i --frozen-lockfile --registry https://registry.npmmirror.com
 
       - name: Cache Dependencies
         uses: actions/cache@v3

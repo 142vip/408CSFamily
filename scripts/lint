@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+/**
+ *
+ * 格式化代码
+ * 例如：
+ *   - ./scripts/lint
+ *   - ./scripts/lint --fix
+ */
+
+const { execShell } = require('./.exec')
+const scriptName = process.argv[2]
+const fixed = scriptName != null ? '--fix' : '';
+
+// 可以在--fix后指定目录
+(async() => await execShell(`eslint ${fixed} --ext .js,.ts,.vue --ignore-path .gitignore .`))()

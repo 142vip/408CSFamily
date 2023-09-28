@@ -1,0 +1,138 @@
+#!/usr/bin/env node
+/**
+ *
+ * 将应用程序打包成可部署的包、文件、镜像
+ * 例如：
+ *   - ./scripts/bundle build              基础部署打包
+ *   - ./scripts/bundle build_proxy        用于三方平台部署打包
+ *   - ./scripts/bundle image              构建容器镜像
+ *   - ./scripts/bundle image_faster       本地build，快速构建容器镜像
+ *   - ./scripts/bundle xxx                其他参数，默认执行build命令
+ *   - ./scripts/bundle                    交互式选择执行的命令
+ */
+
+const { execShell } = require('./.exec')
+const { Select } = require('enquirer')
+
+const packageVersion = require('../package.json').version
+const projectName = '408CSFamily'
+// 仓库地址
+const repoAddress = 'registry.cn-hangzhou.aliyuncs.com/142vip/doc_book'
+// 镜像地址
+const imageName = `${repoAddress}:${projectName}-${packageVersion}`
+
+/**
+ * 获取构建镜像的脚本
+ * @param containerBuild
+ * @param preBuild
+ * @param needProxy
+ * @returns {string[]}
+ */
+function getBuildImageScript({ containerBuild, preBuild, needProxy = false }) {
+  // 基础构建脚本
+  let baseBuildScript = ''
+
+  if (preBuild) {
+    baseBuildScript = needProxy ? './scripts/bundle build_proxy' : './scripts/bundle build'
+  }
+
+  return [
+      // 构建镜像
+      `
+        ${baseBuildScript} 
+        docker build \
+        --build-arg APP_VERSION=${packageVersion} \
+        --build-arg CONTAINER_BUILD=${containerBuild} \
+        -t ${imageName}  .
+      `,
+      // 推送镜像
+      `
+        if [[ "$(docker images -q  ${imageName} 2> /dev/null)" != "" ]];then
+          ## 推送
+          docker push ${imageName}
+          echo  "---------------- 上传镜像成功，删除本地镜像 ---------------- "
+          docker rmi ${imageName}
+          exit 0;
+        else
+          echo "镜像: ${imageName} , 不存在"
+          exit 1;
+        fi
+      `
+  ]
+}
+
+
+/**
+ * 支持的脚本命令
+ */
+const SupportScripts = {
+  build: 'vuepress build docs',
+  build_proxy: 'PROXY_DOMAIN=true vuepress build docs',
+  image: getBuildImageScript({
+    containerBuild: true,
+    needProxy: false
+  }),
+  image_proxy: getBuildImageScript({
+    containerBuild: true,
+    needProxy: true
+  }),
+  // 直接从本地拿dist文件，生成镜像
+  image_faster: getBuildImageScript({
+    containerBuild: false,
+    needProxy: false
+  })
+}
+
+
+async function getScriptCommand() {
+  const scriptName = process.argv[2]
+  let scriptCommand = SupportScripts.build
+
+  if (scriptName == null) {
+    const prompt = new Select({
+      header: '======================== 408CSFamily Cli For Building ========================',
+      footer: '======================== 408CSFamily Cli For Building ========================',
+      name: 'color',
+      message: 'What script will you want to run ',
+      choices: [
+        {
+          message: 'build',
+          name: SupportScripts.build,
+          value: '#00ffff'
+        },
+        {
+          message: 'build for fixing proxy',
+          name: SupportScripts.build_proxy,
+          value: '#000000'
+        },
+        {
+          message: 'build to docker image',
+          name: SupportScripts.image,
+          value: '#0000ff'
+        },
+        {
+          message: 'build to docker image with proxy',
+          name: SupportScripts.image_proxy,
+          value: '#0000ff'
+        },
+        {
+          message: 'build to docker image faster',
+          name: SupportScripts.image_faster,
+          value: '#0000ff'
+        }
+      ]
+    })
+    scriptCommand = await prompt.run()
+  } else {
+    // 命中支持的脚本
+    if (Object.keys(SupportScripts).includes(scriptName)) { scriptCommand = SupportScripts[scriptName] }
+  }
+  return scriptCommand
+}
+
+
+;(async() => {
+  const scriptCommand = await getScriptCommand()
+  await execShell(scriptCommand)
+})()
+

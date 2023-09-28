@@ -1,4 +1,3 @@
-
 /**
  * 基于分治法思想，将数组进行快速排序
  * @param {Array} arr 待排序的数组
@@ -7,7 +6,7 @@
  */
 function QuickSort(arr, low, high) {
   // low=high 说明只有一个元素，理解为有序，不做处理
-  // low>high 说明左右指针已经重合，数组已经遍历完，需要跳出
+  // low>high 说明左、右指针已经重合，数组已经遍历完，需要跳出
   if (low < high) {
     const pivotIndex = Partition(arr, low, high)
     // 处理左侧
@@ -50,7 +49,6 @@ function Partition(arr, low, high) {
 
 
 const initArr = [2, 18, 6, 25, 19, 4, 8, 3, 7]
-
 console.log(`快速排序处理前：${initArr}`)
 const quickSortResult = QuickSort(initArr, 0, 8)
 console.log(`快速排序处理后：${quickSortResult}`)

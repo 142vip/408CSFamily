@@ -1,0 +1,58 @@
+#!/usr/bin/env node
+/**
+ * 脚本执行器，执行shell命令
+ */
+const {join} = require('path')
+const cwd = join(__dirname, '..')
+process.env.PATH = `${join(cwd, 'node_modules', '.bin')}:${process.env.PATH}`
+const  {exec,exit} = require('shelljs');
+
+/**
+ * 监听进程
+ * - 退出进程
+ */
+process.on('exit', () => {
+    exit()
+})
+
+/**
+ * 执行shell指令
+ * @param commands
+ */
+exports.execShell = async commands => {
+    let runCommands=[]
+    if(typeof commands ==='string'){
+        runCommands.push(commands)
+    }
+
+    // 批量执行
+    if(Array.isArray(commands)){
+        runCommands=commands
+    }
+
+    for (let index=0;index<runCommands.length;index++) {
+      const command=runCommands[index]
+      const count=index+1
+      console.log(`>>>command(${count}):\n${command} \n<<<command(${count})--start  === \n`)
+      // await syncExec(command)
+      const execResult=await exec(command)
+
+      console.log(`\n<<<command(${count})--ending === `)
+      // 指令异常，不执行后续指令
+      if(execResult.code!==0){
+        break;
+      }
+    }
+}
+
+/**
+ * 脚本基础设置
+ */
+exports.BaseSetting={
+  successLogger:"\033[36m",
+  errorLogger:"\033[1;31m",
+  warnLogger:"\033[1;33m",
+  // 定义时间
+  currentTime:'$(date "+%Y-%m-%d %H:%M:%S")'
+}
+

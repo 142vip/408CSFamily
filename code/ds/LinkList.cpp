@@ -25,7 +25,6 @@ LinkList CreateListWithStartNode(LinkList &L){
     return L;
 }
 
-
 // 单链表尾插法
 LinkList CreateListWithEndNode(LinkList &L){
 

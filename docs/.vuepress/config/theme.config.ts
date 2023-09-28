@@ -76,6 +76,37 @@ export default {
             // 代码块
             mdEnhance: {
                 codetabs: true,
+                tasklist: true, // 支持任务列表
+                // 启用 figure
+                figure: true,
+                // 启用图片懒加载
+                imgLazyload: true,
+                // 启用图片标记
+                imgMark: true,
+                // 启用图片大小
+                imgSize: true,
+                playground: {
+                    presets: ["ts", "vue"],
+                },
+                presentation: ["highlight", "math", "search", "notes", "zoom"],
+                stylize: [
+                    {
+                        matcher: "Recommended",
+                        replacer: ({tag}) => {
+                            if (tag === "em")
+                                return {
+                                    tag: "Badge",
+                                    attrs: {type: "tip"},
+                                    content: "Recommended",
+                                };
+                        },
+                    },
+                ],
+                sub: true,
+                sup: true,
+                tabs: true,
+                vPre: true,
+                vuePlayground: true,
             },
             copyCode: {
                 showInMobile: true

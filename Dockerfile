@@ -7,7 +7,7 @@
 #
 # 注意：vite构建需要支持node14以上，安装node16较为稳妥
 
-FROM registry.cn-hangzhou.aliyuncs.com/142vip/node:16.12.0-alpine AS build_base
+FROM registry.cn-hangzhou.aliyuncs.com/142vip/node:18.18.0-alpine AS build_base
 ARG CONTAINER_BUILD
 WORKDIR /apps
 COPY . .
@@ -16,9 +16,8 @@ RUN echo $CONTAINER_BUILD
 
 ## 基于容器自动构建
 RUN if [ "$CONTAINER_BUILD" = "true" ]; then  \
-    npm i pnpm@7 -g && pnpm i -D && pnpm build; \
+    npm i pnpm@7 -g && pnpm i -D && ./scripts/bundle build; \
   fi;
-
 
 FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.23.0-alpine
 

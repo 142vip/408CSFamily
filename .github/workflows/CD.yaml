@@ -30,18 +30,17 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      - name: PNPM Install
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
 
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18.18.0
-          cache: 'pnpm'
 
-      - run: pnpm i --frozen-lockfile --registry https://registry.npmmirror.com
+      - name: PNPM Install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: true
 
       - name: Cache Dependencies
         uses: actions/cache@v3
@@ -86,7 +85,7 @@ jobs:
   deploy-vercel:
     name: "部署到Vercel平台"
     needs: install-init
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     if: github.repository == '142vip/408CSFamily'
     steps:
       - name: Checkout Code
@@ -102,11 +101,11 @@ jobs:
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel -v && vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
       ## 注意：安装pnpm
       - name: Build Project Artifacts
-        run: npm i pnpm@7 -g && vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: npm i pnpm -g && vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
@@ -120,12 +119,6 @@ jobs:
     if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
 
     steps:
-      - name: Restore Dependencies From cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       ### 打成压缩包
       - name: Create Zip Package

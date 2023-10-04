@@ -1,7 +1,7 @@
 
 <div align="center">
 <p>
-  <img alt="408Logo图片" width="240" src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/doc_book/408/408_logo.png" style="text-align: center;">
+  <img alt="408Logo图片" width="240" src="https://cdn.statically.io/gh/142vip/cdn_service@main/doc_book/408/408_logo.png" style="text-align: center;">
 </p>
 <p style="font-size: 30px"><strong>✨计算机应试全家桶✨</strong></p>
 
@@ -317,11 +317,11 @@
 <div style="text-align: center">
     <div  align="center" >
         <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
-            <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg" 
+            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg" 
                 width="250px"
 				style="margin:10px"
                 title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
-            <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
+            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
                 width="250px"
 				style="margin:10px"
                 title="欢迎添加微信：chufan443 " alt="联系作者"/>
@@ -334,7 +334,7 @@
           target="_blank"
           title="点击跳转Github主页"
         >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/github.svg"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/github.svg"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -343,7 +343,7 @@
           target="_blank"
           title="点击跳转码云主页"
         >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -352,7 +352,7 @@
           target="_blank"
           title="点击跳转掘金主页"
         >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -361,7 +361,7 @@
           target="_blank"
           title="点击跳转B站主页"
         >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -370,7 +370,7 @@
           target="_blank"
           title="点击跳转CSDN博客主页"
         >
-          <img src="https://cdn.staticaly.com/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
             title="点击跳转CSDN博客主页"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>

@@ -42,14 +42,6 @@ All notable changes to this project will be documented in this file. See [Conven
 
 ### Features
 
-* add vercel script ([a354acc](https://github.com/mmdapl/408CSFamily/commit/a354acced9f9485e0aa2634ac227ab97657de14d))
-* add version ([09d6f2c](https://github.com/mmdapl/408CSFamily/commit/09d6f2ce315dc02b02f6ed6a468b614bb5f22810))
-* docs update ([e4299a8](https://github.com/mmdapl/408CSFamily/commit/e4299a8bddfe78a583b082822011442478dfb6ff))
-* sync ([cbd014c](https://github.com/mmdapl/408CSFamily/commit/cbd014c163e93eed947509739c7a1b356b37f872))
-* update ([8673a64](https://github.com/mmdapl/408CSFamily/commit/8673a64409d646195122835828ffe14be265c97a))
-* update ci ([372dc79](https://github.com/mmdapl/408CSFamily/commit/372dc792c7861a879ff686747fb8c76bd70f4761))
-* update node version ([507ff83](https://github.com/mmdapl/408CSFamily/commit/507ff838f71ab2360e49ef422f6fe969a36882a8))
-* update sync ci ([c357991](https://github.com/mmdapl/408CSFamily/commit/c357991e49a1513f67b92167426c57d68c711c14))
 * 优化脚本 ([e3d5fba](https://github.com/mmdapl/408CSFamily/commit/e3d5fbad7814d0cb652484e0eb5acbdcbe2d940b))
 * 修正脚本异常 ([c003e11](https://github.com/mmdapl/408CSFamily/commit/c003e11b8044bfdf1ff7151f04f9c03fea777095))
 * 文档更新 ([0d947c7](https://github.com/mmdapl/408CSFamily/commit/0d947c74c20dbdf170cc49f0281ff4b196b6b206))

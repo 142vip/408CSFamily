@@ -44,12 +44,8 @@ bool linkStackPushNode(LinkStack* linkStack,int e){
 
 
 /*
- * @Description: 基于单链表链栈的出栈操作
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2020-03-04 23:38:04
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2020-03-04 23:39:16
+ * 基于单链表链栈的出栈操作
+ *
  */
 bool linkStackPopNode(LinkStack* linkStack,int *e){
   // 判断链栈是否存在及是否为空

@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<!-- #region recent-beta -->
+<!-- #region recent-alpha -->
 
 ## [0.0.1-alpha.4](https://github.com/mmdapl/408CSFamily/compare/v0.0.1-alpha.3...v0.0.1-alpha.4) (2023-09-28)
 
@@ -54,3 +54,5 @@ All notable changes to this project will be documented in this file. See [Conven
 ### Bug Fixes
 
 * 修复CI/CD流水线异常 ([edf222f](https://github.com/mmdapl/408CSFamily/commit/edf222f297dbe57782f46fd6d38dd7c92d59e3fe))
+
+<!-- #endregion recent-alpha -->

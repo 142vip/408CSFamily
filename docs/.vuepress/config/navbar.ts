@@ -24,12 +24,14 @@ export const navbar = [
     link: "/manuscripts/cn"
   },
   {
-    text: "网站动态",
-    link: "/big-event-history"
-  },
-  {
     text: '思维导图',
     link: "/manuscripts/note-map"
   },
-
+  {
+    text: "网站",
+    children: [
+      "/big-event-history",
+      "/changelog"
+    ]
+  },
 ];

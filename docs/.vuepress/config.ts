@@ -11,21 +11,21 @@ const PROXY_DOMAIN = process.env.PROXY_DOMAIN || false
 
 
 export default defineUserConfig({
-    title: "计算机应试全家桶",
-    description: "磨刀不误砍柴工，读完硕士再打工",
-    base: PROXY_DOMAIN ? "/408CSFamily/" : "/",
-    port: 4200,
-    head: [
-        // vercel统计 相关配置
-        [
-            'script', {type: 'text/javascript', src: '/_vercel/insights/script.js'}
-        ],
-        [
-            "link", {rel: "icon", href: "/408_favicon.ico"}
-        ],
-        // 百度统计
-        [
-            'script', {}, `
+  title: "计算机应试全家桶",
+  description: "磨刀不误砍柴工，读完硕士再打工",
+  base: PROXY_DOMAIN ? "/408CSFamily/" : "/",
+  port: 4200,
+  head: [
+    // vercel统计 相关配置
+    [
+      'script', {type: 'text/javascript', src: '/_vercel/insights/script.js'}
+    ],
+    [
+      "link", {rel: "icon", href: "/408_favicon.ico"}
+    ],
+    // 百度统计
+    [
+      'script', {}, `
               var _hmt = _hmt || [];
               (function() {
                 var hm = document.createElement("script");
@@ -33,30 +33,30 @@ export default defineUserConfig({
                 var s = document.getElementsByTagName("script")[0];
                 s.parentNode.insertBefore(hm, s);
               })();`
-        ]
-    ],
-    markdown: {
-        // todo 引入代码文件时的路径替换
-        importCode: {
-            handleImportPath: (str) => {
-                if (str.includes('@code')) {
-                    return str.replace(/^@code/, path.resolve(__dirname, '../../code/'))
-                }
-                if (str.includes('~@')) {
-                    return str.replace(/^~@/, path.resolve(__dirname, '../../'))
-                }
-                return str
-            },
-        },
-        // md doc formatter  headerDepth
-        headers: {
-            level: [2, 3, 4]
+    ]
+  ],
+  markdown: {
+    // todo 引入代码文件时的路径替换
+    importCode: {
+      handleImportPath: (str) => {
+        if (str.includes('@code')) {
+          return str.replace(/^@code/, path.resolve(__dirname, '../../code/'))
         }
+        if (str.includes('~@')) {
+          return str.replace(/^~@/, path.resolve(__dirname, '../../'))
+        }
+        return str
+      },
     },
-    // 主题配置
-    ...themeConfig,
-    // 插件配置
-    ...pluginsConfig,
-    shouldPrefetch: false,
+    // md doc formatter  headerDepth
+    headers: {
+      level: [2, 3, 4]
+    }
+  },
+  // 主题配置
+  ...themeConfig,
+  // 插件配置
+  ...pluginsConfig,
+  shouldPrefetch: false,
 })
 

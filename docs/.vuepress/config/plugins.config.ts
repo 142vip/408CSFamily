@@ -1,4 +1,5 @@
 import {searchProPlugin} from "vuepress-plugin-search-pro";
+import {mdEnhancePlugin} from "vuepress-plugin-md-enhance";
 
 /**
  * 插件配置
@@ -20,5 +21,31 @@ export default {
         },
       ],
     }),
+    // // md文档增强
+    // mdEnhancePlugin({
+    //   // 文件导入
+    //   include: true,
+    //   // 容器
+    //   container: true,
+    // }),
+    // componentsPlugin({
+    //   // 插件选项
+    //   components: [
+    //     "ArtPlayer",
+    //     "AudioPlayer",
+    //     "Badge",
+    //     "BiliBili",
+    //     "CodePen",
+    //     "PDF",
+    //     "Replit",
+    //     "Share",
+    //     "SiteInfo",
+    //     "StackBlitz",
+    //     // "VidStack",
+    //     "VideoPlayer",
+    //     "XiGua",
+    //     "YouTube",
+    //   ],
+    // }),
   ]
 }

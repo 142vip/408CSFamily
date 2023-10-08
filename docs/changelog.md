@@ -1,13 +1,7 @@
----
-icon: clock
----
-
-
 # 变更记录
 
 该文件包含 `408CSFamily` 仓库和网站所有显着更改。
 
-<!-- more -->
 
 <!-- @include: ../CHANGELOG.md#recent-alpha -->
 

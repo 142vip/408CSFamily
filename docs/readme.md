@@ -17,15 +17,15 @@ features:
     details: 官方插件的基础上，抽象、封装出适合自己功能的plus插件，能够快速集成、使用在新的项目中。
   - title: 反复反复
     details: 通过以项目Demo示例的方式，对框架常用的功能进行Code编写和整理，提供有效且易用的代码封装。
-  - title: 王道论坛
-    details: 全平台都可以关注。
-    link: https://github.com/zpfz/vuepress-theme-antdocs
-  - title: 研招网
-    link: https://github.com/zpfz/vuepress-theme-antdocs
-    details: 考研最新消息。
-  - title: 开源共享
-    link: https://github.com/zpfz/vuepress-theme-antdocs
-    details: 通过以项目Demo示例的方式，对框架常用的功能进行Code编写和整理，提供有效且易用的代码封装。
+#  - title: 王道论坛
+#    details: 全平台都可以关注。
+#    link: https://github.com/zpfz/vuepress-theme-antdocs
+#  - title: 研招网
+#    link: https://github.com/zpfz/vuepress-theme-antdocs
+#    details: 考研最新消息。
+#  - title: 开源共享
+#    link: https://github.com/zpfz/vuepress-theme-antdocs
+#    details: 通过以项目Demo示例的方式，对框架常用的功能进行Code编写和整理，提供有效且易用的代码封装。
 ---
 
 

@@ -1,20 +1,5 @@
----
-title: 线性表
----
 
-
-<!--
- * @Description: 
- * @Version: Beta1.0
- * @Author: 【B站&公众号】Rong姐姐好可爱
- * @Date: 2021-03-07 21:57:27
- * @LastEditors: 【B站&公众号】Rong姐姐好可爱
- * @LastEditTime: 2022-04-23 18:22:12
--->
-
-
-
-<!-- ## 线性表的基础概念和基本操作 -->
+# 线性表
 
 ## 基础概念和基本操作
 
@@ -222,7 +207,7 @@ bool ListInsert(SqList &L, int i, ElemType e){
 - 成功，返回true,将被删除的元素用引用变量返回；
 - 失败，返回false
 
-```C++
+```cpp
 
 /*
  * @Description: 顺序表的删除操作

@@ -25,25 +25,7 @@ export const navbar = [
   },
   {
     text: '思维导图',
-    // link: "/manuscripts/mark-map",
-    children: [
-      {
-        text: '数据结构',
-        link: '/manuscripts/mark-map/ds-map.md'
-      },
-      {
-        text: '操作系统',
-        link: '/manuscripts/mark-map/os-map.md'
-      },
-      {
-        text: '计算机组成原理',
-        link: '/manuscripts/mark-map/ccp-map.md'
-      },
-      {
-        text: '计算机网络',
-        link: '/manuscripts/mark-map/cn-map.md'
-      }
-    ]
+    link: "/manuscripts/mark-map",
   },
   // http://localhost:4200/mark-map/job-poster-bytedance.html
   {

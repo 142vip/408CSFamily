@@ -14,16 +14,18 @@
   },
   "scripts": {
     "preinstall": "chmod +x ./scripts/*",
+    "postinstall": "npm run build:mark-map",
     "prepare": "rm -f .husky/pre-commit && husky install && npx husky add .husky/pre-commit \"./scripts/lint --fix\" && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",
-    "build": "./scripts/bundle build && npm run build:mark-map",
-    "build:mark-map": "./scripts/mark-map",
+    "build": "./scripts/bundle build ",
     "build:proxy": "./scripts/bundle build_proxy",
+    "build:mark-map": "./scripts/mark-map",
     "deploy:vercel": "vercel --prod",
     "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' + "
   },
   "scripts-info": {
     "preinstall": "在安装依赖前分配脚本权限",
+    "postinstall": "在安装依赖后编译markdown文档转化为思维导图",
     "prepare": "安装依赖预执行脚本",
     "build:mark-map": "./scripts/mark-map",
     "dev": "本地启动项目",

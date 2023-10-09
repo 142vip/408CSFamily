@@ -24,23 +24,28 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout Code
+      - name: checkout code
         uses: actions/checkout@v3
         with:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
+      - name: PNPM Install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
 
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18.18.0
+          ## 淘宝镜像加速
+          registry-url: 'https://registry.npmmirror.com'
+          cache: 'pnpm'
 
-      - name: PNPM Install
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
-          run_install: true
+      - name: Install Dependencies
+        run: |
+          pnpm i --frozen-lockfile --registry https://registry.npmmirror.com
 
       - name: Cache Dependencies
         uses: actions/cache@v3

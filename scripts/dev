@@ -6,5 +6,5 @@
  *   - ./scripts/dev
  */
 
-const { execShell } = require('./.exec');
-(async() => await execShell('vuepress dev docs'))()
+const {execShell} = require('./.exec');
+(async () => await execShell('npm run build:mark-map && vuepress dev docs'))()

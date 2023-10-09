@@ -58,7 +58,7 @@ export const dsSidebar = [
     collapsible: false,
     children: [
       {
-        text: '栈-基本概念和基本操作',
+        text: '栈-基本概念和操作',
         link: '1.栈的基本概念和基本操作.md'
       },
       {

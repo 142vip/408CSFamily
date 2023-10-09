@@ -25,8 +25,9 @@ export const navbar = [
   },
   {
     text: '思维导图',
-    link: "/manuscripts/note-map"
+    link: "/manuscripts/mark-map",
   },
+  // http://localhost:4200/mark-map/job-poster-bytedance.html
   {
     text: "网站",
     children: [

@@ -102,6 +102,8 @@ export default {
         include: true,
         // 容器
         container: true,
+        // mermaid
+        mermaid: true,
       },
       components: {
         // 插件选项

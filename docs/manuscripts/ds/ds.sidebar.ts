@@ -28,35 +28,27 @@ export const dsSidebar = [
         link: '1.basic_concept_and_operation.md'
       },
       {
-        text: '线性表的顺序表示',
+        text: '顺序表示',
         link: '2.sequential_representation.md'
       },
       {
-        text: '基础概念和操作',
-        link: '3.chain_representation.md'
+        text: '链式表示-单链表',
+        link: '3.single_linked_list.md'
       },
       {
-        text: '基础概念和操作',
+        text: '链式表示-双链表',
         link: '4.double_linked_list.md'
       }, {
-        text: '基础概念和操作',
+        text: '链式表示-循环链表',
         link: '5.circular_list.md'
       },
       {
-        text: '基础概念和操作',
+        text: '链式表示-静态链表',
         link: '6.static_linked_list.md'
       },
       {
-        text: '基础概念和操作',
-        link: '7.comparison_of_sequential_list_and_linked_list.md'
-      },
-      {
-        text: '存储结构的选取',
-        link: '8.selection_of_storage_structure.md'
-      },
-      {
-        text: '零碎知识补充',
-        link: '9.piecemeal_knowledge_supplement.md'
+        text: '总结',
+        link: '7.总结.md'
       }
     ]
   },
@@ -66,35 +58,31 @@ export const dsSidebar = [
     collapsible: false,
     children: [
       {
-        text: '栈的基本概念和基本操作',
+        text: '栈-基本概念和操作',
         link: '1.栈的基本概念和基本操作.md'
       },
       {
-        text: '栈的顺序存储结构',
+        text: '栈-顺序存储结构',
         link: '2.栈的顺序存储结构.md'
       },
       {
-        text: '栈的链式存储结构',
+        text: '栈-链式存储结构',
         link: '3.栈的链式存储结构.md'
       },
       {
-        text: '队列的基本概念和操作',
+        text: '队列-基本概念和操作',
         link: '4.队列的基本概念和操作.md'
       }, {
-        text: '队列的顺序存储结构',
+        text: '队列-顺序存储结构',
         link: '5.队列的顺序存储结构.md'
       },
       {
-        text: '队列的链式存储结构',
+        text: '队列-链式存储结构',
         link: '6.队列的链式存储结构.md'
       },
       {
-        text: '栈和队列的应用',
-        link: '7.栈和队列的应用.md'
-      },
-      {
-        text: '特殊矩阵的压缩存储',
-        link: '8.特殊矩阵的压缩存储.md'
+        text: '总结',
+        link: '7.总结.md'
       }
     ]
   }

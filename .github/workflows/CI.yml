@@ -32,9 +32,8 @@ jobs:
       ## 设置代码工作空间
       - name: Set up workspace
         run: |
-          rm -rf ${{ github.workspace }}/shared
           mkdir -p ${{ github.workspace }}/shared 
-          cp -R * ${{ github.workspace }}/shared/
+          cp -R !(${{ github.workspace }}/shared) ${{ github.workspace }}/shared/
 
   install-init:
     name: "依赖安装初始化"

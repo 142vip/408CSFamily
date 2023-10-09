@@ -32,7 +32,8 @@ jobs:
       ## 设置代码工作空间
       - name: Set up workspace
         run: |
-          mkdir -p ${{ github.workspace }}/shared
+          rm -rf ${{ github.workspace }}/shared
+          mkdir -p ${{ github.workspace }}/shared 
           cp -R * ${{ github.workspace }}/shared
 
   install-init:

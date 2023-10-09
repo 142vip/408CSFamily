@@ -29,11 +29,11 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-  #      ## 设置代码工作空间
-  #      - name: Set up workspace
-  #        run: |
-  #          mkdir -p ${{ github.workspace }}/shared
-  #          rsync -r --exclude '${{ github.workspace }}/shared' ${{ github.workspace }}/shared
+      ## 设置代码工作空间
+      - name: Set up workspace
+        run: |
+          pwd
+          ls -a
 
   install-init:
     name: "依赖安装初始化"
@@ -48,7 +48,7 @@ jobs:
       - name: Use shared code
         run: |
           ls ${{ github.workspace }}
-          cd ${{ github.workspace }}
+          cd ${{ github.workspace }} && ls -a && pwd
 
       - name: PNPM Install
         uses: pnpm/action-setup@v2

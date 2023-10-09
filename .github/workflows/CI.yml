@@ -1,6 +1,5 @@
 ## 代码CI快速集成流水线，lint、fix、build
 
-
 name: CI
 ## 触发条件
 on:
@@ -30,6 +29,12 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
+      ## 设置代码工作空间
+      - name: Set up workspace
+        run: |
+          mkdir -p ${{ github.workspace }}/shared
+          cp -R * ${{ github.workspace }}/shared
+
   install-init:
     name: "依赖安装初始化"
     needs:
@@ -40,6 +45,10 @@ jobs:
       pull-requests: read
 
     steps:
+      - name: Use shared code
+        run: |
+          cd ${{ github.workspace }}/shared
+
       - name: PNPM Install
         uses: pnpm/action-setup@v2
         with:
@@ -70,6 +79,9 @@ jobs:
       - checkout-code
       - install-init
     steps:
+      - name: Use shared code
+        run: |
+          cd ${{ github.workspace }}/shared
 
       - name: Restore Dependencies From Cache
         uses: actions/cache@v3
@@ -103,6 +115,10 @@ jobs:
       pull-requests: read
 
     steps:
+      - name: Use shared code
+        run: |
+          cd ${{ github.workspace }}/shared
+
       - name: Login Docker
         run: |
           docker version

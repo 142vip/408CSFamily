@@ -33,7 +33,7 @@ jobs:
       - name: Set up workspace
         run: |
           mkdir -p ${{ github.workspace }}/shared 
-          cp -R !(${{ github.workspace }}/shared) ${{ github.workspace }}/shared/
+          cp -R --exclude='${{ github.workspace }}/shared' ${{ github.workspace }}/shared
 
   install-init:
     name: "依赖安装初始化"

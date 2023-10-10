@@ -19,8 +19,9 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 jobs:
-  install-init:
-    name: "依赖安装初始化"
+  ## 部署到Github-Pages
+  deploy-github:
+    name: "部署到Github-Pages"
     runs-on: macos-latest
 
     steps:
@@ -31,57 +32,21 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
+      ## 依赖下载完成后，或执行思维导图编译
       - name: PNPM Install
         uses: pnpm/action-setup@v2
         with:
           version: 7
+          run_install: |
+            args: [--frozen-lockfile, --registry=https://registry.npmmirror.com]
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.18.0
-          ## 淘宝镜像加速
-          registry-url: 'https://registry.npmmirror.com'
-          cache: 'pnpm'
-
-      - name: Install Dependencies
-        run: |
-          pnpm i --frozen-lockfile --registry https://registry.npmmirror.com
-
-      - name: Cache Dependencies
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
-
-  ## 部署到Github-Pages
-  deploy-github:
-    name: "部署到Github-Pages"
-    needs:
-      - install-init
-    runs-on: macos-latest
-
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
-          fetch-depth: 0
-
-      - name: Restore Dependencies From cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
-
-
-      ## 支持思维导图转化
-      - name: Build Mark-Map
-        run: |
-          ./scripts/mark-map
+      #      - name: Install Node.js
+      #        uses: actions/setup-node@v3
+      #        with:
+      #          node-version: 18.18.0
+      #          ## 淘宝镜像加速
+      #          registry-url: 'https://registry.npmmirror.com'
+      #          cache: 'pnpm'
 
       # 运行构建脚本
       - name: Build VuePress Site
@@ -98,8 +63,6 @@ jobs:
   ## 部署到vercel平台
   deploy-vercel:
     name: "部署到Vercel平台"
-    needs:
-      - install-init
     runs-on: macos-latest
     if: github.repository == '142vip/408CSFamily'
     steps:
@@ -110,34 +73,22 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      - name: Restore Dependencies From cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
-
-      ## 支持思维导图转化
-      - name: Build Mark-Map
-        run: |
-          ./scripts/mark-map
-
+      ## 注意： 这里的操作时间vercel平台配置的命令拉取下来，执行
       - name: Pull Vercel Environment Information
-        run: vercel -v && vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        run: npm i vercel -g && vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
-      ## 注意：安装pnpm
+      ## 执行vercel平台配置的命令
       - name: Build Project Artifacts
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
+      ## dist文件同步到vercel平台
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
 
   ## 版本发布
   release:
-    name: "创建Github发布"
+    name: "Github版本发布"
     runs-on: macos-latest
-    needs:
-      - install-init
     ## 主库master、next且执行release更新时执行
     if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
 
@@ -148,11 +99,6 @@ jobs:
           persist-credentials: false
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
-
-      ## 支持思维导图转化
-      - name: Build Mark-Map
-        run: |
-          ./scripts/mark-map
 
       ### 打成压缩包
       - name: Create Zip Package

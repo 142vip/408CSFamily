@@ -81,13 +81,12 @@ jobs:
       #            node_modules
       #          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+      - name: PNPM Install
+        uses: pnpm/action-setup@v2
         with:
-          node-version: 18.18.0
-          ## 淘宝镜像加速
-          registry-url: 'https://registry.npmmirror.com'
-          cache: 'pnpm'
+          version: 7
+          run_install: |
+            args: [--frozen-lockfile, --registry=https://registry.npmmirror.com]
 
       ## 支持思维导图转化
       - name: Build Mark-Map

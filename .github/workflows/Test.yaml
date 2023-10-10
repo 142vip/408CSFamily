@@ -37,13 +37,13 @@ jobs:
           run_install: |
             args: [--frozen-lockfile, --registry=https://registry.npmmirror.com]
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.18.0
-          ## 淘宝镜像加速
-          registry-url: 'https://registry.npmmirror.com'
-          cache: 'pnpm'
+      #      - name: Install Node.js
+      #        uses: actions/setup-node@v3
+      #        with:
+      #          node-version: 18.18.0
+      #          ## 淘宝镜像加速
+      #          registry-url: 'https://registry.npmmirror.com'
+      #          cache: 'pnpm'
 
       - name: Cache Dependencies
         uses: actions/cache@v3
@@ -96,7 +96,7 @@ jobs:
 
       ## dist文件同步到vercel平台
       - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: npm i vercel -g && vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
 
 #  ## 版本发布
 #  release:

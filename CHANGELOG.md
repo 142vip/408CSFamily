@@ -2,7 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<!-- #region recent-alpha -->
+<!-- #region recent-beta -->
+
+## [0.0.1-alpha.5](https://github.com/mmdapl/408CSFamily/compare/v0.0.1-alpha.4...v0.0.1-alpha.5) (2023-10-10)
+
+
+### Features
+
+* 优化流水线缓存 ([#55](https://github.com/mmdapl/408CSFamily/issues/55)) ([dadfea4](https://github.com/mmdapl/408CSFamily/commit/dadfea48ce9da2632044bb75a186cb774fcbd805))
+* 关闭博客功能，加入插件依赖，支持md文档拓展 ([9d24d49](https://github.com/mmdapl/408CSFamily/commit/9d24d49669768fe0c40f1362ef06110e6fd14f68))
+* 新增markdown转思维导图脚本，导航栏改版 ([67cee8c](https://github.com/mmdapl/408CSFamily/commit/67cee8cbc70ba030e47f2b2a4b3299e760468d49))
+* 新增操作系统、数据结构笔记文档 ([6962e3d](https://github.com/mmdapl/408CSFamily/commit/6962e3d48be173733c818cbc69302a338659d03c))
+* 更新思维导图，优化侧边栏快速预览 ([af23b81](https://github.com/mmdapl/408CSFamily/commit/af23b81246144f545e337f83cfa2bed65dfe6daf))
+* 绘制部分思维导图 ([d084c7c](https://github.com/mmdapl/408CSFamily/commit/d084c7c12d1a62bcf685cc54a23a28d3cdb4abf8))
+
+
+### Bug Fixes
+
+* 修复CD流水线vercel发布异常 ([384a752](https://github.com/mmdapl/408CSFamily/commit/384a7524744f4605487d3c2d4ded2e1bef6ae03d))
+
+
+### Performance Improvements
+
+* 修改CI代码拉取策略，简化scripts脚本命令 ([#54](https://github.com/mmdapl/408CSFamily/issues/54)) ([5e1aedb](https://github.com/mmdapl/408CSFamily/commit/5e1aedbd463fcd265c8641270ae65429481fb1d1))
 
 ## [0.0.1-alpha.4](https://github.com/mmdapl/408CSFamily/compare/v0.0.1-alpha.3...v0.0.1-alpha.4) (2023-09-28)
 

@@ -46,6 +46,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.17.0",
     "husky": "^8.0.3",
+    "markmap-cli": "^0.15.4",
     "shelljs": "^0.8.5",
     "typescript": "^3.9.10",
     "vercel": "^32.4.1",

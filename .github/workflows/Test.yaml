@@ -35,7 +35,7 @@ jobs:
         with:
           version: 7
           run_install: |
-            args: ["--frozen-lockfile", "--registry=https://registry.npmmirror.com"]
+            args: [--frozen-lockfile]
 
 
       - name: Install Node.js

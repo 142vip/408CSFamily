@@ -68,24 +68,6 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      - name: Restore Dependencies From cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
-
-
-      #      ## 支持思维导图转化
-      #      - name: Build Mark-Map
-      #        run: |
-      #          ./scripts/mark-map
-      #
-      #      # 构建、打包成dist
-      #      - name: Build VuePress Site
-      #        run: |
-      #          ./scripts/bundle build
-
       ## 注意： 这里的操作时间vercel平台配置的命令拉取下来，执行
       - name: Pull Vercel Environment Information
         run: npm i vercel -g && vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}

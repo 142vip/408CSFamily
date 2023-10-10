@@ -83,7 +83,7 @@ jobs:
           ./scripts/mark-map
 
       - name: Pull Vercel Environment Information
-        run: pnpm list && vercel -v && vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        run: npm list |grep vercel && vercel -v && npm i vercel && vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
       ## 注意：安装pnpm
       - name: Build Project Artifacts

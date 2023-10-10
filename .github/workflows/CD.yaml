@@ -100,7 +100,7 @@ jobs:
     name: "部署到Vercel平台"
     needs:
       - install-init
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     if: github.repository == '142vip/408CSFamily'
     steps:
       - name: Checkout Code
@@ -110,7 +110,7 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      - name: Restore Dependencies From Cache
+      - name: Restore Dependencies From cache
         uses: actions/cache@v3
         with:
           path: |

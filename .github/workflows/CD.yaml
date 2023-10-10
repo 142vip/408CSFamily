@@ -24,9 +24,10 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: checkout code
-        uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v4
         with:
+          persist-credentials: false
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
@@ -57,13 +58,16 @@ jobs:
   ## 部署到Github-Pages
   deploy-github:
     name: "部署到Github-Pages"
-    needs: install-init
+    needs:
+      - install-init
     runs-on: macos-latest
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
+          persist-credentials: false
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
       - name: Restore Dependencies From cache
@@ -73,6 +77,11 @@ jobs:
             node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
 
+
+      ## 支持思维导图转化
+      - name: Build Mark-Map
+        run: |
+          ./scripts/mark-map
 
       # 运行构建脚本
       - name: Build VuePress Site
@@ -89,13 +98,16 @@ jobs:
   ## 部署到vercel平台
   deploy-vercel:
     name: "部署到Vercel平台"
-    needs: install-init
+    needs:
+      - install-init
     runs-on: ubuntu-latest
     if: github.repository == '142vip/408CSFamily'
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
+          persist-credentials: false
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
       - name: Restore Dependencies From Cache
@@ -104,6 +116,11 @@ jobs:
           path: |
             node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      ## 支持思维导图转化
+      - name: Build Mark-Map
+        run: |
+          ./scripts/mark-map
 
       - name: Pull Vercel Environment Information
         run: vercel -v && vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
@@ -119,16 +136,23 @@ jobs:
   release:
     name: "创建Github发布"
     runs-on: macos-latest
-    needs: install-init
+    needs:
+      - install-init
     ## 主库master、next且执行release更新时执行
     if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
+          persist-credentials: false
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
+
+      ## 支持思维导图转化
+      - name: Build Mark-Map
+        run: |
+          ./scripts/mark-map
 
       ### 打成压缩包
       - name: Create Zip Package

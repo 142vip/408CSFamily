@@ -3,11 +3,10 @@
 name: CI
 ## 触发条件
 on:
+  # 提PR到next分支触发CI
   pull_request:
     branches:
-      - 'master'
-      - 'next'
-      - '!pages/**'
+      - next
   push:
     branches:
       - master
@@ -19,44 +18,20 @@ on:
     - cron: "0 0 1 * *"
 
 jobs:
-  checkout-code:
-    name: "拉取Github代码"
-    runs-on: macos-latest
-    steps:
-      - name: checkout code
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
-          fetch-depth: 0
-
-      ## 设置代码工作空间
-      - name: Set up workspace
-        run: |
-          pwd
-          ls -a
-
   install-init:
     name: "依赖安装初始化"
-    needs:
-      - "checkout-code"
     runs-on: macos-latest
     permissions:
       actions: read
       pull-requests: read
 
     steps:
-      - name: checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4
         with:
           persist-credentials: false
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
-          
-      - name: Use shared code
-        run: |
-          ls ${{ github.workspace }}
-          cd ${{ github.workspace }} && ls -a && pwd
 
       - name: PNPM Install
         uses: pnpm/action-setup@v2
@@ -85,12 +60,14 @@ jobs:
     name: "基础编译构建"
     runs-on: macos-latest
     needs:
-      - checkout-code
       - install-init
     steps:
-      - name: Use shared code
-        run: |
-          cd ${{ github.workspace }}/shared
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
+          fetch-depth: 0
 
       - name: Restore Dependencies From Cache
         uses: actions/cache@v3
@@ -103,19 +80,22 @@ jobs:
           ./scripts/lint --fix
 
       ## 支持思维导图转化
+      - name: Build Mark-Map
+        run: |
+          ./scripts/mark-map
+
       - name: Build Site
         run: |
-          ./scripts/mark-map && ./scripts/bundle build
+          ./scripts/bundle build
 
       - name: Build Site With Proxy
         run: |
-          ./scripts/mark-map && ./scripts/bundle build_proxy
+          ./scripts/bundle build_proxy
 
   Build-Docker-Image:
     name: "构建Docker镜像"
     runs-on: macos-latest
     needs:
-      - checkout-code
       - install-init
     ## 主库且tag更新时执行
     if: github.repository == '142vip/408CSFamily' && startsWith(github.ref, 'refs/tags/v')
@@ -124,9 +104,12 @@ jobs:
       pull-requests: read
 
     steps:
-      - name: Use shared code
-        run: |
-          cd ${{ github.workspace }}/shared
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
+          fetch-depth: 0
 
       - name: Login Docker
         run: |
@@ -143,6 +126,10 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
 
+      ## 支持思维导图转化
+      - name: Build Mark-Map
+        run: |
+          ./scripts/mark-map
 
       ## 构建，支持domain
       - name: Build To Dist

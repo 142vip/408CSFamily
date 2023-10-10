@@ -4,13 +4,13 @@ name: CI
 ## 触发条件
 on:
   # 提PR到next分支触发CI
-  pull_request:
-    branches:
-      - next
-  push:
-    branches:
-      - master
-      - next
+  #  pull_request:
+  #    branches:
+  #      - next
+  #  push:
+  #    branches:
+  #      - master
+  #      - next
   # 手动触发部署
   workflow_dispatch:
 

@@ -30,6 +30,12 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
+      - name: PNPM Install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: |
+            args: ["--frozen-lockfile", "--registry=https://registry.npmmirror.com"]
 
 
       - name: Install Node.js
@@ -43,13 +49,6 @@ jobs:
       #      - name: Install Dependencies
       #        run: |
       #          pnpm i --frozen-lockfile --registry https://registry.npmmirror.com
-
-      - name: PNPM Install
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
-          run_install: |
-            args: ["--frozen-lockfile", "--registry=https://registry.npmmirror.com"]
 
 
       - name: Cache Dependencies

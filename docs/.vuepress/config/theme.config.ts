@@ -79,7 +79,8 @@ export default {
         playground: {
           presets: ["ts", "vue"],
         },
-        presentation: ["highlight", "math", "search", "notes", "zoom"],
+        // 是否启用幻灯片
+        revealjs: ["highlight", "math", "search", "notes", "zoom"],
         stylize: [
           {
             matcher: "Recommended",

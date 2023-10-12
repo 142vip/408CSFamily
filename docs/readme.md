@@ -143,12 +143,6 @@ yarn run dev
 
 感谢向仓库提交mr的所有开发者
 
-::: right
-
-323232
-
-:::
-
 [![contributors](https://contrib.rocks/image?repo=142vip/408CSFamily)](https://github.com/142vip/408CSFamily/graphs/contributors)
 
 

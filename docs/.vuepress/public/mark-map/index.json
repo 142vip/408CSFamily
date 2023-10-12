@@ -1,0 +1,30 @@
+[
+  {
+    "name": "数据结构",
+    "originXmindFileName": "数据结构.xmind",
+    "targetXmindFileName": "ds.xmind",
+    "xMindPath": "../mark-map/ds.xmind",
+    "mdPath": "../mark-map/ds-map.md"
+  },
+  {
+    "name": "操作系统",
+    "originXmindFileName": "操作系统.xmind",
+    "targetXmindFileName": "os.xmind",
+    "xMindPath": "../mark-map/os.xmind",
+    "mdPath": "../mark-map/os-map.md"
+  },
+  {
+    "name": "计算机组成原理",
+    "originXmindFileName": "计算机组成原理.xmind",
+    "targetXmindFileName": "cpp.xmind",
+    "xMindPath": "../mark-map/cpp.xmind",
+    "mdPath": "../mark-map/ccp-map.md"
+  },
+  {
+    "name": "计算机网络",
+    "originXmindFileName": "计算机网络.xmind",
+    "targetXmindFileName": "cn.xmind",
+    "xMindPath": "../mark-map/cn.xmind",
+    "mdPath": "../mark-map/cn-map.md"
+  }
+]

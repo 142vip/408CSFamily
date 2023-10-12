@@ -104,6 +104,8 @@ export default {
         container: true,
         // mermaid
         mermaid: true,
+        // 自定义对齐
+        align: true,
       },
       components: {
         // 插件选项

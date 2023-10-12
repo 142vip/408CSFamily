@@ -8,6 +8,8 @@
 - <a href="../../mark-map/cn-map.html" target="_blank">计算机网络</a>
 
 
+<ClientOnly>
 <XMindManager></XMindManager>
+</ClientOnly>
 
 

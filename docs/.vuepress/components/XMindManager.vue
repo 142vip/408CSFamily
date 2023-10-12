@@ -2,6 +2,8 @@
   参考链接：
     - https://www.npmjs.com/package/xmind-embed-viewer
     - https://xmindltd.github.io/xmind-embed-viewer/
+  注意：
+    - 使用ClientOnly内置组件，只在客户端加载，避免依赖构建出错
 -->
 <template>
   <div class="x-mind-container">
@@ -25,9 +27,11 @@
 </template>
 
 <script>
-import {XMindEmbedViewer} from "xmind-embed-viewer"
 import mapData from "../public/mark-map/index.json"
 
+import {XMindEmbedViewer} from "xmind-embed-viewer";
+
+console.log(111, XMindEmbedViewer)
 
 export default {
 

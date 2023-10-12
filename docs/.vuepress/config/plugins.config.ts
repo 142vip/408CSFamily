@@ -2,7 +2,6 @@ import {searchProPlugin} from "vuepress-plugin-search-pro";
 import {path} from "@vuepress/utils";
 import {registerComponentsPlugin} from "@vuepress/plugin-register-components";
 
-console.log(path.resolve(__dirname, './components/HelloWorld.vue'))
 /**
  * 插件配置
  */

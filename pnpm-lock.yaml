@@ -4,6 +4,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.62.0
   '@typescript-eslint/parser': ^5.62.0
   '@vuepress/client': ^2.0.0-beta.67
+  '@vuepress/plugin-register-components': 2.0.0-beta.67
   '@vuepress/utils': ^2.0.0-beta.67
   bumpp: ^9.2.0
   commit-and-tag-version: ^11.2.4
@@ -26,11 +27,13 @@ specifiers:
   vuepress-plugin-search-pro: ^2.0.0-beta.237
   vuepress-theme-hope: ^2.0.0-beta.237
   webpack: ^5.88.2
+  xmind-embed-viewer: ^1.2.0
 
 devDependencies:
   '@typescript-eslint/eslint-plugin': 5.62.0_3iz6pru4e7qejel7wzajszboby
   '@typescript-eslint/parser': 5.62.0_a53yqesurnxlupy6jnu3bp6z7y
   '@vuepress/client': 2.0.0-beta.67
+  '@vuepress/plugin-register-components': 2.0.0-beta.67
   '@vuepress/utils': 2.0.0-beta.67
   bumpp: 9.2.0
   commit-and-tag-version: 11.2.4
@@ -53,6 +56,7 @@ devDependencies:
   vuepress-plugin-search-pro: 2.0.0-beta.237_vuepress@2.0.0-beta.67
   vuepress-theme-hope: 2.0.0-beta.237_vuepress@2.0.0-beta.67
   webpack: 5.88.2
+  xmind-embed-viewer: 1.2.0
 
 packages:
 
@@ -2966,6 +2970,17 @@ packages:
     dependencies:
       '@vuepress/core': 2.0.0-beta.67
       prismjs: 1.29.0
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - supports-color
+    dev: true
+
+  /@vuepress/plugin-register-components/2.0.0-beta.67:
+    resolution: {integrity: sha512-dbdCnlY/MAzyrycwIONDOtZbHvv2r5yenXPO18IOy5bAFnlaEOL2RfPjD6MqRlYS3aZD7om21RV3RxGHJabHew==}
+    dependencies:
+      '@vuepress/core': 2.0.0-beta.67
+      '@vuepress/utils': 2.0.0-beta.67
+      chokidar: 3.5.3
     transitivePeerDependencies:
       - '@vue/composition-api'
       - supports-color
@@ -11395,6 +11410,10 @@ packages:
     engines: {node: '>= 6.0'}
     dependencies:
       os-paths: 4.4.0
+    dev: true
+
+  /xmind-embed-viewer/1.2.0:
+    resolution: {integrity: sha512-dtsxbeePxhSy3g/Kyc4Oe1K3hfdCmkiyRtvONN2KZ2MqeL/QBFTvL4imCiXfAiLpincl42r87OOA3V3Shcza4A==}
     dev: true
 
   /xml-js/1.6.11:

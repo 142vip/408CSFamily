@@ -7,8 +7,8 @@
 const {execShell} = require("./.exec");
 const path = require('path');
 const fs = require('fs');
-const markMapPath = path.join(__dirname, '../', 'docs/manuscripts/mark-map')
-const markMapHtmlPath = path.join(__dirname, '../', 'docs/.vuepress/public/mark-map')
+const markMapSourcePath = path.join(__dirname, '../', 'docs/manuscripts/mark-map')
+const markMapTargetPath = path.join(__dirname, '../', 'docs/.vuepress/public/mark-map')
 
 
 /**
@@ -35,12 +35,12 @@ function scanDirectory(directory, fileType) {
   /**
    * 第一步： 清空站点思维导图文件存放目录
    */
-  const delHtmlDir = `rm -rf ${path.join(markMapHtmlPath, '*')}`
+  const delHtmlDir = `rm -rf ${path.join(markMapTargetPath, '*')}`
 
   /**
    * 第二步： 将md文档转化为思维导图网页
    */
-  const mdList = scanDirectory(markMapPath, 'md')
+  const mdList = scanDirectory(markMapSourcePath, 'md')
   const mdToHtmlCmdStr = mdList.map(md => `markmap --no-open ${md}`).join(' && ')
 
 
@@ -48,9 +48,44 @@ function scanDirectory(directory, fileType) {
    * 第三步： 根据文件类型将思维导图网页文件移动到站点指定目录
    *
    */
-  const mdHtmlByFileType = path.join(markMapPath, '*.html')
-  const moveHtmlCmdStr = `mv -f ${mdHtmlByFileType} ${markMapHtmlPath}`
+  const mdHtmlByFileType = path.join(markMapSourcePath, '*.html')
+  const moveHtmlCmdStr = `mv -f ${mdHtmlByFileType} ${markMapTargetPath}`
 
-  await execShell([delHtmlDir, mdToHtmlCmdStr, moveHtmlCmdStr])
+  /**
+   * 第四步： 将xmind思维导图原件复制到指定目录
+   *
+   */
+  const xmindByFileType = path.join(markMapSourcePath, '*.xmind')
+  const cpXmindCmdStr = `cp -f ${xmindByFileType} ${markMapTargetPath}`
+
+
+  /**
+   * 第五步： 复制mark-map对应的json文件
+   */
+  const cpIndexJsonCmdStr = `cp -f ${path.join(markMapSourcePath, 'index.json')} ${markMapTargetPath}`
+
+
+  // 脚本执行
+  await execShell([
+    delHtmlDir,
+    mdToHtmlCmdStr,
+    moveHtmlCmdStr,
+    cpXmindCmdStr,
+    cpIndexJsonCmdStr
+  ])
+
+  /**
+   * 第六步： 对mark-map中的xmind文件重命名
+   *
+   */
+
+  const markMapData = require(path.join(markMapTargetPath, 'index.json'))
+
+
+  for (const {originXmindFileName, targetXmindFileName} of markMapData) {
+    const originPath = path.join(markMapTargetPath, originXmindFileName)
+    const targetPath = path.join(markMapTargetPath, targetXmindFileName)
+    await fs.renameSync(originPath, targetPath)
+  }
 
 })()

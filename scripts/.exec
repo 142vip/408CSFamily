@@ -37,8 +37,9 @@ exports.execShell = async commands => {
     const execResult = await exec(command)
 
     console.log(`\n<<<command(${count})--ending === `)
-    // 指令异常，不执行后续指令
+    // 指令异常，不执行后续指令，非0退出
     if (execResult.code !== 0) {
+      exit(1)
       break;
     }
   }

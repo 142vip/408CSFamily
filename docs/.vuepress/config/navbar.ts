@@ -31,8 +31,9 @@ export const navbar = [
   {
     text: "网站",
     children: [
-      "/big-event-history",
-      "/changelog"
+      "/big-event-history.md",
+      "/changelog.md",
+      "/wechat-list.md"
     ]
   },
 ];

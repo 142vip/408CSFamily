@@ -1,5 +1,5 @@
 export const FOOTER_HTML_INFO = `<a href="https://tongji.baidu.com/web/welcome/login" target="_blank">百度统计</a> 
- Copyrights © 2015-${new Date().getFullYear()} 妍荣姑娘网络工作室 <a href="https://github.com/mmdapl" target="_blank">Chu Fan</a>`
+ Copyrights © 2015-${new Date().getFullYear()} 妍荣姑娘网络工作室 All Rights Reserved <a href="https://github.com/142vip" target="_blank">142vip</a>`
 
 export const NotFoundMsgList = [
   "徒留我孤单在湖面成双。",

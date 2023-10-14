@@ -20,7 +20,7 @@ export default {
     print: false, // 打印按钮
     hostname: 'https://408.142vip.cn',
     author: {
-      name: 'Chu Fan',
+      name: '微信公众号：储凡',
       email: 'fairy_408@2925.com',
       url: 'https://www.142vip.cn'
     },

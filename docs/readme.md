@@ -2,7 +2,7 @@
 home: true
 title: 首页
 heroText: 计算机应试全家桶
-tagline: 磨刀不误砍柴工、读完硕士再打工...
+tagline: 保持终身学习，读研or考研，做适合自己的选择
 actions:
   - text: 快速开始→
     link: /quick-start.md
@@ -11,11 +11,13 @@ actions:
     link: /job-poster-bytedance.md
     type: secondary
 features:
-  - title: 基础概览
+  - title: 多学科笔记
     details: 与官网同步的Egg.js框架基础知识整理，有效地降低日常开发和复习巩固的查询、学习时间。
-  - title: 整理强化
+  - title: 重难点巩固
     details: 官方插件的基础上，抽象、封装出适合自己功能的plus插件，能够快速集成、使用在新的项目中。
-  - title: 反复反复
+  - title: 思维导图强化
+    details: 官方插件的基础上，抽象、封装出适合自己功能的plus插件，能够快速集成、使用在新的项目中。
+  - title: 反复、多次
     details: 通过以项目Demo示例的方式，对框架常用的功能进行Code编写和整理，提供有效且易用的代码封装。
 #  - title: 王道论坛
 #    details: 全平台都可以关注。
@@ -236,8 +238,8 @@ yarn run dev
     </div>
 </div>
 
-交流/加群/互看朋友圈
-当然：**聊天 /提问 /建议 /提需求** 可以在本公众号直接**私信**，后台可以看到，有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。
+交流/加群/互看朋友圈，
+当然：**聊天 /提问 /建议 /提需求** 可以在公众号直接**私信**，后台可以看到。有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。
 
 
 

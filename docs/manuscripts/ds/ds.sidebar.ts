@@ -32,23 +32,12 @@ export const dsSidebar = [
         link: '2.sequential_representation.md'
       },
       {
-        text: '链式表示-单链表',
-        link: '3.single_linked_list.md'
+        text: '链式表示',
+        link: '3.chained_representation.md'
       },
       {
-        text: '链式表示-双链表',
-        link: '4.double_linked_list.md'
-      }, {
-        text: '链式表示-循环链表',
-        link: '5.circular_list.md'
-      },
-      {
-        text: '链式表示-静态链表',
-        link: '6.static_linked_list.md'
-      },
-      {
-        text: '总结',
-        link: '7.总结.md'
+        text: '一些总结',
+        link: '4.总结.md'
       }
     ]
   },
@@ -81,8 +70,163 @@ export const dsSidebar = [
         link: '6.队列的链式存储结构.md'
       },
       {
-        text: '总结',
+        text: '一些总结',
         link: '7.总结.md'
+      }
+    ]
+  },
+  {
+    text: '串',
+    prefix: '串',
+    collapsible: false,
+    children: [
+      {
+        text: '基本概念',
+        link: '1.基本概念.md'
+      },
+      {
+        text: '简单的模式匹配',
+        link: '2.简单的模式匹配.md'
+      },
+      {
+        text: 'KMP算法',
+        link: '3.KMP算法.md'
+      },
+      {
+        text: '一些总结',
+        link: '4.总结.md'
+      }
+    ]
+  },
+  {
+    text: '树和二叉树',
+    prefix: '树和二叉树',
+    collapsible: false,
+    children: [
+      {
+        text: '基本概念',
+        link: '1.基本概念.md'
+      },
+      {
+        text: '二叉树',
+        link: '2.二叉树.md'
+      },
+      {
+        text: '二叉树的遍历',
+        link: '3.二叉树的遍历.md'
+      },
+      {
+        text: '线索二叉树',
+        link: '4.线索二叉树.md'
+      },
+      {
+        text: '树和森林',
+        link: '5.树和森林.md'
+      },
+      {
+        text: '树的应用',
+        link: '6.树的应用.md'
+      },
+      {
+        text: '一些总结',
+        link: '7.总结.md'
+      }
+    ]
+  },
+  {
+    text: '图论',
+    prefix: '图论',
+    collapsible: false,
+    children: [
+      {
+        text: '基本概念',
+        link: '1.基本概念.md'
+      },
+      {
+        text: '图的存储',
+        link: '2.图的存储.md'
+      },
+      {
+        text: '图的遍历',
+        link: '3.图的遍历.md'
+      },
+      {
+        text: '图的应用',
+        link: '4.图的应用.md'
+      },
+      {
+        text: '一些总结',
+        link: '5.总结.md'
+      }
+    ]
+  },
+  {
+    text: '查找',
+    prefix: '查找',
+    collapsible: false,
+    children: [
+      {
+        text: '基本概念',
+        link: '1.基本概念.md'
+      },
+      {
+        text: '顺序查找',
+        link: '2.顺序查找.md'
+      },
+      {
+        text: '折半查找',
+        link: '3.折半查找.md'
+      },
+      {
+        text: 'B树和B+树',
+        link: '4.B树和B+树.md'
+      },
+      {
+        text: '散列表',
+        link: '5.散列表.md'
+      },
+      {
+        text: '一些总结',
+        link: '6.总结.md'
+      }
+    ]
+  },
+  {
+    text: '排序',
+    prefix: '排序',
+    collapsible: false,
+    children: [
+      {
+        text: '基本概念',
+        link: '1.基本概念.md'
+      },
+      {
+        text: '插入排序',
+        link: '2.插入排序.md'
+      },
+      {
+        text: '交换排序',
+        link: '3.交换排序.md'
+      },
+      {
+        text: '选择排序',
+        link: '4.选择排序.md'
+      },
+      {
+        text: '归并排序',
+        link: '5.归并排序.md'
+      },
+      {
+        text: '基数排序',
+        link: '6.基数排序.md'
+      },
+      {
+        text: '外部排序',
+        link: '7.外部排序.md'
+      },
+      {
+        text: '一些总结',
+        link: '8.总结.md'
       }
     ]
   }

@@ -75,91 +75,91 @@ export const dsSidebar = [
       }
     ]
   },
-  {
-    text: '串',
-    prefix: '串',
-    collapsible: false,
-    children: [
-      {
-        text: '基本概念',
-        link: '1.基本概念.md'
-      },
-      {
-        text: '简单的模式匹配',
-        link: '2.简单的模式匹配.md'
-      },
-      {
-        text: 'KMP算法',
-        link: '3.KMP算法.md'
-      },
-      {
-        text: '一些总结',
-        link: '4.总结.md'
-      }
-    ]
-  },
-  {
-    text: '树和二叉树',
-    prefix: '树和二叉树',
-    collapsible: false,
-    children: [
-      {
-        text: '基本概念',
-        link: '1.基本概念.md'
-      },
-      {
-        text: '二叉树',
-        link: '2.二叉树.md'
-      },
-      {
-        text: '二叉树的遍历',
-        link: '3.二叉树的遍历.md'
-      },
-      {
-        text: '线索二叉树',
-        link: '4.线索二叉树.md'
-      },
-      {
-        text: '树和森林',
-        link: '5.树和森林.md'
-      },
-      {
-        text: '树的应用',
-        link: '6.树的应用.md'
-      },
-      {
-        text: '一些总结',
-        link: '7.总结.md'
-      }
-    ]
-  },
-  {
-    text: '图论',
-    prefix: '图论',
-    collapsible: false,
-    children: [
-      {
-        text: '基本概念',
-        link: '1.基本概念.md'
-      },
-      {
-        text: '图的存储',
-        link: '2.图的存储.md'
-      },
-      {
-        text: '图的遍历',
-        link: '3.图的遍历.md'
-      },
-      {
-        text: '图的应用',
-        link: '4.图的应用.md'
-      },
-      {
-        text: '一些总结',
-        link: '5.总结.md'
-      }
-    ]
-  },
+  // {
+  //   text: '串',
+  //   prefix: '串',
+  //   collapsible: false,
+  //   children: [
+  //     {
+  //       text: '基本概念',
+  //       link: '1.基本概念.md'
+  //     },
+  //     {
+  //       text: '简单的模式匹配',
+  //       link: '2.简单的模式匹配.md'
+  //     },
+  //     {
+  //       text: 'KMP算法',
+  //       link: '3.KMP算法.md'
+  //     },
+  //     {
+  //       text: '一些总结',
+  //       link: '4.总结.md'
+  //     }
+  //   ]
+  // },
+  // {
+  //   text: '树和二叉树',
+  //   prefix: '树和二叉树',
+  //   collapsible: false,
+  //   children: [
+  //     {
+  //       text: '基本概念',
+  //       link: '1.基本概念.md'
+  //     },
+  //     {
+  //       text: '二叉树',
+  //       link: '2.二叉树.md'
+  //     },
+  //     {
+  //       text: '二叉树的遍历',
+  //       link: '3.二叉树的遍历.md'
+  //     },
+  //     {
+  //       text: '线索二叉树',
+  //       link: '4.线索二叉树.md'
+  //     },
+  //     {
+  //       text: '树和森林',
+  //       link: '5.树和森林.md'
+  //     },
+  //     {
+  //       text: '树的应用',
+  //       link: '6.树的应用.md'
+  //     },
+  //     {
+  //       text: '一些总结',
+  //       link: '7.总结.md'
+  //     }
+  //   ]
+  // },
+  // {
+  //   text: '图论',
+  //   prefix: '图论',
+  //   collapsible: false,
+  //   children: [
+  //     {
+  //       text: '基本概念',
+  //       link: '1.基本概念.md'
+  //     },
+  //     {
+  //       text: '图的存储',
+  //       link: '2.图的存储.md'
+  //     },
+  //     {
+  //       text: '图的遍历',
+  //       link: '3.图的遍历.md'
+  //     },
+  //     {
+  //       text: '图的应用',
+  //       link: '4.图的应用.md'
+  //     },
+  //     {
+  //       text: '一些总结',
+  //       link: '5.总结.md'
+  //     }
+  //   ]
+  // },
   {
     text: '查找',
     prefix: '查找',

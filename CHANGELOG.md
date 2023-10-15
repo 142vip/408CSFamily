@@ -4,6 +4,27 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.1-alpha.6](https://github.com/mmdapl/408CSFamily/compare/v0.0.1-alpha.5...v0.0.1-alpha.6) (2023-10-15)
+
+
+### Features
+
+* 修改侧边栏内容，大幅增加md初始文档 ([#61](https://github.com/mmdapl/408CSFamily/issues/61)) ([fe3dedb](https://github.com/mmdapl/408CSFamily/commit/fe3dedbc35068a8498ea106e944f963488bfb3c5))
+* 删除栈、队列备份文件，优化数据结构文档 ([2d47327](https://github.com/mmdapl/408CSFamily/commit/2d473270cc5924d5333200f759e7ec212ee4e43f))
+* 集成xmind，支持思维导图在线预览 ([3ff248b](https://github.com/mmdapl/408CSFamily/commit/3ff248b2cdb08313dbaae70eb9665dc9e4b529c1))
+
+
+### Bug Fixes
+
+* 修复release变更记录异常 ([452e9ea](https://github.com/mmdapl/408CSFamily/commit/452e9ead6d7a61d0add18235f81011cf7decdf88))
+* 修复xmind文件使用viewer依赖构建异常，配置自定义组件只客户端渲染 ([229ae8e](https://github.com/mmdapl/408CSFamily/commit/229ae8e41c8540e0b5e1297ac0d19907997f5209))
+* 修复思维导图显示链接跳转异常 ([b68ade5](https://github.com/mmdapl/408CSFamily/commit/b68ade5005e89861172c9be1b0e5a9b5a741e464))
+
+
+### Performance Improvements
+
+* vuepress及主题相关依赖同步最新 ([aa6a54f](https://github.com/mmdapl/408CSFamily/commit/aa6a54f5a9ec1f4c3313350275415b983c7d84ee))
+
 ## [0.0.1-alpha.5](https://github.com/mmdapl/408CSFamily/compare/v0.0.1-alpha.4...v0.0.1-alpha.5) (2023-10-10)
 
 

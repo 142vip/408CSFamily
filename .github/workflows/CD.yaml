@@ -48,7 +48,8 @@ jobs:
           ## 淘宝镜像加速
           registry-url: 'https://registry.npmmirror.com'
 
-      - run: ./scripts/ci
+      - name: Install Dependencies
+        run: ./scripts/ci
 
       # 运行构建脚本
       - name: Build VuePress Site

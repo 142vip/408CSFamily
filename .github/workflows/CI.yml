@@ -48,7 +48,8 @@ jobs:
           ## 淘宝镜像加速
           registry-url: 'https://registry.npmmirror.com'
 
-      - run: ./scripts/ci
+      - name: Install Dependencies
+        run: ./scripts/ci
 
       - name: Cache Dependencies
         uses: actions/cache@v3

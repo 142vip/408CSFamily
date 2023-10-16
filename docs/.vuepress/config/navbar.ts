@@ -6,10 +6,11 @@ export const navbar = [
     text: '首页',
     link: '/'
   },
-  {
-    text: "数据结构",
-    link: "/manuscripts/ds"
-  },
+  // {
+  //   text: "数据结构",
+  //   link: "/manuscripts/ds"
+  // },
+  "/manuscripts/ds",
   {
     text: "操作系统",
     link: "/manuscripts/os"

@@ -12,33 +12,6 @@
   visibility: hidden; // 占位隐藏
 }
 
-.DocSearch-Button-Keys {
-  visibility: hidden
-}
-
-//  首页title描述
-.home .hero .description {
-  max-width: fit-content;
-}
-
-// 搜索框
-#docsearch-container > button {
-  border-radius: 5px;
-}
-
-.code-group__nav-tab-active {
-  color: var(--c-brand)
-}
-
-.open-info-div {
-  text-align: center;
-  align-content: center;
-
-  a {
-    margin: 5px;
-  }
-}
-
 
 // 全站主题色
 :root {

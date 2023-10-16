@@ -42,36 +42,43 @@ export const dsSidebar = [
     ]
   },
   {
-    text: '栈和队列',
+    text: '栈',
     prefix: '栈和队列',
     collapsible: false,
     children: [
       {
-        text: '栈-基本概念和操作',
+        text: '基本概念和操作',
         link: '1.栈的基本概念和基本操作.md'
       },
       {
-        text: '栈-顺序存储结构',
+        text: '顺序存储结构',
         link: '2.栈的顺序存储结构.md'
       },
       {
-        text: '栈-链式存储结构',
+        text: '链式存储结构',
         link: '3.栈的链式存储结构.md'
-      },
+      }
+    ]
+  },
+  {
+    text: '队列',
+    prefix: '栈和队列',
+    collapsible: false,
+    children: [
       {
-        text: '队列-基本概念和操作',
+        text: '基本概念和操作',
         link: '4.队列的基本概念和操作.md'
       }, {
-        text: '队列-顺序存储结构',
+        text: '顺序存储结构',
         link: '5.队列的顺序存储结构.md'
       },
       {
-        text: '队列-链式存储结构',
+        text: '链式存储结构',
         link: '6.队列的链式存储结构.md'
       },
       {
-        text: '一些总结',
-        link: '7.总结.md'
+        text: '栈VS队列补充',
+        link: '7.栈VS队列补充.md'
       }
     ]
   },

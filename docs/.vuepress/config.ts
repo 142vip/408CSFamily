@@ -35,6 +35,9 @@ export default defineUserConfig({
               })();`
     ]
   ],
+  // 配置永久链接，参考：https://v2.vuepress.vuejs.org/zh/reference/frontmatter.html#permalink
+  // permalink: "/:year/:month/:day/:slug",
+  // permalinkPattern: `:slug.html`,
   markdown: {
     // todo 引入代码文件时的路径替换
     importCode: {

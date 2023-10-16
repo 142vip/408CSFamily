@@ -32,21 +32,24 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      ## 依赖下载完成后，或执行思维导图编译
-      - name: PNPM Install
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
-          run_install: |
-            args: [--frozen-lockfile, --registry=https://registry.npmmirror.com]
-
-      #      - name: Install Node.js
-      #        uses: actions/setup-node@v3
+      #      ## 依赖下载完成后，或执行思维导图编译
+      #      - name: PNPM Install
+      #        uses: pnpm/action-setup@v2
       #        with:
-      #          node-version: 18.18.0
-      #          ## 淘宝镜像加速
-      #          registry-url: 'https://registry.npmmirror.com'
-      #          cache: 'pnpm'
+      #          version: 7
+      #          run_install: |
+      #            args: [--frozen-lockfile, --registry=https://registry.npmmirror.com]
+
+      # 安装Node环境
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.18.0
+          ## 淘宝镜像加速
+          registry-url: 'https://registry.npmmirror.com'
+
+      - name: Install Dependencies
+        run: ./scripts/ci
 
       # 运行构建脚本
       - name: Build VuePress Site
@@ -75,7 +78,7 @@ jobs:
 
       ## 注意： 这里的操作时间vercel平台配置的命令拉取下来，执行
       - name: Pull Vercel Environment Information
-        run: npm i vercel -g && vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        run: npm i -g vercel && vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
       ## 执行vercel平台配置的命令
       - name: Build Project Artifacts

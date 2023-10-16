@@ -1,4 +1,4 @@
 #!/bin/bash
 
 ## 下载依赖
-pnpm i --frozen-lockfile --registry https://registry.npmmirror.com
+npm i -g pnpm@7 && pnpm i --frozen-lockfile --registry https://registry.npmmirror.com

@@ -12,7 +12,7 @@ ARG CONTAINER_BUILD
 WORKDIR /apps
 COPY . .
 
-RUN echo $CONTAINER_BUILD
+RUN echo $CONTAINER_BUILD;
 
 ## 基于容器自动构建
 RUN if [ "$CONTAINER_BUILD" = "true" ]; then  \

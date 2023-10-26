@@ -104,7 +104,7 @@ jobs:
 
   Build-Docker-Image:
     name: "构建Docker镜像"
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     ## 主库且tag更新时执行
     #    if: github.repository == '142vip/408CSFamily' && startsWith(github.ref, 'refs/tags/v')
     permissions:

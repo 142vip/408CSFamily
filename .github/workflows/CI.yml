@@ -142,7 +142,7 @@ jobs:
       ## 构建，支持domain
       - name: Build To Dist
         run: |
-          ./scripts/bundle build_proxy
+          ./scripts/bundle build
 
       ## 快速构建并推送
       - name: Push Docker Image

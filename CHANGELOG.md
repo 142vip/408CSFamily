@@ -4,48 +4,48 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
-## [0.0.1-alpha.6](https://github.com/mmdapl/408CSFamily/compare/v0.0.1-alpha.5...v0.0.1-alpha.6) (2023-10-15)
+## [0.0.1-alpha.6](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.5...v0.0.1-alpha.6) (2023-10-15)
 
 
 ### Features
 
-* 修改侧边栏内容，大幅增加md初始文档 ([#61](https://github.com/mmdapl/408CSFamily/issues/61)) ([fe3dedb](https://github.com/mmdapl/408CSFamily/commit/fe3dedbc35068a8498ea106e944f963488bfb3c5))
-* 删除栈、队列备份文件，优化数据结构文档 ([2d47327](https://github.com/mmdapl/408CSFamily/commit/2d473270cc5924d5333200f759e7ec212ee4e43f))
-* 集成xmind，支持思维导图在线预览 ([3ff248b](https://github.com/mmdapl/408CSFamily/commit/3ff248b2cdb08313dbaae70eb9665dc9e4b529c1))
+* 修改侧边栏内容，大幅增加md初始文档 ([#61](https://github.com/142vip/408CSFamily/issues/61)) ([fe3dedb](https://github.com/142vip/408CSFamily/commit/fe3dedbc35068a8498ea106e944f963488bfb3c5))
+* 删除栈、队列备份文件，优化数据结构文档 ([2d47327](https://github.com/142vip/408CSFamily/commit/2d473270cc5924d5333200f759e7ec212ee4e43f))
+* 集成xmind，支持思维导图在线预览 ([3ff248b](https://github.com/142vip/408CSFamily/commit/3ff248b2cdb08313dbaae70eb9665dc9e4b529c1))
 
 
 ### Bug Fixes
 
-* 修复release变更记录异常 ([452e9ea](https://github.com/mmdapl/408CSFamily/commit/452e9ead6d7a61d0add18235f81011cf7decdf88))
-* 修复xmind文件使用viewer依赖构建异常，配置自定义组件只客户端渲染 ([229ae8e](https://github.com/mmdapl/408CSFamily/commit/229ae8e41c8540e0b5e1297ac0d19907997f5209))
-* 修复思维导图显示链接跳转异常 ([b68ade5](https://github.com/mmdapl/408CSFamily/commit/b68ade5005e89861172c9be1b0e5a9b5a741e464))
+* 修复release变更记录异常 ([452e9ea](https://github.com/142vip/408CSFamily/commit/452e9ead6d7a61d0add18235f81011cf7decdf88))
+* 修复xmind文件使用viewer依赖构建异常，配置自定义组件只客户端渲染 ([229ae8e](https://github.com/142vip/408CSFamily/commit/229ae8e41c8540e0b5e1297ac0d19907997f5209))
+* 修复思维导图显示链接跳转异常 ([b68ade5](https://github.com/142vip/408CSFamily/commit/b68ade5005e89861172c9be1b0e5a9b5a741e464))
 
 
 ### Performance Improvements
 
-* vuepress及主题相关依赖同步最新 ([aa6a54f](https://github.com/mmdapl/408CSFamily/commit/aa6a54f5a9ec1f4c3313350275415b983c7d84ee))
+* vuepress及主题相关依赖同步最新 ([aa6a54f](https://github.com/142vip/408CSFamily/commit/aa6a54f5a9ec1f4c3313350275415b983c7d84ee))
 
-## [0.0.1-alpha.5](https://github.com/mmdapl/408CSFamily/compare/v0.0.1-alpha.4...v0.0.1-alpha.5) (2023-10-10)
+## [0.0.1-alpha.5](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.4...v0.0.1-alpha.5) (2023-10-10)
 
 
 ### Features
 
-* 优化流水线缓存 ([#55](https://github.com/mmdapl/408CSFamily/issues/55)) ([dadfea4](https://github.com/mmdapl/408CSFamily/commit/dadfea48ce9da2632044bb75a186cb774fcbd805))
-* 关闭博客功能，加入插件依赖，支持md文档拓展 ([9d24d49](https://github.com/mmdapl/408CSFamily/commit/9d24d49669768fe0c40f1362ef06110e6fd14f68))
-* 新增markdown转思维导图脚本，导航栏改版 ([67cee8c](https://github.com/mmdapl/408CSFamily/commit/67cee8cbc70ba030e47f2b2a4b3299e760468d49))
-* 新增操作系统、数据结构笔记文档 ([6962e3d](https://github.com/mmdapl/408CSFamily/commit/6962e3d48be173733c818cbc69302a338659d03c))
-* 更新思维导图，优化侧边栏快速预览 ([af23b81](https://github.com/mmdapl/408CSFamily/commit/af23b81246144f545e337f83cfa2bed65dfe6daf))
-* 绘制部分思维导图 ([d084c7c](https://github.com/mmdapl/408CSFamily/commit/d084c7c12d1a62bcf685cc54a23a28d3cdb4abf8))
+* 优化流水线缓存 ([#55](https://github.com/142vip/408CSFamily/issues/55)) ([dadfea4](https://github.com/142vip/408CSFamily/commit/dadfea48ce9da2632044bb75a186cb774fcbd805))
+* 关闭博客功能，加入插件依赖，支持md文档拓展 ([9d24d49](https://github.com/142vip/408CSFamily/commit/9d24d49669768fe0c40f1362ef06110e6fd14f68))
+* 新增markdown转思维导图脚本，导航栏改版 ([67cee8c](https://github.com/142vip/408CSFamily/commit/67cee8cbc70ba030e47f2b2a4b3299e760468d49))
+* 新增操作系统、数据结构笔记文档 ([6962e3d](https://github.com/142vip/408CSFamily/commit/6962e3d48be173733c818cbc69302a338659d03c))
+* 更新思维导图，优化侧边栏快速预览 ([af23b81](https://github.com/142vip/408CSFamily/commit/af23b81246144f545e337f83cfa2bed65dfe6daf))
+* 绘制部分思维导图 ([d084c7c](https://github.com/142vip/408CSFamily/commit/d084c7c12d1a62bcf685cc54a23a28d3cdb4abf8))
 
 
 ### Bug Fixes
 
-* 修复CD流水线vercel发布异常 ([384a752](https://github.com/mmdapl/408CSFamily/commit/384a7524744f4605487d3c2d4ded2e1bef6ae03d))
+* 修复CD流水线vercel发布异常 ([384a752](https://github.com/142vip/408CSFamily/commit/384a7524744f4605487d3c2d4ded2e1bef6ae03d))
 
 
 ### Performance Improvements
 
-* 修改CI代码拉取策略，简化scripts脚本命令 ([#54](https://github.com/mmdapl/408CSFamily/issues/54)) ([5e1aedb](https://github.com/mmdapl/408CSFamily/commit/5e1aedbd463fcd265c8641270ae65429481fb1d1))
+* 修改CI代码拉取策略，简化scripts脚本命令 ([#54](https://github.com/142vip/408CSFamily/issues/54)) ([5e1aedb](https://github.com/142vip/408CSFamily/commit/5e1aedbd463fcd265c8641270ae65429481fb1d1))
 
 ## [0.0.1-alpha.4](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.3...v0.0.1-alpha.4) (2023-09-28)
 

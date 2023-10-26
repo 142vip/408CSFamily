@@ -8,9 +8,18 @@
  *   - ./scripts/lint --fix
  */
 
-const { execShell } = require('./.exec')
+const {execShell} = require('./.exec')
 const scriptName = process.argv[2]
 const fixed = scriptName != null ? '--fix' : '';
 
+// 格式化代码
+const lintCode = `eslint ${fixed} --ext .js,.ts,.vue --ignore-path .gitignore .`;
+
+// 遍历格式化docs目录下的markdown 文档
+const lintMd = 'find docs -type f -name \"*.md\" -print0 | xargs -0 -I {} markdownlint  -c .markdownlint.js --fix {}';
+
 // 可以在--fix后指定目录
-(async() => await execShell(`eslint ${fixed} --ext .js,.ts,.vue --ignore-path .gitignore .`))()
+(async () => await execShell([
+  lintCode,
+  lintMd
+]))()

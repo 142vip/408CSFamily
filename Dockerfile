@@ -12,11 +12,11 @@ ARG CONTAINER_BUILD
 WORKDIR /apps
 COPY . .
 
-RUN echo $CONTAINER_BUILD
+RUN echo $CONTAINER_BUILD;
 
 ## 基于容器自动构建
 RUN if [ "$CONTAINER_BUILD" = "true" ]; then  \
-    npm i pnpm@7 -g && pnpm i -D && ./scripts/bundle build; \
+    sh ./scripts/ci && pnpm build; \
   fi;
 
 FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.23.0-alpine

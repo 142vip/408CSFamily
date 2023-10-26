@@ -1,8 +1,8 @@
 {
   "name": "408CSFamily",
   "description": "专业代号408，计算机基础知识点合集",
-  "version": "0.0.1-alpha.6",
-  "packageManager": "pnpm@7.2.1",
+  "version": "0.0.1-alpha.7",
+  "packageManager": "pnpm@8.9.2",
   "engines": {
     "node": "^18.x",
     "pnpm": ">=7.2.1"
@@ -47,6 +47,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.17.0",
     "husky": "^8.0.3",
+    "markdownlint-cli": "^0.37.0",
     "markmap-cli": "^0.15.4",
     "shelljs": "^0.8.5",
     "typescript": "^3.9.10",

@@ -22,7 +22,7 @@ jobs:
   ## 部署到Github-Pages
   deploy-github:
     name: "部署到Github-Pages"
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
@@ -66,7 +66,7 @@ jobs:
   ## 部署到vercel平台
   deploy-vercel:
     name: "部署到Vercel平台"
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     if: github.repository == '142vip/408CSFamily'
     steps:
       - name: Checkout Code
@@ -91,7 +91,7 @@ jobs:
   ## 版本发布
   release:
     name: "Github版本发布"
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     ## 主库master、next且执行release更新时执行
     if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
 

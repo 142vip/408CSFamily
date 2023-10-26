@@ -12,4 +12,16 @@ readonly generateChangeLog='commit-and-tag-version && git add CHANGELOG.md'
 readonly commitInfo='chore(release): publish v%s'
 
 
-bumpp  --preid alpha  --execute="$generateChangeLog" --commit "$commitInfo" --all --tag --push
+# 获取当前分支名称
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+# 判断分支名称
+if [ "$current_branch" = "next" ]; then
+  bumpp  --preid alpha  --execute="$generateChangeLog" --commit "$commitInfo" --all --tag --push
+else
+  echo "当前分支是：$current_branch ，版本迭代允许在next分之操作，并推送到远程！！！"
+fi
+
+
+## 直接快速生成CHANGELOG文档
+#pnpm commit-and-tag-version

@@ -135,9 +135,9 @@ jobs:
           --password=${{ secrets.DOCKER_PASSWORD }} \
           ${{env.REGISTRY}}
 
-      #      - name: Install Dependencies
-      #        run: |
-      #          ./scripts/ci
+      - name: Install Dependencies
+        run: |
+          ./scripts/ci
 
       #      ## 构建，支持domain
       #      - name: Build To Dist

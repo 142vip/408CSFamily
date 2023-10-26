@@ -4,6 +4,28 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.1-alpha.7](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.6...v0.0.1-alpha.7) (2023-10-26)
+
+
+### Features
+
+* 408各科导航目录梳理，修改跳转链 ([cd9f486](https://github.com/142vip/408CSFamily/commit/cd9f486bfb3c4f058777102f4ec95d284eafe956))
+* **markdownlint-cli:** 添加markdown文档校验，支持lint脚本自动格式化文档 ([151249b](https://github.com/142vip/408CSFamily/commit/151249bf2eda3c190b3b6c61cdcf5d4cc8c5b18c))
+
+
+### Bug Fixes
+
+* **CI:** 修复流水线构建镜像异常 ([#68](https://github.com/142vip/408CSFamily/issues/68)) ([295299b](https://github.com/142vip/408CSFamily/commit/295299b4b521dc2cc692013c9d0b23d5dc3c431b))
+* **nginx:** 修改nginx配置，修复404页面出现首页问题 ([74544ee](https://github.com/142vip/408CSFamily/commit/74544ee6fe85f1c95d73b95f502050e452460b50))
+* **pnpm8:** 修复pnpm升级后，netlify无法安装依赖 ([eb9da3d](https://github.com/142vip/408CSFamily/commit/eb9da3d2425a5bba56e8b7a9a5807397e8d14107))
+
+
+### Performance Improvements
+
+* ci脚本新增pnpm安装，优化CI、CD流水线 ([67c38b0](https://github.com/142vip/408CSFamily/commit/67c38b0564ba7388058ca896498bc26a7fb3e35f))
+* **Dockerfile:** 支持node18.18.0 ([c3e8736](https://github.com/142vip/408CSFamily/commit/c3e87363551cd436774ebe2e08185a8126dbedb6))
+* 支持PNPM8 ([6c6fc92](https://github.com/142vip/408CSFamily/commit/6c6fc92c40d8807288d12f657febad776090b160))
+
 ## [0.0.1-alpha.6](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.5...v0.0.1-alpha.6) (2023-10-15)
 
 ### Features

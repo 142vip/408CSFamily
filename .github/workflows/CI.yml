@@ -11,7 +11,6 @@ on:
     branches:
       - master
       - next
-      - fix/ci
   # 手动触发部署
   workflow_dispatch:
 
@@ -29,7 +28,6 @@ jobs:
   install-init:
     name: "依赖安装初始化"
     runs-on: ubuntu-latest
-    if: github.repository == '142vip/408CSFamily' && startsWith(github.ref, 'refs/tags/v')
     permissions:
       actions: read
       pull-requests: read
@@ -106,7 +104,7 @@ jobs:
     name: "构建Docker镜像"
     runs-on: ubuntu-latest
     ## 主库且tag更新时执行
-    #    if: github.repository == '142vip/408CSFamily' && startsWith(github.ref, 'refs/tags/v')
+    if: github.repository == '142vip/408CSFamily' && startsWith(github.ref, 'refs/tags/v')
     permissions:
       actions: read
       pull-requests: read

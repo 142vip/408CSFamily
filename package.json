@@ -20,6 +20,7 @@
     "build": "./scripts/bundle build",
     "build:proxy": "./scripts/bundle build_proxy",
     "build:mark-map": "./scripts/mark-map",
+    "lint:md": "",
     "deploy:vercel": "vercel --prod",
     "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' + "
   },
@@ -47,6 +48,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.17.0",
     "husky": "^8.0.3",
+    "markdownlint-cli": "^0.37.0",
     "markmap-cli": "^0.15.4",
     "shelljs": "^0.8.5",
     "typescript": "^3.9.10",

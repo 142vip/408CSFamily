@@ -97,15 +97,14 @@ yarn install
 yarn run dev
 
 ```
+
 :::
 
 查看项目启动日志并访问：[http://127.0.0.1:4200](http://localhost:4200)，开启学习之旅吧~
 
-
 ### 在线浏览
 
 - 稳定版： <https://408.142vip.cn>
-
 
 > 网站无法访问时，建议通过科学上网访问备用网络
 
@@ -113,33 +112,24 @@ yarn run dev
 - Netlify： <https://408-family.netlify.app>
 - Vercel： <https://408-family.vercel.app>
 
-
-
-
 ### 提交记录
-
 
 ### 赞赏列表
 
-
-以下排名不分先后!  [传送门→]() **赞赏过的一定要微信跟我说呀！！！！！！**
-
+以下排名不分先后!  **赞赏过的一定要微信跟我说呀！！！！！！**
 
 <div>
   <a href="https://github.com/ChiefPing" target="_blank" style="margin: 5px">
     <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="brder-radius:5px;"/>
-  </a> 
+  </a>
    <a href="https://github.com/xiaoliuxin" target="_blank" style="margin: 5px">
     <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
   </a>
 </div>
 
-
-
 ### 赞助商
 
-**以下排名不分先后! 还木有收到赞助，哈哈哈，先留坑**
-
+以下排名不分先后! 还木有收到赞助，哈哈哈，先留坑
 
 ### 贡献
 
@@ -147,14 +137,11 @@ yarn run dev
 
 [![contributors](https://contrib.rocks/image?repo=142vip/408CSFamily)](https://github.com/142vip/408CSFamily/graphs/contributors)
 
-
 ### 趋势
 
 <div style="text-align: center" align="center">
 <img alt="Star History" src="https://api.star-history.com/svg?repos=142vip/408CSFamily&type=Date" >
 </div>
-
-
 
 ### 联系作者
 
@@ -163,7 +150,7 @@ yarn run dev
 <div style="text-align: center">
     <div  align="center" >
         <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
-            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg" 
+            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg"
                 width="250px"
                 style="margin:10px"
                 title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
@@ -240,6 +227,3 @@ yarn run dev
 
 交流/加群/互看朋友圈，
 当然：**聊天 /提问 /建议 /提需求** 可以在公众号直接**私信**，后台可以看到。有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。
-
-
-

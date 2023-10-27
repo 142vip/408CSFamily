@@ -32,22 +32,23 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      #      ## 依赖下载完成后，或执行思维导图编译
-      #      - name: PNPM Install
-      #        uses: pnpm/action-setup@v2
-      #        with:
-      #          version: 7
-      #          run_install: |
-      #            args: [--frozen-lockfile, --registry=https://registry.npmmirror.com]
+      ## 安装PNPM
+      - name: PNPM Install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
 
-      # 安装Node环境
+      ## 安装Node环境
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18.18.0
           ## 淘宝镜像加速
           registry-url: 'https://registry.npmmirror.com'
+          ## 缓存
+          cache: 'pnpm'
 
+      ## 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
       - name: Install Dependencies
         run: |
           ./scripts/ci

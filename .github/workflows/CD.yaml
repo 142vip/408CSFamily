@@ -8,7 +8,6 @@ name: CD
 on:
   push:
     branches:
-      - master
       - next
   workflow_dispatch:
 
@@ -23,6 +22,7 @@ jobs:
   deploy-github:
     name: "部署到Github-Pages"
     runs-on: ubuntu-latest
+    if: github.repository == '142vip/408CSFamily'
 
     steps:
       - name: Checkout Code
@@ -68,6 +68,7 @@ jobs:
     name: "部署到Vercel平台"
     runs-on: ubuntu-latest
     if: github.repository == '142vip/408CSFamily'
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4

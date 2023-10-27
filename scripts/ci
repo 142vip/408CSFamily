@@ -1,4 +1,31 @@
 #!/bin/bash
 
+# 期望的 pnpm 大版本号
+majorVersionRequired="8"
+
+# 检测 pnpm 是否已安装并且大版本号符合要求
+checkPNPM() {
+    local pnpmVersionInstalled=$(pnpm --version 2>/dev/null)  # 获取已安装的 pnpm 版本
+    if [[ $pnpmVersionInstalled =~ ^$majorVersionRequired ]]; then
+        echo "已安装的 pnpm 版本：$pnpmVersionInstalled"
+        echo "已安装的 pnpm 大版本号符合要求."
+        return 0
+    else
+        echo "未安装 pnpm 或 pnpm 大版本号不符合要求."
+        return 1
+    fi
+}
+
+
 ## 下载依赖
-npm i pnpm@8 -g && pnpm i --frozen-lockfile --registry https://registry.npmmirror.com
+# 检查 pnpm 是否已安装并符合要求
+if checkPNPM; then
+    echo "无需安装 pnpm@@$majorVersionRequired"
+else
+    echo "安装 pnpm@$majorVersionRequired..."
+    npm i pnpm@$majorVersionRequired -g
+fi
+
+# 安装项目依赖
+pnpm i --frozen-lockfile --registry https://registry.npmmirror.com
+

@@ -5,7 +5,7 @@
  *  - ./scripts/deploy ali
  *  - ./scripts/deploy github
  */
-const { execShell } = require('./.exec')
+const {execShell} = require('./.exec')
 const packageVersion = require('../package.json').version
 
 const dockerDeployInfo = {
@@ -31,8 +31,8 @@ const SupportScripts = {
         cd -
       `,
   Ali: [
-      // 容器存在即删除
-      `
+    // 容器存在即删除
+    `
         if docker inspect --format='{{.State.Running}}' ${dockerDeployInfo.containerName} >/dev/null 2>&1;then
           docker rm -f ${dockerDeployInfo.containerName}
           exit 0;
@@ -41,9 +41,9 @@ const SupportScripts = {
           exit 1;
         fi
       `,
-      // 镜像存在即删除
-      `
-        if [[ "$(docker images -q ${imageName} 2> /dev/null)" != "" ]];then 
+    // 镜像存在即删除
+    `
+        if [ "$(docker images -q ${imageName} 2> /dev/null)" != "" ];then 
           docker rmi ${imageName}
           exit 0;
         else
@@ -51,8 +51,8 @@ const SupportScripts = {
           exit 1;
         fi
       `,
-      // 运行容器
-      `
+    // 运行容器
+    `
         docker run -d --name ${dockerDeployInfo.containerName} \
         -p 7000:80 \
         --network=${dockerDeployInfo.networkName}  \
@@ -82,7 +82,7 @@ function getDeployCommand() {
 
 
 // 执行
-;(async() => {
+;(async () => {
   const deployCommand = getDeployCommand()
   // console.log(deployCommand)
   await execShell(deployCommand)

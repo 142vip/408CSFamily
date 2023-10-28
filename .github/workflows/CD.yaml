@@ -67,8 +67,9 @@ jobs:
       - name: Get Commit Info
         id: gitInfo
         run: |
-          echo "::set-output name=commitMessage::$(git log -1 --pretty=%B)"
-          echo "::set-output name=author::$(git log -1 --pretty=%an)"
+          echo "commitMessage=$(git log -1 --pretty=%B)" >> $GITHUB_OUTPUT
+          echo "author=$(git log -1 --pretty=%an)" >> $GITHUB_OUTPUT
+          echo "email=$(git log -1 --pretty=%ae)" >> $GITHUB_OUTPUT
 
       ## 参考：https://github.com/marketplace/actions/github-pages
       - name: Deploy To GitHub Page
@@ -77,8 +78,8 @@ jobs:
           target_branch: pages/github
           build_dir: docs/.vuepress/dist
           commit_message: ${{ steps.gitInfo.outputs.commitMessage }}
-          committer: ${{ steps.gitInfo.outputs.commitMessage }}
-          author: ${{ steps.gitInfo.outputs.author }}
+          committer: ${{steps.gitInfo.outputs.author}} <${{steps.gitInfo.outputs.email}}>
+          author: ${{steps.gitInfo.outputs.author}}
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -134,7 +135,7 @@ jobs:
       - name: Get New Version Number
         id: releaseVersion
         run: |
-          echo "::set-output name=version::$(node -p "require('./package.json').version")"
+          echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
 
       # 创建发布版本
       - name: Create New Release

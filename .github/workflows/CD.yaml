@@ -9,7 +9,6 @@ on:
   push:
     branches:
       - next
-      - feat/add-gh-pages-commit
   workflow_dispatch:
 
 

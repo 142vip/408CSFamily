@@ -78,9 +78,9 @@ jobs:
         with:
           target_branch: pages/github
           build_dir: docs/.vuepress/dist
-          commit_message: ${{ steps.gitInfo.outputs.commitMessage }} 【Sync Next】
+          commit_message: ${{ steps.gitInfo.outputs.commitMessage }}
           committer: ${{steps.gitInfo.outputs.author}}<${{steps.gitInfo.outputs.email}}>
-          author: Mr·408
+          author: Sync Next
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

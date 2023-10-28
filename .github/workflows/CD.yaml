@@ -9,6 +9,7 @@ on:
   push:
     branches:
       - next
+      - fix/add-gh-pages-commit
   workflow_dispatch:
 
 
@@ -58,11 +59,27 @@ jobs:
         run: |
           ./scripts/bundle build_proxy
 
+      - name: Check GitHub Pages status
+        uses: crazy-max/ghaction-github-status@v3
+        with:
+          pages_threshold: major_outage
+
+      - name: Get Commit Info
+        id: gitInfo
+        run: |
+          echo "::set-output name=commitMessage::$(git log -1 --pretty=%B)"
+          echo "::set-output name=author::$(git log -1 --pretty=%an)"
+
+      ## 参考：https://github.com/marketplace/actions/github-pages
       - name: Deploy To GitHub Page
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: pages/github
           build_dir: docs/.vuepress/dist
+          commit_message: ${{ steps.gitInfo.outputs.commitMessage }}
+          committer: ${{ steps.gitInfo.outputs.commitMessage }}
+          author: ${{ steps.gitInfo.outputs.author }}
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -115,20 +132,21 @@ jobs:
 
       # 提取版本号
       - name: Get New Version Number
-        id: extract_version
-        run: echo "::set-output name=version::$(node -p "require('./package.json').version")"
+        id: releaseVersion
+        run: |
+          echo "::set-output name=version::$(node -p "require('./package.json').version")"
 
       # 创建发布版本
       - name: Create New Release
-        id: create_release
+        id: createRelease
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v${{ steps.extract_version.outputs.version }}
-          release_name: v${{ steps.extract_version.outputs.version }}
+          release_name: v${{ steps.releaseVersion.outputs.version }}
           body: |
-            Release ${{ steps.extract_version.outputs.version }}
+            Release ${{ steps.releaseVersion.outputs.version }}
             
             ### Features
 
@@ -140,7 +158,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          upload_url: ${{ steps.createRelease.outputs.upload_url }}
           asset_path: ./408CSFamily.zip
           asset_name: 408CSFamily.zip
           asset_content_type: application/zip

@@ -67,7 +67,7 @@ jobs:
       - name: Get Commit Info
         id: gitInfo
         run: |
-          echo "commitMessage=$(git log -1 --pretty=%B)" >> $GITHUB_OUTPUT
+          echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
           echo "author=$(git log -1 --pretty=%an)" >> $GITHUB_OUTPUT
           echo "email=$(git log -1 --pretty=%ae)" >> $GITHUB_OUTPUT
 
@@ -77,7 +77,7 @@ jobs:
         with:
           target_branch: pages/github
           build_dir: docs/.vuepress/dist
-          commit_message: ${{ steps.gitInfo.outputs.commitMessage }}
+          commit_message: chore(sync) v${{steps.gitInfo.outputs.version}}
           committer: ${{steps.gitInfo.outputs.author}}<${{steps.gitInfo.outputs.email}}>
           author: Mr·Sync
 

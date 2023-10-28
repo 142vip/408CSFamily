@@ -80,7 +80,7 @@ jobs:
           build_dir: docs/.vuepress/dist
           commit_message: ${{ steps.gitInfo.outputs.commitMessage }}
           committer: ${{steps.gitInfo.outputs.author}}<${{steps.gitInfo.outputs.email}}>
-          author: Sync Next
+          author: Mr·Sync
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -145,7 +145,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v${{ steps.extract_version.outputs.version }}
+          tag_name: v${{ steps.releaseVersion.outputs.version }}
           release_name: v${{ steps.releaseVersion.outputs.version }}
           body: |
             Release ${{ steps.releaseVersion.outputs.version }}

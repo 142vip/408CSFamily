@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.1-alpha.8](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.7...v0.0.1-alpha.8) (2023-10-28)
+
+
+### Features
+
+* **CI:** 新增codeql流水线 ([9202226](https://github.com/142vip/408CSFamily/commit/92022260251fda3aa5458d9a35de0eca35f02d93))
+* **gh-pages:** 丰富pages站点的提交信息，实时同步next分支内容 ([1c8f54c](https://github.com/142vip/408CSFamily/commit/1c8f54cc34375792c63005d753ddadcb8603c8fe))
+
+
+### Bug Fixes
+
+* **CI:** 修复镜像构建时ci版本异常 ([b5be536](https://github.com/142vip/408CSFamily/commit/b5be53605a74249e6ddb0557774a18e1c220119e))
+* **CI:** 修改release执行条件，next分支触发 ([86f0594](https://github.com/142vip/408CSFamily/commit/86f0594c4e5ccec4906857cc9bdba822ecd6066f))
+* **scripts:** 优化deploy脚本，修复镜像构建异常 ([07f16f7](https://github.com/142vip/408CSFamily/commit/07f16f72cf63e443c25e3d07c19659c7daf917dc))
+
+
+### Performance Improvements
+
+* **CI:** 简化流水线校验流程 ([15a69a2](https://github.com/142vip/408CSFamily/commit/15a69a2c943f63b2b5f86acae599c9373c4c5ff6))
+
 ## [0.0.1-alpha.7](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.6...v0.0.1-alpha.7) (2023-10-26)
 
 

@@ -8,7 +8,6 @@ name: CD
 on:
   push:
     branches:
-      - master
       - next
   workflow_dispatch:
 
@@ -23,6 +22,7 @@ jobs:
   deploy-github:
     name: "部署到Github-Pages"
     runs-on: ubuntu-latest
+    if: github.repository == '142vip/408CSFamily'
 
     steps:
       - name: Checkout Code
@@ -32,28 +32,31 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      #      ## 依赖下载完成后，或执行思维导图编译
-      #      - name: PNPM Install
-      #        uses: pnpm/action-setup@v2
-      #        with:
-      #          version: 7
-      #          run_install: |
-      #            args: [--frozen-lockfile, --registry=https://registry.npmmirror.com]
+      ## 安装PNPM
+      - name: PNPM Install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
 
-      # 安装Node环境
+      ## 安装Node环境
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18.18.0
           ## 淘宝镜像加速
           registry-url: 'https://registry.npmmirror.com'
+          ## 缓存
+          cache: 'pnpm'
 
+      ## 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
       - name: Install Dependencies
-        run: ./scripts/ci
+        run: |
+          ./scripts/ci
 
       # 运行构建脚本
       - name: Build VuePress Site
-        run: ls -a && ./scripts/bundle build_proxy
+        run: |
+          ./scripts/bundle build_proxy
 
       - name: Deploy To GitHub Page
         uses: crazy-max/ghaction-github-pages@v3
@@ -68,6 +71,7 @@ jobs:
     name: "部署到Vercel平台"
     runs-on: ubuntu-latest
     if: github.repository == '142vip/408CSFamily'
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -140,3 +144,37 @@ jobs:
           asset_path: ./408CSFamily.zip
           asset_name: 408CSFamily.zip
           asset_content_type: application/zip
+
+
+#  Deploy-ESC:
+#    name: "部署到ESC服务器"
+#    needs: install-init
+#    runs-on: ubuntu-latest
+#    ## 主库master、next且执行release更新时执行
+#    if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
+#
+#    steps:
+#      - name: Checkout repository
+#        uses: actions/checkout@v4
+#
+#      - name: Get Current Version
+#        id: version
+#        uses: ashley-taylor/read-json-property-action@v1.0
+#        with:
+#          path: ./package.json
+#          property: version
+#
+#        # 拉取镜像，更新服务
+#      - name: Pull Image And Update ESC
+#        uses: appleboy/ssh-action@master
+#        with:
+#          host: ${{ secrets.SERVER_HOST }}
+#          port: ${{ secrets.SERVER_PORT }}
+#          username: ${{ secrets.SERVER_USERNAME }}
+#          password: ${{ secrets.SERVER_PASSWORD }}
+#          script: |
+#            docker images
+#            echo "-----------正在运行的服务--------"
+#            docker ps
+#            cd /service_env/ && git reset --hard && git pull origin main
+#            bash ./scripts/book_doc.deploy.sh jsc ${{steps.version.outputs.value}}

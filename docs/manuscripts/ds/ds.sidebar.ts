@@ -1,39 +1,39 @@
 export const dsSidebar = [
   {
     text: '基础入门',
-    prefix: 'basic-introduction',
+    prefix: '基础入门',
     collapsible: false,
     children: [
       {
         text: '基本概念',
-        link: '1.basic_concepts.md'
+        link: '1.基本概念.md'
       },
       {
-        text: '数据结构三要素',
-        link: '2.three_elements_of_data_structure.md'
+        text: '三要素',
+        link: '2.三要素.md'
       },
       {
         text: '算法和算法评价',
-        link: '3.algorithm_and_algorithm_evaluation.md'
+        link: '3.算法和算法评价.md'
       }
     ]
   },
   {
     text: '线性表',
+    prefix: '线性表',
     collapsible: false,
-    prefix: 'linear-table',
     children: [
       {
         text: '基础概念和操作',
-        link: '1.basic_concept_and_operation.md'
+        link: '1.基础概念和操作.md'
       },
       {
         text: '顺序表示',
-        link: '2.sequential_representation.md'
+        link: '2.顺序表示.md'
       },
       {
         text: '链式表示',
-        link: '3.chained_representation.md'
+        link: '3.链式表示.md'
       },
       {
         text: '一些总结',

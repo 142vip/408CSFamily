@@ -2,7 +2,7 @@
 home: true
 title: 首页
 heroText: 计算机应试全家桶
-tagline: 保持终身学习，读研or考研，做适合自己的选择
+tagline: 保持终身学习，读研or考研，做适合自己的选择!
 actions:
   - text: 快速开始→
     link: /quick-start.md

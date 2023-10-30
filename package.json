@@ -15,7 +15,7 @@
   "scripts": {
     "preinstall": "chmod +x ./scripts/*",
     "postinstall": "npm run build:mark-map",
-    "prepare": "rm -f .husky/pre-commit && husky install && npx husky add .husky/pre-commit \"./scripts/lint --fix\" && chmod +x .husky/pre-commit",
+    "prepare": "rm -f .husky/pre-commit && husky install && npx husky add .husky/pre-commit \"./scripts/lint\" && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",
     "build": "./scripts/bundle build",
     "build:proxy": "./scripts/bundle build_proxy",

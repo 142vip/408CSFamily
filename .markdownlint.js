@@ -1,3 +1,4 @@
+// 参考：<https://github.com/updownpress/markdown-lint/tree/master/rules>
 module.exports = {
   "default": true,
   "MD001": false,
@@ -10,6 +11,9 @@ module.exports = {
   "MD013": false,
   "MD024": {
     "allow_different_nesting": true
+  },
+  "MD025": {
+    "front_matter_title": ""
   },
   "MD033": {
     "allowed_elements": [

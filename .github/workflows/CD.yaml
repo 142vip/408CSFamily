@@ -58,6 +58,12 @@ jobs:
         run: |
           ./scripts/bundle build_proxy
 
+      # 将README.md同步，利于github pages分支展示
+      - name: Add Readme.md To Dist
+        run: |
+          cp -f README.md docs/.vuepress/dist
+
+
       - name: Check GitHub Pages status
         uses: crazy-max/ghaction-github-status@v3
         with:

@@ -1,25 +1,22 @@
-#!/usr/bin/env node
+#!/bin/bash
 
-/**
- *
- * 格式化代码
- * 例如：
- *   - ./scripts/lint
- *   - ./scripts/lint --fix
- */
+##
+## 自动格式化
+##  - 代码
+##  - markdown文档
+## 使用:
+  #    - ./scripts/lint
+## 参考链接：
+##   - https://eslint.org/docs/latest/use/getting-started
+##   - https://github.com/igorshubovych/markdownlint-cli
+##
 
-const {execShell} = require('./.exec')
-const scriptName = process.argv[2]
-const fixed = scriptName != null ? '--fix' : '';
+# 设置 PATH 环境变量，避免command not found问题
+export PATH="$(pnpm bin):$PATH"
 
-// 格式化代码
-const lintCode = `eslint ${fixed} --ext .js,.ts,.vue --ignore-path .gitignore .`;
+# ESLint格式化代码
+eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .
 
-// 遍历格式化docs目录下的markdown 文档
-const lintMd = 'find docs -type f -name \"*.md\" -print0 | xargs -0 -I {} markdownlint  -c .markdownlint.js --fix {}';
+# markdown-cli格式化markdown 文档
+markdownlint '**/*.md'  -c .markdownlint.js -p .markdownlintignore --fix
 
-// 可以在--fix后指定目录
-(async () => await execShell([
-  lintCode,
-  lintMd
-]))()

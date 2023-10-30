@@ -65,7 +65,7 @@ jobs:
 
       - name: Code LintFix
         run: |
-          ./scripts/lint --fix
+          ./scripts/lint
 
       - name: Build Site
         run: |

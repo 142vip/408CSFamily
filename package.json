@@ -1,7 +1,7 @@
 {
   "name": "408CSFamily",
   "description": "专业代号408，计算机基础知识点合集",
-  "version": "0.0.1-alpha.7",
+  "version": "0.0.1-alpha.8",
   "packageManager": "pnpm@8.9.2",
   "engines": {
     "node": "^18.x",
@@ -15,7 +15,7 @@
   "scripts": {
     "preinstall": "chmod +x ./scripts/*",
     "postinstall": "npm run build:mark-map",
-    "prepare": "rm -f .husky/pre-commit && husky install && npx husky add .husky/pre-commit \"./scripts/lint --fix\" && chmod +x .husky/pre-commit",
+    "prepare": "rm -f .husky/pre-commit && husky install && npx husky add .husky/pre-commit \"./scripts/lint\" && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",
     "build": "./scripts/bundle build",
     "build:proxy": "./scripts/bundle build_proxy",

@@ -1,4 +1,4 @@
-// 参考：https://github.com/updownpress/markdown-lint/tree/master/rules
+// 参考：<https://github.com/updownpress/markdown-lint/tree/master/rules>
 module.exports = {
   "default": true,
   "MD001": false,

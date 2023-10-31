@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.1-alpha.9](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.8...v0.0.1-alpha.9) (2023-10-31)
+
+
+### Features
+
+* **CD:** 静态站点分支新增next分支的README.md文档 ([381b7d5](https://github.com/142vip/408CSFamily/commit/381b7d55a029cfe4b4fc390b4d3f1b3e4a48dda8))
+* 文档内容更新，md文档新增固定链接 ([564c3e0](https://github.com/142vip/408CSFamily/commit/564c3e06d674d620de258de52f07435540f31abf))
+* 新增数据结构入门、线性表、栈、队列文章固定链接 ([dc1d847](https://github.com/142vip/408CSFamily/commit/dc1d8479e4d417279945dd780125395ccefeab5a))
+
+
+### Bug Fixes
+
+* **CI:** 修复依赖下载异常，PNPM版本约束统一 ([af06e39](https://github.com/142vip/408CSFamily/commit/af06e39ed52c3b90c3caaa5b38b830726606a8bd))
+
+
+### Performance Improvements
+
+* **scripts:** 修改lint脚本，优化markdown文档格式化配置 ([717d7f7](https://github.com/142vip/408CSFamily/commit/717d7f7a093f504a744cedac169451c7b0567411))
+
 ## [0.0.1-alpha.8](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.7...v0.0.1-alpha.8) (2023-10-28)
 
 

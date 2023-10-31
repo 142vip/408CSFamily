@@ -6,11 +6,10 @@ export const navbar = [
     text: '首页',
     link: '/'
   },
-  // {
-  //   text: "数据结构",
-  //   link: "/manuscripts/ds"
-  // },
-  "/manuscripts/ds",
+  {
+    text: "数据结构",
+    link: "/manuscripts/ds"
+  },
   {
     text: "操作系统",
     link: "/manuscripts/os"
@@ -28,13 +27,39 @@ export const navbar = [
     text: '思维导图',
     link: "/manuscripts/mark-map",
   },
-  // http://localhost:4200/mark-map/job-poster-bytedance.html
   {
-    text: "网站",
+    text: "了解更多",
     children: [
-      "/big-event-history.md",
-      "/changelog.md",
-      "/wechat-list.md"
-    ]
+      {
+        text: '变更记录',
+        link: '/manuscripts/changelog.md'
+      },
+      {
+        text: '网站动态',
+        link: '/manuscripts/big-event-history.md'
+      },
+      {
+        text: "自媒体",
+        children: [
+          {
+            text: "公众号文章",
+            link: "/manuscripts/wechat-list.md"
+          },
+        ]
+      },
+      {
+        text: "外链",
+        children: [
+          // {
+          //   text: '常用网站',
+          //   link: '/manuscripts/frequent-site-link.md'
+          // },
+          {
+            text: "RoadMap计划",
+            link: "https://142vip-cn.feishu.cn/share/base/view/shrcnpso8R4vCid01wmg66hFjae"
+          }
+        ]
+      },
+    ],
   },
 ];

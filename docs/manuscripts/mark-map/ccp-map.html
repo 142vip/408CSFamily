@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script><script>(r => {
+          setTimeout(r);
+        })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+          const markmap = getMarkmap();
+          window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+        })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[0,1]},"content":"计算机组成原理","children":[{"type":"heading","depth":1,"payload":{"lines":[4,5]},"content":"引论","children":[]},{"type":"heading","depth":1,"payload":{"lines":[6,7]},"content":"数据的表示和运算","children":[]},{"type":"heading","depth":1,"payload":{"lines":[8,9]},"content":"存储系统","children":[]},{"type":"heading","depth":1,"payload":{"lines":[10,11]},"content":"中央处理器","children":[]},{"type":"heading","depth":1,"payload":{"lines":[12,13]},"content":"总线","children":[]},{"type":"heading","depth":1,"payload":{"lines":[14,15]},"content":"输入输出系统","children":[]},{"type":"heading","depth":1,"payload":{"lines":[16,17]},"content":"一些总结","children":[]}]},null)</script>
+</body>
+</html>

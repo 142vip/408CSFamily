@@ -1,3 +1,9 @@
+---
+title: 数据结构
+permalink: /manuscripts/mark-map/ds-map.html
+headerDepth: 3
+---
+
 # 数据结构
 
 <a href="../../mark-map/ds-map.html" target="_blank">在线预览</a>

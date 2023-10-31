@@ -1,8 +1,12 @@
+---
+title: 变更记录
+permalink: /manuscripts/changelog.html
+---
 # 变更记录
 
 该文件包含 `408CSFamily` 仓库和网站所有显着更改。
 
-<!-- @include: ../CHANGELOG.md#recent-alpha -->
+<!-- @include: ../../CHANGELOG.md#recent-alpha -->
 
 ## 更多
 

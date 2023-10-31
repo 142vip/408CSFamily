@@ -64,4 +64,3 @@ const { prefix, children } = sideBarData;
     }
   }
 })()
-

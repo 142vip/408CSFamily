@@ -1,18 +1,5 @@
 /*  此处自定义样式，对主题进行覆盖 */
 
-//首页导航按钮
-.actions > a {
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-// 隐藏 全文搜索
-.DocSearch-Logo {
-  // display:none;不占位隐藏
-  visibility: hidden; // 占位隐藏
-}
-
-
 // 全站主题色
 :root {
   // brand colors
@@ -90,11 +77,6 @@
   --homepage-width: 960px;
 }
 
-// plugin-back-to-top
-.back-to-top {
-  --back-to-top-color: var(--c-brand);
-  --back-to-top-color-hover: var(--c-brand-light);
-}
 
 // plugin-docsearch
 .DocSearch {
@@ -124,10 +106,6 @@
   --medium-zoom-bg-color: var(--c-bg);
 }
 
-// plugin-nprogress
-#nprogress {
-  --nprogress-color: var(--c-brand);
-}
 
 // plugin-pwa-popup
 .pwa-popup {
@@ -150,4 +128,3 @@
   --search-item-text-color: var(--c-text-lighter);
   --search-item-focus-bg-color: var(--c-bg-light);
 }
-

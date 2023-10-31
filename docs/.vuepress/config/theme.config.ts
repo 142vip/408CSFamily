@@ -108,8 +108,10 @@ export default {
         // 自定义对齐
         align: true,
       },
+      // 不自动生成readme目录
+      autoCatalog: false,
+      // 参考：https://theme-hope.vuejs.press/zh/guide/markdown/components.html
       components: {
-        // 插件选项
         components: [
           "ArtPlayer",
           "AudioPlayer",

@@ -1,3 +1,8 @@
+---
+title: 公众号汇总
+permalink: /manuscripts/wechat-list.html
+---
+
 # 公众号汇总
 
 ## 2021年

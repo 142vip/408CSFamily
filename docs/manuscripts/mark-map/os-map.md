@@ -1,3 +1,9 @@
+---
+title: 操作系统
+permalink: /manuscripts/mark-map/os-map.html
+headerDepth: 3
+---
+
 # 操作系统
 
 <a href="../../mark-map/os-map.html" target="_blank">在线预览</a>

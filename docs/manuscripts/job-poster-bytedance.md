@@ -1,3 +1,8 @@
+---
+title: 工作机会
+permalink: /manuscripts/job-poster-bytedance.html
+---
+
 # 工作机会
 
 ### 字节工作内推

@@ -1,3 +1,8 @@
+---
+title: 操作系统
+permalink: /manuscripts/os.html
+---
+
 # 操作系统
 
 ```mindmap

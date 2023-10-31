@@ -1,20 +1,20 @@
 {
   "name": "408CSFamily",
-  "description": "专业代号408，计算机基础知识点合集",
+  "description": "研究生考试408考点、工作面试计算机基础知识合集",
   "version": "0.0.1-alpha.8",
-  "packageManager": "pnpm@8.9.2",
-  "engines": {
-    "node": "^18.x",
-    "pnpm": ">=7.2.1"
-  },
   "author": {
     "name": "Chu Fan",
     "email": "fairy_408@2925.com",
     "url": "https://github.com/142vip"
   },
+  "packageManager": "pnpm@8.9.2",
+  "engines": {
+    "node": "^18.x",
+    "pnpm": "8"
+  },
   "scripts": {
     "preinstall": "chmod +x ./scripts/*",
-    "postinstall": "npm run build:mark-map",
+    "postinstall": "pnpm build:mark-map",
     "prepare": "rm -f .husky/pre-commit && husky install && npx husky add .husky/pre-commit \"./scripts/lint\" && chmod +x .husky/pre-commit",
     "dev": "vuepress dev docs",
     "build": "./scripts/bundle build",

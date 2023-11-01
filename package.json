@@ -2,10 +2,11 @@
   "name": "408CSFamily",
   "description": "研究生考试408考点、工作面试计算机基础知识合集",
   "version": "0.0.1-alpha.9",
-  "author": {
-    "name": "Chu Fan",
+  "authorInfo": {
+    "name": "微信公众号：储凡",
     "email": "fairy_408@2925.com",
-    "url": "https://github.com/142vip"
+    "url": "https://github.com/142vip",
+    "homePage": "https://www.142vip.cn"
   },
   "packageManager": "pnpm@8.9.2",
   "engines": {

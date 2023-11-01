@@ -1,4 +1,4 @@
-import {FOOTER_HTML_INFO} from "./constant.config";
+import {AUTHOR_INFO, copyright, FOOTER_HTML_INFO} from "./constant.config";
 import {hopeTheme} from "vuepress-theme-hope";
 import {langConfig} from "./lang.config";
 import {navbar} from "./navbar";
@@ -15,15 +15,11 @@ export default {
     darkmode: "toggle",
     // 支持全屏
     fullscreen: true,
-    // 纯净模式s
+    // 纯净模式
     // pure: true,
     print: false, // 打印按钮
     hostname: 'https://408.142vip.cn',
-    author: {
-      name: '微信公众号：储凡',
-      email: 'fairy_408@2925.com',
-      url: 'https://www.142vip.cn'
-    },
+    author: AUTHOR_INFO,
     favicon: "/408_favicon.ico",
     logo: "/assets/408_logo.png",
     navbar: navbar,
@@ -57,7 +53,8 @@ export default {
     // 设置页脚
     displayFooter: true,
     footer: FOOTER_HTML_INFO,
-    // copyright:false,
+    // copyright: false,
+    copyright,
     // 主题色选择器
     themeColor: true,
     plugins: {

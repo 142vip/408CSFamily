@@ -1,5 +1,35 @@
-export const FOOTER_HTML_INFO = `<a href="https://tongji.baidu.com/web/welcome/login" target="_blank">百度统计</a> 
- Copyrights © 2015-${new Date().getFullYear()} 妍荣姑娘网络工作室 All Rights Reserved <a href="https://github.com/142vip" target="_blank">142vip</a>`
+import {name, version, authorInfo} from "../../../package.json"
+
+export const FOOTER_HTML_INFO = ` 
+<div>
+    All Rights Reserved
+    <a href="https://github.com/142vip" target="_blank">142vip</a> Repo.
+    ${name}@v${version} 
+    &nbsp;&nbsp;
+</div>
+<div style="margin-top: 5px">
+  <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">鄂ICP备17025193号-1 </a>
+  <span style="margin: 0 5px;">|</span>
+  <a href="https://tongji.baidu.com/web/welcome/login" target="_blank">百度统计</a> 
+</div>
+
+`
+
+/**
+ * 版权信息
+ */
+export const copyright = `
+  Copyrights © 2015-${new Date().getFullYear()} ${authorInfo.name}
+`
+
+/**
+ * 作者信息
+ */
+export const AUTHOR_INFO = {
+  name: authorInfo.name,
+  email: authorInfo.email,
+  url: authorInfo.homePages
+}
 
 export const NotFoundMsgList = [
   "徒留我孤单在湖面成双。",

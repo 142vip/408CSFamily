@@ -135,7 +135,8 @@ jobs:
       - name: Create Zip Package
         run: |
           zip -r 408CSFamily.zip . \
-          -x "node_modules/*"
+          -x "node_modules/*" \
+          -x "*.git*"
 
       # 提取版本号
       - name: Get New Version Number

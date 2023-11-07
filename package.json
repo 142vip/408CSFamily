@@ -16,7 +16,7 @@
   "scripts": {
     "preinstall": "chmod +x ./scripts/*",
     "postinstall": "pnpm build:mark-map",
-    "prepare": "rm -f .husky/pre-commit && husky install && npx husky add .husky/pre-commit \"./scripts/lint\" && chmod +x .husky/pre-commit",
+    "prepare": "husky install",
     "dev": "vuepress dev docs",
     "build": "./scripts/bundle build",
     "build:proxy": "./scripts/bundle build_proxy",
@@ -33,6 +33,8 @@
     "clean": "快速删除本地依赖"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vuepress/client": "^2.0.0-beta.67",
@@ -48,6 +50,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.17.0",
     "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
     "markdownlint-cli": "^0.37.0",
     "markmap-cli": "^0.15.4",
     "shelljs": "^0.8.5",

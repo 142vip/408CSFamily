@@ -1,5 +1,8 @@
-// commit-and-tag-version 配置，参考：https://github.com/conventional-changelog/standard-version
-// 配置参考：https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md
+/**
+ * commit-and-tag-version 模块配置提交、标签功能
+ * - 使用：https://github.com/conventional-changelog/standard-version
+ * - 配置：https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md
+ */
 module.exports = {
   header: '# Release history\n\nAll notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.\n\n<!-- #region recent-alpha -->\n',
   releaseCommitMessageFormat: 'chore(release): publish v{{currentTag}}',

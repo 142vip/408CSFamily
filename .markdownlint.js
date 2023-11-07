@@ -1,4 +1,7 @@
-// 参考：<https://github.com/updownpress/markdown-lint/tree/master/rules>
+/**
+ * markdownlint-cli格式化markdown文档
+ * 规则参考：https://github.com/updownpress/markdown-lint/tree/master/rules
+ */
 module.exports = {
   "default": true,
   "MD001": false,

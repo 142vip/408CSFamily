@@ -37,3 +37,4 @@ docs/.vuepress/dist/
 # TernJS port file
 .tern-port
 /.husky/
+/.vercel/

@@ -15,10 +15,10 @@
    </a>
  </div>
  <div>
-   <a href="https://app.netlify.com/sites/408-family/deploys" target="_blank" style="padding: 5px">
+   <a href="https://408-family.netlify.app" target="_blank" style="padding: 5px">
     <img alt="Netlify" src="https://api.netlify.com/api/v1/badges/75a7251a-f873-4aff-b387-6449ca241ef7/deploy-status">
    </a>
-   <a href="" target="_blank" style="padding: 5px">
+   <a href="https://408-family.vercel.app" target="_blank" style="padding: 5px">
     <img alt="Vercel" src="https://therealsujitk-vercel-badge.vercel.app/?app=408">
    </a>
  </div>
@@ -53,12 +53,6 @@
 - Github： <https://142vip.github.io/408CSFamily>
 - Netlify： <https://408-family.netlify.app>
 - Vercel： <https://408-family.vercel.app>
-
-[//]: # (## 思维导图【MD文档版本】)
-[//]: # (- [数据结构]&#40;./manuscripts/数据结构/数据结构和算法.md&#41;)
-[//]: # (- 计算机组成原理（TBD）)
-[//]: # (- 操作系统（TBD）)
-[//]: # (- 计算机网络（TBD）)
 
 ## 学习资料
 
@@ -284,10 +278,10 @@
 
 <div>
   <a href="https://github.com/ChiefPing" target="_blank" style="margin: 5px">
-    <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4" width="50px" style="brder-radius:5px;"/>
+    <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4"  alt="ChiefPing" style="border-radius:5px;" width="50px" />
   </a>
    <a href="https://github.com/xiaoliuxin" target="_blank" style="margin: 5px">
-    <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  style="border-radius:5px;"  width="50px"/>
+    <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  alt="xiaoliuxin" style="border-radius:5px;" width="50px"/>
   </a>
 </div>
 
@@ -313,14 +307,14 @@
 
 <div style="text-align: center">
     <div  align="center" >
-        <table style="border:none;cell-padding:0; cell-spacing:0;border-collapse:collapse;" border="0">
+        <table style="border:none; border-collapse:collapse;" border="0">
             <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg"
                 width="250px"
-                style="margin:10px"
+                style="margin:5px"
                 title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
             <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
                 width="250px"
-                style="margin:10px"
+                style="margin:5px"
                 title="欢迎添加微信：chufan443 " alt="联系作者"/>
         </table>
     </div>
@@ -331,7 +325,7 @@
           target="_blank"
           title="点击跳转Github主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/github.svg"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/github.svg" alt="CSDN" title="CSDN"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -340,7 +334,7 @@
           target="_blank"
           title="点击跳转码云主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg" alt="Gitee" title="Gitee"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -349,7 +343,7 @@
           target="_blank"
           title="点击跳转掘金主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg" alt="掘金"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -358,7 +352,7 @@
           target="_blank"
           title="点击跳转B站主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg" alt="Bilibili"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -368,7 +362,7 @@
           title="点击跳转CSDN博客主页"
         >
           <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
-            title="点击跳转CSDN博客主页"
+            title="点击跳转CSDN博客主页" alt="CSDN"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
     </div>

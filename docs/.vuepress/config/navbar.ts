@@ -25,7 +25,7 @@ export const navbar = [
   },
   {
     text: '思维导图',
-    link: "/manuscripts/mark-map",
+    link: "/manuscripts/mark-map/ds-map.html",
   },
   {
     text: "了解更多",

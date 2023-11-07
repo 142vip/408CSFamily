@@ -7,4 +7,7 @@
  */
 
 const {execShell} = require('./.exec');
-(async () => await execShell('npm run build:mark-map && vuepress dev docs'))()
+(async () => await execShell([
+  'npm run build:mark-map',
+  'vuepress dev docs'
+]))()

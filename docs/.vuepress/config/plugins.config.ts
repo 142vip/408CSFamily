@@ -29,31 +29,5 @@ export default {
         },
       ],
     }),
-    // // md文档增强
-    // mdEnhancePlugin({
-    //   // 文件导入
-    //   include: true,
-    //   // 容器
-    //   container: true,
-    // }),
-    // componentsPlugin({
-    //   // 插件选项
-    //   components: [
-    //     "ArtPlayer",
-    //     "AudioPlayer",
-    //     "Badge",
-    //     "BiliBili",
-    //     "CodePen",
-    //     "PDF",
-    //     "Replit",
-    //     "Share",
-    //     "SiteInfo",
-    //     "StackBlitz",
-    //     // "VidStack",
-    //     "VideoPlayer",
-    //     "XiGua",
-    //     "YouTube",
-    //   ],
-    // }),
   ]
 }

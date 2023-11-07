@@ -11,7 +11,8 @@ echo "期望的 pnpm 大版本号:$majorVersionRequired"
 
 # 检测 pnpm 是否已安装并且大版本号符合要求
 checkPNPMVersion() {
-  local pnpmVersionInstalled=$(pnpm --version 2>/dev/null)  # 获取已安装的 pnpm 版本
+  # 获取已安装的 pnpm 版本
+  local pnpmVersionInstalled=$(pnpm --version 2>/dev/null)
   if [[ $pnpmVersionInstalled =~ ^$majorVersionRequired ]]; then
     echo "已安装的 pnpm 版本：$pnpmVersionInstalled"
     echo "已安装的 pnpm 大版本号符合要求."

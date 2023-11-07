@@ -11,7 +11,6 @@ on:
       - next
   workflow_dispatch:
 
-
 ## vercel 环境变量
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -83,7 +82,10 @@ jobs:
         with:
           target_branch: pages/github
           build_dir: docs/.vuepress/dist
-          commit_message: chore(sync) v${{steps.gitInfo.outputs.version}}
+          commit_message: |
+            chore(sync): v${{steps.gitInfo.outputs.version}}
+            
+            部署地址: https://142vip.github.io/408CSFamily
           committer: ${{steps.gitInfo.outputs.author}}<${{steps.gitInfo.outputs.email}}>
           author: Mr·Sync
 

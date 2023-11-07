@@ -32,11 +32,12 @@ exports.execShell = async commands => {
   for (let index = 0; index < runCommands.length; index++) {
     const command = runCommands[index]
     const count = index + 1
-    console.log(`>>>command(${count}):\n${command} \n<<<command(${count})--start  === \n`)
+    console.log(`step${count}:\n${command} \nstep${count}(start):  === `)
     // await syncExec(command)
     const execResult = await exec(command)
-
-    console.log(`\n<<<command(${count})--ending === `)
+    // 打印输出结果
+    // console.log(execResult.stdout);
+    console.log(`step${count}(ending): === \n`)
     // 指令异常，不执行后续指令，非0退出
     if (execResult.code !== 0) {
       exit(1)

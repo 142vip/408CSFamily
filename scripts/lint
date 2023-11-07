@@ -5,7 +5,8 @@
 ##  - 代码
 ##  - markdown文档
 ## 使用:
-  #    - ./scripts/lint
+#    - ./scripts/lint           校验
+#    - ./scripts/lint --fix     格式化
 ## 参考链接：
 ##   - https://eslint.org/docs/latest/use/getting-started
 ##   - https://github.com/igorshubovych/markdownlint-cli
@@ -14,9 +15,15 @@
 # 设置 PATH 环境变量，避免command not found问题
 export PATH="$(pnpm bin):$PATH"
 
+# 是否fix
+fixed=${1}
+
 # ESLint格式化代码
-eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .
+echo "step1: eslint $fixed --ext .js,.ts,.vue --ignore-path .gitignore ."
+eslint $fixed --ext .js,.ts,.vue --ignore-path .gitignore .
 
 # markdown-cli格式化markdown 文档
-markdownlint '**/*.md'  -c .markdownlint.js -p .markdownlintignore --fix
+echo "step2: markdownlint '**/*.md'  -c .markdownlint.js -p .markdownlintignore $fixed"
+markdownlint '**/*.md'  -c .markdownlint.js -p .markdownlintignore $fixed
+
 

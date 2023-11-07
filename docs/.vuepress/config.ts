@@ -45,8 +45,11 @@ export default defineUserConfig({
         if (str.includes('@code')) {
           return str.replace(/^@code/, path.resolve(__dirname, '../../code/'))
         }
-        if (str.includes('~@')) {
-          return str.replace(/^~@/, path.resolve(__dirname, '../../'))
+        if (str.includes('@ds')) {
+          return str.replace(/^@ds/, path.resolve(__dirname, '../../code/ds/'))
+        }
+        if (str.includes('~')) {
+          return str.replace(/^~/, path.resolve(__dirname, '../../'))
         }
         return str
       },

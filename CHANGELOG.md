@@ -24,9 +24,7 @@ All notable changes to this project will be documented in this file. See [Conven
 
 ### Performance Improvements
 
-* **vuepress:** 升级主题和插件的版本 ([2feaf6b](https://github.com/142vip/408CSFamily/commit/2feaf6b7bc67b4fab9404dbba000d8e43a084dd9))
-* **vuepress:** 升级主题和插件的版本 ([#78](https://github.com/142vip/408CSFamily/issues/78)) ([b9159c5](https://github.com/142vip/408CSFamily/commit/b9159c5bea75adee6163a183c1ee57558b2504a6))
-
+* **vuepress:** 升级主题和插件的版本 ([#78](https://github.com/142vip/408CSFamily/issues/78)) ([b9159c5](https://github.com/142vip/408CSFamily/commit/b9159c5bea75adee6163a183c1ee57558b2504a6)) ([2feaf6b](https://github.com/142vip/408CSFamily/commit/2feaf6b7bc67b4fab9404dbba000d8e43a084dd9))
 ## [0.0.1-alpha.9](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.8...v0.0.1-alpha.9) (2023-10-31)
 
 

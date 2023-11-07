@@ -4,6 +4,29 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.1-alpha.10](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.9...v0.0.1-alpha.10) (2023-11-07)
+
+
+### Features
+
+* docker镜像新增git相关记录的label标记 ([dccfbcf](https://github.com/142vip/408CSFamily/commit/dccfbcfea64e2abd13cfb36ff5ea74fef2273c9f))
+* **lint:** 新增工程化规范约束 ([02c58eb](https://github.com/142vip/408CSFamily/commit/02c58eb67227b356eff7b77b518b5037cb98a65b))
+* **release:** 同步到github pages时增加部署地址信息 ([66bb15e](https://github.com/142vip/408CSFamily/commit/66bb15e944ec3b6a7c5247b35793adbf7c0227fe))
+* 优化lint校验、markdown文档更新、脚本修改等 ([8a10772](https://github.com/142vip/408CSFamily/commit/8a10772cf95b746413b002da346b9a0a67218219))
+* 优化页面footer显示形式，展示版本信息 ([b596a86](https://github.com/142vip/408CSFamily/commit/b596a867138014c19f8f9640a0a28cd73cc0d5b1))
+* 升级依赖版本 ([ae10c59](https://github.com/142vip/408CSFamily/commit/ae10c590c3e86b998a5f6348f659a29bf565191a))
+
+
+### Bug Fixes
+
+* **release:** 修复版本发布时zip压缩包过大问题，忽略.git目录 ([55c23f4](https://github.com/142vip/408CSFamily/commit/55c23f412b46a2f00f881953112b09c017406715))
+
+
+### Performance Improvements
+
+* **vuepress:** 升级主题和插件的版本 ([2feaf6b](https://github.com/142vip/408CSFamily/commit/2feaf6b7bc67b4fab9404dbba000d8e43a084dd9))
+* **vuepress:** 升级主题和插件的版本 ([#78](https://github.com/142vip/408CSFamily/issues/78)) ([b9159c5](https://github.com/142vip/408CSFamily/commit/b9159c5bea75adee6163a183c1ee57558b2504a6))
+
 ## [0.0.1-alpha.9](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.8...v0.0.1-alpha.9) (2023-10-31)
 
 

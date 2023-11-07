@@ -12,23 +12,45 @@
  */
 
 const {execShell} = require('./.exec')
+const {execSync} = require('child_process');
 const {Select} = require('enquirer')
 
-const packageVersion = require('../package.json').version
-const projectName = '408CSFamily'
 // 仓库地址
 const repoAddress = 'registry.cn-hangzhou.aliyuncs.com/142vip/doc_book'
+
+const packageInfo = require('../package.json')
+const packageVersion = packageInfo.version
+const projectName = packageInfo.name
+
 // 镜像地址
 const imageName = `${repoAddress}:${projectName}-${packageVersion}`
 
 /**
- * 获取构建镜像的脚本
- * @param containerBuild
- * @param preBuild
- * @param needProxy
- * @returns {string[]}
+ * 获取最近一次Git提交信息
+ * - 短哈希值
+ * - 提交信息
  */
-function getBuildImageScript({containerBuild, preBuild, needProxy = false}) {
+async function getGitInfo() {
+  // 执行 git log 命令获取最新一次提交的哈希值和消息
+  const gitLog = execSync('git log --no-merges -1 --pretty=format:"%h %s"').toString();
+
+  // 分割输出字符串以获取哈希值和消息
+  const [commitHash, ...commitMessage] = gitLog.trim().split(' ');
+
+  // 输出最近一次提交的信息
+  return {
+    gitHash: commitHash,
+    gitMessage: commitMessage.join('')
+  }
+}
+
+/**
+ * 获取构建镜像的脚本
+ * @param containerBuild  是否容器内构建
+ * @param preBuild        是否预编译
+ * @param needProxy       是否配置代理路径
+ */
+async function getBuildImageScript({containerBuild, preBuild, needProxy = false}) {
   // 基础构建脚本
   let baseBuildScript = ''
 
@@ -36,13 +58,22 @@ function getBuildImageScript({containerBuild, preBuild, needProxy = false}) {
     baseBuildScript = needProxy ? './scripts/bundle build_proxy' : './scripts/bundle build'
   }
 
+  const {gitHash, gitMessage} = await getGitInfo()
+
   return [
     // 构建镜像
     `
         ${baseBuildScript} 
         docker build \
-        --build-arg APP_VERSION=${packageVersion} \
         --build-arg CONTAINER_BUILD=${containerBuild} \
+        --build-arg APP_VERSION=${packageVersion} \
+        --build-arg APP_NAME=${projectName} \
+        --build-arg HOME_PAGE=${packageInfo.authorInfo.homePage} \
+        --build-arg AUTHOR=${packageInfo.authorInfo.name} \
+        --build-arg EMAIL=${packageInfo.authorInfo.email} \
+        --build-arg DESCRIPTION=${packageInfo.description} \
+        --build-arg GIT_HASH=${gitHash} \
+        --build-arg GIT_MESSAGE="${gitMessage}" \
         -t ${imageName}  .
       `,
     // 推送镜像

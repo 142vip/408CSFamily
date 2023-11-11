@@ -293,7 +293,9 @@
 
 > 感谢向仓库提交PR的所有开发者
 
-[![contributors](https://contrib.rocks/image?repo=142vip/408CSFamily)](https://github.com/142vip/408CSFamily/graphs/contributors)
+<a href="https://github.com/142vip/408CSFamily/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=142vip/408CSFamily" alt="感谢向仓库提交PR的所有开发者" title="408CSFamily"/>
+</a>
 
 ## 趋势
 

@@ -15,10 +15,18 @@
     </div>
     <div id="deploy-platform">
         <a href="https://408-family.netlify.app" target="_blank">
-            <img alt="Netlify" src="https://api.netlify.com/api/v1/badges/75a7251a-f873-4aff-b387-6449ca241ef7/deploy-status" style="padding: 5px">
+            <img
+            alt="Netlify"
+            src="https://api.netlify.com/api/v1/badges/75a7251a-f873-4aff-b387-6449ca241ef7/deploy-status"
+            style="padding: 5px;max-width: 100%; max-height: 100%;"
+            >
         </a>
         <a href="https://408-family.vercel.app" target="_blank">
-            <img alt="Vercel" src="https://therealsujitk-vercel-badge.vercel.app/?app=408" style="padding: 5px">
+            <img
+            alt="Vercel"
+            src="https://therealsujitk-vercel-badge.vercel.app/?app=408"
+            style="padding: 5px;max-width: 100%; max-height: 100%;"
+            >
         </a>
     </div>
     <div id="repo-info">
@@ -354,9 +362,11 @@
           rel="nofollow noreferrer"
           target="_blank"
           title="点击跳转B站主页"
-          style="padding: 5px"
+          style="margin: 5px;width: 24px;height: 24px;max-width: 100%; max-height: 100%;"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg" alt="Bilibili"
+          <img
+            src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg"
+            alt="Bilibili"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -366,9 +376,11 @@
           title="点击跳转CSDN博客主页"
           style="padding: 2px"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
+          <img
+            src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
             title="点击跳转CSDN博客主页" alt="CSDN"
-            style="margin: 5px;width: 24px;height: 24px;">
+            style="margin: 5px;width: 24px;height: 24px;max-width: 100%; max-height: 100%;"
+          >
         </a>
     </div>
 </div>

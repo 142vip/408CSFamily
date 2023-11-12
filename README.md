@@ -9,16 +9,16 @@
 
 <div align="center">
     <div id="wechat">
-        <a href="#test">
+        <a href="#we-media-container">
             <img alt="作者: 储凡" src="https://img.shields.io/badge/公众号-储凡-8A2BE2.svg" style="text-align: center;">
         </a>
     </div>
     <div id="deploy-platform">
-        <a href="https://408-family.netlify.app" target="_blank" style="padding: 5px">
-            <img alt="Netlify" src="https://api.netlify.com/api/v1/badges/75a7251a-f873-4aff-b387-6449ca241ef7/deploy-status">
+        <a href="https://408-family.netlify.app" target="_blank">
+            <img alt="Netlify" src="https://api.netlify.com/api/v1/badges/75a7251a-f873-4aff-b387-6449ca241ef7/deploy-status" style="padding: 5px">
         </a>
-        <a href="https://408-family.vercel.app" target="_blank" style="padding: 5px">
-            <img alt="Vercel" src="https://therealsujitk-vercel-badge.vercel.app/?app=408">
+        <a href="https://408-family.vercel.app" target="_blank">
+            <img alt="Vercel" src="https://therealsujitk-vercel-badge.vercel.app/?app=408" style="padding: 5px">
         </a>
     </div>
     <div id="repo-info">
@@ -307,9 +307,7 @@
 
 若系列文章对你有所帮助，欢迎订阅公众号或微信”骚扰“，获取更多内容。**商务合作请备注来意**
 
-<a name="test"></a>
-<a name="公众号"></a>
-<div style="text-align: center">
+<div style="text-align: center" id="we-media-container">
     <div  align="center" >
             <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg"
                 width="200px"
@@ -326,6 +324,7 @@
           rel="nofollow noreferrer"
           target="_blank"
           title="点击跳转Github主页"
+          style="padding: 2px"
         >
           <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/github.svg" alt="CSDN" title="CSDN"
             style="margin: 5px;width: 24px;height: 24px;">
@@ -335,6 +334,7 @@
           rel="nofollow noreferrer"
           target="_blank"
           title="点击跳转码云主页"
+          style="padding: 2px"
         >
           <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg" alt="Gitee" title="Gitee"
             style="margin: 5px;width: 24px;height: 24px;">
@@ -344,6 +344,7 @@
           rel="nofollow noreferrer"
           target="_blank"
           title="点击跳转掘金主页"
+          style="padding: 2px"
         >
           <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg" alt="掘金"
             style="margin: 5px;width: 24px;height: 24px;">
@@ -353,6 +354,7 @@
           rel="nofollow noreferrer"
           target="_blank"
           title="点击跳转B站主页"
+          style="padding: 5px"
         >
           <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg" alt="Bilibili"
             style="margin: 5px;width: 24px;height: 24px;">
@@ -362,6 +364,7 @@
           rel="nofollow noreferrer"
           target="_blank"
           title="点击跳转CSDN博客主页"
+          style="padding: 2px"
         >
           <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
             title="点击跳转CSDN博客主页" alt="CSDN"

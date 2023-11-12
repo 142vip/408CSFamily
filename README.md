@@ -18,14 +18,14 @@
             <img
             alt="Netlify"
             src="https://api.netlify.com/api/v1/badges/75a7251a-f873-4aff-b387-6449ca241ef7/deploy-status"
-            style="padding: 5px;max-width: 100%; max-height: 100%;"
+            style="padding: 5px;"
             >
         </a>
         <a href="https://408-family.vercel.app" target="_blank">
             <img
             alt="Vercel"
             src="https://therealsujitk-vercel-badge.vercel.app/?app=408"
-            style="padding: 5px;max-width: 100%; max-height: 100%;"
+            style="padding: 5px;"
             >
         </a>
     </div>
@@ -42,8 +42,8 @@
 
 `408CSFamily` 我的理解是：408计算机专业课”全家桶“，而408相信考研er都知道计算机考研专业课代码；在最新的高校计算机研究生招考中，已经越来越多的学校改考408。可见408所涉及到的专业课举足轻重的地位；不论是在考研或者找工作，我相信408的专业基础必定是难以避免的，所以话不多说、形势复杂，唯一能做的就是不停的学习、巩固基础知识，加油！
 
-本仓库收录的大部分内容将来源我自己的学习输出和相关资料的整理，
-将会站在上班族的角度进行整理、输出。若有任何疑惑和问题，
+本仓库收录的大部分内容来源我自己的学习输出和相关资料的整理，
+将会站在上班族的角度进行整理。若有任何疑惑和问题，
 欢迎在仓库集中`PR`或`ISSUES`提出。
 
 **阅读之前必看：**
@@ -332,7 +332,7 @@
           rel="nofollow noreferrer"
           target="_blank"
           title="点击跳转Github主页"
-          style="padding: 2px"
+          style="display: inline-block; width: 30px; height: 30px;"
         >
           <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/github.svg" alt="CSDN" title="CSDN"
             style="margin: 5px;width: 24px;height: 24px;">
@@ -342,7 +342,7 @@
           rel="nofollow noreferrer"
           target="_blank"
           title="点击跳转码云主页"
-          style="padding: 2px"
+          style="display: inline-block; width: 30px; height: 30px;"
         >
           <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg" alt="Gitee" title="Gitee"
             style="margin: 5px;width: 24px;height: 24px;">
@@ -352,7 +352,7 @@
           rel="nofollow noreferrer"
           target="_blank"
           title="点击跳转掘金主页"
-          style="padding: 2px"
+          style="display: inline-block; width: 30px; height: 30px;"
         >
           <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg" alt="掘金"
             style="margin: 5px;width: 24px;height: 24px;">
@@ -362,7 +362,7 @@
           rel="nofollow noreferrer"
           target="_blank"
           title="点击跳转B站主页"
-          style="margin: 5px;width: 24px;height: 24px;max-width: 100%; max-height: 100%;"
+          style="display: inline-block; width: 30px; height: 30px;"
         >
           <img
             src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg"
@@ -374,12 +374,12 @@
           rel="nofollow noreferrer"
           target="_blank"
           title="点击跳转CSDN博客主页"
-          style="padding: 2px"
+          style="display: inline-block; width: 30px; height: 30px;"
         >
           <img
             src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
             title="点击跳转CSDN博客主页" alt="CSDN"
-            style="margin: 5px;width: 24px;height: 24px;max-width: 100%; max-height: 100%;"
+            style="margin: 5px;width: 24px;height: 24px;"
           >
         </a>
     </div>

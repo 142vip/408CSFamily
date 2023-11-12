@@ -1,48 +1,61 @@
+<div align="center">
+    <p>
+        <img alt="408Logo图片" width="240" src="https://cdn.statically.io/gh/142vip/cdn_service@main/doc_book/408/408_logo.png" style="text-align: center;">
+    </p>
+    <p style="font-size: 30px">
+        <strong>✨计算机应试全家桶✨</strong>
+    </p>
+</div>
+
+<div align="center">
+    <div id="wechat">
+        <a href="#we-media-container">
+            <img alt="作者: 储凡" src="https://img.shields.io/badge/公众号-储凡-8A2BE2.svg" style="text-align: center;">
+        </a>
+    </div>
+    <div id="deploy-platform">
+        <a
+          href="https://408-family.netlify.app"
+          target="_blank"
+          style="padding: 5px"
+        >
+            <img
+            alt="Netlify"
+            src="https://api.netlify.com/api/v1/badges/75a7251a-f873-4aff-b387-6449ca241ef7/deploy-status"
+            >
+        </a>
+        <a
+          href="https://408-family.vercel.app"
+          target="_blank"
+          style="padding: 5px"
+        >
+            <img
+            alt="Vercel"
+            src="https://therealsujitk-vercel-badge.vercel.app/?app=408"
+            >
+        </a>
+    </div>
+    <div id="repo-info">
+        <img alt="code size" src="https://img.shields.io/github/languages/code-size/142vip/408CSFamily" style="padding: 5px">
+        <img alt="release version" src="https://img.shields.io/github/v/release/142vip/408CSFamily" style="padding: 5px">
+        <img alt="repo size" src="https://img.shields.io/github/repo-size/142vip/408CSFamily" style="padding: 5px">
+    </div>
+</div>
+
 <!-- #region quick-start -->
-
-<div align="center">
-<p>
-  <img alt="408Logo图片" width="240" src="https://cdn.statically.io/gh/142vip/cdn_service@main/doc_book/408/408_logo.png" style="text-align: center;">
-</p>
-<p style="font-size: 30px"><strong>✨计算机应试全家桶✨</strong></p>
-
-</div>
-
-<div align="center">
- <div id="">
-   <a href="https://github.com/mmdapl" target="_blank">
-    <img alt="作者: 储凡" src="https://img.shields.io/badge/Author-Chu·Fan-8A2BE2.svg?style=for-the-badge" style="text-align: center;">
-   </a>
- </div>
- <div>
-   <a href="https://408-family.netlify.app" target="_blank" style="padding: 5px">
-    <img alt="Netlify" src="https://api.netlify.com/api/v1/badges/75a7251a-f873-4aff-b387-6449ca241ef7/deploy-status">
-   </a>
-   <a href="https://408-family.vercel.app" target="_blank" style="padding: 5px">
-    <img alt="Vercel" src="https://therealsujitk-vercel-badge.vercel.app/?app=408">
-   </a>
- </div>
- <div>
-  <img alt="code size" src="https://img.shields.io/github/languages/code-size/142vip/408CSFamily" style="padding: 5px">
-  <img alt="tag version" src="https://img.shields.io/github/v/tag/142vip/408CSFamily" style="padding: 5px">
-  <img alt="release version" src="https://img.shields.io/github/v/release/142vip/408CSFamily" style="padding: 5px">
-  <img alt="repo size" src="https://img.shields.io/github/repo-size/142vip/408CSFamily" style="padding: 5px">
- </div>
-</div>
-
 ## 写最前面
 
 `408CSFamily` 我的理解是：408计算机专业课”全家桶“，而408相信考研er都知道计算机考研专业课代码；在最新的高校计算机研究生招考中，已经越来越多的学校改考408。可见408所涉及到的专业课举足轻重的地位；不论是在考研或者找工作，我相信408的专业基础必定是难以避免的，所以话不多说、形势复杂，唯一能做的就是不停的学习、巩固基础知识，加油！
 
-本仓库收录的大部分内容将来源我自己的学习输出和相关资料的整理，
-将会站在上班族的角度进行整理、输出。若有任何疑惑和问题，
+本仓库收录的大部分内容源于我自己的学习输出和相关资料的整理，
+将会站在上班族的角度进行整理。若有任何疑惑和问题，
 欢迎在仓库集中`PR`或`ISSUES`提出。
 
 **阅读之前必看：**
 
 - **大家善用快捷键Ctrl+F，没有效访问链接的代表尚未完成**
 - 注意学科学习顺序，建议：`数据结构` --> `操作系统`、`计算机组成原理` --> `计算机网络`
-- 学习切忌浮于表面，戒骄戒躁。408考试知识点多、杂，非常容易忘，**抓大放小、先易后难、反复多次**
+- **学习切忌浮于表面，需戒骄戒躁**。408考试知识点多、杂，非常容易忘，**抓大放小、先易后难、反复多次**
 
 ## 在线浏览
 
@@ -56,7 +69,7 @@
 
 ## 学习资料
 
-### 电子书PDF - 王道
+### 电子书PDF
 
 - 数据结构2019: <https://pan.baidu.com/s/18x8AIfOkZxz197eY7HLRMg>  密码: euja
 - 计算机组成原理2019: <https://pan.baidu.com/s/1DiOBJMt9ZnZ6GK4CRCETJg>  密码: wic5
@@ -307,20 +320,18 @@
 
 若系列文章对你有所帮助，欢迎订阅公众号或微信”骚扰“，获取更多内容。**商务合作请备注来意**
 
-<div style="text-align: center">
+<div style="text-align: center;margin: 10px" id="we-media-container">
     <div  align="center" >
-        <table style="border:none; border-collapse:collapse;" border="0">
             <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg"
-                width="250px"
+                width="200px"
                 style="margin:5px"
                 title="欢迎关注公众号:Rong姐姐好可爱" alt="关注公众号"/>
             <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
-                width="250px"
+                width="200px"
                 style="margin:5px"
                 title="欢迎添加微信：chufan443 " alt="联系作者"/>
-        </table>
     </div>
-    <div  style="text-align: center;padding: 10px" align="center">
+    <div  style="text-align: center;padding: 5px" align="center">
         <a
           href="https://github.com/mmdapl"
           rel="nofollow noreferrer"
@@ -354,7 +365,9 @@
           target="_blank"
           title="点击跳转B站主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg" alt="Bilibili"
+          <img
+            src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg"
+            alt="Bilibili"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -363,29 +376,15 @@
           target="_blank"
           title="点击跳转CSDN博客主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
+          <img
+            src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
             title="点击跳转CSDN博客主页" alt="CSDN"
-            style="margin: 5px;width: 24px;height: 24px;">
+            style="margin: 5px;width: 24px;height: 24px;"
+          >
         </a>
-    </div>
-    <div align="center">
-        <div id="">
-             <a href="https://github.com/mmdapl" target="_blank">
-              <img alt="作者: 储凡" src="https://img.shields.io/badge/Author-Chu·Fan-8A2BE2.svg?style=for-the-badge" style="text-align: center;">
-             </a>
-        </div>
-        <div style="padding: 5px">
-             <a href="https://app.netlify.com/sites/408-family/deploys" target="_blank" style="padding: 5px">
-              <img alt="Netlify" src="https://api.netlify.com/api/v1/badges/75a7251a-f873-4aff-b387-6449ca241ef7/deploy-status">
-             </a>
-             <a href="https://vercel.com/142vip/408/deployments" target="_blank" style="padding: 5px">
-              <img alt="Vercel" src="https://therealsujitk-vercel-badge.vercel.app/?app=408">
-             </a>
-        </div>
     </div>
 </div>
 
-交流/加群/互看朋友圈，
-当然：**聊天/提问/建议/提需求** 可以在公众号直接**私信**，后台可以看到。有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。
+交流/加群/互看朋友圈、**聊天/提问/建议/提需求** 可以在公众号直接**私信**，有时间即会回复，偶尔的延迟和疏漏还请小伙伴们谅解，蟹蟹。
 
 <!-- #endregion we-media -->

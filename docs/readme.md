@@ -10,9 +10,9 @@ actions:
   - text: 微信公众号
     link: /manuscripts/wechat-list.md
     type: secondary
-  - text: 工作机会 💡
-    link: /manuscripts/job-poster-bytedance.md
-    type: secondary
+#  - text: 工作机会 💡
+#    link: /manuscripts/job-poster-bytedance.md
+#    type: secondary
 features:
   - title: 多学科笔记
     details: 与官网同步的Egg.js框架基础知识整理，有效地降低日常开发和复习巩固的查询、学习时间。
@@ -23,9 +23,6 @@ features:
   - title: 反复、多次
     details: 通过以项目Demo示例的方式，对框架常用的功能进行Code编写和整理，提供有效且易用的代码封装。
 ---
-
-
-
 
 ## 本地浏览【推荐】
 

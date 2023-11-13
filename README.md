@@ -40,6 +40,11 @@
         <img alt="release version" src="https://img.shields.io/github/v/release/142vip/408CSFamily" style="padding: 5px">
         <img alt="repo size" src="https://img.shields.io/github/repo-size/142vip/408CSFamily" style="padding: 5px">
     </div>
+    <div id="repo-link">
+        <a href="https://github.com/142vip/408CSFamily" target="_blank" style="padding: 5px">GitHub</a>
+        |
+        <a href="https://gitee.com/chufan443/408CSFamily" target="_blank" style="padding: 5px">Gitee</a>
+    </div>
 </div>
 
 <!-- #region quick-start -->
@@ -313,7 +318,7 @@
 ## 趋势
 
 <div style="text-align: center" align="center">
-<img alt="Star History" src="https://api.star-history.com/svg?repos=142vip/408CSFamily&type=Date" >
+    <img alt="Star History" src="https://api.star-history.com/svg?repos=142vip/408CSFamily&type=Date" >
 </div>
 
 ## 联系作者
@@ -321,7 +326,7 @@
 若系列文章对你有所帮助，欢迎订阅公众号或微信”骚扰“，获取更多内容。**商务合作请备注来意**
 
 <div style="text-align: center;margin: 10px" id="we-media-container">
-    <div  align="center" >
+    <div align="center" >
             <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/fairy-sister-450x450.jpg"
                 width="200px"
                 style="margin:5px"
@@ -331,7 +336,7 @@
                 style="margin:5px"
                 title="欢迎添加微信：chufan443 " alt="联系作者"/>
     </div>
-    <div  style="text-align: center;padding: 5px" align="center">
+    <div style="text-align: center;padding: 5px" align="center">
         <a
           href="https://github.com/mmdapl"
           rel="nofollow noreferrer"

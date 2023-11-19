@@ -1,40 +1,22 @@
-# Logs
 logs
 *.log
 .vscode
 .vscode/*
 */.DS_Store
 .DS_Store
-*/.vscode
 .idea
-# Coverage directory used by tools like istanbul
 coverage
-*.lcov
-# nyc test coverage
-.nyc_output
-# Dependency directories
-node_modules/
-jspm_packages/
-# TypeScript v1 declaration files
+node_modules
 typings/
-# Optional npm cache directory
 .npm
-# Output of 'npm pack'
 *.tgz
-# parcel-bundler cache (https://parceljs.org/)
 .cache
-# Next.js build output
 .next
 .nuxt
 dist
-# Gatsby files
 .cache/
-# vuepress build output
-# .vuepress/dist
 docs/.vuepress/.cache/
 docs/.vuepress/.temp/
 docs/.vuepress/dist/
-# TernJS port file
-.tern-port
 /.husky/
 /.vercel/

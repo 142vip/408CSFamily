@@ -97,7 +97,7 @@ yarn run dev
 
 - 稳定版： <https://408.142vip.cn>
 
-> 网站无法访问时，合理使用魔法通过科学上网访问第三方托管平台
+> 网站无法访问时，合理使用魔法、通过科学上网访问第三方托管平台
 
 - Github： <https://142vip.github.io/408CSFamily>
 - Netlify： <https://408-family.netlify.app>

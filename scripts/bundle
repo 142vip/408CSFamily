@@ -163,7 +163,9 @@ async function getScriptCommand() {
   return scriptCommand
 }
 
-
+/**
+ * 执行构建命令
+ */
 ;(async () => {
   const scriptCommand = await getScriptCommand()
   await execShell(scriptCommand)

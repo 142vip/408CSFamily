@@ -53,7 +53,7 @@ const { prefix, children } = sideBarData;
   }
 
   /**
-   * 第二步： 穿件文件，并追加文件内容
+   * 第二步： 创建文件，并追加文件内容
    */
 
   for (const { text, link } of children) {

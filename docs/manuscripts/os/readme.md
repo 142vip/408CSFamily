@@ -5,14 +5,9 @@ permalink: /manuscripts/os.html
 
 # 操作系统
 
-```mindmap
-root(操作系统)
-  (系统概述)
-  (进程管理)
-  (进程管理)
-  (文件管理)
-  (输入、输出管理)
-```
+![打好基础推荐学习这本](./images/os-base.png)
+
+![学有余力可以适当翻看这本](./images/os-better.png)
 
 ## 系统概述
 

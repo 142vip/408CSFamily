@@ -3,17 +3,20 @@ import themeConfig from "./config/theme.config";
 import {defineUserConfig} from "vuepress";
 import {fileURLToPath} from 'node:url'
 import {path} from "@vuepress/utils";
+import {name} from "../../package.json"
 // @ts-ignore
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-// 用于区分base路径，是否nginx代理
-const PROXY_DOMAIN = process.env.PROXY_DOMAIN || false
-
-
+/**
+ * 用户自定义配置
+ * 注意：
+ *  - 环境变量中的PROXY_DOMAIN字段，用于区分是否nginx代理
+ */
 export default defineUserConfig({
-  title: "计算机应试全家桶",
+  title: "计算机408全家桶",
   description: "磨刀不误砍柴工，读完硕士再打工",
-  base: PROXY_DOMAIN ? "/408CSFamily/" : "/",
+  // 用于区分base路径，是否nginx代理
+  base: process.env.PROXY_DOMAIN ? `/${name}/` : `/`,
   port: 4200,
   head: [
     // vercel统计 相关配置

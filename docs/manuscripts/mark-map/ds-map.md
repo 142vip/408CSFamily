@@ -6,6 +6,19 @@ headerDepth: 3
 
 # 数据结构
 
+```mindmap
+root(数据结构)
+    (基础入门)
+    (线性表)
+    (栈和队列)
+    (队列)
+    (串)
+    (树与二叉树)
+    (图论)
+    (查找)
+    (排序)
+```
+
 <a href="../../mark-map/ds-map.html" target="_blank">在线预览</a>
 
 ## 基础入门

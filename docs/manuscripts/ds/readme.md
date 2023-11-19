@@ -1,17 +1,13 @@
-# 数据结构
+---
+title: 数据结构
+permalink: /manuscripts/ds.html
+---
 
-```mindmap
-root(数据结构)
-    (基础入门)
-    (线性表)
-    (栈和队列)
-    (队列)
-    (串)
-    (树与二叉树)
-    (图论)
-    (查找)
-    (排序)
-```
+![打好基础推荐学习这本](./images/ds-base.png)
+
+![学有余力可以适当翻看这本](./images/ds-better.png)
+
+# 数据结构
 
 ## 基础入门
 

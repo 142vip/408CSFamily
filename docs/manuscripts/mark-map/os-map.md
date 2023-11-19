@@ -6,6 +6,15 @@ headerDepth: 3
 
 # 操作系统
 
+```mindmap
+root(操作系统)
+  (系统概述)
+  (进程管理)
+  (进程管理)
+  (文件管理)
+  (输入、输出管理)
+```
+
 <a href="../../mark-map/os-map.html" target="_blank">在线预览</a>
 
 ## 引论

@@ -3,7 +3,7 @@
         <img alt="408Logo图片" width="240" src="https://cdn.statically.io/gh/142vip/cdn_service@main/doc_book/408/408_logo.png" style="text-align: center;">
     </p>
     <p style="font-size: 30px">
-        <strong>✨计算机应试全家桶✨</strong>
+        <strong>✨计算机408全家桶✨</strong>
     </p>
 </div>
 
@@ -66,7 +66,7 @@
 
 - 稳定版： <https://408.142vip.cn>
 
-> 网站无法访问时，建议通过科学上网访问备用网络
+> 网站无法访问时，合理使用魔法、通过科学上网访问第三方托管平台
 
 - Github： <https://142vip.github.io/408CSFamily>
 - Netlify： <https://408-family.netlify.app>
@@ -83,7 +83,8 @@
 
 ### 学习视频
 
-> **不是王道工作人员，不做任何推销**，只是感觉看书不太行的话还是得找找视频辅助下，就发现了王道官方视频，我自己有时也会用这个，如果链接失效可以去B站搜！
+> **不是王道工作人员，不做任何推销**，只是感觉看书不太行的话还是得找找视频辅助下，就发现了王道官方视频，
+> 我自己有时也会用这个，如果链接失效可以去B站搜！
 
 - [数据结构](https://www.bilibili.com/video/BV1b7411N798)
 - [计算机组成原理](https://www.bilibili.com/video/BV1BE411D7ii)
@@ -216,19 +217,56 @@
 > - 《计算机组成原理》 第二版  唐朔飞
 > - 《计算机组成原理-王道考研》 2019 王道论坛
 
-### 概述
+### 计算机引论
+
+- 发展历程
+- 系统层次结构
+- 性能指标
 
 ### 数据的表示和运算
 
+- 数制和编码
+- 定点数
+- 浮点数
+- 算数逻辑单元
+
 ### 存储系统
+
+- 存储器介绍
+- 存储器的层次化结构
+- 随机存储器
+- 主存和CPU
+- 双端口RAM和多模块存储器
+- 高速缓冲存储器
+- 虚拟存储器
 
 ### 指令系统
 
+- 指令格式
+- 寻址方式
+- 指令集
+
 ### 中央处理器
+
+- CPU的基本介绍
+- 指令执行过程
+- 数据通路
+- 控制器
+- 指令流水线
 
 ### 总线
 
+- 总线介绍
+- 总线仲裁
+- 总线的操作和定时
+- 总线标准
+
 ### 输入输出系统
+
+- 基本概念
+- 外部设备
+- 输入输出接口
+- 输入输出方式
 
 ## 计算机网络
 
@@ -288,18 +326,24 @@
 [//]: # (宣传内容)
 <!-- #region we-media -->
 
-## 提交记录
-
 ## 赞赏列表
 
-以下排名不分先后!  **赞赏过的一定要微信跟我说呀！！！！！！**
+以下排名不分先后，  **赞赏过的一定要微信跟我说呀！！！！！！**
 
 <div>
   <a href="https://github.com/ChiefPing" target="_blank" style="margin: 5px">
-    <img src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4"  alt="ChiefPing" style="border-radius:5px;" width="50px" />
+    <img
+        src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4"  
+        alt="ChiefPing"
+        style="border-radius:5px;" width="50px"
+    />
   </a>
-   <a href="https://github.com/xiaoliuxin" target="_blank" style="margin: 5px">
-    <img src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  alt="xiaoliuxin" style="border-radius:5px;" width="50px"/>
+  <a href="https://github.com/xiaoliuxin" target="_blank" style="margin: 5px">
+    <img
+        src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  
+        alt="xiaoliuxin"
+        style="border-radius:5px;" width="50px"
+    />
   </a>
 </div>
 
@@ -309,16 +353,24 @@
 
 ## 贡献
 
-> 感谢向仓库提交PR的所有开发者
+> 感谢所有参与仓库建设的开发者
 
 <a href="https://github.com/142vip/408CSFamily/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=142vip/408CSFamily" alt="感谢向仓库提交PR的所有开发者" title="408CSFamily"/>
+  <img
+    src="https://contrib.rocks/image?repo=142vip/408CSFamily"
+    alt="感谢向仓库提交PR的所有开发者"
+    title="408CSFamily"
+  />
 </a>
 
 ## 趋势
 
 <div style="text-align: center" align="center">
-    <img alt="Star History" src="https://api.star-history.com/svg?repos=142vip/408CSFamily&type=Date" >
+    <img
+        src="https://api.star-history.com/svg?repos=142vip/408CSFamily&type=Date"
+        alt="Star History"
+        style="border-radius: 5px"
+    >
 </div>
 
 ## 联系作者
@@ -327,14 +379,10 @@
 
 <div style="text-align: center;margin: 10px" id="we-media-container">
     <div align="center" >
-            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/chu-fan-code-450x450.png"
-                width="200px"
-                style="margin:5px"
-                title="欢迎关注微信公众号：储凡" alt="关注微信公众号：储凡"/>
-            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/chu-fan-443-650x650.jpg"
-                width="200px"
-                style="margin:5px"
-                title="欢迎添加微信：chufan443 " alt="添加微信：chufan443，联系作者"/>
+            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/main-code.png"
+                width="auto"
+                style="margin:5px;border-radius: 5px"
+                title="关注微信公众号或添加好友联系储凡" alt="关注微信公众号或添加好友联系储凡"/>
     </div>
     <div style="text-align: center;padding: 5px" align="center">
         <a

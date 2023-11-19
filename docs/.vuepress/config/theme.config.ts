@@ -12,16 +12,16 @@ import {sidebar} from "./sidebar";
 export default {
   theme: hopeTheme({
     locales: langConfig,
-    darkmode: "toggle",
+    darkmode: "disable",
     // 支持全屏
-    fullscreen: true,
+    // fullscreen: true,
     // 纯净模式
     // pure: true,
     print: false, // 打印按钮
     hostname: 'https://408.142vip.cn',
     author: AUTHOR_INFO,
     favicon: "/408_favicon.ico",
-    logo: "/assets/408_logo.png",
+    logo: "/408_logo.png",
     navbar: navbar,
     // 导航栏布局
     navbarLayout: {
@@ -34,7 +34,7 @@ export default {
 
     // 主题布局选项
     repo: "https://github.com/142vip/408CSFamily",
-    logoDark: "/assets/408_logo.png",
+    logoDark: "/408_logo.png",
 
     // 博客配置
     // blog: {

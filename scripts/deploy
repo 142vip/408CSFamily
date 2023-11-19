@@ -80,8 +80,9 @@ function getDeployCommand() {
   return deployCommand
 }
 
-
-// 执行
+/**
+ * 执行部署相关命令
+ */
 ;(async () => {
   const deployCommand = getDeployCommand()
   // console.log(deployCommand)

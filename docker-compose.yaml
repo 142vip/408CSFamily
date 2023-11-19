@@ -1,6 +1,8 @@
+###
+### 408CSFamily服务，ip范围 172.30.0.100
+###
 version: '2'
 services:
-  ### 408CSFamily服务，ip范围 172.30.0.200
   408CSFamily:
     image: registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:408CSFamily-0.0.1
     container_name: 408CSFamily

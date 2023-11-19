@@ -16,11 +16,11 @@
   height: 100vh;
 }
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.8.0/styles/default.min.css"><link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.15.4/dist/style.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script><script>(r => {
+<script src="https://unpkg.com/d3@7.8.5/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.15.4/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.15.4/dist/index.js"></script><script>(r => {
           setTimeout(r);
         })(() => {
   const {
@@ -35,6 +35,6 @@
 })</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
           const markmap = getMarkmap();
           window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
-        })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[0,1]},"content":"计算机组成原理","children":[{"type":"heading","depth":1,"payload":{"lines":[4,5]},"content":"引论","children":[]},{"type":"heading","depth":1,"payload":{"lines":[6,7]},"content":"数据的表示和运算","children":[]},{"type":"heading","depth":1,"payload":{"lines":[8,9]},"content":"存储系统","children":[]},{"type":"heading","depth":1,"payload":{"lines":[10,11]},"content":"中央处理器","children":[]},{"type":"heading","depth":1,"payload":{"lines":[12,13]},"content":"总线","children":[]},{"type":"heading","depth":1,"payload":{"lines":[14,15]},"content":"输入输出系统","children":[]},{"type":"heading","depth":1,"payload":{"lines":[16,17]},"content":"一些总结","children":[]}]},null)</script>
+        })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[1,2]},"content":"计算机组成原理","children":[{"type":"fence","depth":1,"content":"<pre><code class=\"language-mindmap\">root(计算机组成原理)\n    (引论)\n    (数据的表示和运算)\n    (储存系统)\n    (指令系统)\n    (中央处理器)\n    (总线)\n    (输入输出系统)\n</code></pre>\n","children":[],"payload":{"lines":[3,13]}},{"type":"heading","depth":1,"payload":{"lines":[16,17]},"content":"引论","children":[]},{"type":"heading","depth":1,"payload":{"lines":[18,19]},"content":"数据的表示和运算","children":[]},{"type":"heading","depth":1,"payload":{"lines":[20,21]},"content":"存储系统","children":[]},{"type":"heading","depth":1,"payload":{"lines":[22,23]},"content":"指令系统","children":[]},{"type":"heading","depth":1,"payload":{"lines":[24,25]},"content":"中央处理器","children":[]},{"type":"heading","depth":1,"payload":{"lines":[26,27]},"content":"总线","children":[]},{"type":"heading","depth":1,"payload":{"lines":[28,29]},"content":"输入输出系统","children":[]},{"type":"heading","depth":1,"payload":{"lines":[30,31]},"content":"一些总结","children":[]}]},null)</script>
 </body>
 </html>

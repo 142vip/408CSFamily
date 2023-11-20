@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.1-alpha.11](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.10...v0.0.1-alpha.11) (2023-11-20)
+
+
+### Features
+
+* **scripts:** 新增sync脚本，同步master分支到不同仓库 ([9a0c018](https://github.com/142vip/408CSFamily/commit/9a0c018ebd8b772ca65763dc6969588d20cdfce4))
+* **数据结构:** 新增不同语言的查找算法代码 ([ec1dba6](https://github.com/142vip/408CSFamily/commit/ec1dba661f7921a421bde9b77cb9cf8dad82eacc))
+* 更新忽略文件、链接地址 ([483dcba](https://github.com/142vip/408CSFamily/commit/483dcba3c4cf7dabc12ee8e62472b07a9a0ee73a))
+* 网站动态文档更新，新增时间轴 ([3b03f4e](https://github.com/142vip/408CSFamily/commit/3b03f4e43cf61bef1984dc870c23c0fe89097ddb))
+* **计组:** 新增一些文档，优化导航栏 ([5c20d6a](https://github.com/142vip/408CSFamily/commit/5c20d6ac1d922d5b9438b17962c181491c82b47c))
+* 首页添加Gitee等链接 ([91a6e95](https://github.com/142vip/408CSFamily/commit/91a6e9556682ea886f94b5a51de1cb5edb6b5f0d))
+
+
+### Bug Fixes
+
+* **undici:** 升级vuepress依赖，修复同源cookie泄露问题 ([68bb062](https://github.com/142vip/408CSFamily/commit/68bb0624cc3a0d93e6d6958405e6491c3ec47700))
+* 修复首页图片异常居中问题 ([b80a805](https://github.com/142vip/408CSFamily/commit/b80a8054a3f8f54b9536d97d5216cc446afc330a))
+* 修复首页展示异常 ([#84](https://github.com/142vip/408CSFamily/issues/84)) ([c10f4d8](https://github.com/142vip/408CSFamily/commit/c10f4d8fe1eb906e4dcf09b62fa7c68eebec7e4a))
+
 ## [0.0.1-alpha.10](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.9...v0.0.1-alpha.10) (2023-11-07)
 
 

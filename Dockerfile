@@ -9,13 +9,18 @@
 
 FROM registry.cn-hangzhou.aliyuncs.com/142vip/node:18.18.0-alpine AS build_base
 ARG CONTAINER_BUILD
+
+## 设置环境变量，支持容器构建时使用layer缓存，参考：https://pnpm.io/zh/docker
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+
 WORKDIR /apps
 COPY . .
 
 RUN echo $CONTAINER_BUILD;
 
 ## 基于容器自动构建
-RUN if [ "$CONTAINER_BUILD" = "true" ]; then  \
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store if [ "$CONTAINER_BUILD" = "true" ]; then  \
     sh ./scripts/ci && pnpm build; \
   fi;
 

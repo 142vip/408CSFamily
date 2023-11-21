@@ -40,7 +40,7 @@ async function getGitInfo() {
   // 输出最近一次提交的信息
   return {
     gitHash: commitHash,
-    gitMessage: commitMessage.join('')
+    gitMessage: commitMessage.join(' ')
   }
 }
 

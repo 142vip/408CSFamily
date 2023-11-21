@@ -31,7 +31,7 @@ ARG GIT_MESSAGE
 ARG HOME_PAGE
 
 # 作者信息
-LABEL "author.name"="$AUTHOR" "author.email"="$EMAIL"
+LABEL "maintainer"="$AUTHOR <$EMAIL>"
 
 # 项目信息
 LABEL "repo.name"=$APP_NAME "repo.version"=$APP_VERSION  \

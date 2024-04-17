@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## [0.0.1-alpha.12](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.11...v0.0.1-alpha.12) (2024-04-17)
+
+
+### Bug Fixes
+
+* 修复release脚本异常，使用npx ([94d6349](https://github.com/142vip/408CSFamily/commit/94d63496ce0d5118b8e3686ef734637dea50405d))
+* **镜像:** 修复标签信息异常 ([4f2e254](https://github.com/142vip/408CSFamily/commit/4f2e254cf100c30a0e9058ed083a6cd98f407564))
+
+
+### Performance Improvements
+
+* **deps-dev:** bump vite from 4.4.11 to 4.4.12 ([9946631](https://github.com/142vip/408CSFamily/commit/994663186f9b2213b6e4db9b88e1757274ca098d))
+* 升级vue等基础工具依赖 ([#94](https://github.com/142vip/408CSFamily/issues/94)) ([1a8f1b1](https://github.com/142vip/408CSFamily/commit/1a8f1b109e0afc5326a42daf8319ec6356214543))
+* **镜像:** 使用Layer缓存信息，提高Docker构建、打包速度 ([1b3c69e](https://github.com/142vip/408CSFamily/commit/1b3c69edfa3b90d725b468c0a7cef9a953773710))
+
 ## [0.0.1-alpha.11](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.10...v0.0.1-alpha.11) (2023-11-20)
 
 

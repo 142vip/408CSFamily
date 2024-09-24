@@ -17,14 +17,17 @@
     "preinstall": "chmod +x ./scripts/*",
     "postinstall": "pnpm build:mark-map",
     "prepare": "husky install",
+    "clean": "npx fa clean --ignore-tips --dist --vite --all",
+    "lint": "npx fa lint",
+    "lint:fix": "npx fa lint --fix",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "build:proxy": "./scripts/bundle build_proxy",
     "build:mark-map": "./scripts/mark-map",
-    "deploy:vercel": "vercel --prod",
-    "clean": "find . -name \"node_modules\" -type d -exec rm -rf '{}' + "
+    "deploy:vercel": "vercel --prod"
   },
   "devDependencies": {
+    "@142vip/fairy-cli": "0.0.3-alpha.11",
     "@commitlint/cli": "^18.6.1",
     "@commitlint/config-conventional": "^18.6.3",
     "@typescript-eslint/eslint-plugin": "^5.62.0",

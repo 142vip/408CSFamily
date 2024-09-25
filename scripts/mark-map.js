@@ -1,15 +1,14 @@
-#!/usr/bin/env node
-
+import * as fs from 'node:fs'
+import * as path from 'node:path'
 /**
  * 将思维导图的md格式转化为html，提供在线预览
  * 链接：https://www.npmjs.com/package/markmap-cli
  */
-const {commandStandardExecutor} = require("@142vip/utils");
-const path = require('path');
-const fs = require('fs');
+
+import { commandStandardExecutor } from '@142vip/utils'
+
 const markMapSourcePath = path.join(__dirname, '../', 'docs/manuscripts/mark-map')
 const markMapTargetPath = path.join(__dirname, '../', 'docs/.vuepress/public/mark-map')
-
 
 /**
  * 扫面目录
@@ -18,20 +17,21 @@ function scanDirectory(directory, fileType) {
   const fileList = fs.readdirSync(directory)
 
   return fileList
-    .map(file => {
-      const filePath = path.join(directory, file);
-      const fileExtension = path.extname(file).toLowerCase();
+    .map((file) => {
+      const filePath = path.join(directory, file)
+      const fileExtension = path.extname(file).toLowerCase()
 
       if (fileExtension === `.${fileType.toLowerCase()}`) {
         return filePath
       }
+      return null
     })
     // 过滤空
     .filter(c => c != null)
 }
 
-
 (async () => {
+  console.log(1111, markMapSourcePath)
   /**
    * 第一步： 清空站点思维导图文件存放目录
    */
@@ -42,7 +42,6 @@ function scanDirectory(directory, fileType) {
    */
   const mdList = scanDirectory(markMapSourcePath, 'md')
   const mdToHtmlCmdStr = mdList.map(md => `markmap --no-open ${md}`).join(' && ')
-
 
   /**
    * 第三步： 根据文件类型将思维导图网页文件移动到站点指定目录
@@ -58,12 +57,10 @@ function scanDirectory(directory, fileType) {
   const xmindByFileType = path.join(markMapSourcePath, '*.xmind')
   const cpXmindCmdStr = `cp -f ${xmindByFileType} ${markMapTargetPath}`
 
-
   /**
    * 第五步： 复制mark-map对应的json文件
    */
   const cpIndexJsonCmdStr = `cp -f ${path.join(markMapSourcePath, 'index.json')} ${markMapTargetPath}`
-
 
   // 脚本执行
   await commandStandardExecutor([
@@ -71,7 +68,7 @@ function scanDirectory(directory, fileType) {
     mdToHtmlCmdStr,
     moveHtmlCmdStr,
     cpXmindCmdStr,
-    cpIndexJsonCmdStr
+    cpIndexJsonCmdStr,
   ])
 
   /**
@@ -79,7 +76,7 @@ function scanDirectory(directory, fileType) {
    *
    */
   const markMapData = require(path.join(markMapTargetPath, 'index.json'))
-  for (const {originXmindFileName, targetXmindFileName} of markMapData) {
+  for (const { originXmindFileName, targetXmindFileName } of markMapData) {
     const originPath = path.join(markMapTargetPath, originXmindFileName)
     const targetPath = path.join(markMapTargetPath, targetXmindFileName)
 

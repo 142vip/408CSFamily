@@ -1,6 +1,6 @@
-import {searchProPlugin} from "vuepress-plugin-search-pro";
-import {path} from "@vuepress/utils";
-import {registerComponentsPlugin} from "@vuepress/plugin-register-components";
+import { searchProPlugin } from 'vuepress-plugin-search-pro'
+import { path } from '@vuepress/utils'
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 
 /**
  * 插件配置
@@ -21,13 +21,13 @@ export default {
       customFields: [
         {
           getter: (page: any) => page.frontmatter.category,
-          formatter: "分类：$content",
+          formatter: '分类：$content',
         },
         {
-          getter: (page) => page.frontmatter.tag,
-          formatter: "标签：$content",
+          getter: page => page.frontmatter.tag,
+          formatter: '标签：$content',
         },
       ],
     }),
-  ]
+  ],
 }

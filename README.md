@@ -48,6 +48,7 @@
 </div>
 
 <!-- #region quick-start -->
+
 ## 写最前面
 
 `408CSFamily` 我的理解是：408计算机专业课”全家桶“，而408相信考研er都知道计算机考研专业课代码；在最新的高校计算机研究生招考中，已经越来越多的学校改考408。可见408所涉及到的专业课举足轻重的地位；不论是在考研或者找工作，我相信408的专业基础必定是难以避免的，所以话不多说、形势复杂，唯一能做的就是不停的学习、巩固基础知识，加油！
@@ -76,10 +77,10 @@
 
 ### 电子书PDF
 
-- 数据结构2019: <https://pan.baidu.com/s/18x8AIfOkZxz197eY7HLRMg>  密码: euja
-- 计算机组成原理2019: <https://pan.baidu.com/s/1DiOBJMt9ZnZ6GK4CRCETJg>  密码: wic5
-- 计算机网络2019: <https://pan.baidu.com/s/1mmIZDugwY5YyytzIJoGQFw>  密码: dpkb
-- 操作系统2019: <https://pan.baidu.com/s/1gzuUqq09xqi8wQ8JJRF69g>  密码: o9b3
+- 数据结构2019: <https://pan.baidu.com/s/18x8AIfOkZxz197eY7HLRMg> 密码: euja
+- 计算机组成原理2019: <https://pan.baidu.com/s/1DiOBJMt9ZnZ6GK4CRCETJg> 密码: wic5
+- 计算机网络2019: <https://pan.baidu.com/s/1mmIZDugwY5YyytzIJoGQFw> 密码: dpkb
+- 操作系统2019: <https://pan.baidu.com/s/1gzuUqq09xqi8wQ8JJRF69g> 密码: o9b3
 
 ### 学习视频
 
@@ -113,9 +114,9 @@
 - [线性表的链式表示之双链表](https://mp.weixin.qq.com/s/2R4ZKTSALaR5kVe04UY_Xg)
 - [线性表的链式表示之循环链表](https://mp.weixin.qq.com/s/BbDFhNl018UQAAc7g2PIMg)
 - [线性表的链式表示之静态链表](https://mp.weixin.qq.com/s/JYabNgsHQnEcuJmwOwEB6g)
-- [顺序表和链表的比较](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&amp;mid=2247485537&amp;idx=1&amp;sn=7e40e933d96b3b68187ecdd9b022e165&amp;chksm=fcdfb1edcba838fbe23eb3b463a55b1ee160cd7dea53c54200838ba85f3230c2b9accdf5a05b&token=1697862929&lang=zh_CN#wechat_redirect)
-- [存储结构的选取](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&amp;mid=2247485549&amp;idx=1&amp;sn=4b7091696c40874a7dcfc682ca18db61&amp;chksm=fcdfb1e1cba838f7e611341fe3b6f3c45fc6efcdce18e79be244a349c87a8e6abcbbd33c250c&token=1697862929&lang=zh_CN#rd)
-- [零碎知识补充](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&amp;mid=2247485549&amp;idx=2&amp;sn=5282cd006b6c33e4bfe992298602e053&amp;chksm=fcdfb1e1cba838f743a335bad530cf415eef57a417b807257d8ed6983047c2d57d5552b34cb0&token=1697862929&lang=zh_CN#rd)
+- [顺序表和链表的比较](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247485537&idx=1&sn=7e40e933d96b3b68187ecdd9b022e165&chksm=fcdfb1edcba838fbe23eb3b463a55b1ee160cd7dea53c54200838ba85f3230c2b9accdf5a05b&=1697862929&=zh_CN#wechat_redirect)
+- [存储结构的选取](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247485549&idx=1&sn=4b7091696c40874a7dcfc682ca18db61&chksm=fcdfb1e1cba838f7e611341fe3b6f3c45fc6efcdce18e79be244a349c87a8e6abcbbd33c250c&=1697862929&=zh_CN#rd)
+- [零碎知识补充](https://mp.weixin.qq.com/s?__biz=MzU3MTUxOTIwMw==&mid=2247485549&idx=2&sn=5282cd006b6c33e4bfe992298602e053&chksm=fcdfb1e1cba838f743a335bad530cf415eef57a417b807257d8ed6983047c2d57d5552b34cb0&=1697862929&=zh_CN#rd)
 
 ### 栈
 
@@ -173,7 +174,7 @@
 
 > 参考资料：
 >
-> - 《计算机操作系统》 第四版  汤小丹、梁红兵、汤子瀛著
+> - 《计算机操作系统》 第四版 汤小丹、梁红兵、汤子瀛著
 > - 《操作系统-王道考研》 2019 王道论坛
 
 ### 系统概述
@@ -214,7 +215,7 @@
 
 > 参考资料：
 >
-> - 《计算机组成原理》 第二版  唐朔飞
+> - 《计算机组成原理》 第二版 唐朔飞
 > - 《计算机组成原理-王道考研》 2019 王道论坛
 
 ### 计算机引论
@@ -272,7 +273,7 @@
 
 > 参考资料：
 >
-> - 《计算机网络-第七版》  谢希仁著.
+> - 《计算机网络-第七版》 谢希仁著.
 > - 《计算机网络-王道考研》 2019 王道论坛.
 
 ### 体系机构
@@ -323,24 +324,25 @@
 
 <!-- #endregion quick-start -->
 
-[//]: # (宣传内容)
+[//]: # '宣传内容'
+
 <!-- #region we-media -->
 
 ## 赞赏列表
 
-以下排名不分先后，  **赞赏过的一定要微信跟我说呀！！！！！！**
+以下排名不分先后， **赞赏过的一定要微信跟我说呀！！！！！！**
 
 <div>
   <a href="https://github.com/ChiefPing" target="_blank" style="margin: 5px">
     <img
-        src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4"  
+        src="https://avatars2.githubusercontent.com/u/34122068?s=460&v=4"
         alt="ChiefPing"
         style="border-radius:5px;" width="50px"
     />
   </a>
   <a href="https://github.com/xiaoliuxin" target="_blank" style="margin: 5px">
     <img
-        src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"  
+        src="https://avatars2.githubusercontent.com/u/60652527?s=460&v=4"
         alt="xiaoliuxin"
         style="border-radius:5px;" width="50px"
     />

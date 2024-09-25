@@ -7,29 +7,29 @@ permalink: /manuscripts/big-event-history.html
 
 ```mermaid
 %%{
-  init: { 
+  init: {
       'theme': 'forest',
       "fontFamily": "monospace"
-   } 
+   }
 }%%
     timeline
         title 408CSFamily时间轴
-          2015 : 刚上学 
+          2015 : 刚上学
                : 接触计算机
                : 学习CS专业知识
           2019 : 初识408   <br>  年轻人别草率
-          2020 : 武汉疫情解封 <br> 萌生念头，创建仓库 
+          2020 : 武汉疫情解封 <br> 萌生念头，创建仓库
                : 代号：408CSFamily
-               
+
           2021 : 更新停滞期
-               : 内容存在被抄袭风险 <br> 替换原有MIT协议 
+               : 内容存在被抄袭风险 <br> 替换原有MIT协议
                : 更新部分算法代码
                : 项目结构调整、优化
-          
+
           2022 : 引入Vuepress框架大改造
                : 支持自动发版、部署 <br> Release版本下载
                : 全新出发，网站上线 <br> 域名：408.142vip.cn
-               
+
           2023 : 分学科梳理文档
                : 基于Hope主题优化UI
                : 增加思维导图

@@ -1,7 +1,7 @@
-## 代码CI快速集成流水线，lint、fix、build
+# # 代码CI快速集成流水线，lint、fix、build
 
 name: CI
-## 触发条件
+# # 触发条件
 on:
   # 提PR到next分支触发CI
   pull_request:
@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: "0 0 1 * *"
+    - cron: '0 0 1 * *'
 
 # 环境变量
 env:
@@ -23,12 +23,11 @@ env:
   REGISTRY: registry.cn-hangzhou.aliyuncs.com
   UserName: 142vip
 
-
 jobs:
   Base-Build:
-    name: "基础编译构建"
+    name: 基础编译构建
     runs-on: ubuntu-latest
-    ## 主库且拉取PR时触发
+    # # 主库且拉取PR时触发
     if: github.repository == '142vip/408CSFamily' &&  github.event_name == 'pull_request'
     permissions:
       actions: read
@@ -48,22 +47,22 @@ jobs:
         with:
           version: 9.6.0
 
-      ## 安装Node环境
+      # # 安装Node环境
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18.18.0
-          ## 缓存
-          cache: 'pnpm'
+          # # 缓存
+          cache: pnpm
 
-      ## 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
+      # # 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
       - name: Install Dependencies
         run: |
           ./scripts/ci
 
       - name: Code LintFix
         run: |
-          ./scripts/lint
+          pnpm lint
 
       - name: Build Site
         run: |
@@ -74,9 +73,9 @@ jobs:
           pnpm build:proxy
 
   Build-Docker-Image:
-    name: "构建Docker镜像"
+    name: 构建Docker镜像
     runs-on: ubuntu-latest
-    ## 主库且tag更新时执行
+    # # 主库且tag更新时执行
     if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
     permissions:
       actions: read
@@ -109,14 +108,12 @@ jobs:
         run: |
           ./scripts/ci
 
-      ## 构建，支持domain
+      # # 构建，支持domain
       - name: Build To Dist
         run: |
-          ./scripts/bundle build
+          pnpm build
 
-      ## 快速构建并推送
+      # # 快速构建并推送
       - name: Push Docker Image
         run: |
-          ./scripts/bundle image_faster
-
-
+          ./scripts/bundle

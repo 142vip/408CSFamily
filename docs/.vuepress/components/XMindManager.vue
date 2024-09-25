@@ -5,60 +5,38 @@
   注意：
     - 使用ClientOnly内置组件，只在客户端加载，避免依赖构建出错
 -->
-<template>
-  <div class="x-mind-container">
-    <!-- xmind思维导图管理器 -->
-    <div id="x-mind-manager-container">
-    </div>
-    <div class="btn-container">
-      <button id="openLocalBtn" @click="handleOpenLocalBtnClick">打开本地</button>
-      <button id="zoomScaleBtn" @click="handleZoomScaleRevertBtnClick">还原缩放</button>
-
-      <div class="select">
-        <select v-model="xmindIndex">
-          <option v-for="(xmind, index) in xmindFileList" :key="index" :value="index">
-            {{ xmind }}
-          </option>
-        </select>
-      </div>
-    </div>
-  </div>
-
-</template>
-
 <script>
-import mapData from "../public/mark-map/index.json"
-
-import {XMindEmbedViewer} from "xmind-embed-viewer";
+import { XMindEmbedViewer } from 'xmind-embed-viewer'
+import mapData from '../public/mark-map/index.json'
 
 console.log(111, XMindEmbedViewer)
 
 export default {
+  data() {
+    return {
+      viewer: {},
+      xmindIndex: 0,
+      xmindFileList: [],
+      xmindFile: mapData.length > 0 ? mapData[0].xMindPath : '../mark-map/操作系统发展历程.xmind',
+    }
+  },
 
   /**
    * 监听下来列表变更
    */
   watch: {
-    xmindIndex: async function (newIndex, oldVal) {
-      const {xMindPath} = mapData[newIndex]
+    async xmindIndex(newIndex, _oldVal) {
+      const { xMindPath } = mapData[newIndex]
 
       // 打开指定
       const xmindResponse = await fetch(xMindPath)
       const data = await xmindResponse.arrayBuffer()
       this.viewer.setZoomScale(100)
       this.viewer.load(data)
-    }
-  },
-  data() {
-    return {
-      viewer: {},
-      xmindIndex: 0,
-      xmindFileList: [],
-      xmindFile: mapData.length > 0 ? mapData[0].xMindPath : '../mark-map/操作系统发展历程.xmind'
-    }
+    },
   },
   created() {
-    this.xmindFileList = mapData.map(({name}) => name)
+    this.xmindFileList = mapData.map(({ name }) => name)
   },
   mounted() {
     (async () => {
@@ -71,10 +49,10 @@ export default {
         region: 'cn',
         styles: {
           width: '100%',
-          minHeight: "600px",
+          minHeight: '600px',
           height: 'auto',
-          maxHeight: '1200px'
-        }
+          maxHeight: '1200px',
+        },
       })
     })()
   },
@@ -87,7 +65,7 @@ export default {
       const fileSelector = document.createElement('input')
       fileSelector.style.display = 'none'
       document.body.appendChild(fileSelector)
-      await new Promise(resolve => {
+      await new Promise((resolve) => {
         fileSelector.setAttribute('type', 'file')
         fileSelector.setAttribute('accept', '.xmind')
         fileSelector.addEventListener('change', () => {
@@ -113,13 +91,34 @@ export default {
     async handleZoomScaleRevertBtnClick() {
       this.viewer.setFitMap()
     },
-  }
+  },
 }
 </script>
 
+<template>
+  <div class="x-mind-container">
+    <!-- xmind思维导图管理器 -->
+    <div id="x-mind-manager-container" />
+    <div class="btn-container">
+      <button id="openLocalBtn" @click="handleOpenLocalBtnClick">
+        打开本地
+      </button>
+      <button id="zoomScaleBtn" @click="handleZoomScaleRevertBtnClick">
+        还原缩放
+      </button>
+
+      <div class="select">
+        <select v-model="xmindIndex">
+          <option v-for="(xmind, index) in xmindFileList" :key="index" :value="index">
+            {{ xmind }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style scoped>
-
 .btn-container {
   margin: 50px 0;
   text-align: center;
@@ -146,7 +145,7 @@ export default {
 }
 
 .select:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 0;
   height: 0;
@@ -206,7 +205,4 @@ button:hover {
   background-image: -ms-linear-gradient(top, #2079b0, #eb94d0);
   text-decoration: none;
 }
-
 </style>
-
-

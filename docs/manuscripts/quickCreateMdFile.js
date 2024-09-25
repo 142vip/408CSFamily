@@ -3,9 +3,8 @@
  *
  */
 
-const fs = require('fs')
-const path = require('path')
-
+const fs = require('node:fs')
+const path = require('node:path')
 
 const sideBarData = {
   text: '查找',
@@ -14,34 +13,34 @@ const sideBarData = {
   children: [
     {
       text: '基本概念',
-      link: '1.基本概念.md'
+      link: '1.基本概念.md',
     },
     {
       text: '顺序查找',
-      link: '2.顺序查找.md'
+      link: '2.顺序查找.md',
     },
     {
       text: '折半查找',
-      link: '3.折半查找.md'
+      link: '3.折半查找.md',
     },
     {
       text: 'B树和B+树',
-      link: '4.B树和B+树.md'
+      link: '4.B树和B+树.md',
     },
     {
       text: '散列表',
-      link: '5.散列表.md'
+      link: '5.散列表.md',
     },
     {
       text: '总结',
-      link: '6.总结.md'
-    }
-  ]
+      link: '6.总结.md',
+    },
+  ],
 }
 
 const { prefix, children } = sideBarData;
 
-(async() => {
+(async () => {
   /**
    * 第一步： 创建目录
    */

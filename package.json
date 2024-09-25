@@ -1,53 +1,48 @@
 {
   "name": "408CSFamily",
-  "description": "研究生考试408考点、工作面试计算机基础知识合集",
+  "type": "module",
   "version": "0.0.1-alpha.12",
+  "packageManager": "pnpm@9.6.0",
+  "description": "研究生考试408考点、工作面试计算机基础知识合集",
   "authorInfo": {
     "name": "微信公众号：储凡",
     "email": "fairy_408@2925.com",
     "url": "https://github.com/142vip",
     "homePage": "https://408.142vip.cn"
   },
-  "packageManager": "pnpm@9.6.0",
+  "license": "MIT",
   "engines": {
     "node": ">=18.x",
     "pnpm": "9.6.0"
   },
   "scripts": {
     "preinstall": "chmod +x ./scripts/*",
-    "postinstall": "pnpm build:mark-map",
-    "prepare": "husky install",
     "clean": "npx fa clean --ignore-tips --dist --vite --all",
     "lint": "npx fa lint",
     "lint:fix": "npx fa lint --fix",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs --clean-temp --clean-cache",
     "build:proxy": "PROXY_DOMAIN=true vuepress build docs --clean-temp --clean-cache",
-    "build:mark-map": "./scripts/mark-map",
+    "build:mark-map": "scripts/mark-map.js",
     "deploy:vercel": "vercel --prod",
     "release": "npx fa release --vip"
   },
   "devDependencies": {
     "@142vip/fairy-cli": "0.0.3-alpha.11",
     "@142vip/utils": "0.0.1-alpha.5",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
+    "@antfu/eslint-config": "^2.27.3",
     "@vuepress/client": "2.0.0-beta.67",
     "@vuepress/plugin-register-components": "2.0.0-beta.67",
     "@vuepress/utils": "2.0.0-beta.67",
     "enquirer": "^2.4.1",
-    "eslint": "^8.57.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^15.7.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-vue": "^9.25.0",
+    "eslint": "8.55.0",
+    "eslint-plugin-format": "^0.1.2",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.2",
     "markdownlint-cli": "^0.37.0",
     "markmap-cli": "^0.15.8",
     "shelljs": "^0.8.5",
-    "typescript": "^4.9.5",
+    "typescript": "^5.5.4",
     "vercel": "^32.7.2",
     "vue": "^3.4.23",
     "vuepress": "2.0.0-beta.67",
@@ -57,6 +52,5 @@
     "vuepress-theme-hope": "2.0.0-beta.238",
     "webpack": "^5.91.0",
     "xmind-embed-viewer": "^1.2.0"
-  },
-  "license": "MIT"
+  }
 }

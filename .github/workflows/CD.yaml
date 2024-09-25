@@ -1,8 +1,8 @@
-## CD交付流水线
-##    - 部署到Github Pages
-##    - 部署到Vercel托管平台
-##    - 发布新的Github Release
-## 参考资料：https://v2.vuepress.vuejs.org/zh/guide/deployment.html#github-pages
+# # CD交付流水线
+# #    - 部署到Github Pages
+# #    - 部署到Vercel托管平台
+# #    - 发布新的Github Release
+# # 参考资料：https://v2.vuepress.vuejs.org/zh/guide/deployment.html#github-pages
 
 name: CD
 on:
@@ -11,7 +11,7 @@ on:
       - next
   workflow_dispatch:
 
-## vercel 环境变量
+# # vercel 环境变量
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
@@ -23,9 +23,9 @@ permissions:
   id-token: write
 
 jobs:
-  ## 部署到Github-Pages
+  # # 部署到Github-Pages
   deploy-github:
-    name: "部署到Github-Pages"
+    name: 部署到Github-Pages
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -72,9 +72,9 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  ## 部署到vercel平台
+  # # 部署到vercel平台
   deploy-vercel:
-    name: "部署到Vercel平台"
+    name: 部署到Vercel平台
     runs-on: ubuntu-latest
     if: github.repository == '142vip/408CSFamily'
 
@@ -86,23 +86,23 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      ## 注意： 这里的操作时间vercel平台配置的命令拉取下来，执行
+      # # 注意： 这里的操作时间vercel平台配置的命令拉取下来，执行
       - name: Pull Vercel Environment Information
         run: npm i -g vercel && vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
-      ## 执行vercel平台配置的命令
+      # # 执行vercel平台配置的命令
       - name: Build Project Artifacts
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
-      ## dist文件同步到vercel平台
+      # # dist文件同步到vercel平台
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
 
-  ## 版本发布
+  # # 版本发布
   release:
-    name: "Github版本发布"
+    name: Github版本发布
     runs-on: ubuntu-latest
-    ## 主库master、next且执行release更新时执行
+    # # 主库master、next且执行release更新时执行
     if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
 
     steps:
@@ -113,7 +113,7 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      ### 打成压缩包
+      # ## 打成压缩包
       - name: Create Zip Package
         run: |
           zip -r 408CSFamily.zip . \
@@ -137,12 +137,12 @@ jobs:
           release_name: v${{ steps.releaseVersion.outputs.version }}
           body: |
             Release ${{ steps.releaseVersion.outputs.version }}
-            
+
             ### Features
 
             ### Bug Fixes
 
-      ## 更新资源
+      # # 更新资源
       - name: Upload Resource Assets
         uses: actions/upload-release-asset@latest
         env:
@@ -152,7 +152,6 @@ jobs:
           asset_path: ./408CSFamily.zip
           asset_name: 408CSFamily.zip
           asset_content_type: application/zip
-
 
 #  Deploy-ESC:
 #    name: "部署到ESC服务器"

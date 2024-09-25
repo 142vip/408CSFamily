@@ -34,7 +34,6 @@ function specialStraightInsertSort(arr, len, increment, groupIndex) {
   for (let eleStartIndex = groupIndex + increment; eleStartIndex < len; eleStartIndex += increment) {
     // 此时eleStartIndex为直接插入排序的比较元素
 
-
     // 直接插入排序中的哨兵元素【重要】
     const temp = arr[eleStartIndex]
     let j
@@ -49,12 +48,10 @@ function specialStraightInsertSort(arr, len, increment, groupIndex) {
   return arr
 }
 
-
 const dealArr = [5, 8, 2, 16, 3, 9, 1]
 console.log('插入排序前：', dealArr)
 const sortResult = shellSort(dealArr, 7)
 console.log('插入排序后：', sortResult)
-
 
 /**
  * 简化的希尔排序
@@ -76,7 +73,6 @@ function shellSortBetter(arr) {
   }
   return arr
 }
-
 
 console.log('简化shellSortBetter希尔排序前：', dealArr)
 const sortResultBetter = shellSortBetter(dealArr)

@@ -6,7 +6,7 @@ on:
     branches:
       - next
   schedule:
-    - cron: "30 7 * * 3"
+    - cron: '30 7 * * 3'
 
 jobs:
   analyze:

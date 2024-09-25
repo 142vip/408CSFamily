@@ -1,8 +1,8 @@
-import {AUTHOR_INFO, copyright, FOOTER_HTML_INFO} from "./constant.config";
-import {hopeTheme} from "vuepress-theme-hope";
-import {langConfig} from "./lang.config";
-import {navbar} from "./navbar";
-import {sidebar} from "./sidebar";
+import { hopeTheme } from 'vuepress-theme-hope'
+import { AUTHOR_INFO, FOOTER_HTML_INFO, copyright } from './constant.config'
+import { langConfig } from './lang.config'
+import { navbar } from './navbar'
+import { sidebar } from './sidebar'
 
 /**
  * hope主题配置
@@ -12,7 +12,7 @@ import {sidebar} from "./sidebar";
 export default {
   theme: hopeTheme({
     locales: langConfig,
-    darkmode: "disable",
+    darkmode: 'disable',
     // 支持全屏
     // fullscreen: true,
     // 纯净模式
@@ -20,21 +20,21 @@ export default {
     print: false, // 打印按钮
     hostname: 'https://408.142vip.cn',
     author: AUTHOR_INFO,
-    favicon: "/408_favicon.ico",
-    logo: "/408_logo.png",
-    navbar: navbar,
+    favicon: '/408_favicon.ico',
+    logo: '/408_logo.png',
+    navbar,
     // 导航栏布局
     navbarLayout: {
-      start: ["Brand"],
-      center: ["Links"],
-      end: ["Language", "Search", "Repo", "Outlook",]
+      start: ['Brand'],
+      center: ['Links'],
+      end: ['Language', 'Search', 'Repo', 'Outlook'],
     },
-    sidebar: sidebar,
+    sidebar,
     // sidebar: "heading",
 
     // 主题布局选项
-    repo: "https://github.com/142vip/408CSFamily",
-    logoDark: "/408_logo.png",
+    repo: 'https://github.com/142vip/408CSFamily',
+    logoDark: '/408_logo.png',
 
     // 博客配置
     // blog: {
@@ -74,20 +74,21 @@ export default {
         // 启用图片大小
         imgSize: true,
         playground: {
-          presets: ["ts", "vue"],
+          presets: ['ts', 'vue'],
         },
         // 是否启用幻灯片
-        revealjs: ["highlight", "math", "search", "notes", "zoom"],
+        revealjs: ['highlight', 'math', 'search', 'notes', 'zoom'],
         stylize: [
           {
-            matcher: "Recommended",
-            replacer: ({tag}) => {
-              if (tag === "em")
+            matcher: 'Recommended',
+            replacer: ({ tag }) => {
+              if (tag === 'em') {
                 return {
-                  tag: "Badge",
-                  attrs: {type: "tip"},
-                  content: "Recommended",
-                };
+                  tag: 'Badge',
+                  attrs: { type: 'tip' },
+                  content: 'Recommended',
+                }
+              }
             },
           },
         ],
@@ -110,28 +111,28 @@ export default {
       // 参考：https://theme-hope.vuejs.press/zh/guide/markdown/components.html
       components: {
         components: [
-          "ArtPlayer",
-          "AudioPlayer",
-          "Badge",
-          "BiliBili",
-          "CodePen",
-          "PDF",
-          "Replit",
-          "Share",
-          "SiteInfo",
-          "StackBlitz",
+          'ArtPlayer',
+          'AudioPlayer',
+          'Badge',
+          'BiliBili',
+          'CodePen',
+          'PDF',
+          'Replit',
+          'Share',
+          'SiteInfo',
+          'StackBlitz',
           // "VidStack",
-          "VideoPlayer",
-          "XiGua",
-          "YouTube",
+          'VideoPlayer',
+          'XiGua',
+          'YouTube',
         ],
       },
       copyCode: {
-        showInMobile: true
+        showInMobile: true,
       },
       feed: {
         json: true,
       },
     },
-  })
+  }),
 }

@@ -3,7 +3,7 @@
  * 给定一个数组，按照从小到大或从大到小排序，打印排序前后结果对比
  * 编程语言：TypeScript
  */
-function BubbleSort(arr:Array<number>):number[] {
+function BubbleSort(arr: Array<number>): number[] {
   // 获取数组长度
   const len = arr.length
 
@@ -33,10 +33,14 @@ function BubbleSort(arr:Array<number>):number[] {
   return arr
 }
 
+interface SwitchValue {
+  a: number
+  b: number
+}
 /**
  * 将两个变量数值交换
  */
-function switchValue(params:{ a: number, b: number }):{a:number, b:number} {
+function _switchValue(params: SwitchValue) {
   const { a: newB, b: newA } = params
   return { a: newA, b: newB }
 }

@@ -19,7 +19,6 @@ function QuickSort(arr, low, high) {
   return arr
 }
 
-
 /**
  *
  * 寻找数组中的基准pivot，使得左侧元素全部小于等于pivot，右侧元素全部大于等于pivot
@@ -46,7 +45,6 @@ function Partition(arr, low, high) {
   // 返回基准值的角标
   return low
 }
-
 
 const initArr = [2, 18, 6, 25, 19, 4, 8, 3, 7]
 console.log(`快速排序处理前：${initArr}`)

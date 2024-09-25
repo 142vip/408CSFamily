@@ -5,13 +5,13 @@ export const cnSidebar = [
     children: [
       {
         text: '基本介绍',
-        link: '1.引论.md'
+        link: '1.引论.md',
       },
       {
         text: '体系结构与参考模型',
-        link: '2.体系结构与参考模型.md'
-      }
-    ]
+        link: '2.体系结构与参考模型.md',
+      },
+    ],
   },
   {
     text: '物理层',
@@ -19,21 +19,21 @@ export const cnSidebar = [
     children: [
       {
         text: '通信基础',
-        link: '1.通信基础.md'
+        link: '1.通信基础.md',
       },
       {
         text: '传输介质',
-        link: '2.传输介质.md'
+        link: '2.传输介质.md',
       },
       {
         text: '物理层设备',
-        link: '3.物理层设备.md'
+        link: '3.物理层设备.md',
       },
       {
         text: '一些总结',
-        link: '4.总结.md'
-      }
-    ]
+        link: '4.总结.md',
+      },
+    ],
   },
   // {
   //   text: '数据链路层',
@@ -122,22 +122,22 @@ export const cnSidebar = [
     children: [
       {
         text: '提供的服务',
-        link: '1.提供的服务.md'
+        link: '1.提供的服务.md',
       },
       {
         text: 'UDP协议',
-        link: '2.UDP协议.md'
+        link: '2.UDP协议.md',
       },
       {
         text: 'TCP协议',
-        link: '3.TCP协议.md'
+        link: '3.TCP协议.md',
       },
       {
         text: '一些总结',
-        link: '4.总结.md'
-      }
-    ]
-  }
+        link: '4.总结.md',
+      },
+    ],
+  },
   // {
   //   text: '应用层',
   //   prefix: '应用层',

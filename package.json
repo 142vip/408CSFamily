@@ -22,13 +22,14 @@
     "lint:fix": "npx fa lint --fix",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs --clean-temp --clean-cache",
-    "build:proxy": "./scripts/bundle build_proxy",
+    "build:proxy": "PROXY_DOMAIN=true vuepress build docs --clean-temp --clean-cache",
     "build:mark-map": "./scripts/mark-map",
     "deploy:vercel": "vercel --prod",
     "release": "npx fa release --vip"
   },
   "devDependencies": {
     "@142vip/fairy-cli": "0.0.3-alpha.11",
+    "@142vip/utils": "0.0.1-alpha.5",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vuepress/client": "2.0.0-beta.67",

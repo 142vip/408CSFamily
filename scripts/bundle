@@ -1,173 +1,52 @@
 #!/usr/bin/env node
-/**
- *
- * 将应用程序打包成可部署的包、文件、镜像
- * 例如：
- *   - ./scripts/bundle build              基础部署打包
- *   - ./scripts/bundle build_proxy        用于三方平台部署打包
- *   - ./scripts/bundle image              构建容器镜像
- *   - ./scripts/bundle image_faster       本地build，快速构建容器镜像
- *   - ./scripts/bundle xxx                其他参数，默认执行build命令
- *   - ./scripts/bundle                    交互式选择执行的命令
- */
-
-const {execShell} = require('./.exec')
-const {execSync} = require('child_process');
-const {Select} = require('enquirer')
-
-// 仓库地址
-const repoAddress = 'registry.cn-hangzhou.aliyuncs.com/142vip/doc_book'
-
-const packageInfo = require('../package.json')
-const packageVersion = packageInfo.version
-const projectName = packageInfo.name
-
-// 镜像地址
-const imageName = `${repoAddress}:${projectName}-${packageVersion}`
 
 /**
- * 获取最近一次Git提交信息
- * - 短哈希值
- * - 提交信息
+ * 功能：构建Docker镜像
+ * 使用：
+ *  - ./scripts/bundle
+ *  - ./scripts/bundle --proxy
  */
-async function getGitInfo() {
-  // 执行 git log 命令获取最新一次提交的哈希值和消息
-  const gitLog = execSync('git log --no-merges -1 --pretty=format:"%h %s"').toString();
 
-  // 分割输出字符串以获取哈希值和消息
-  const [commitHash, ...commitMessage] = gitLog.trim().split(' ');
+import {createRequire} from 'node:module'
+import process from 'node:process'
+import {
+  VipDockerAddress,
+  buildImage,
+  getRecentGitCommit,
+} from '@142vip/utils'
 
-  // 输出最近一次提交的信息
-  return {
-    gitHash: commitHash,
-    gitMessage: commitMessage.join(' ')
-  }
-}
 
-/**
- * 获取构建镜像的脚本
- * @param containerBuild  是否容器内构建
- * @param preBuild        是否预编译
- * @param needProxy       是否配置代理路径
- */
-async function getBuildImageScript({containerBuild, preBuild, needProxy = false}) {
-  // 基础构建脚本
-  let baseBuildScript = ''
+(async () => {
+  try {
+    // 获取package.json文件
+    const pkg = createRequire(import.meta.url)('../package.json')
 
-  if (preBuild) {
-    baseBuildScript = needProxy ? './scripts/bundle build_proxy' : './scripts/bundle build'
-  }
+    // 镜像地址
+    const imageName = `${VipDockerAddress}/docs:${pkg.name}-${pkg.version}`
 
-  const {gitHash, gitMessage} = await getGitInfo()
+    // 最近一次提交信息
+    const {hash: gitHash} = await getRecentGitCommit()
 
-  return [
     // 构建镜像
-    `
-        ${baseBuildScript} 
-        docker build \
-        --build-arg CONTAINER_BUILD=${containerBuild} \
-        --build-arg APP_VERSION=${packageVersion} \
-        --build-arg APP_NAME=${projectName} \
-        --build-arg HOME_PAGE=${packageInfo.authorInfo.homePage} \
-        --build-arg AUTHOR=${packageInfo.authorInfo.name} \
-        --build-arg EMAIL=${packageInfo.authorInfo.email} \
-        --build-arg DESCRIPTION=${packageInfo.description} \
-        --build-arg GIT_HASH=${gitHash} \
-        --build-arg GIT_MESSAGE="${gitMessage}" \
-        -t ${imageName}  .
-      `,
-    // 推送镜像
-    `
-        if [ "$(docker images -q  ${imageName} 2> /dev/null)" != "" ];then
-          ## 推送
-          docker push ${imageName}
-          echo  "---------------- 上传镜像成功，删除本地镜像 ---------------- "
-          docker rmi ${imageName}
-          exit 0;
-        else
-          echo "镜像: ${imageName} , 不存在"
-          exit 1;
-        fi
-      `
-  ]
-}
-
-
-/**
- * 支持的脚本命令
- */
-const SupportScripts = {
-  build: 'vuepress build docs',
-  build_proxy: 'PROXY_DOMAIN=true vuepress build docs',
-  image: getBuildImageScript({
-    containerBuild: true,
-    needProxy: false
-  }),
-  image_proxy: getBuildImageScript({
-    containerBuild: true,
-    needProxy: true
-  }),
-  // 直接从本地拿dist文件，生成镜像
-  image_faster: getBuildImageScript({
-    containerBuild: false,
-    needProxy: false
-  })
-}
-
-
-async function getScriptCommand() {
-  const scriptName = process.argv[2]
-  let scriptCommand = SupportScripts.build
-
-  if (scriptName == null) {
-    const prompt = new Select({
-      header: '======================== 408CSFamily Cli For Building ========================',
-      footer: '======================== 408CSFamily Cli For Building ========================',
-      name: 'color',
-      message: 'What script will you want to run ',
-      choices: [
-        {
-          message: 'build',
-          name: SupportScripts.build,
-          value: '#00ffff'
-        },
-        {
-          message: 'build for fixing proxy',
-          name: SupportScripts.build_proxy,
-          value: '#000000'
-        },
-        {
-          message: 'build to docker image',
-          name: SupportScripts.image,
-          value: '#0000ff'
-        },
-        {
-          message: 'build to docker image with proxy',
-          name: SupportScripts.image_proxy,
-          value: '#0000ff'
-        },
-        {
-          message: 'build to docker image faster',
-          name: SupportScripts.image_faster,
-          value: '#0000ff'
-        }
-      ]
+    await buildImage({
+      imageName,
+      buildArgs: [
+        // 参数中是否包含 --proxy
+        ['NEED_PROXY', process.argv.includes('--proxy')],
+        ['APP_NAME', pkg.name],
+        ['APP_VERSION', pkg.version],
+        ['APP_DESCRIPTION', pkg.description],
+        ['AUTHOR', pkg.authorInfo.name],
+        ['EMAIL', pkg.authorInfo.email],
+        ['HOME_PAGE', pkg.authorInfo.homePage],
+        ['GIT_HASH', gitHash],
+      ],
+      memory:20000,
+      push: true,
+      delete: true,
+      logger: true,
     })
-    scriptCommand = await prompt.run()
-  } else {
-    // 命中支持的脚本
-    if (Object.keys(SupportScripts).includes(scriptName)) {
-      scriptCommand = SupportScripts[scriptName]
-    }
+  } catch (e) {
+    console.log('异常信息:', e)
   }
-  return scriptCommand
-}
-
-/**
- * 执行构建命令
- */
-;(async () => {
-  const scriptCommand = await getScriptCommand()
-  await execShell(scriptCommand)
 })()
-

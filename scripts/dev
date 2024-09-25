@@ -6,8 +6,9 @@
  *   - ./scripts/dev
  */
 
-const {execShell} = require('./.exec');
-(async () => await execShell([
-  'npm run build:mark-map',
-  'vuepress dev docs'
+import {commandStandardExecutor} from '@142vip/utils'
+
+(async () => await commandStandardExecutor([
+  'pnpm build:mark-map',
+  'pnpm dev'
 ]))()

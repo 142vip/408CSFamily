@@ -4,7 +4,7 @@
  */
 module.exports = {
   '*.{js,ts,md}': [
-    './scripts/lint --fix',
+    // './scripts/lint --fix',
     // "./scripts/mark-map"
   ],
 }

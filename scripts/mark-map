@@ -4,7 +4,7 @@
  * 将思维导图的md格式转化为html，提供在线预览
  * 链接：https://www.npmjs.com/package/markmap-cli
  */
-const {execShell} = require("./.exec");
+const {commandStandardExecutor} = require("@142vip/utils");
 const path = require('path');
 const fs = require('fs');
 const markMapSourcePath = path.join(__dirname, '../', 'docs/manuscripts/mark-map')
@@ -66,7 +66,7 @@ function scanDirectory(directory, fileType) {
 
 
   // 脚本执行
-  await execShell([
+  await commandStandardExecutor([
     delHtmlDir,
     mdToHtmlCmdStr,
     moveHtmlCmdStr,
@@ -78,14 +78,11 @@ function scanDirectory(directory, fileType) {
    * 第六步： 对mark-map中的xmind文件重命名
    *
    */
-
   const markMapData = require(path.join(markMapTargetPath, 'index.json'))
-
-
   for (const {originXmindFileName, targetXmindFileName} of markMapData) {
     const originPath = path.join(markMapTargetPath, originXmindFileName)
     const targetPath = path.join(markMapTargetPath, targetXmindFileName)
+
     await fs.renameSync(originPath, targetPath)
   }
-
 })()

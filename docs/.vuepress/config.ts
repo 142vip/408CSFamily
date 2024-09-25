@@ -13,8 +13,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
  */
 function getSiteBase(): '/' | `/${string}/` {
   // 用于区分base路径，是否nginx代理
-  const PROXY_DOMAIN = process.env.PROXY_DOMAIN || false
-  return PROXY_DOMAIN ? `/${name}/` : '/'
+  const needProxy = process.env.NEED_PROXY || false
+  return needProxy ? `/${name}/` : '/'
 }
 
 /**

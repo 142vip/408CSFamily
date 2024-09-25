@@ -136,7 +136,8 @@ jobs:
 
       # Github发布版本，并更新Release信息
       - name: Release New Version
-        run: npx changelog
+        run: |
+          npx fa changelog
         env:
           GITHUB_TOKEN: ${{secrets.TOKEN}}
 

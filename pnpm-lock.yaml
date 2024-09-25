@@ -9,13 +9,10 @@ importers:
   .:
     devDependencies:
       '@142vip/fairy-cli':
-        specifier: 0.0.3-alpha.11
-        version: 0.0.3-alpha.11
-      '@142vip/release-version':
-        specifier: 0.0.1-alpha.9
-        version: 0.0.1-alpha.9
+        specifier: ^0.0.3-alpha.13
+        version: 0.0.3-alpha.13
       '@142vip/utils':
-        specifier: 0.0.1-alpha.5
+        specifier: ^0.0.1-alpha.5
         version: 0.0.1-alpha.5
       '@antfu/eslint-config':
         specifier: ^2.27.3
@@ -88,8 +85,8 @@ packages:
     engines: {node: '>=16.0.0'}
     hasBin: true
 
-  '@142vip/fairy-cli@0.0.3-alpha.11':
-    resolution: {integrity: sha512-G1JXL7YnyAGYlETDHpcjjTvAism0GhRoFyWkGRlKWimIxBWrEwqEAbU0mZfSkoYhF6frPiGRtKS8NpKcf/T5jg==}
+  '@142vip/fairy-cli@0.0.3-alpha.13':
+    resolution: {integrity: sha512-FGbd9B7VM7ZPWGauOTl7++rAFmPjGw8Bjhfql61RE+f8MqCpk1H6n5BFIeyDvYj+NhMU6pWg06jMvBk0Wi32xQ==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -6092,10 +6089,10 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  '@142vip/fairy-cli@0.0.3-alpha.11':
+  '@142vip/fairy-cli@0.0.3-alpha.13':
     dependencies:
       '@142vip/release-version': 0.0.1-alpha.9
-      '@142vip/utils': 0.0.1-alpha.2
+      '@142vip/utils': 0.0.1-alpha.5
       '@inquirer/prompts': 5.5.0
       commander: 12.1.0
       del: 7.1.0

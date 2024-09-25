@@ -30,5 +30,3 @@ console.log('插入排序前：', dealArr)
 const sortResult = straightInsertSort(dealArr, 7)
 
 console.log('插入排序后：', sortResult)
-
-

@@ -6,17 +6,17 @@ export const dsSidebar = [
     children: [
       {
         text: '基本概念',
-        link: '1.基本概念.md'
+        link: '1.基本概念.md',
       },
       {
         text: '三要素',
-        link: '2.三要素.md'
+        link: '2.三要素.md',
       },
       {
         text: '算法和算法评价',
-        link: '3.算法和算法评价.md'
-      }
-    ]
+        link: '3.算法和算法评价.md',
+      },
+    ],
   },
   {
     text: '线性表',
@@ -25,21 +25,21 @@ export const dsSidebar = [
     children: [
       {
         text: '基础概念和操作',
-        link: '1.基础概念和操作.md'
+        link: '1.基础概念和操作.md',
       },
       {
         text: '顺序表示',
-        link: '2.顺序表示.md'
+        link: '2.顺序表示.md',
       },
       {
         text: '链式表示',
-        link: '3.链式表示.md'
+        link: '3.链式表示.md',
       },
       {
         text: '一些总结',
-        link: '4.总结.md'
-      }
-    ]
+        link: '4.总结.md',
+      },
+    ],
   },
   {
     text: '栈',
@@ -48,17 +48,17 @@ export const dsSidebar = [
     children: [
       {
         text: '基本概念和操作',
-        link: '1.栈的基本概念和基本操作.md'
+        link: '1.栈的基本概念和基本操作.md',
       },
       {
         text: '顺序存储结构',
-        link: '2.栈的顺序存储结构.md'
+        link: '2.栈的顺序存储结构.md',
       },
       {
         text: '链式存储结构',
-        link: '3.栈的链式存储结构.md'
-      }
-    ]
+        link: '3.栈的链式存储结构.md',
+      },
+    ],
   },
   {
     text: '队列',
@@ -67,20 +67,21 @@ export const dsSidebar = [
     children: [
       {
         text: '基本概念和操作',
-        link: '4.队列的基本概念和操作.md'
-      }, {
+        link: '4.队列的基本概念和操作.md',
+      },
+      {
         text: '顺序存储结构',
-        link: '5.队列的顺序存储结构.md'
+        link: '5.队列的顺序存储结构.md',
       },
       {
         text: '链式存储结构',
-        link: '6.队列的链式存储结构.md'
+        link: '6.队列的链式存储结构.md',
       },
       {
         text: '栈VS队列补充',
-        link: '7.栈VS队列补充.md'
-      }
-    ]
+        link: '7.栈VS队列补充.md',
+      },
+    ],
   },
   // {
   //   text: '串',
@@ -174,29 +175,29 @@ export const dsSidebar = [
     children: [
       {
         text: '基本概念',
-        link: '1.基本概念.md'
+        link: '1.基本概念.md',
       },
       {
         text: '顺序查找',
-        link: '2.顺序查找.md'
+        link: '2.顺序查找.md',
       },
       {
         text: '折半查找',
-        link: '3.折半查找.md'
+        link: '3.折半查找.md',
       },
       {
         text: 'B树和B+树',
-        link: '4.B树和B+树.md'
+        link: '4.B树和B+树.md',
       },
       {
         text: '散列表',
-        link: '5.散列表.md'
+        link: '5.散列表.md',
       },
       {
         text: '一些总结',
-        link: '6.总结.md'
-      }
-    ]
+        link: '6.总结.md',
+      },
+    ],
   },
   {
     text: '排序',
@@ -205,36 +206,36 @@ export const dsSidebar = [
     children: [
       {
         text: '基本概念',
-        link: '1.基本概念.md'
+        link: '1.基本概念.md',
       },
       {
         text: '插入排序',
-        link: '2.插入排序.md'
+        link: '2.插入排序.md',
       },
       {
         text: '交换排序',
-        link: '3.交换排序.md'
+        link: '3.交换排序.md',
       },
       {
         text: '选择排序',
-        link: '4.选择排序.md'
+        link: '4.选择排序.md',
       },
       {
         text: '归并排序',
-        link: '5.归并排序.md'
+        link: '5.归并排序.md',
       },
       {
         text: '基数排序',
-        link: '6.基数排序.md'
+        link: '6.基数排序.md',
       },
       {
         text: '外部排序',
-        link: '7.外部排序.md'
+        link: '7.外部排序.md',
       },
       {
         text: '一些总结',
-        link: '8.总结.md'
-      }
-    ]
-  }
+        link: '8.总结.md',
+      },
+    ],
+  },
 ]

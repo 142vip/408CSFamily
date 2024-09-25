@@ -6,22 +6,22 @@ export const osSidebar = [
     children: [
       {
         text: '引论',
-        link: '1.操作系统引论.md'
+        link: '1.操作系统引论.md',
       },
       {
         text: '发展和分类',
-        link: '2.发展和分类.md'
+        link: '2.发展和分类.md',
       },
       {
         text: '运行环境',
-        link: '3.运行环境.md'
+        link: '3.运行环境.md',
       },
       {
         text: '体系结构',
-        link: '4.体系结构.md'
-      }
-    ]
-  }
+        link: '4.体系结构.md',
+      },
+    ],
+  },
   // {
   //   text: '进程管理',
   //   prefix: '进程管理',

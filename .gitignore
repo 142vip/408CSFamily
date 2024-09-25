@@ -14,9 +14,8 @@ typings/
 .next
 .nuxt
 dist
-.cache/
-docs/.vuepress/.cache/
-docs/.vuepress/.temp/
-docs/.vuepress/dist/
-/.husky/
-/.vercel/
+docs/.vuepress/.cache
+docs/.vuepress/.temp
+docs/.vuepress/dist
+.husky
+.vercel

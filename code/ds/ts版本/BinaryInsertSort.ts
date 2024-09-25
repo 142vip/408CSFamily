@@ -20,7 +20,8 @@ function binaryInsertSort(arr, len) {
       if (arr[mid] <= temp) {
         // 右侧
         lowIndex = mid + 1
-      } else {
+      }
+      else {
         // 左侧
         highIndex = mid - 1
       }
@@ -35,10 +36,8 @@ function binaryInsertSort(arr, len) {
   return arr
 }
 
-
 // 测试用例
 const dealArr = [5, 2, 7, 3, 18, 8, 12, 1]
 console.log('插入排序前：', dealArr)
 const sortResult = binaryInsertSort(dealArr, 7)
 console.log('插入排序后：', sortResult)
-

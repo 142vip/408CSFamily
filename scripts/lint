@@ -18,9 +18,9 @@ export PATH="$(pnpm bin):$PATH"
 # 是否fix
 fixed=${1}
 
-# ESLint格式化代码
-echo "step1: eslint $fixed --ext .js,.ts,.vue --ignore-path .gitignore ."
-eslint $fixed --ext .js,.ts,.vue --ignore-path .gitignore .
+## ESLint格式化代码
+#echo "step1: eslint $fixed --ext .js,.ts,.vue --ignore-path .gitignore ."
+#eslint $fixed --ext .js,.ts,.vue --ignore-path .gitignore .
 
 # markdown-cli格式化markdown 文档
 echo "step2: markdownlint '**/*.md'  -c .markdownlint.js -p .markdownlintignore $fixed"

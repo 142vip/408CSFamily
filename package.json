@@ -22,7 +22,7 @@
     "lint:fix": "npx fa lint --fix",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs --clean-temp --clean-cache",
-    "build:proxy": "./scripts/bundle build_proxy",
+    "build:proxy": "PROXY_DOMAIN=true vuepress build docs --clean-temp --clean-cache",
     "build:mark-map": "./scripts/mark-map",
     "deploy:vercel": "vercel --prod",
     "release": "npx fa release --vip"

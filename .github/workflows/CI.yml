@@ -42,19 +42,17 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      ## 安装PNPM
+      # 安装PNPM
       - name: PNPM Install
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
+          version: 9.6.0
 
       ## 安装Node环境
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18.18.0
-          ## 淘宝镜像加速
-          registry-url: 'https://registry.npmmirror.com'
           ## 缓存
           cache: 'pnpm'
 
@@ -69,11 +67,11 @@ jobs:
 
       - name: Build Site
         run: |
-          ./scripts/bundle build
+          pnpm build
 
       - name: Build Site With Proxy
         run: |
-          ./scripts/bundle build_proxy
+          pnpm build:proxy
 
   Build-Docker-Image:
     name: "构建Docker镜像"

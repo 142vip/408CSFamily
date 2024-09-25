@@ -4,6 +4,33 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.1-alpha.13 (2024-09-25)
+
+### ✨ Features
+
+- 引入`@142vip/fairy-cli`模块，简化`clean`、`lint`命令 &nbsp;-&nbsp; by **微信公众号：储凡** and **142vip.cn** in https://github.com/142vip/408CSFamily/issues/98 [<samp>(08892)</samp>](https://github.com/142vip/408CSFamily/commit/0889277)
+- 移除`release`脚本和依赖，配置`release`命令自动化发布流程 &nbsp;-&nbsp; by **142vip.cn** [<samp>(e67c9)</samp>](https://github.com/142vip/408CSFamily/commit/e67c912)
+- 引入`@142vip/utils`模块，删除`.exec`执行器，优化`scripts`脚本逻辑和流程 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/408CSFamily/issues/100 [<samp>(e792e)</samp>](https://github.com/142vip/408CSFamily/commit/e792ed4)
+- 移除`eslint`相关配置，引入`@antfu/eslint-config`，统一约束风格 &nbsp;-&nbsp; by **142vip.cn** [<samp>(93038)</samp>](https://github.com/142vip/408CSFamily/commit/9303820)
+- 移除`release`命令发布流程时的`commitlint`配置文件 &nbsp;-&nbsp; by **142vip.cn** [<samp>(dee35)</samp>](https://github.com/142vip/408CSFamily/commit/dee351c)
+- **GitHub Actions**:
+  - 引入`@142vip/release-version`模块，修改`CD`流水线支持自动发布流程 &nbsp;-&nbsp; by **142vip.cn** [<samp>(20fdd)</samp>](https://github.com/142vip/408CSFamily/commit/20fdd0d)
+  - 修改`CD`流水线逻辑，基于`@142vip/fairy-cli`模块使用`changelog`命令 &nbsp;-&nbsp; by **142vip.cn** [<samp>(c0d88)</samp>](https://github.com/142vip/408CSFamily/commit/c0d8877)
+
+### 🔥 Performance
+
+- 优化`CI`脚本，基于`corepack`锁定`pnpm`版本 &nbsp;-&nbsp; by **142vip.cn** [<samp>(62e18)</samp>](https://github.com/142vip/408CSFamily/commit/62e18ab)
+- **GitHub Actions**:
+  - 优化`CD`流水线，替换`github pages`部署流程 &nbsp;-&nbsp; by **142vip.cn** [<samp>(cd99f)</samp>](https://github.com/142vip/408CSFamily/commit/cd99f58)
+
+### 🐛 Bug Fixes
+
+- 修复`CD`流水线权限异常 &nbsp;-&nbsp; by **142vip.cn** [<samp>(c45c6)</samp>](https://github.com/142vip/408CSFamily/commit/c45c660)
+- **GitHub Actions**:
+  - 修复`CD`流水线中`vercel`命令使用异常，避免冗余安装模块 &nbsp;-&nbsp; by **142vip.cn** [<samp>(e264c)</samp>](https://github.com/142vip/408CSFamily/commit/e264c49)
+
+**Release New Version v0.0.1-alpha.13 [👉 View Changes On GitHub](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.12...v0.0.1-alpha.13)**
+
 ## [0.0.1-alpha.12](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.11...v0.0.1-alpha.12) (2024-04-17)
 
 

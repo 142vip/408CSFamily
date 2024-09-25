@@ -116,45 +116,29 @@ jobs:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      # ## 打成压缩包
-      - name: Create Zip Package
-        run: |
-          zip -r 408CSFamily.zip . \
-          -x "node_modules/*" \
-          -x "*.git*"
-
-      # 提取版本号
-      - name: Get New Version Number
-        id: releaseVersion
-        run: |
-          echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
-
-      # 创建发布版本
-      - name: Create New Release
-        id: createRelease
-        uses: actions/create-release@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # 安装PNPM
+      - name: PNPM Install
+        uses: pnpm/action-setup@v4
         with:
-          tag_name: v${{ steps.releaseVersion.outputs.version }}
-          release_name: v${{ steps.releaseVersion.outputs.version }}
-          body: |
-            Release ${{ steps.releaseVersion.outputs.version }}
+          version: 9.6.0
 
-            ### Features
-
-            ### Bug Fixes
-
-      # # 更新资源
-      - name: Upload Resource Assets
-        uses: actions/upload-release-asset@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # 安装Node环境
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          upload_url: ${{ steps.createRelease.outputs.upload_url }}
-          asset_path: ./408CSFamily.zip
-          asset_name: 408CSFamily.zip
-          asset_content_type: application/zip
+          node-version: 20.16.0
+          # 缓存
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: |
+          ./scripts/ci
+
+      # Github发布版本，并更新Release信息
+      - name: Release New Version
+        run: npx changelog
+        env:
+          GITHUB_TOKEN: ${{secrets.TOKEN}}
 
 #  Deploy-ESC:
 #    name: "部署到ESC服务器"

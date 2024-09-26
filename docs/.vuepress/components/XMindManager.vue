@@ -7,7 +7,7 @@
 -->
 <script>
 import { XMindEmbedViewer } from 'xmind-embed-viewer'
-import mapData from '../public/mark-map/index.json'
+import mapData from '../public/mind-map/index.json'
 
 console.log(111, XMindEmbedViewer)
 

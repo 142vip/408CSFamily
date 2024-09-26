@@ -51,7 +51,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18.18.0
+          node-version: 20.16.0
           # # 缓存
           cache: pnpm
 

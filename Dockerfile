@@ -7,7 +7,7 @@
 #
 # 注意：vite构建需要支持node14以上，安装node16较为稳妥
 
-FROM registry.cn-hangzhou.aliyuncs.com/142vip/node:18.18.0-alpine AS build_base
+FROM registry.cn-hangzhou.aliyuncs.com/142vip/node:20.17.0-alpine AS build_base
 ARG CONTAINER_BUILD
 
 ## 设置环境变量，支持容器构建时使用layer缓存，参考：https://pnpm.io/zh/docker

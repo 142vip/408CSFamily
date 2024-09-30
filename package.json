@@ -29,7 +29,7 @@
     "release": "npx fa release --vip"
   },
   "devDependencies": {
-    "@142vip/eslint-config": "0.0.1-alpha.1",
+    "@142vip/eslint-config": "^0.0.1-alpha.2",
     "@142vip/fairy-cli": "^0.0.3-alpha.11",
     "@142vip/utils": "^0.0.1-alpha.5",
     "@vue/repl": "^4.3.1",

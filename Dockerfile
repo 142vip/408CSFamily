@@ -1,6 +1,6 @@
 #
 # - 功能: 408CSFamily镜像构建
-# - 用法: docker build -f Dockerfile --build-arg APP_VERSION=0.0.1 --build-arg CONTAINER_BUILD=true -t 408CSFamily-0.0.1  .
+# - 用法: docker build -f Dockerfile --build-arg APP_VERSION=0.0.1  -t 408CSFamily-0.0.1  .
 # - 参数:
 #   APP_VERSION: 版本
 #   CONTAINER_BUILD: 采用容器构建
@@ -20,11 +20,14 @@ COPY . .
 RUN echo $CONTAINER_BUILD;
 
 ## 基于容器自动构建
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store if [ "$CONTAINER_BUILD" = "true" ]; then  \
-    sh ./scripts/ci && pnpm build; \
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store sh ./scripts/ci && if [ "$NEED_PROXY" = "false" ];  \
+  then \
+     pnpm build; \
+  else \
+     pnpm build:proxy; \
   fi;
 
-FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.23.0-alpine
+FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.27.0-alpine
 
 ARG APP_NAME
 ARG APP_VERSION

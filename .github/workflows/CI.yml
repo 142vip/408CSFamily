@@ -27,7 +27,7 @@ jobs:
   Base-Build:
     name: 基础编译构建
     runs-on: ubuntu-latest
-    # # 主库且拉取PR时触发
+    # 主库且拉取PR时触发
     if: github.repository == '142vip/408CSFamily' &&  github.event_name == 'pull_request'
     permissions:
       actions: read
@@ -47,7 +47,7 @@ jobs:
         with:
           version: 9.6.0
 
-      # # 安装Node环境
+      # 安装Node环境
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
@@ -55,7 +55,7 @@ jobs:
           # # 缓存
           cache: pnpm
 
-      # # 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
+      # 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
       - name: Install Dependencies
         run: |
           ./scripts/ci
@@ -75,8 +75,8 @@ jobs:
   Build-Docker-Image:
     name: 构建Docker镜像
     runs-on: ubuntu-latest
-    # # 主库且tag更新时执行
-    #    if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
+    # 主库且tag更新时执行
+    if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
     permissions:
       actions: read
       pull-requests: read
@@ -110,7 +110,7 @@ jobs:
         with:
           version: 9.6.0
 
-      # # 安装Node环境
+      # 安装Node环境
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
@@ -118,7 +118,7 @@ jobs:
           # # 缓存
           cache: pnpm
 
-      # # 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
+      # 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
       - name: Install Dependencies
         run: |
           ./scripts/ci
@@ -128,7 +128,7 @@ jobs:
       #        run: |
       #          pnpm build
 
-      # # 快速构建并推送
+      # 快速构建并推送
       - name: Push Docker Image
         run: |
           ./scripts/bundle

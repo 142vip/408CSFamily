@@ -24,7 +24,7 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store if [ "$CONTAINER_BUILD" = "tru
     sh ./scripts/ci && pnpm build; \
   fi;
 
-FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.23.0-alpine
+FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.27.0-alpine
 
 ARG APP_NAME
 ARG APP_VERSION

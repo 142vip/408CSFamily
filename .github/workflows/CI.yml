@@ -76,7 +76,7 @@ jobs:
     name: 构建Docker镜像
     runs-on: ubuntu-latest
     # # 主库且tag更新时执行
-    if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
+    #    if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
     permissions:
       actions: read
       pull-requests: read
@@ -104,14 +104,14 @@ jobs:
           --password=${{ secrets.DOCKER_PASSWORD }} \
           ${{env.REGISTRY}}
 
-      - name: Install Dependencies
-        run: |
-          ./scripts/ci
+      #      - name: Install Dependencies
+      #        run: |
+      #          ./scripts/ci
 
-      # # 构建，支持domain
-      - name: Build To Dist
-        run: |
-          pnpm build
+      #      # # 构建，支持domain
+      #      - name: Build To Dist
+      #        run: |
+      #          pnpm build
 
       # # 快速构建并推送
       - name: Push Docker Image

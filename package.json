@@ -33,9 +33,11 @@
     "@142vip/fairy-cli": "^0.0.3-alpha.11",
     "@142vip/utils": "^0.0.1-alpha.5",
     "@vue/repl": "^4.3.1",
-    "@vuepress/bundler-vite": "2.0.0-rc.15",
+    "@vuepress/bundler-vite": "2.0.0-rc.17",
     "@vuepress/plugin-feed": "2.0.0-rc.3",
     "@vuepress/plugin-markdown-image": "2.0.0-rc.30",
+    "@vuepress/plugin-markdown-tab": "2.0.0-rc.47",
+    "@vuepress/plugin-redirect": "2.0.0-rc.8",
     "dashjs": "^4.7.4",
     "hls.js": "^1.5.13",
     "markmap-cli": "^0.15.8",
@@ -46,10 +48,9 @@
     "vercel": "^32.7.2",
     "vidstack": "^1.11.30",
     "vue": "^3.5.8",
-    "vuepress": "2.0.0-rc.15",
-    "vuepress-plugin-search-pro": "2.0.0-rc.53",
-    "vuepress-theme-hope": "2.0.0-rc.53",
-    "webpack": "^5.91.0",
+    "vuepress": "2.0.0-rc.17",
+    "vuepress-plugin-search-pro": "2.0.0-rc.57",
+    "vuepress-theme-hope": "2.0.0-rc.56",
     "xmind-embed-viewer": "^1.2.0"
   }
 }

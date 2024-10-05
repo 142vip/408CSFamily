@@ -104,11 +104,26 @@ jobs:
           --password=${{ secrets.DOCKER_PASSWORD }} \
           ${{env.REGISTRY}}
 
-      #      - name: Install Dependencies
-      #        run: |
-      #          ./scripts/ci
+      # 安装PNPM
+      - name: PNPM Install
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.6.0
 
-      #      # # 构建，支持domain
+      # # 安装Node环境
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.16.0
+          # # 缓存
+          cache: pnpm
+
+      # # 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
+      - name: Install Dependencies
+        run: |
+          ./scripts/ci
+
+      #       # 构建，支持domain
       #      - name: Build To Dist
       #        run: |
       #          pnpm build

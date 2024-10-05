@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.1-alpha.14 (2024-10-05)
+
+### ✨ Features
+
+- 移除`husky`、`lint-staged`模块和配置，修改`build`等命令增加`NEED_PROXY`环境变量 &nbsp;-&nbsp; by **142vip.cn** [<samp>(4531b)</samp>](https://github.com/142vip/408CSFamily/commit/4531b52)
+- 升级`vuepress`到最新版本，改造整个项目结构、配置 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/408CSFamily/issues/108 [<samp>(77999)</samp>](https://github.com/142vip/408CSFamily/commit/7799941)
+- 使用`@142vip/eslint-config`模块，优化`Eslint`配置和校验规则 &nbsp;-&nbsp; by **142vip.cn** [<samp>(38e6d)</samp>](https://github.com/142vip/408CSFamily/commit/38e6d33)
+
+### 🔥 Performance
+
+- 升级`@142vip/eslint-config`依赖 &nbsp;-&nbsp; by **142vip.cn** [<samp>(cd00b)</samp>](https://github.com/142vip/408CSFamily/commit/cd00b03)
+- `sync`脚本支持`-f`参数，强制同步 &nbsp;-&nbsp; by **chufan** [<samp>(132a1)</samp>](https://github.com/142vip/408CSFamily/commit/132a1a4)
+
+### 🐛 Bug Fixes
+
+- **GitHub Actions**:
+  - 修复`CI`流水线`docker`构建异常 &nbsp;-&nbsp; by **微信公众号：储凡** and **chufan** in https://github.com/142vip/408CSFamily/issues/110 [<samp>(6d7ae)</samp>](https://github.com/142vip/408CSFamily/commit/6d7ae35)
+
+**Release New Version v0.0.1-alpha.14 [👉 View Changes On GitHub](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.13...v0.0.1-alpha.14)**
+
 ## v0.0.1-alpha.13 (2024-09-25)
 
 ### ✨ Features

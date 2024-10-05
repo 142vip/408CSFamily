@@ -22,14 +22,14 @@ if [ "$current_branch" = "master" ]; then
   for repoName in "${remoteList[@]}"
   do
       echo "-->Pushing to $repoName in master branch..."
-      git push "$repoName" master
+      git push "$repoName" master "$@"
   done
 # next分支同步
 elif [ "$current_branch" = "next" ]; then
     for repoName in "${remoteList[@]}"
     do
         echo "-->Pushing to $repoName in next branch..."
-        git push "$repoName" next
+        git push "$repoName" next "$@"
     done
 else
   echo "当前分支是：$current_branch ，只允许在master和next分支上操作，并推送到远程！！！"

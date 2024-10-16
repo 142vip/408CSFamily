@@ -17,7 +17,7 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm && chmod +x ./scripts/*",
-    "postinstall": "pnpm build:mark-map",
+    "postinstall": "simple-git-hooks",
     "clean": "npx fa clean --ignore-tips --dist --vite --all",
     "lint": "npx fa lint",
     "lint:fix": "npx fa lint --fix",
@@ -39,6 +39,7 @@
     "mermaid": "^10.9.1",
     "only-allow": "^1.2.1",
     "sass-embedded": "^1.79.5",
+    "simple-git-hooks": "^2.11.1",
     "typescript": "^5.5.4",
     "vercel": "^32.7.2",
     "vue": "^3.5.8",
@@ -46,5 +47,9 @@
     "vuepress-plugin-search-pro": "^2.0.0-rc.57",
     "vuepress-theme-hope": "^2.0.0-rc.58",
     "xmind-embed-viewer": "^1.2.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint:fix",
+    "prepare-commit-msg": "pnpm build"
   }
 }

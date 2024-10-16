@@ -7,14 +7,13 @@
  *  - ./scripts/bundle --proxy
  */
 
-import {createRequire} from 'node:module'
+import { createRequire } from 'node:module'
 import process from 'node:process'
 import {
-  VipDockerAddress,
+  OPEN_SOURCE_ADDRESS,
   buildImage,
   getRecentGitCommit,
 } from '@142vip/utils'
-
 
 (async () => {
   try {
@@ -22,10 +21,10 @@ import {
     const pkg = createRequire(import.meta.url)('../package.json')
 
     // 镜像地址
-    const imageName = `${VipDockerAddress}/docs:${pkg.name}-${pkg.version}`
+    const imageName = `${OPEN_SOURCE_ADDRESS.DOCKER_ALIYUNCS_VIP}/docs:${pkg.name}-${pkg.version}`
 
     // 最近一次提交信息
-    const {hash: gitHash} = await getRecentGitCommit()
+    const { hash: gitHash } = await getRecentGitCommit()
 
     // 构建镜像
     await buildImage({
@@ -41,12 +40,13 @@ import {
         ['HOME_PAGE', pkg.authorInfo.homePage],
         ['GIT_HASH', gitHash],
       ],
-      memory:20000,
+      memory: 20000,
       push: true,
       delete: true,
       logger: true,
     })
-  } catch (e) {
+  }
+  catch (e) {
     console.log('异常信息:', e)
   }
 })()

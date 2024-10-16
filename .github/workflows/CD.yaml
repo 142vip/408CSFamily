@@ -23,7 +23,7 @@ permissions:
   id-token: write
 
 jobs:
-  # # 部署到Github-Pages
+  # 部署到Github-Pages
   deploy-github:
     name: 部署到Github-Pages
     runs-on: ubuntu-latest
@@ -72,36 +72,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  # # 部署到vercel平台
-  deploy-vercel:
-    name: 部署到Vercel平台
-    runs-on: ubuntu-latest
-    if: github.repository == '142vip/408CSFamily'
-
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
-          fetch-depth: 0
-
-      # # 注意： 这里的操作时间vercel平台配置的命令拉取下来，执行
-      - name: Pull Vercel Environment Information
-        run: |
-          npx vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-
-      # # 执行vercel平台配置的命令
-      - name: Build Project Artifacts
-        run: |
-          npx vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-
-      # # dist文件同步到vercel平台
-      - name: Deploy Project Artifacts to Vercel
-        run: |
-          npx vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
-
-  # # 版本发布
+    # 版本发布
   release:
     name: Github版本发布
     runs-on: ubuntu-latest

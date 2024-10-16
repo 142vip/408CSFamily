@@ -38,10 +38,7 @@ features:
 
 ## 本地浏览【推荐】
 
-由于平台、网络等原因，在线浏览容易出现加载面、加载不出来等常见问题，因此非常建议在本地进行浏览、学习；**下面指令默认你已经安装[Git](https://git-scm.com/download)、[NPM](https://www.npmjs.com/)、[PNPM](https://www.pnpm.cn/)、[Yarn](https://yarn.bootcss.com/)、[Node](http://nodejs.cn)等环境，并对此有一定了解!**
-
-::: code-tabs#shell
-@tab PNPM（推荐）
+由于平台、网络等原因，在线浏览容易出现加载面、加载不出来等常见问题，因此非常建议在本地进行浏览、学习；**下面指令默认你已经安装[Git](https://git-scm.com/download)、[NPM](https://www.npmjs.com/)、[PNPM](https://www.pnpm.cn/)、[Node](http://nodejs.cn)等环境，并对此有一定了解!**
 
 ```bash:no-line-numbers
 ## 进入cmd命令行，直接克隆仓库
@@ -60,48 +57,6 @@ pnpm install
 pnpm dev
 
 ```
-
-@tab NPM
-
-```bash:no-line-numbers
-## 进入cmd命令行，直接克隆仓库
-git clone https://github.com/mmdapl/408CSFamily.git
-
-## 进入408CSFamily文件夹中
-cd 408CSFamily
-
-## tips: 如果本地已经clone过仓库，建议执行pull指令，获取最新
-git pull
-
-## 下载依赖包
-npm install
-
-## 执行dev指令，本地启动项目，打开http://localhost:4200即可访问文档
-npm run dev
-
-```
-
-@tab YARN
-
-```bash:no-line-numbers
-## 进入cmd命令行，直接克隆仓库
-git clone https://github.com/mmdapl/408CSFamily.git
-
-## 进入408CSFamily文件夹中
-cd 408CSFamily
-
-## tips: 如果本地已经clone过仓库，建议执行pull指令，获取最新
-git pull
-
-## 下载依赖包
-yarn install
-
-## 执行dev指令，本地启动项目，打开http://localhost:4200即可访问文档
-yarn run dev
-
-```
-
-:::
 
 查看项目启动日志并访问：[http://127.0.0.1:4200](http://localhost:4200)，开启学习之旅吧~
 

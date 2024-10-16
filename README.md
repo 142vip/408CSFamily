@@ -369,7 +369,7 @@
 
 <div style="text-align: center" align="center">
     <img
-        src="https://api.star-history.com/svg?repos=142vip/408CSFamily&type=Date"
+        src="https://api.star-history.com/svg?repos=142vip/408CSFamily,142vip/JavaScriptCollection,142vip/core-x&type=Date"
         alt="Star History"
         style="border-radius: 5px"
     >

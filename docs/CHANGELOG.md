@@ -1,6 +1,7 @@
 ---
 title: 变更记录
 permalink: /changelog.html
+headerDepth: 1
 sidebar: false
 ---
 
@@ -10,7 +11,7 @@ sidebar: false
 
 <!-- @include: ../CHANGELOG.md#recent-alpha -->
 
-## 更多
+## 更多...
 
 ::: tip
 

@@ -1,19 +1,62 @@
-import { hopeTheme } from 'vuepress-theme-hope'
+import { hopeTheme, navbar, sidebar } from 'vuepress-theme-hope'
 import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
-import { AUTHOR_INFO, FOOTER_HTML_INFO, copyright } from './constants'
-import { navbar } from './navbar'
-import { i18n, searchProCNLocals } from './i18n'
-import { sidebar } from './sidebar'
+import { MarkMapSidebar } from './mark-map/mark-map.sidebar'
+import { cnSidebar } from './cn/cn.sidebar'
+import { cppSidebar } from './ccp/cpp.sidebar'
+import { osSidebar } from './os/os.sidebar'
+import { dsSidebar } from './ds/ds.sidebar'
+
+/**
+ * 导航栏配置
+ */
+export const navbarConfig = navbar([
+  { text: '🌐 首页', link: '/' },
+  { text: '📙 数据结构', link: '/ds/' },
+  { text: '📕 操作系统', link: '/os/' },
+  { text: '📘 计算机组成原理', link: '/ccp/' },
+  { text: '📗 计算机网络', link: '/cn/' },
+  { text: '🧠 思维导图', link: '/mark-map/ds-map.html' },
+  {
+    text: '👉 了解更多',
+    children: [
+      { text: '📄 更新日志', link: '/changelog.md' },
+      { text: '📣 网站动态', link: '/big-event-history.md' },
+      {
+        text: '自媒体',
+        children: [
+          { text: '💥 公众号文章', link: '/wechat-list.md' },
+        ],
+      },
+      {
+        text: '外链',
+        children: [
+          // { text: '常用网站', link: '/frequent-site-link.md' },
+          { text: '🎯 开发计划', link: 'https://142vip-cn.feishu.cn/share/base/view/shrcnCSIIgL5Tg2PUpKWwiQnr6g' },
+        ],
+      },
+    ],
+  },
+])
+
+/**
+ * 侧边导航栏设置
+ */
+export const sidebarConfig = sidebar({
+  '/ds': dsSidebar,
+  '/os': osSidebar,
+  '/ccp': cppSidebar,
+  '/cn': cnSidebar,
+  '/mark-map': MarkMapSidebar,
+})
 
 /**
  * hope主题配置
  * 参考：https://theme-hope.vuejs.press/zh/config/
  */
-
-export default {
+export const themeConfig = {
   theme: hopeTheme({
     // locales: langConfig,
-    locales: i18n,
+    // locales: i18n,
     // 在深色模式和浅色模式之间切换
     darkmode: 'toggle',
     // 支持全屏
@@ -22,18 +65,18 @@ export default {
     // pure: true,
     print: false, // 打印按钮
     hostname: 'https://408.142vip.cn',
-    author: AUTHOR_INFO,
+    // author: AUTHOR_INFO,
     favicon: '/408_favicon.ico',
     logo: '/408_logo.png',
     logoDark: '/408_logo.png',
-    navbar,
+    navbar: navbarConfig,
     // 导航栏布局
     navbarLayout: {
       start: ['Brand'],
       center: ['Links'],
       end: ['Language', 'Outlook', 'Repo', 'Search'],
     },
-    sidebar,
+    sidebar: sidebarConfig,
 
     // 主题布局选项
     repo: 'https://github.com/142vip/408CSFamily',
@@ -54,9 +97,9 @@ export default {
     // },
     // 设置页脚
     displayFooter: true,
-    footer: FOOTER_HTML_INFO,
+    // footer: FOOTER_HTML_INFO,
     // copyright: false,
-    copyright,
+    // copyright,
     // 主题色选择器
     themeColor: true,
     // 是否显示外部链接图标
@@ -130,12 +173,12 @@ export default {
           'XiGua',
         ],
       },
-      searchPro: {
-        // 参考：https://plugin-search-pro.vuejs.press/zh/config.html#locales
-        locales: {
-          '/': searchProCNLocals,
-        },
-      },
+      // searchPro: {
+      //   // 参考：https://plugin-search-pro.vuejs.press/zh/config.html#locales
+      //   locales: {
+      //     '/': searchProCNLocals,
+      //   },
+      // },
       // 参考：https://theme-hope.vuejs.press/zh/config/plugins/others.html#markdowntab
       markdownTab: true,
       nprogress: true,

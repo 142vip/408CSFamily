@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.1-alpha.16 (2024-10-16)
+
+### ✨ Features
+
+- 移除`vercel`模块和流水线同步，采用官方基于`Git`仓库同步策略进行部署 &nbsp;-&nbsp; by **chufan** [<samp>(63f37)</samp>](https://github.com/142vip/408CSFamily/commit/63f3715)
+
+### 🐛 Bug Fixes
+
+- 修复`bundle`脚本构建异常 &nbsp;-&nbsp; by **chufan** [<samp>(b17fd)</samp>](https://github.com/142vip/408CSFamily/commit/b17fd0c)
+
+**Release New Version v0.0.1-alpha.16 [👉 View Changes On GitHub](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.15...v0.0.1-alpha.16)**
+
 ## v0.0.1-alpha.15 (2024-10-16)
 
 ### ✨ Features

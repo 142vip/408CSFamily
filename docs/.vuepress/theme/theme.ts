@@ -82,7 +82,7 @@ export default {
       }),
       // 代码块
       mdEnhance: {
-        codetabs: true,
+        // codetabs: true,
         tasklist: true, // 支持任务列表
         playground: {
           presets: ['ts', 'vue'],
@@ -105,7 +105,7 @@ export default {
         ],
         sub: true,
         sup: true,
-        tabs: true,
+        // tabs: true,
         vPre: true,
         vuePlayground: true,
         // 文件导入
@@ -136,6 +136,9 @@ export default {
           '/': searchProCNLocals,
         },
       },
+      // 参考：https://theme-hope.vuejs.press/zh/config/plugins/others.html#markdowntab
+      markdownTab: true,
+      nprogress: true,
       // 代码高亮：https://theme-hope.vuejs.press/zh/guide/feature/code-block.html
       shiki: {
         langs: ['ts', 'js', 'json', 'vue', 'json5', 'bash', 'diff', 'c', 'c++', 'dockerfile', 'nginx', 'proto', 'java', 'javascript', 'typescript'],

@@ -16,7 +16,7 @@
     "pnpm": "9.6.0"
   },
   "scripts": {
-    "preinstall": "chmod +x ./scripts/*",
+    "preinstall": "npx only-allow pnpm && chmod +x ./scripts/*",
     "postinstall": "pnpm build:mark-map",
     "clean": "npx fa clean --ignore-tips --dist --vite --all",
     "lint": "npx fa lint",
@@ -42,6 +42,7 @@
     "hls.js": "^1.5.13",
     "markmap-cli": "^0.15.8",
     "mermaid": "^10.9.1",
+    "only-allow": "^1.2.1",
     "reveal.js": "^5.1.0",
     "sass-embedded": "^1.79.3",
     "typescript": "^5.5.4",

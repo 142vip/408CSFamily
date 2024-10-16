@@ -21,7 +21,7 @@
     "clean": "npx fa clean --ignore-tips --dist --vite --all",
     "lint": "npx fa lint",
     "lint:fix": "npx fa lint --fix",
-    "dev": "npx vuepress dev docs",
+    "dev": "pnpm build:mark-map && npx vuepress dev docs",
     "build": "npx vuepress build docs --clean-temp --clean-cache",
     "build:proxy": "NEED_PROXY=true npx vuepress build docs --clean-temp --clean-cache",
     "build:mark-map": "./scripts/mark-map",

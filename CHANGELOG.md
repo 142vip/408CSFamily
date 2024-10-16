@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.1-alpha.15 (2024-10-16)
+
+### ✨ Features
+
+- 升级`hope`主题版本，支持主题色设置，优化`build`命令日志 &nbsp;-&nbsp; by **chufan** [<samp>(8d83e)</samp>](https://github.com/142vip/408CSFamily/commit/8d83e4c)
+- 移除`ci`脚本，本地启动使用`pnpm dev`命令 &nbsp;-&nbsp; by **chufan** [<samp>(cbbeb)</samp>](https://github.com/142vip/408CSFamily/commit/cbbeb3e)
+- 引入`only-allow`严格校验`pnpm`使用 &nbsp;-&nbsp; by **chufan** [<samp>(f79c7)</samp>](https://github.com/142vip/408CSFamily/commit/f79c7e7)
+- 使用`simple-git-hooks`模块配置钩子函数，规范仓库内容 &nbsp;-&nbsp; by **chufan** [<samp>(5698a)</samp>](https://github.com/142vip/408CSFamily/commit/5698a96)
+
+### 💅 Refactors
+
+- 站点改造，引入`@142vip/vuepress`模块，简化站点结构，删除冗余配置文件 &nbsp;-&nbsp; by **chufan** [<samp>(0ce97)</samp>](https://github.com/142vip/408CSFamily/commit/0ce97a5)
+
+**Release New Version v0.0.1-alpha.15 [👉 View Changes On GitHub](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.14...v0.0.1-alpha.15)**
+
 ## v0.0.1-alpha.14 (2024-10-05)
 
 ### ✨ Features

@@ -29,10 +29,7 @@
           target="_blank"
           style="padding: 5px"
         >
-            <img
-            alt="Vercel"
-            src="https://therealsujitk-vercel-badge.vercel.app/?app=408"
-            >
+        <img src="https://deploy-badge.vercel.app/vercel/408-family" alt="408CSFamily Deploy"></img>
         </a>
     </div>
     <div id="repo-info">

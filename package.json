@@ -17,7 +17,7 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm && chmod +x ./scripts/*",
-    "postinstall": "simple-git-hooks",
+    "postinstall": "rm -rf .git/hooks && npx simple-git-hooks",
     "clean": "npx fa clean --ignore-tips --dist --vite --all",
     "lint": "npx fa lint",
     "lint:fix": "npx fa lint --fix",

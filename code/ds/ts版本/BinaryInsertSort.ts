@@ -1,11 +1,11 @@
 /**
- * 折半插入排序【JavaScript版本】
+ * 折半插入排序
  */
-function binaryInsertSort(arr, len) {
+function binaryInsertSort(arr: number[], len: number): number[] {
   // 数组长度校验【非必须】
-  len = arr.length === len
-    ? len
-    : arr.length
+  if (arr.length !== len) {
+    len = arr.length
+  }
 
   // 遍历
   for (let i = 1; i < len; i++) {
@@ -30,14 +30,17 @@ function binaryInsertSort(arr, len) {
     for (let j = i - 1; j > highIndex; --j) {
       arr[j + 1] = arr[j]
     }
+
     arr[highIndex + 1] = temp
   }
+
   // 返回经过折半插入排序处理的有序数组
   return arr
 }
 
 // 测试用例
 const dealArr = [5, 2, 7, 3, 18, 8, 12, 1]
+
 console.log('插入排序前：', dealArr)
 const sortResult = binaryInsertSort(dealArr, 7)
 console.log('插入排序后：', sortResult)

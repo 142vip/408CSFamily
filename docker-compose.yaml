@@ -4,7 +4,7 @@
 version: '2'
 services:
   408CSFamily:
-    image: registry.cn-hangzhou.aliyuncs.com/142vip/doc_book:408CSFamily-0.0.1
+    image: registry.cn-hangzhou.aliyuncs.com/142vip/docs:408CSFamily-0.0.1-alpha.16
     container_name: 408CSFamily
     restart: on-failure
     hostname: 408CSFamily

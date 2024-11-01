@@ -1,9 +1,13 @@
+interface SwitchValue {
+  a: number
+  b: number
+}
+
 /**
  * 排序算法：冒泡排序
  * 给定一个数组，按照从小到大或从大到小排序，打印排序前后结果对比
- * 编程语言：TypeScript
  */
-function BubbleSort(arr: Array<number>): number[] {
+export function BubbleSort(arr: number[]): number[] {
   // 获取数组长度
   const len = arr.length
 
@@ -25,7 +29,7 @@ function BubbleSort(arr: Array<number>): number[] {
       }
     }
     // 第一趟比较后，如果本身序列是有序的，就直接跳出循环
-    if (isSorted === false) {
+    if (!isSorted) {
       break
     }
   }
@@ -33,18 +37,15 @@ function BubbleSort(arr: Array<number>): number[] {
   return arr
 }
 
-interface SwitchValue {
-  a: number
-  b: number
-}
 /**
  * 将两个变量数值交换
  */
-function _switchValue(params: SwitchValue) {
+export function switchValue(params: SwitchValue) {
   const { a: newB, b: newA } = params
   return { a: newA, b: newB }
 }
 
+// 用例
 const initArr = [1, 5, 8, 3, 2, 9, 16]
 console.log(`冒泡排序前：${initArr}`)
 const sortedArr = BubbleSort(initArr)

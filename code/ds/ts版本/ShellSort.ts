@@ -3,11 +3,12 @@
  * - 返回已排序的数组，从小到大
  * @param {Array} arr  待排序数组
  * @param {int} len 数组长度，可校验
- * @returns
  */
-function shellSort(arr, len) {
+export function shellSort(arr: number[], len: number) {
   // 校对数组长度
-  len = arr.length === len ? len : arr.length
+  if (arr.length !== len) {
+    len = arr.length
+  }
 
   // 注意处理浮点【向上取整】 防止空指针
   for (let increment = Math.floor(len / 2); increment >= 1; increment = Math.floor(increment / 2)) {
@@ -27,8 +28,11 @@ function shellSort(arr, len) {
  * @param {int} increment 增量步长
  * @param {int} groupIndex 分组，第几个分组
  */
-function specialStraightInsertSort(arr, len, increment, groupIndex) {
-  len = arr.length === len ? len : arr.length
+export function specialStraightInsertSort(arr: number[], len: number, increment: number, groupIndex: number) {
+  if (arr.length !== len) {
+    len = arr.length
+  }
+
   console.log(`数组长度：${len}----->当前步长：${increment}---->分组：${groupIndex}`)
 
   for (let eleStartIndex = groupIndex + increment; eleStartIndex < len; eleStartIndex += increment) {
@@ -36,7 +40,8 @@ function specialStraightInsertSort(arr, len, increment, groupIndex) {
 
     // 直接插入排序中的哨兵元素【重要】
     const temp = arr[eleStartIndex]
-    let j
+
+    let j: number
     // 向前比较 从小到大
     for (j = eleStartIndex - increment; j >= 0 && arr[j] > temp; j -= increment) {
       arr[j + increment] = arr[j]
@@ -45,6 +50,7 @@ function specialStraightInsertSort(arr, len, increment, groupIndex) {
   }
 
   console.log('specialStraightInsertSort处理后：', arr)
+
   return arr
 }
 
@@ -58,9 +64,10 @@ console.log('插入排序后：', sortResult)
  * - 返回已排序号的数组，从小到大
  * @param {Array} arr
  */
-function shellSortBetter(arr) {
+export function shellSortBetter(arr) {
   const len = arr.length
   let increment = Math.floor(len / 2)
+
   while (increment !== 0) {
     for (let i = increment; i < len; i++) {
       const temp = arr[i]
@@ -74,6 +81,7 @@ function shellSortBetter(arr) {
   return arr
 }
 
+// 测试用例
 console.log('简化shellSortBetter希尔排序前：', dealArr)
 const sortResultBetter = shellSortBetter(dealArr)
 console.log('简化shellSortBetter希尔排序后：', sortResultBetter)

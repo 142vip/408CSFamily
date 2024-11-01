@@ -2,6 +2,7 @@
   "compileOnSave": true,
   "compilerOptions": {
     "target": "ES2020",
+    "moduleDetection": "force",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "baseUrl": ".",

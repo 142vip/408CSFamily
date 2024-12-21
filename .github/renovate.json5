@@ -1,0 +1,24 @@
+// 参考：https://docs.renovatebot.com/configuration-options/#configuration-options
+{
+  "extends": ["config:base"],
+  "labels": ["PR:dependencies"],
+  "baseBranches": ["next"],
+  "schedule": ["before 3am on Friday"],
+  "additionalBranchPrefix": "{{parentDir}}-",
+  "branchConcurrentLimit": 6,
+  // 触发CI流水线
+  "requiredStatusChecks": [
+    "CI"
+  ],
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "schedule": ["at any time"],
+      "prConcurrentLimit": 4,
+      "platformAutomerge": true,
+      "addLabels": ["devDependencies"],
+      "automerge": false
+    }
+  ]
+}

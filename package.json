@@ -2,7 +2,7 @@
   "name": "408CSFamily",
   "type": "module",
   "version": "0.0.1-alpha.16",
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.15.1",
   "description": "研究生考试408考点、工作面试计算机基础知识合集",
   "authorInfo": {
     "name": "微信公众号：储凡",
@@ -13,7 +13,7 @@
   "license": "MIT",
   "engines": {
     "node": ">=18.x",
-    "pnpm": "9.6.0"
+    "pnpm": "9.15.1"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm && chmod +x ./scripts/*",

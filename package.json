@@ -32,7 +32,7 @@
     "@142vip/fairy-cli": "^0.0.3-alpha.13",
     "@142vip/utils": "^0.0.1-alpha.7",
     "@142vip/vuepress": "0.0.1-alpha.8",
-    "@vuepress/bundler-vite": "2.0.0-rc.17",
+    "@vuepress/bundler-vite": "2.0.0-rc.19",
     "markmap-cli": "^0.18.0",
     "only-allow": "^1.2.1",
     "simple-git-hooks": "^2.11.1",

@@ -16,11 +16,11 @@
   height: 100vh;
 }
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.8/dist/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.10.0/styles/default.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.0/dist/style.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.8/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.8/dist/index.js"></script><script>((r) => {
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.0/dist/index.js"></script><script>((r) => {
             setTimeout(r);
           })(() => {
   const { markmap, mm } = window;
@@ -30,12 +30,12 @@
   el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
   document.body.append(el);
 })</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
-                const markmap = getMarkmap();
-                window.mm = markmap.Markmap.create(
-                  "svg#mindmap",
-                  (getOptions || markmap.deriveOptions)(jsonOptions),
-                  root2
-                );
-              })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[1,2]},"content":"计算机网络","children":[{"type":"fence","depth":1,"content":"<pre><code class=\"language-mindmap\">root(计算机网络)\n    (体系机构)\n    (物理层)\n    (数据链路层)\n    (网络层)\n    (传输层)\n    (应用层)\n</code></pre>\n","children":[],"payload":{"lines":[3,12]}},{"type":"heading","depth":1,"payload":{"lines":[15,16]},"content":"体系结构","children":[]},{"type":"heading","depth":1,"payload":{"lines":[17,18]},"content":"物理层","children":[]},{"type":"heading","depth":1,"payload":{"lines":[19,20]},"content":"数据链路层","children":[]},{"type":"heading","depth":1,"payload":{"lines":[21,22]},"content":"网络层","children":[]},{"type":"heading","depth":1,"payload":{"lines":[23,24]},"content":"传输层","children":[]},{"type":"heading","depth":1,"payload":{"lines":[25,26]},"content":"应用层","children":[]},{"type":"heading","depth":1,"payload":{"lines":[27,28]},"content":"一些总结","children":[]}]},null)</script>
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"计算机网络","children":[{"content":"体系结构","children":[],"payload":{"tag":"h2","lines":"20,21"}},{"content":"物理层","children":[],"payload":{"tag":"h2","lines":"22,23"}},{"content":"数据链路层","children":[],"payload":{"tag":"h2","lines":"24,25"}},{"content":"网络层","children":[],"payload":{"tag":"h2","lines":"26,27"}},{"content":"传输层","children":[],"payload":{"tag":"h2","lines":"28,29"}},{"content":"应用层","children":[],"payload":{"tag":"h2","lines":"30,31"}},{"content":"一些总结","children":[],"payload":{"tag":"h2","lines":"32,33"}}],"payload":{"tag":"h1","lines":"6,7"}},null)</script>
 </body>
 </html>

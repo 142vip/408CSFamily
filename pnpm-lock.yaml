@@ -9,14 +9,14 @@ importers:
   .:
     devDependencies:
       '@142vip/eslint-config':
-        specifier: ^0.0.1-alpha.2
+        specifier: 0.0.1-alpha.2
         version: 0.0.1-alpha.2(@typescript-eslint/utils@8.12.2(eslint@8.55.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.13)(typescript@5.6.3)
       '@142vip/fairy-cli':
-        specifier: ^0.0.3-alpha.13
-        version: 0.0.3-alpha.17
+        specifier: 0.0.3-alpha.13
+        version: 0.0.3-alpha.13
       '@142vip/utils':
-        specifier: ^0.0.1-alpha.7
-        version: 0.0.1-alpha.11
+        specifier: 0.0.1-alpha.7
+        version: 0.0.1-alpha.7
       '@142vip/vuepress':
         specifier: 0.0.1-alpha.8
         version: 0.0.1-alpha.8(w24qbmfoqu7e7dya4pmnqambiq)
@@ -24,19 +24,19 @@ importers:
         specifier: 2.0.0-rc.19
         version: 2.0.0-rc.19(@types/node@22.10.2)(jiti@1.21.7)(sass-embedded@1.80.5)(typescript@5.6.3)(yaml@2.6.1)
       markmap-cli:
-        specifier: ^0.18.0
-        version: 0.18.1
+        specifier: 0.18.0
+        version: 0.18.0
       only-allow:
-        specifier: ^1.2.1
+        specifier: 1.2.1
         version: 1.2.1
       simple-git-hooks:
-        specifier: ^2.11.1
+        specifier: 2.11.1
         version: 2.11.1
       vuepress:
         specifier: 2.0.0-rc.19
         version: 2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@22.10.2)(jiti@1.21.7)(sass-embedded@1.80.5)(typescript@5.6.3)(yaml@2.6.1))(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       xmind-embed-viewer:
-        specifier: ^1.2.0
+        specifier: 1.2.0
         version: 1.2.0
 
 packages:
@@ -49,8 +49,8 @@ packages:
   '@142vip/eslint-config@0.0.1-alpha.2':
     resolution: {integrity: sha512-VKTzeBNIOEwABL8Yg8GGEbqn0THVM2BptoCvFC4Mp4R5kC8YoYTiDrUup1SaJHD88/7RzpCDbdqPH7u28m9wCQ==}
 
-  '@142vip/fairy-cli@0.0.3-alpha.17':
-    resolution: {integrity: sha512-w/DZWTMVeGZ06dQ6uwqiMInj43p3Ob8uJNnSw+PhLZ4mLWOrSHCNgxzq0WGnQarzik6iYZAY3OGCVkv0WbuS/w==}
+  '@142vip/fairy-cli@0.0.3-alpha.13':
+    resolution: {integrity: sha512-FGbd9B7VM7ZPWGauOTl7++rAFmPjGw8Bjhfql61RE+f8MqCpk1H6n5BFIeyDvYj+NhMU6pWg06jMvBk0Wi32xQ==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -59,12 +59,16 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  '@142vip/utils@0.0.1-alpha.11':
-    resolution: {integrity: sha512-5WpmBuEh1TbefT6buyA66f8lUKdeZYIWBjAYdkKi9EsWXU3y+tTKb4NlpF0yIuZMJXRpBAgjGfPJcw5HmU+9RQ==}
-    engines: {node: '>=16.0.0'}
-
   '@142vip/utils@0.0.1-alpha.2':
     resolution: {integrity: sha512-AzeWlLpD/M6KKqygywKLx0mNOensWN8VJ2q3Bk+ffWwXjdsh/pR1goHd1cATbYwuFBEVlcIRwxRSDNupSzKi4Q==}
+    engines: {node: '>=16.0.0'}
+
+  '@142vip/utils@0.0.1-alpha.5':
+    resolution: {integrity: sha512-w+2zcFBGwO+tfKaSjWuOrK8HUgHptF4yCHIKqPyC62W9ZYsH2eHuaLqj9fMrOK56/Gp+1gyVXijeKOkiN/QxUA==}
+    engines: {node: '>=16.0.0'}
+
+  '@142vip/utils@0.0.1-alpha.7':
+    resolution: {integrity: sha512-QaWav5wQnhK/Q00z9w+lBJJH3zyo9Dro/ZDdAimga/w3hnv2iPsCU1QtzlFsA1cqGZjGv3xV4OcRPr1OUPziMA==}
     engines: {node: '>=16.0.0'}
 
   '@142vip/vuepress@0.0.1-alpha.8':
@@ -561,6 +565,10 @@ packages:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
 
+  '@inquirer/checkbox@2.5.0':
+    resolution: {integrity: sha512-sMgdETOfi2dUHT8r7TT1BTKOwNvdDGFDXYWtQ2J69SvlYNntk9I/gJe7r5yvMwwsuKnYbuRs3pNhx4tgNck5aA==}
+    engines: {node: '>=18'}
+
   '@inquirer/confirm@3.2.0':
     resolution: {integrity: sha512-oOIwPs0Dvq5220Z8lGL/6LHRTEr9TgLHmiI99Rj1PJ1p1czTys+olrgBqZk4E2qC0YTzeHprxSQmoHioVdJ7Lw==}
     engines: {node: '>=18'}
@@ -569,8 +577,44 @@ packages:
     resolution: {integrity: sha512-F2VBt7W/mwqEU4bL0RnHNZmC/OxzNx9cOYxHqnXX3MP6ruYvZUZAW9imgN9+h/uBT/oP8Gh888J2OZSbjSeWcg==}
     engines: {node: '>=18'}
 
+  '@inquirer/editor@2.2.0':
+    resolution: {integrity: sha512-9KHOpJ+dIL5SZli8lJ6xdaYLPPzB8xB9GZItg39MBybzhxA16vxmszmQFrRwbOA918WA2rvu8xhDEg/p6LXKbw==}
+    engines: {node: '>=18'}
+
+  '@inquirer/expand@2.3.0':
+    resolution: {integrity: sha512-qnJsUcOGCSG1e5DTOErmv2BPQqrtT6uzqn1vI/aYGiPKq+FgslGZmtdnXbhuI7IlT7OByDoEEqdnhUnVR2hhLw==}
+    engines: {node: '>=18'}
+
   '@inquirer/figures@1.0.9':
     resolution: {integrity: sha512-BXvGj0ehzrngHTPTDqUoDT3NXL8U0RxUk2zJm2A66RhCEIWdtU1v6GuUqNAgArW4PQ9CinqIWyHdQgdwOj06zQ==}
+    engines: {node: '>=18'}
+
+  '@inquirer/input@2.3.0':
+    resolution: {integrity: sha512-XfnpCStx2xgh1LIRqPXrTNEEByqQWoxsWYzNRSEUxJ5c6EQlhMogJ3vHKu8aXuTacebtaZzMAHwEL0kAflKOBw==}
+    engines: {node: '>=18'}
+
+  '@inquirer/number@1.1.0':
+    resolution: {integrity: sha512-ilUnia/GZUtfSZy3YEErXLJ2Sljo/mf9fiKc08n18DdwdmDbOzRcTv65H1jjDvlsAuvdFXf4Sa/aL7iw/NanVA==}
+    engines: {node: '>=18'}
+
+  '@inquirer/password@2.2.0':
+    resolution: {integrity: sha512-5otqIpgsPYIshqhgtEwSspBQE40etouR8VIxzpJkv9i0dVHIpyhiivbkH9/dGiMLdyamT54YRdGJLfl8TFnLHg==}
+    engines: {node: '>=18'}
+
+  '@inquirer/prompts@5.5.0':
+    resolution: {integrity: sha512-BHDeL0catgHdcHbSFFUddNzvx/imzJMft+tWDPwTm3hfu8/tApk1HrooNngB2Mb4qY+KaRWF+iZqoVUPeslEog==}
+    engines: {node: '>=18'}
+
+  '@inquirer/rawlist@2.3.0':
+    resolution: {integrity: sha512-zzfNuINhFF7OLAtGHfhwOW2TlYJyli7lOUoJUXw/uyklcwalV6WRXBXtFIicN8rTRK1XTiPWB4UY+YuW8dsnLQ==}
+    engines: {node: '>=18'}
+
+  '@inquirer/search@1.1.0':
+    resolution: {integrity: sha512-h+/5LSj51dx7hp5xOn4QFnUaKeARwUCLs6mIhtkJ0JYPBLmEYjdHSYh7I6GrLg9LwpJ3xeX0FZgAG1q0QdCpVQ==}
+    engines: {node: '>=18'}
+
+  '@inquirer/select@2.5.0':
+    resolution: {integrity: sha512-YmDobTItPP3WcEI86GvPo+T2sRHkxxOq/kXmsBjHS5BVXUgvgZ5AfJjkvQvZr03T81NnI3KrrRuMzeuYUQRFOA==}
     engines: {node: '>=18'}
 
   '@inquirer/type@1.5.5':
@@ -1142,9 +1186,6 @@ packages:
   '@typescript-eslint/visitor-keys@8.12.2':
     resolution: {integrity: sha512-PChz8UaKQAVNHghsHcPyx1OMHoFRUEA7rJSK/mDhdq85bk+PLsUHUBqTQTFt18VJZbmxBovM65fezlheQRsSDA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@ungap/structured-clone@1.2.0':
-    resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
   '@ungap/structured-clone@1.2.1':
     resolution: {integrity: sha512-fEzPV3hSkSMltkw152tJKNARhOupqbH96MZWyRjNaYZOMIzbrTeQDG+MTc6Mr2pgzFQzFxAfmhGDNP5QK++2ZA==}
@@ -1788,10 +1829,6 @@ packages:
     resolution: {integrity: sha512-ehJ0Zw5RSV2G4+/azUb7vEZWRSA/K9cW7HDock1Y9ViDexkgSJUZJRcObdw/YAWeXKjreEQV9l/igNSsJ1yw5A==}
     engines: {node: '>=18'}
 
-  cross-spawn@7.0.3:
-    resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
-    engines: {node: '>= 8'}
-
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
@@ -1980,15 +2017,6 @@ packages:
 
   debug@3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-
-  debug@4.3.7:
-    resolution: {integrity: sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==}
-    engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
     peerDependenciesMeta:
@@ -2995,8 +3023,8 @@ packages:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
     hasBin: true
 
-  markmap-cli@0.18.1:
-    resolution: {integrity: sha512-V0J30DViOZqTNKgw6Rj9ciy4cEIOTpa7j8fuIAdTwkWch3Jj9mrqRvAPQO4kXUXBo8yWO5Ix5QwIriRPHS12vw==}
+  markmap-cli@0.18.0:
+    resolution: {integrity: sha512-Yoc6A9/VDWEvO5As1M41DN4KnxCnA7GW01oCx9fujux9I7R/ICsMkR2SiZfmCi9quVtEyIZll6MuB/RxZ3n3dA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -3008,8 +3036,8 @@ packages:
     peerDependencies:
       markmap-common: '*'
 
-  markmap-lib@0.18.1:
-    resolution: {integrity: sha512-48j/8+o6X0E0zZCDZwokJA7swD4P0pEsULeW3BbbDlKoCP3FwrQvFWU6V8tJ+G579bdZXGk+Nh9uU5uB1Ql0vg==}
+  markmap-lib@0.18.0:
+    resolution: {integrity: sha512-5VHUoMFrDdvB2HYBG8X6r910gw8jng+xtT69BnQSF7zMlTgt1rgPn3LmhjgfklitOo5I1i8O1QR4V9Ao+Hi+7g==}
     peerDependencies:
       markmap-common: '*'
 
@@ -4632,10 +4660,12 @@ snapshots:
       - typescript
       - vitest
 
-  '@142vip/fairy-cli@0.0.3-alpha.17':
+  '@142vip/fairy-cli@0.0.3-alpha.13':
     dependencies:
       '@142vip/release-version': 0.0.1-alpha.9
-      '@142vip/utils': 0.0.1-alpha.11
+      '@142vip/utils': 0.0.1-alpha.5
+      '@inquirer/prompts': 5.5.0
+      commander: 12.1.0
       del: 7.1.0
       js-yaml: 4.1.0
       node-fetch: 3.3.2
@@ -4657,19 +4687,27 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  '@142vip/utils@0.0.1-alpha.11':
-    dependencies:
-      ansi-colors: 4.1.3
-      commander: 12.1.0
-      inquirer: 7.3.3
-      qs: 6.13.1
-
   '@142vip/utils@0.0.1-alpha.2':
     dependencies:
       '@inquirer/confirm': 3.2.0
       ansi-colors: 4.1.3
       dayjs: 1.11.13
       inquirer: 7.3.3
+
+  '@142vip/utils@0.0.1-alpha.5':
+    dependencies:
+      '@inquirer/confirm': 3.2.0
+      ansi-colors: 4.1.3
+      dayjs: 1.11.13
+      inquirer: 7.3.3
+
+  '@142vip/utils@0.0.1-alpha.7':
+    dependencies:
+      '@inquirer/confirm': 3.2.0
+      ansi-colors: 4.1.3
+      dayjs: 1.11.13
+      inquirer: 7.3.3
+      qs: 6.13.1
 
   '@142vip/vuepress@0.0.1-alpha.8(w24qbmfoqu7e7dya4pmnqambiq)':
     dependencies:
@@ -4953,7 +4991,7 @@ snapshots:
   '@eslint/eslintrc@2.1.4':
     dependencies:
       ajv: 6.12.6
-      debug: 4.3.7
+      debug: 4.4.0
       espree: 9.6.1
       globals: 13.24.0
       ignore: 5.3.2
@@ -5018,7 +5056,7 @@ snapshots:
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
-      debug: 4.3.7
+      debug: 4.4.0
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -5026,6 +5064,14 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/object-schema@2.0.3': {}
+
+  '@inquirer/checkbox@2.5.0':
+    dependencies:
+      '@inquirer/core': 9.2.1
+      '@inquirer/figures': 1.0.9
+      '@inquirer/type': 1.5.5
+      ansi-escapes: 4.3.2
+      yoctocolors-cjs: 2.1.2
 
   '@inquirer/confirm@3.2.0':
     dependencies:
@@ -5047,7 +5093,69 @@ snapshots:
       wrap-ansi: 6.2.0
       yoctocolors-cjs: 2.1.2
 
+  '@inquirer/editor@2.2.0':
+    dependencies:
+      '@inquirer/core': 9.2.1
+      '@inquirer/type': 1.5.5
+      external-editor: 3.1.0
+
+  '@inquirer/expand@2.3.0':
+    dependencies:
+      '@inquirer/core': 9.2.1
+      '@inquirer/type': 1.5.5
+      yoctocolors-cjs: 2.1.2
+
   '@inquirer/figures@1.0.9': {}
+
+  '@inquirer/input@2.3.0':
+    dependencies:
+      '@inquirer/core': 9.2.1
+      '@inquirer/type': 1.5.5
+
+  '@inquirer/number@1.1.0':
+    dependencies:
+      '@inquirer/core': 9.2.1
+      '@inquirer/type': 1.5.5
+
+  '@inquirer/password@2.2.0':
+    dependencies:
+      '@inquirer/core': 9.2.1
+      '@inquirer/type': 1.5.5
+      ansi-escapes: 4.3.2
+
+  '@inquirer/prompts@5.5.0':
+    dependencies:
+      '@inquirer/checkbox': 2.5.0
+      '@inquirer/confirm': 3.2.0
+      '@inquirer/editor': 2.2.0
+      '@inquirer/expand': 2.3.0
+      '@inquirer/input': 2.3.0
+      '@inquirer/number': 1.1.0
+      '@inquirer/password': 2.2.0
+      '@inquirer/rawlist': 2.3.0
+      '@inquirer/search': 1.1.0
+      '@inquirer/select': 2.5.0
+
+  '@inquirer/rawlist@2.3.0':
+    dependencies:
+      '@inquirer/core': 9.2.1
+      '@inquirer/type': 1.5.5
+      yoctocolors-cjs: 2.1.2
+
+  '@inquirer/search@1.1.0':
+    dependencies:
+      '@inquirer/core': 9.2.1
+      '@inquirer/figures': 1.0.9
+      '@inquirer/type': 1.5.5
+      yoctocolors-cjs: 2.1.2
+
+  '@inquirer/select@2.5.0':
+    dependencies:
+      '@inquirer/core': 9.2.1
+      '@inquirer/figures': 1.0.9
+      '@inquirer/type': 1.5.5
+      ansi-escapes: 4.3.2
+      yoctocolors-cjs: 2.1.2
 
   '@inquirer/type@1.5.5':
     dependencies:
@@ -5571,7 +5679,7 @@ snapshots:
       '@typescript-eslint/types': 8.12.2
       '@typescript-eslint/typescript-estree': 8.12.2(typescript@5.6.3)
       '@typescript-eslint/visitor-keys': 8.12.2
-      debug: 4.3.7
+      debug: 4.4.0
       eslint: 8.55.0
     optionalDependencies:
       typescript: 5.6.3
@@ -5627,8 +5735,6 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.12.2
       eslint-visitor-keys: 3.4.3
-
-  '@ungap/structured-clone@1.2.0': {}
 
   '@ungap/structured-clone@1.2.1': {}
 
@@ -6519,12 +6625,6 @@ snapshots:
 
   create-codepen@2.0.0: {}
 
-  cross-spawn@7.0.3:
-    dependencies:
-      path-key: 3.1.1
-      shebang-command: 2.0.0
-      which: 2.0.2
-
   cross-spawn@7.0.6:
     dependencies:
       path-key: 3.1.1
@@ -6748,10 +6848,6 @@ snapshots:
   dayjs@1.11.13: {}
 
   debug@3.2.7:
-    dependencies:
-      ms: 2.1.3
-
-  debug@4.3.7:
     dependencies:
       ms: 2.1.3
 
@@ -7010,7 +7106,7 @@ snapshots:
   eslint-plugin-import-x@4.4.0(eslint@8.55.0)(typescript@5.6.3):
     dependencies:
       '@typescript-eslint/utils': 8.12.2(eslint@8.55.0)(typescript@5.6.3)
-      debug: 4.3.7
+      debug: 4.4.0
       doctrine: 3.0.0
       eslint: 8.55.0
       eslint-import-resolver-node: 0.3.9
@@ -7029,7 +7125,7 @@ snapshots:
       '@es-joy/jsdoccomment': 0.49.0
       are-docs-informative: 0.0.2
       comment-parser: 1.4.1
-      debug: 4.3.7
+      debug: 4.4.0
       escape-string-regexp: 4.0.0
       eslint: 8.55.0
       espree: 10.3.0
@@ -7099,7 +7195,7 @@ snapshots:
 
   eslint-plugin-toml@0.11.1(eslint@8.55.0):
     dependencies:
-      debug: 4.3.7
+      debug: 4.4.0
       eslint: 8.55.0
       eslint-compat-utils: 0.5.1(eslint@8.55.0)
       lodash: 4.17.21
@@ -7149,7 +7245,7 @@ snapshots:
 
   eslint-plugin-yml@1.15.0(eslint@8.55.0):
     dependencies:
-      debug: 4.3.7
+      debug: 4.4.0
       eslint: 8.55.0
       eslint-compat-utils: 0.5.1(eslint@8.55.0)
       lodash: 4.17.21
@@ -7181,11 +7277,11 @@ snapshots:
       '@humanwhocodes/config-array': 0.11.14
       '@humanwhocodes/module-importer': 1.0.1
       '@nodelib/fs.walk': 1.2.8
-      '@ungap/structured-clone': 1.2.0
+      '@ungap/structured-clone': 1.2.1
       ajv: 6.12.6
       chalk: 4.1.2
-      cross-spawn: 7.0.3
-      debug: 4.3.7
+      cross-spawn: 7.0.6
+      debug: 4.4.0
       doctrine: 3.0.0
       escape-string-regexp: 4.0.0
       eslint-scope: 7.2.2
@@ -7864,7 +7960,7 @@ snapshots:
       punycode.js: 2.3.1
       uc.micro: 2.1.0
 
-  markmap-cli@0.18.1:
+  markmap-cli@0.18.0:
     dependencies:
       '@babel/runtime': 7.26.0
       '@hono/node-server': 1.13.7(hono@4.6.14)
@@ -7872,7 +7968,7 @@ snapshots:
       commander: 12.1.0
       hono: 4.6.14
       markmap-common: 0.18.0
-      markmap-lib: 0.18.1(markmap-common@0.18.0)
+      markmap-lib: 0.18.0(markmap-common@0.18.0)
       markmap-render: 0.18.0(markmap-common@0.18.0)
       markmap-toolbar: 0.18.0(markmap-common@0.18.0)
       open: 10.1.0
@@ -7892,7 +7988,7 @@ snapshots:
       cheerio: 1.0.0
       markmap-common: 0.18.0
 
-  markmap-lib@0.18.1(markmap-common@0.18.0):
+  markmap-lib@0.18.0(markmap-common@0.18.0):
     dependencies:
       '@babel/runtime': 7.26.0
       '@vscode/markdown-it-katex': 1.1.1
@@ -9193,7 +9289,7 @@ snapshots:
 
   vue-eslint-parser@9.4.3(eslint@8.55.0):
     dependencies:
-      debug: 4.3.7
+      debug: 4.4.0
       eslint: 8.55.0
       eslint-scope: 7.2.2
       eslint-visitor-keys: 3.4.3

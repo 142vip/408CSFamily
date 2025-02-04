@@ -4,6 +4,32 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.1-alpha.17 (2025-02-04)
+
+### ✨ Features
+
+- 优化`ts`版本算法代码，删除冗余算法代码，基于`Eslint`格式化 &nbsp;-&nbsp; by **chufan** [<samp>(dcec9)</samp>](https://github.com/142vip/408CSFamily/commit/dcec9ad)
+- 支持`renovate`自动升级依赖版本 &nbsp;-&nbsp; by **chufan** [<samp>(02e10)</samp>](https://github.com/142vip/408CSFamily/commit/02e10fa)
+- 支持`clean`命令移除依赖 &nbsp;-&nbsp; by **chufan** [<samp>(446bd)</samp>](https://github.com/142vip/408CSFamily/commit/446bde4)
+- 依赖版本锁定 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/408CSFamily/issues/135 [<samp>(858e7)</samp>](https://github.com/142vip/408CSFamily/commit/858e7bf)
+
+### 🔥 Performance
+
+- 升级`@142vip/vuepress`等模块，减少模块依赖配置 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/408CSFamily/issues/122 [<samp>(85c1b)</samp>](https://github.com/142vip/408CSFamily/commit/85c1bec)
+
+### 🐛 Bug Fixes
+
+- 修复`simple-git-hooks`钩子函数触发异常 &nbsp;-&nbsp; by **chufan** [<samp>(b334c)</samp>](https://github.com/142vip/408CSFamily/commit/b334ccf)
+- 修复`bundler-vite`模块版本异常 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/408CSFamily/issues/132 [<samp>(0d890)</samp>](https://github.com/142vip/408CSFamily/commit/0d8908b)
+- **pnpm-lock**:
+  - Update &nbsp;-&nbsp; by **chufan** [<samp>(6cef1)</samp>](https://github.com/142vip/408CSFamily/commit/6cef129)
+
+### 📖 Documentation
+
+- Update README &nbsp;-&nbsp; by **chufan** [<samp>(9a316)</samp>](https://github.com/142vip/408CSFamily/commit/9a316b0)
+
+**Release New Version v0.0.1-alpha.17 [👉 View Changes On GitHub](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.16...v0.0.1-alpha.17)**
+
 ## v0.0.1-alpha.16 (2024-10-16)
 
 ### ✨ Features

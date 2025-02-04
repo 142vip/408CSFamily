@@ -11,8 +11,8 @@ import { createRequire } from 'node:module'
 import process from 'node:process'
 import {
   OPEN_SOURCE_ADDRESS,
-  buildImage,
-  getRecentGitCommit,
+  VipDocker,
+  VipGit,
 } from '@142vip/utils'
 
 (async () => {
@@ -24,10 +24,10 @@ import {
     const imageName = `${OPEN_SOURCE_ADDRESS.DOCKER_ALIYUNCS_VIP}/docs:${pkg.name}-${pkg.version}`
 
     // 最近一次提交信息
-    const { hash: gitHash } = await getRecentGitCommit()
+    const { hash: gitHash } = await VipGit.getRecentGitCommit()
 
     // 构建镜像
-    await buildImage({
+    await VipDocker.buildImage({
       imageName,
       buildArgs: [
         // 参数中是否包含 --proxy

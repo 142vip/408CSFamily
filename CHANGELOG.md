@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.1-alpha.18 (2025-02-04)
+
+### 🐛 Bug Fixes
+
+- 修复`bundle`命令异常 &nbsp;-&nbsp; by **chufan** [<samp>(30036)</samp>](https://github.com/142vip/408CSFamily/commit/30036a2)
+
+**Release New Version v0.0.1-alpha.18 [👉 View Changes On GitHub](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.17...v0.0.1-alpha.18)**
+
 ## v0.0.1-alpha.17 (2025-02-04)
 
 ### ✨ Features

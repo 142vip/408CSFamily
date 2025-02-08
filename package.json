@@ -31,7 +31,7 @@
     "@142vip/eslint-config": "0.0.1-alpha.2",
     "@142vip/fairy-cli": "0.0.3-alpha.18",
     "@142vip/utils": "0.0.1-alpha.14",
-    "@142vip/vuepress": "0.0.1-alpha.9",
+    "@142vip/vuepress": "0.0.1-alpha.10",
     "@vuepress/bundler-vite": "2.0.0-rc.19",
     "markmap-cli": "0.18.9",
     "only-allow": "1.2.1",

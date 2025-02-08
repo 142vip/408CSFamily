@@ -18,8 +18,8 @@ importers:
         specifier: 0.0.1-alpha.14
         version: 0.0.1-alpha.14
       '@142vip/vuepress':
-        specifier: 0.0.1-alpha.9
-        version: 0.0.1-alpha.9(pisv2n5lx6maaab36kljytfva4)
+        specifier: 0.0.1-alpha.10
+        version: 0.0.1-alpha.10(pisv2n5lx6maaab36kljytfva4)
       '@vuepress/bundler-vite':
         specifier: 2.0.0-rc.19
         version: 2.0.0-rc.19(@types/node@22.10.2)(jiti@1.21.7)(sass-embedded@1.80.5)(typescript@5.6.3)(yaml@2.6.1)
@@ -67,23 +67,23 @@ packages:
     resolution: {integrity: sha512-AzeWlLpD/M6KKqygywKLx0mNOensWN8VJ2q3Bk+ffWwXjdsh/pR1goHd1cATbYwuFBEVlcIRwxRSDNupSzKi4Q==}
     engines: {node: '>=16.0.0'}
 
-  '@142vip/vuepress@0.0.1-alpha.9':
-    resolution: {integrity: sha512-vM1fWCXAjKNuSnfWlgaQGacI4FiCw78YLmZSQLZBpIPW/21ADfw+AnvB0YavwbwAN5Ob6BgFs6LPkKqcqkhsLQ==}
+  '@142vip/vuepress@0.0.1-alpha.10':
+    resolution: {integrity: sha512-wg2OVn2rIgo3DfzuA/+aGvZl3Xe0AO1SlFR0c+pi4GuqCogA35XGkU3ujvcJljut79NwrD4TmC/6QKMwthYWMQ==}
     peerDependencies:
-      '@vue/repl': ^4.3.1
+      '@vue/repl': 4.5.0
       '@vuepress/bundler-vite': 2.0.0-rc.19
       '@vuepress/plugin-markdown-image': 2.0.0-rc.30
       '@vuepress/plugin-markdown-tab': 2.0.0-rc.47
       '@vuepress/plugin-redirect': 2.0.0-rc.8
       '@vuepress/plugin-slimsearch': 2.0.0-rc.61
-      dashjs: ^4.7.4
-      hls.js: ^1.5.13
-      mermaid: ^10.9.1 || ^11.0.0
-      reveal.js: ^5.1.0
-      sass-embedded: ^1.79.4
-      unicorn-magic: ^0.3.0
-      vidstack: ^1.11.30
-      vue: ^3.5.8
+      dashjs: 4.7.4
+      hls.js: 1.5.13
+      mermaid: 11.4.1
+      reveal.js: 5.1.0
+      sass-embedded: 1.83.4
+      unicorn-magic: 0.3.0
+      vidstack: 1.12.12
+      vue: 3.5.13
       vuepress: 2.0.0-rc.19
       vuepress-theme-hope: 2.0.0-rc.66
 
@@ -4581,7 +4581,7 @@ snapshots:
       dayjs: 1.11.13
       inquirer: 7.3.3
 
-  '@142vip/vuepress@0.0.1-alpha.9(pisv2n5lx6maaab36kljytfva4)':
+  '@142vip/vuepress@0.0.1-alpha.10(pisv2n5lx6maaab36kljytfva4)':
     dependencies:
       '@vue/repl': 4.4.2
       '@vuepress/bundler-vite': 2.0.0-rc.19(@types/node@22.10.2)(jiti@1.21.7)(sass-embedded@1.80.5)(typescript@5.6.3)(yaml@2.6.1)

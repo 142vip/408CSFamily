@@ -15,8 +15,8 @@ importers:
         specifier: 0.0.3-alpha.18
         version: 0.0.3-alpha.18
       '@142vip/utils':
-        specifier: 0.0.1-alpha.14
-        version: 0.0.1-alpha.14
+        specifier: 0.0.1-alpha.18
+        version: 0.0.1-alpha.18
       '@142vip/vuepress':
         specifier: 0.0.1-alpha.9
         version: 0.0.1-alpha.9(pisv2n5lx6maaab36kljytfva4)
@@ -62,6 +62,9 @@ packages:
   '@142vip/utils@0.0.1-alpha.14':
     resolution: {integrity: sha512-kdy6F1k/bAoBytBgzACUZKkKDjfy3DCONWCsueCU5tnaX3JhDS0N2D2ptIWsSh0HNru64EKmQzVRnRyKrf8N/A==}
     engines: {node: '>=16.0.0'}
+
+  '@142vip/utils@0.0.1-alpha.18':
+    resolution: {integrity: sha512-Z5ysjUb9pKE2RsN+Lwgo3qPsljhd2Vfxs0VjnF/2VzpQrC9xwyME+E58kYPO4Y+Z3ljFv16E1Sdl+4Kd+bsuzA==}
 
   '@142vip/utils@0.0.1-alpha.2':
     resolution: {integrity: sha512-AzeWlLpD/M6KKqygywKLx0mNOensWN8VJ2q3Bk+ffWwXjdsh/pR1goHd1cATbYwuFBEVlcIRwxRSDNupSzKi4Q==}
@@ -3775,6 +3778,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.7.1:
+    resolution: {integrity: sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   set-blocking@2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
 
@@ -4573,6 +4581,18 @@ snapshots:
       lodash: 4.17.21
       nanoid: 3.3.8
       qs: 6.13.1
+
+  '@142vip/utils@0.0.1-alpha.18':
+    dependencies:
+      ansi-colors: 4.1.3
+      commander: 12.1.0
+      dayjs: 1.11.13
+      inquirer: 7.3.3
+      klona: 2.0.6
+      lodash: 4.17.21
+      nanoid: 3.3.8
+      qs: 6.13.1
+      semver: 7.7.1
 
   '@142vip/utils@0.0.1-alpha.2':
     dependencies:
@@ -8625,6 +8645,8 @@ snapshots:
   semver@5.7.2: {}
 
   semver@7.6.3: {}
+
+  semver@7.7.1: {}
 
   set-blocking@2.0.0: {}
 

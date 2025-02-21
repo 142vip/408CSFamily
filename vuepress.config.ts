@@ -1,11 +1,8 @@
 import { fileURLToPath } from 'node:url'
-import { defineUserConfig } from '@vuepress/cli'
-import { path } from '@vuepress/utils'
-import viteBundler from '@vuepress/bundler-vite'
 import {
+  getDocSiteBase,
   OPEN_SOURCE_ADDRESS,
   OPEN_SOURCE_AUTHOR,
-  getDocSiteBase,
 } from '@142vip/utils'
 import {
   FamilyHeaders,
@@ -14,9 +11,12 @@ import {
   getThemeConfig,
   getViteBundler,
 } from '@142vip/vuepress'
+import viteBundler from '@vuepress/bundler-vite'
+import { defineUserConfig } from '@vuepress/cli'
+import { path } from '@vuepress/utils'
 import { hopeTheme } from 'vuepress-theme-hope'
-import pkg from './package.json'
 import { navbarConfig, sidebarConfig } from './docs/theme.config'
+import pkg from './package.json'
 
 /**
  * 用户自定义配置

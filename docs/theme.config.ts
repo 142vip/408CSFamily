@@ -1,10 +1,10 @@
-import { hopeTheme, navbar, sidebar } from 'vuepress-theme-hope'
 import { markdownImagePlugin } from '@vuepress/plugin-markdown-image'
-import { MarkMapSidebar } from './mark-map/mark-map.sidebar'
-import { cnSidebar } from './cn/cn.sidebar'
+import { hopeTheme, navbar, sidebar } from 'vuepress-theme-hope'
 import { cppSidebar } from './ccp/cpp.sidebar'
-import { osSidebar } from './os/os.sidebar'
+import { cnSidebar } from './cn/cn.sidebar'
 import { dsSidebar } from './ds/ds.sidebar'
+import { MarkMapSidebar } from './mark-map/mark-map.sidebar'
+import { osSidebar } from './os/os.sidebar'
 
 /**
  * 导航栏配置

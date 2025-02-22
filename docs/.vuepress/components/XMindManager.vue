@@ -9,8 +9,6 @@
 import { XMindEmbedViewer } from 'xmind-embed-viewer'
 import mapData from '../public/mind-map/index.json'
 
-console.log(111, XMindEmbedViewer)
-
 export default {
   data() {
     return {

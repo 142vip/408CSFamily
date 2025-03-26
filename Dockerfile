@@ -27,7 +27,8 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store sh ./scripts/ci && if [ "$NEED
      pnpm build:proxy; \
   fi;
 
-FROM registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.27.0-alpine
+FROM --platform=linux/amd64 registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.27.0-alpine
+#FROM --platform=linux/amd64 ,linux/arm64 nginx:1.27.0-alpine
 
 ARG APP_NAME
 ARG APP_VERSION

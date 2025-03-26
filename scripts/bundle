@@ -8,11 +8,11 @@
  */
 
 import { createRequire } from 'node:module'
-import process from 'node:process'
 import {
   OPEN_SOURCE_ADDRESS,
   VipDocker,
   VipGit,
+  VipNodeJS,
 } from '@142vip/utils'
 
 (async () => {
@@ -24,21 +24,21 @@ import {
     const imageName = `${OPEN_SOURCE_ADDRESS.DOCKER_ALIYUNCS_VIP}/docs:${pkg.name}-${pkg.version}`
 
     // 最近一次提交信息
-    const { hash: gitHash } = await VipGit.getRecentGitCommit()
+    const shortGitHash = VipGit.getRecentCommitShortHash()
 
     // 构建镜像
     await VipDocker.buildImage({
       imageName,
       buildArgs: [
         // 参数中是否包含 --proxy
-        ['NEED_PROXY', process.argv.includes('--proxy')],
+        ['NEED_PROXY', VipNodeJS.getProcessArgv().includes('--proxy')],
         ['APP_NAME', pkg.name],
         ['APP_VERSION', pkg.version],
         ['APP_DESCRIPTION', pkg.description],
         ['AUTHOR', pkg.authorInfo.name],
         ['EMAIL', pkg.authorInfo.email],
         ['HOME_PAGE', pkg.authorInfo.homePage],
-        ['GIT_HASH', gitHash],
+        ['GIT_HASH', shortGitHash],
       ],
       memory: 20000,
       push: true,

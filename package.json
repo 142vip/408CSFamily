@@ -19,6 +19,7 @@
     "preinstall": "npx only-allow pnpm && chmod +x ./scripts/*",
     "postinstall": "rm -rf .git/hooks && npx simple-git-hooks",
     "clean": "npx fa clean --ignore-tips --dist --vite --deps --all",
+    "clean:hooks": "npx fa clean --git-hooks --all --ignore-tips",
     "lint": "npx fa lint",
     "lint:fix": "npx fa lint --fix",
     "dev": "pnpm build:mark-map && npx vuepress dev docs",
@@ -31,12 +32,12 @@
     "@142vip/eslint-config": "0.0.1-alpha.3",
     "@142vip/fairy-cli": "0.0.3-alpha.20",
     "@142vip/utils": "0.0.1-alpha.28",
-    "@142vip/vuepress": "0.0.1-alpha.10",
-    "@vuepress/bundler-vite": "2.0.0-rc.19",
+    "@142vip/vuepress": "0.0.1-alpha.11",
+    "@vuepress/bundler-vite": "2.0.0-rc.20",
     "markmap-cli": "0.18.9",
     "only-allow": "1.2.1",
     "simple-git-hooks": "2.11.1",
-    "vuepress": "2.0.0-rc.19",
+    "vuepress": "2.0.0-rc.20",
     "xmind-embed-viewer": "1.2.0"
   },
   "simple-git-hooks": {

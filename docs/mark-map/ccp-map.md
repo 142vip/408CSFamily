@@ -1,7 +1,7 @@
 ---
 title: 计算机组成原理
 permalink: /mark-map/ccp-map.html
-headerDepth: 3
+levels: 3
 ---
 
 # 计算机组成原理

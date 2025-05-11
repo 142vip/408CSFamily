@@ -1,11 +1,11 @@
+const fs = require('node:fs')
+
+const { VipNodeJS } = require('@142vip/utils')
+
 /**
  * 根据sideBar来快速初始化目录文档
  *
  */
-
-const fs = require('node:fs')
-const path = require('node:path')
-
 const sideBarData = {
   text: '查找',
   prefix: '查找',
@@ -44,8 +44,8 @@ const { prefix, children } = sideBarData;
   /**
    * 第一步： 创建目录
    */
-  const dir = path.join(__dirname, prefix)
-  const isExist = fs.existsSync(dir)
+  const dir = VipNodeJS.pathJoin(__dirname, prefix)
+  const isExist = VipNodeJS.existPath(dir)
 
   if (!isExist) {
     await fs.mkdirSync(dir)
@@ -56,10 +56,11 @@ const { prefix, children } = sideBarData;
    */
 
   for (const { text, link } of children) {
-    const filePath = path.join(dir, link)
-    const isExistFile = fs.existsSync(filePath)
+    const filePath = VipNodeJS.pathJoin(dir, link)
+    const isExistFile = VipNodeJS.existPath(filePath)
+    // 创建
     if (!isExistFile) {
-      await fs.writeFileSync(filePath, `# ${text} \n\n努力赶稿中，等等我呀...`)
+      await VipNodeJS.writeFileByUTF8(filePath, `# ${text} \n\n努力赶稿中，等等我呀...`)
     }
   }
 })()

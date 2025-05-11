@@ -1,7 +1,7 @@
 ---
 title: 操作系统
 permalink: /mark-map/os-map.html
-headerDepth: 3
+levels: 3
 ---
 
 # 操作系统

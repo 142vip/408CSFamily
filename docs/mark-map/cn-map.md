@@ -1,7 +1,7 @@
 ---
 title: 计算机网络
 permalink: /mark-map/cn-map.html
-headerDepth: 3
+levels: 3
 ---
 
 # 计算机网络
@@ -14,7 +14,6 @@ root(计算机网络)
     (网络层)
     (传输层)
     (应用层)
-```
 
 <a href="../../mind-map/cn-map.html" target="_blank">在线预览</a>
 

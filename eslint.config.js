@@ -4,6 +4,5 @@ export default defineVipEslintConfig({
   ignores: [
     '**/CHANGELOG.md',
   ],
-  rules: {
-  },
+  rules: {},
 })

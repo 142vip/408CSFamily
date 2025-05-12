@@ -21,7 +21,7 @@
     "strictNullChecks": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
-    "declaration": true,
+    "declaration": false,
     "inlineSourceMap": true,
     "stripInternal": true,
     "allowSyntheticDefaultImports": true,

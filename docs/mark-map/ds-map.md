@@ -1,7 +1,7 @@
 ---
 title: 数据结构
 permalink: /mark-map/ds-map.html
-headerDepth: 3
+levels: 3
 ---
 
 # 数据结构

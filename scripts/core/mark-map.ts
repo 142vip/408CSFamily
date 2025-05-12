@@ -8,7 +8,7 @@ const markMapTargetPath = VipNodeJS.pathJoin(__dirname, 'docs/.vuepress/public/m
 /**
  * 扫描目录
  */
-function scanDirectory(directory: string, fileType: string) {
+function scanDirectory(directory: string, fileType: string): (string | null)[] {
   const fileList = VipNodeJS.readdirSync(directory)
 
   return fileList

@@ -26,9 +26,11 @@
     "build": "npx vuepress build docs --clean-temp --clean-cache",
     "build:proxy": "NEED_PROXY=true npx vuepress build docs --clean-temp --clean-cache",
     "build:mark-map": "npx node --loader ts-node/esm --no-warnings scripts/core/mark-map.ts",
-    "release": "npx fa release --vip --check-branch next --check-branch main"
+    "release": "npx fa release --vip --check-branch next --check-branch main",
+    "check:commit": "npx node --loader ts-node/esm --no-warnings scripts/core/verify-commit.ts"
   },
   "devDependencies": {
+    "@142vip/commit-linter": "0.0.1-alpha.1",
     "@142vip/eslint-config": "0.0.1-alpha.4",
     "@142vip/fairy-cli": "0.0.3-alpha.24",
     "@142vip/utils": "0.0.1-alpha.36",
@@ -43,6 +45,6 @@
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint:fix",
-    "prepare-commit-msg": "pnpm build"
+    "commit-msg": "pnpm check:commit"
   }
 }

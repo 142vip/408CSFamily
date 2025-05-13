@@ -132,7 +132,7 @@ All notable changes to this project will be documented in this file. See [Conven
 
 ### Features
 
-* **scripts:** 新增sync脚本，同步master分支到不同仓库 ([9a0c018](https://github.com/142vip/408CSFamily/commit/9a0c018ebd8b772ca65763dc6969588d20cdfce4))
+* **scripts:** 新增sync脚本，同步main分支到不同仓库 ([9a0c018](https://github.com/142vip/408CSFamily/commit/9a0c018ebd8b772ca65763dc6969588d20cdfce4))
 * **数据结构:** 新增不同语言的查找算法代码 ([ec1dba6](https://github.com/142vip/408CSFamily/commit/ec1dba661f7921a421bde9b77cb9cf8dad82eacc))
 * 更新忽略文件、链接地址 ([483dcba](https://github.com/142vip/408CSFamily/commit/483dcba3c4cf7dabc12ee8e62472b07a9a0ee73a))
 * 网站动态文档更新，新增时间轴 ([3b03f4e](https://github.com/142vip/408CSFamily/commit/3b03f4e43cf61bef1984dc870c23c0fe89097ddb))

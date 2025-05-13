@@ -57,8 +57,8 @@ export default defineVipVuepressConfig({
     }),
     // 版权
     copyright: getCopyRightText(OPEN_SOURCE_AUTHOR.name),
-    // 仓库
-    repo: '142vip/408CSFamily',
+    // 仓库 142vip/408CSFamily
+    repo: `${OPEN_SOURCE_ADDRESS.GITHUB_ORGANIZATION_NAME}/${pkg.name}`,
     repoLabel: 'GitHub',
 
     // 作者信息
@@ -79,6 +79,7 @@ export default defineVipVuepressConfig({
           content: OPEN_SOURCE_AUTHOR.name,
         },
       },
+      git: true,
     },
   }),
   shouldPrefetch: false,

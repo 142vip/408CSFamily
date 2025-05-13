@@ -1,8 +1,7 @@
 ---
 title: 变更记录
 permalink: /changelog.html
-levels: 1
-sidebar: false
+levels: false
 ---
 
 # 变更记录
@@ -15,6 +14,6 @@ sidebar: false
 
 ::: tip
 
-对于发布早于 0.0.1-alpha.1 的历史版本，详见[Github 仓库](https://github.com/142vip/408CSFamily/blob/master/CHANGELOG.md) 。
+对于发布早于 0.0.1-alpha.1 的历史版本，详见[Github 仓库](https://github.com/142vip/408CSFamily/blob/main/CHANGELOG.md) 。
 
 :::

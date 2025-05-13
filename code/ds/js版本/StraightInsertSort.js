@@ -27,6 +27,6 @@ function straightInsertSort(arr, len) {
 
 const dealArr = [5, 2, 7, 3, 18, 8, 12, 1]
 console.log('插入排序前：', dealArr)
-const sortResult = straightInsertSort(dealArr, 7)
 
+const sortResult = straightInsertSort(dealArr, 7)
 console.log('插入排序后：', sortResult)

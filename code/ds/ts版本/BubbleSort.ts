@@ -40,7 +40,7 @@ export function BubbleSort(arr: number[]): number[] {
 /**
  * 将两个变量数值交换
  */
-export function switchValue(params: SwitchValue) {
+export function switchValue(params: SwitchValue): SwitchValue {
   const { a: newB, b: newA } = params
   return { a: newA, b: newB }
 }
@@ -48,5 +48,6 @@ export function switchValue(params: SwitchValue) {
 // 用例
 const initArr = [1, 5, 8, 3, 2, 9, 16]
 console.log(`冒泡排序前：${initArr}`)
+
 const sortedArr = BubbleSort(initArr)
 console.log(`冒泡排序后：${sortedArr}`)

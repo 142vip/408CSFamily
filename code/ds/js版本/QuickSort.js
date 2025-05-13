@@ -48,5 +48,6 @@ function Partition(arr, low, high) {
 
 const initArr = [2, 18, 6, 25, 19, 4, 8, 3, 7]
 console.log(`快速排序处理前：${initArr}`)
+
 const quickSortResult = QuickSort(initArr, 0, 8)
 console.log(`快速排序处理后：${quickSortResult}`)

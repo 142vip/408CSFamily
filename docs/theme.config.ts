@@ -9,7 +9,7 @@ import { osSidebar } from './os/os.sidebar'
  * 导航栏
  */
 export const navbarConfig = defineVipNavbarConfig([
-  { text: '🌐 首页', link: '/' },
+  { text: '🔥 首页', link: '/' },
   { text: '📙 数据结构', link: '/ds/' },
   { text: '📕 操作系统', link: '/os/' },
   { text: '📘 计算机组成原理', link: '/ccp/' },

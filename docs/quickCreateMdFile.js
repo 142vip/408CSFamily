@@ -1,5 +1,4 @@
 const fs = require('node:fs')
-
 const { VipNodeJS } = require('@142vip/utils')
 
 /**
@@ -38,9 +37,9 @@ const sideBarData = {
   ],
 }
 
-const { prefix, children } = sideBarData;
+const { prefix, children } = sideBarData
 
-(async () => {
+async function quickCreateMdFile() {
   /**
    * 第一步： 创建目录
    */
@@ -63,4 +62,6 @@ const { prefix, children } = sideBarData;
       await VipNodeJS.writeFileByUTF8(filePath, `# ${text} \n\n努力赶稿中，等等我呀...`)
     }
   }
-})()
+}
+
+void quickCreateMdFile()

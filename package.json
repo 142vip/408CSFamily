@@ -30,14 +30,12 @@
     "check:commit": "npx node --loader ts-node/esm --no-warnings scripts/core/verify-commit.ts"
   },
   "devDependencies": {
-    "@142vip/commit-linter": "0.0.1-alpha.1",
+    "@142vip/commit-linter": "0.0.1-alpha.2",
     "@142vip/eslint-config": "0.0.1-alpha.4",
-    "@142vip/fairy-cli": "0.0.3-alpha.24",
+    "@142vip/fairy-cli": "0.0.3-alpha.25",
     "@142vip/utils": "0.0.1-alpha.36",
-    "@142vip/vuepress": "0.0.1-alpha.14",
-    "@vuepress/plugin-watermark": "2.0.0-rc.27",
+    "@142vip/vuepress": "0.0.1-alpha.15",
     "markmap-cli": "0.18.9",
-    "mermaid": "11.6.0",
     "only-allow": "1.2.1",
     "simple-git-hooks": "2.11.1",
     "ts-node": "10.9.2",

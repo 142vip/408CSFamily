@@ -40,7 +40,7 @@ function binaryInsertSort(arr: number[], len: number): number[] {
 
 // 测试用例
 const dealArr = [5, 2, 7, 3, 18, 8, 12, 1]
-
 console.log('插入排序前：', dealArr)
+
 const sortResult = binaryInsertSort(dealArr, 7)
 console.log('插入排序后：', sortResult)

@@ -1,4 +1,12 @@
-import { OPEN_SOURCE_ADDRESS, OPEN_SOURCE_AUTHOR, VipDocker, VipGit, VipNodeJS, VipPackageJSON } from '@142vip/utils'
+import {
+  OPEN_SOURCE_ADDRESS,
+  OPEN_SOURCE_AUTHOR,
+  VipConsole,
+  VipDocker,
+  VipGit,
+  VipNodeJS,
+  VipPackageJSON,
+} from '@142vip/utils'
 
 /**
  * 功能：构建Docker镜像
@@ -35,7 +43,7 @@ async function buildImageMain(): Promise<void> {
     })
   }
   catch (e) {
-    console.log('异常信息:', e)
+    VipConsole.trace('异常信息:', e)
   }
 }
 

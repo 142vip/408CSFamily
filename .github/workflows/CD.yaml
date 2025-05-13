@@ -76,7 +76,7 @@ jobs:
   release:
     name: Github版本发布
     runs-on: ubuntu-latest
-    # # 主库master、next且执行release更新时执行
+    # # 主库main、next且执行release更新时执行
     if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
 
     steps:
@@ -116,7 +116,7 @@ jobs:
 #    name: "部署到ESC服务器"
 #    needs: install-init
 #    runs-on: ubuntu-latest
-#    ## 主库master、next且执行release更新时执行
+#    ## 主库main、next且执行release更新时执行
 #    if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
 #
 #    steps:

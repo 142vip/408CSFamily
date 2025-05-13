@@ -33,5 +33,6 @@ function BubbleSort(arr, len) {
 
 const initArr = [1, 5, 8, 3, 2, 9, 16]
 console.log(`冒泡排序前：${initArr}`)
+
 const sortedArr = BubbleSort(initArr, 7)
 console.log(`冒泡排序后：${sortedArr}`)

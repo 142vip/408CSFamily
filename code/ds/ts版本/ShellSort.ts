@@ -4,7 +4,7 @@
  * @param {Array} arr  待排序数组
  * @param {int} len 数组长度，可校验
  */
-export function shellSort(arr: number[], len: number) {
+export function shellSort(arr: number[], len: number): number[] {
   // 校对数组长度
   if (arr.length !== len) {
     len = arr.length
@@ -28,7 +28,7 @@ export function shellSort(arr: number[], len: number) {
  * @param {int} increment 增量步长
  * @param {int} groupIndex 分组，第几个分组
  */
-export function specialStraightInsertSort(arr: number[], len: number, increment: number, groupIndex: number) {
+export function specialStraightInsertSort(arr: number[], len: number, increment: number, groupIndex: number): number[] {
   if (arr.length !== len) {
     len = arr.length
   }
@@ -56,6 +56,7 @@ export function specialStraightInsertSort(arr: number[], len: number, increment:
 
 const dealArr = [5, 8, 2, 16, 3, 9, 1]
 console.log('插入排序前：', dealArr)
+
 const sortResult = shellSort(dealArr, 7)
 console.log('插入排序后：', sortResult)
 
@@ -64,7 +65,7 @@ console.log('插入排序后：', sortResult)
  * - 返回已排序号的数组，从小到大
  * @param {Array} arr
  */
-export function shellSortBetter(arr) {
+export function shellSortBetter(arr: number[]): number[] {
   const len = arr.length
   let increment = Math.floor(len / 2)
 

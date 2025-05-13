@@ -50,6 +50,7 @@ function specialStraightInsertSort(arr, len, increment, groupIndex) {
 
 const dealArr = [5, 8, 2, 16, 3, 9, 1]
 console.log('插入排序前：', dealArr)
+
 const sortResult = shellSort(dealArr, 7)
 console.log('插入排序后：', sortResult)
 

@@ -4,7 +4,7 @@
  * @param {int} low   数组低位角标   左指针
  * @param {int} high  数组高位角标   右指针
  */
-export function QuickSort(arr, low, high) {
+export function QuickSort(arr: number[], low: number, high: number): number[] {
   // low=high 说明只有一个元素，理解为有序，不做处理
   // low>high 说明左、右指针已经重合，数组已经遍历完，需要跳出
   if (low < high) {
@@ -26,7 +26,7 @@ export function QuickSort(arr, low, high) {
  * @param {int} low   数组低位角标   左指针
  * @param {int} high  数组高位角标   右指针
  */
-export function Partition(arr, low, high) {
+export function Partition(arr: number[], low: number, high: number): number {
   // 假设低位指针对应数组角标元素为基准pivot
   const pivot = arr[low]
   while (low < high) {

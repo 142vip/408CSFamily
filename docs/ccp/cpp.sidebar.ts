@@ -1,3 +1,6 @@
+/**
+ * 计算机组成原理
+ */
 export const cppSidebar = [
   {
     text: '计算机引论',

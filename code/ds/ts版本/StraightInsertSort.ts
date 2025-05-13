@@ -1,7 +1,7 @@
 /**
  * 直接插入排序【JavaScript版本】
  */
-export function straightInsertSort(arr: number[], len: number) {
+export function straightInsertSort(arr: number[], len: number): number[] {
   // 重新确定数组长度
   if (arr.length !== len) {
     len = arr.length
@@ -30,7 +30,7 @@ export function straightInsertSort(arr: number[], len: number) {
 }
 
 const dealArr = [5, 2, 7, 3, 18, 8, 12, 1]
-
 console.log('插入排序前：', dealArr)
+
 const sortResult = straightInsertSort(dealArr, 7)
 console.log('插入排序后：', sortResult)

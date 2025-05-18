@@ -4,7 +4,7 @@ import { VipColor, VipConsole, vipLogger } from '@142vip/utils'
 /**
  * 验证Git Commit信息
  */
-async function verifyCommitMain(): Promise<void> {
+function verifyCommitMain(): void {
   const { type, scope, subject, commit } = commitLiner()
 
   // 提交符合规范，打印相关信息

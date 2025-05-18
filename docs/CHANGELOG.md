@@ -1,16 +1,18 @@
 ---
 title: 变更记录
 permalink: /changelog.html
-levels: false
+# 设置右侧标题显示
+toc:
+  levels: 2
 ---
 
 # 变更记录
 
-该文件包含 `408CSFamily` 仓库和网站所有显着更改。
+**该文件包含 `408CSFamily` 仓库和网站所有显着更改。**
 
 <!-- @include: ../CHANGELOG.md#recent-alpha -->
 
-## 更多...
+## 更多变更
 
 ::: tip
 

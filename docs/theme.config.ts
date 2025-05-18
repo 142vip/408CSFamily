@@ -18,7 +18,7 @@ export const navbarConfig = defineVipNavbarConfig([
   {
     text: '👉 了解更多',
     children: [
-      { text: '📄 更新日志', link: '/changelog.md' },
+      { text: '📄 变更记录', link: '/changelog.md' },
       { text: '📣 网站动态', link: '/big-event-history.md' },
       {
         text: '自媒体',

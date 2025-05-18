@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.1-alpha.19 (2025-05-18)
+
+### ✨ Features
+
+- 升级vuepress依赖，优化逻辑 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/408CSFamily/issues/145 [<samp>(f1a94)</samp>](https://github.com/142vip/408CSFamily/commit/f1a9474)
+- 依赖升级，工程化定期改造 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/408CSFamily/issues/146 [<samp>(237b3)</samp>](https://github.com/142vip/408CSFamily/commit/237b3ab)
+- 引入`@142vip/commit-linter`依赖，增加`check:commit`命令，校验`commit`信息 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/408CSFamily/issues/147 [<samp>(3878a)</samp>](https://github.com/142vip/408CSFamily/commit/3878a43)
+- 工程化依赖升级，优化文档和基础配置 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/408CSFamily/issues/148 [<samp>(866d9)</samp>](https://github.com/142vip/408CSFamily/commit/866d943)
+- 基于`@142vip/vuepress`对站点升级，简化配置、优化整体结构 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/408CSFamily/issues/149 [<samp>(42614)</samp>](https://github.com/142vip/408CSFamily/commit/42614cd)
+
+### 💅 Refactors
+
+- 优化脚本逻辑，升级`@142vip/utils`依赖 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/142vip/408CSFamily/issues/144 [<samp>(84fc0)</samp>](https://github.com/142vip/408CSFamily/commit/84fc0f9)
+
+**Release New Version v0.0.1-alpha.19 [👉 View Changes On GitHub](https://github.com/142vip/408CSFamily/compare/v0.0.1-alpha.18...v0.0.1-alpha.19)**
+
 ## v0.0.1-alpha.18 (2025-02-04)
 
 ### 🐛 Bug Fixes

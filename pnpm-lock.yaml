@@ -25,10 +25,10 @@ importers:
         version: 0.0.1-alpha.37(@types/node@22.15.18)
       '@142vip/vuepress':
         specifier: 0.0.1-alpha.17
-        version: 0.0.1-alpha.17(gre43dmvs6tjumee4gz2on2nga)
+        version: 0.0.1-alpha.17(edw6zixblrxlv4huuzwnydsj6u)
       markmap-cli:
-        specifier: 0.18.9
-        version: 0.18.9
+        specifier: 0.18.11
+        version: 0.18.11
       only-allow:
         specifier: 1.2.1
         version: 1.2.1
@@ -3155,36 +3155,36 @@ packages:
     engines: {node: '>= 18'}
     hasBin: true
 
-  markmap-cli@0.18.9:
-    resolution: {integrity: sha512-CSFFZ04N0+uAL7YurKl7T8UXzOXKy0uAxUTV5oFFw3mhwx2UbexGA5lywQNTZ0yGHPowOBdYRoFmITEaW2hSnA==}
+  markmap-cli@0.18.11:
+    resolution: {integrity: sha512-z8uakajQX7A6j4U9UA8WT4SpKQ/xinbp7bhalovAHVYcBCas3cQPwrS2nlc6pMShzol10OTxCp1MAr8wPglA0w==}
     engines: {node: '>=18'}
     hasBin: true
 
   markmap-common@0.18.9:
     resolution: {integrity: sha512-MV2HQO7IGIm3jWEJXSG8vmdpqf4WIDXcEyAEN52lrWR1qD53Zg5l81JwjXoZ2l0rY5mofKYqUFlmdM2fqTGMVg==}
 
-  markmap-html-parser@0.18.9:
-    resolution: {integrity: sha512-B/Fq3fGn+NN0CQAxV75IVPT6RDzV/voYHzVOeo55ut6D3VymuKXIgY5ondA5NnM8k6VgCDJzns+h/wGuNX/Ceg==}
+  markmap-html-parser@0.18.11:
+    resolution: {integrity: sha512-+kC5C4sCGntGUhGvTa5VIb5rtM75cSy/VCy3tzZoNAcn2qZGdgYvljN0WvjsOzrEzp+V6XKgwzO0u2TdzNAiOg==}
     peerDependencies:
       markmap-common: '*'
 
-  markmap-lib@0.18.9:
-    resolution: {integrity: sha512-ryFMCGMeMaVPLUi5IsLsuG+534JHjsNZHZVumGTZyjxEGZXRbFqcEdDBKypdR+UnLCLuaqtZtKY0R9lPzNv38w==}
+  markmap-lib@0.18.11:
+    resolution: {integrity: sha512-2mBWrWRdK61W5//FlJ0zN20vi+/oVlPtnydyO3xR+0E2bhiTLNPjFwRi0h2RrdT/hUiiHV98s9iRckwXEhDtJg==}
     peerDependencies:
       markmap-common: '*'
 
-  markmap-render@0.18.9:
-    resolution: {integrity: sha512-dHnU5z0YsnkLCBwJULS7yhJfitoJjyPS9vANgrmLvPRZQdfWclnpxzKHwU9bLB7rvAg0O1xb1xf6mrt0IAM4Pw==}
+  markmap-render@0.18.10:
+    resolution: {integrity: sha512-TJtWZ/1IabMhKLCTixPTdAlmGNaEV7l6j6Ljm9GxTPumrumXehpasxSgFbxDgDGhsC8Z0bMTYum83mE38sey/g==}
     peerDependencies:
       markmap-common: '*'
 
-  markmap-toolbar@0.18.9:
-    resolution: {integrity: sha512-/av64dCJtCUKgQrGk9ksw7AZJq25K75l7enhiulJjKBwTh3LX7hCcF/uRoC0uP3URb9t6isrDAA8wDBGzaSJvg==}
+  markmap-toolbar@0.18.10:
+    resolution: {integrity: sha512-1/ju0NfI0iUGYYTu1FZPdrNcGZGt4oWMNqhF8CJhImvxyM6DnT/RE1zFtTknNLqo077Aif6wZ460IDqzFKrghw==}
     peerDependencies:
       markmap-common: '*'
 
-  markmap-view@0.18.9:
-    resolution: {integrity: sha512-fS/KwpF8oUK/on6IPj0zN7yRoaX68dm/QzhyaCJTEH4hb7EeAhPRsCeMcSz4AFxhXvj8ntT+uLvv7TLyDNn0Wg==}
+  markmap-view@0.18.10:
+    resolution: {integrity: sha512-2Wi/HpOHwhDjw+Lj6/CoZzWtxvAF2ymkjCpexJKC1uYQERqMhja8Rr5d5hww7oVAith80Bsr6h+ZIYQGgxnhdQ==}
     peerDependencies:
       markmap-common: '*'
 
@@ -4803,7 +4803,7 @@ snapshots:
       - '@types/node'
       - magicast
 
-  '@142vip/vuepress@0.0.1-alpha.17(gre43dmvs6tjumee4gz2on2nga)':
+  '@142vip/vuepress@0.0.1-alpha.17(edw6zixblrxlv4huuzwnydsj6u)':
     dependencies:
       '@vue/repl': 4.5.1
       '@vuepress/bundler-vite': 2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0)
@@ -4825,7 +4825,7 @@ snapshots:
       vidstack: 1.12.12
       vue: 3.5.14(typescript@5.8.3)
       vuepress: 2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))
-      vuepress-theme-hope: 2.0.0-rc.87(@vue/repl@4.5.1)(@vuepress/plugin-slimsearch@2.0.0-rc.102(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))))(@vuepress/plugin-watermark@2.0.0-rc.102(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))))(dashjs@4.7.4)(hls.js@1.5.13)(katex@0.16.22)(markdown-it@14.1.0)(markmap-lib@0.18.9(markmap-common@0.18.9))(markmap-toolbar@0.18.9(markmap-common@0.18.9))(markmap-view@0.18.9(markmap-common@0.18.9))(mermaid@11.6.0)(sass-embedded@1.87.0)(typescript@5.8.3)(vidstack@1.12.12)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3)))
+      vuepress-theme-hope: 2.0.0-rc.87(@vue/repl@4.5.1)(@vuepress/plugin-slimsearch@2.0.0-rc.102(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))))(@vuepress/plugin-watermark@2.0.0-rc.102(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))))(dashjs@4.7.4)(hls.js@1.5.13)(katex@0.16.22)(markdown-it@14.1.0)(markmap-lib@0.18.11(markmap-common@0.18.9))(markmap-toolbar@0.18.10(markmap-common@0.18.9))(markmap-view@0.18.10(markmap-common@0.18.9))(mermaid@11.6.0)(sass-embedded@1.87.0)(typescript@5.8.3)(vidstack@1.12.12)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3)))
 
   '@antfu/eslint-config@4.11.0(@vue/compiler-sfc@3.5.14)(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
@@ -8126,7 +8126,7 @@ snapshots:
 
   marked@15.0.11: {}
 
-  markmap-cli@0.18.9:
+  markmap-cli@0.18.11:
     dependencies:
       '@babel/runtime': 7.27.1
       '@hono/node-server': 1.14.1(hono@4.7.10)
@@ -8134,9 +8134,9 @@ snapshots:
       commander: 12.1.0
       hono: 4.7.10
       markmap-common: 0.18.9
-      markmap-lib: 0.18.9(markmap-common@0.18.9)
-      markmap-render: 0.18.9(markmap-common@0.18.9)
-      markmap-toolbar: 0.18.9(markmap-common@0.18.9)
+      markmap-lib: 0.18.11(markmap-common@0.18.9)
+      markmap-render: 0.18.10(markmap-common@0.18.9)
+      markmap-toolbar: 0.18.10(markmap-common@0.18.9)
       open: 10.1.2
       portfinder: 1.0.37
       read-package-up: 11.0.0
@@ -8150,13 +8150,13 @@ snapshots:
       '@gera2ld/jsx-dom': 2.2.2
       npm2url: 0.2.4
 
-  markmap-html-parser@0.18.9(markmap-common@0.18.9):
+  markmap-html-parser@0.18.11(markmap-common@0.18.9):
     dependencies:
       '@babel/runtime': 7.27.1
       cheerio: 1.0.0
       markmap-common: 0.18.9
 
-  markmap-lib@0.18.9(markmap-common@0.18.9):
+  markmap-lib@0.18.11(markmap-common@0.18.9):
     dependencies:
       '@babel/runtime': 7.27.1
       '@vscode/markdown-it-katex': 1.1.1
@@ -8168,23 +8168,23 @@ snapshots:
       markdown-it-sub: 2.0.0
       markdown-it-sup: 2.0.0
       markmap-common: 0.18.9
-      markmap-html-parser: 0.18.9(markmap-common@0.18.9)
-      markmap-view: 0.18.9(markmap-common@0.18.9)
+      markmap-html-parser: 0.18.11(markmap-common@0.18.9)
+      markmap-view: 0.18.10(markmap-common@0.18.9)
       prismjs: 1.30.0
       yaml: 2.8.0
 
-  markmap-render@0.18.9(markmap-common@0.18.9):
+  markmap-render@0.18.10(markmap-common@0.18.9):
     dependencies:
       '@babel/runtime': 7.27.1
       markmap-common: 0.18.9
 
-  markmap-toolbar@0.18.9(markmap-common@0.18.9):
+  markmap-toolbar@0.18.10(markmap-common@0.18.9):
     dependencies:
       '@babel/runtime': 7.27.1
       '@gera2ld/jsx-dom': 2.2.2
       markmap-common: 0.18.9
 
-  markmap-view@0.18.9(markmap-common@0.18.9):
+  markmap-view@0.18.10(markmap-common@0.18.9):
     dependencies:
       '@babel/runtime': 7.27.1
       d3: 7.9.0
@@ -9591,7 +9591,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  vuepress-plugin-md-enhance@2.0.0-rc.87(@vue/repl@4.5.1)(markdown-it@14.1.0)(markmap-lib@0.18.9(markmap-common@0.18.9))(markmap-toolbar@0.18.9(markmap-common@0.18.9))(markmap-view@0.18.9(markmap-common@0.18.9))(mermaid@11.6.0)(sass-embedded@1.87.0)(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))):
+  vuepress-plugin-md-enhance@2.0.0-rc.87(@vue/repl@4.5.1)(markdown-it@14.1.0)(markmap-lib@0.18.11(markmap-common@0.18.9))(markmap-toolbar@0.18.10(markmap-common@0.18.9))(markmap-view@0.18.10(markmap-common@0.18.9))(mermaid@11.6.0)(sass-embedded@1.87.0)(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))):
     dependencies:
       '@mdit/plugin-container': 0.18.0(markdown-it@14.1.0)
       '@mdit/plugin-demo': 0.18.0(markdown-it@14.1.0)
@@ -9608,9 +9608,9 @@ snapshots:
       vuepress-shared: 2.0.0-rc.86(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3)))
     optionalDependencies:
       '@vue/repl': 4.5.1
-      markmap-lib: 0.18.9(markmap-common@0.18.9)
-      markmap-toolbar: 0.18.9(markmap-common@0.18.9)
-      markmap-view: 0.18.9(markmap-common@0.18.9)
+      markmap-lib: 0.18.11(markmap-common@0.18.9)
+      markmap-toolbar: 0.18.10(markmap-common@0.18.9)
+      markmap-view: 0.18.10(markmap-common@0.18.9)
       mermaid: 11.6.0
       sass-embedded: 1.87.0
     transitivePeerDependencies:
@@ -9626,7 +9626,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  vuepress-theme-hope@2.0.0-rc.87(@vue/repl@4.5.1)(@vuepress/plugin-slimsearch@2.0.0-rc.102(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))))(@vuepress/plugin-watermark@2.0.0-rc.102(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))))(dashjs@4.7.4)(hls.js@1.5.13)(katex@0.16.22)(markdown-it@14.1.0)(markmap-lib@0.18.9(markmap-common@0.18.9))(markmap-toolbar@0.18.9(markmap-common@0.18.9))(markmap-view@0.18.9(markmap-common@0.18.9))(mermaid@11.6.0)(sass-embedded@1.87.0)(typescript@5.8.3)(vidstack@1.12.12)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))):
+  vuepress-theme-hope@2.0.0-rc.87(@vue/repl@4.5.1)(@vuepress/plugin-slimsearch@2.0.0-rc.102(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))))(@vuepress/plugin-watermark@2.0.0-rc.102(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))))(dashjs@4.7.4)(hls.js@1.5.13)(katex@0.16.22)(markdown-it@14.1.0)(markmap-lib@0.18.11(markmap-common@0.18.9))(markmap-toolbar@0.18.10(markmap-common@0.18.9))(markmap-view@0.18.10(markmap-common@0.18.9))(mermaid@11.6.0)(sass-embedded@1.87.0)(typescript@5.8.3)(vidstack@1.12.12)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))):
     dependencies:
       '@vuepress/helper': 2.0.0-rc.105(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3)))
       '@vuepress/plugin-active-header-links': 2.0.0-rc.98(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3)))
@@ -9664,7 +9664,7 @@ snapshots:
       vue: 3.5.14(typescript@5.8.3)
       vuepress: 2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3))
       vuepress-plugin-components: 2.0.0-rc.86(dashjs@4.7.4)(hls.js@1.5.13)(sass-embedded@1.87.0)(typescript@5.8.3)(vidstack@1.12.12)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3)))
-      vuepress-plugin-md-enhance: 2.0.0-rc.87(@vue/repl@4.5.1)(markdown-it@14.1.0)(markmap-lib@0.18.9(markmap-common@0.18.9))(markmap-toolbar@0.18.9(markmap-common@0.18.9))(markmap-view@0.18.9(markmap-common@0.18.9))(mermaid@11.6.0)(sass-embedded@1.87.0)(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3)))
+      vuepress-plugin-md-enhance: 2.0.0-rc.87(@vue/repl@4.5.1)(markdown-it@14.1.0)(markmap-lib@0.18.11(markmap-common@0.18.9))(markmap-toolbar@0.18.10(markmap-common@0.18.9))(markmap-view@0.18.10(markmap-common@0.18.9))(mermaid@11.6.0)(sass-embedded@1.87.0)(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3)))
       vuepress-shared: 2.0.0-rc.86(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3)))
     optionalDependencies:
       '@vuepress/plugin-slimsearch': 2.0.0-rc.102(typescript@5.8.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.18)(jiti@2.4.2)(sass-embedded@1.87.0)(typescript@5.8.3)(yaml@2.8.0))(typescript@5.8.3)(vue@3.5.14(typescript@5.8.3)))

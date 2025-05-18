@@ -131,4 +131,4 @@ jobs:
       # 快速构建并推送
       - name: Push Docker Image
         run: |
-          ./scripts/bundle
+          ./scripts/build-image

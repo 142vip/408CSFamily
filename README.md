@@ -60,6 +60,29 @@
 - 注意学科学习顺序，建议：`数据结构` --> `操作系统`、`计算机组成原理` --> `计算机网络`
 - **学习切忌浮于表面，需戒骄戒躁**。408考试知识点多、杂，非常容易忘，**抓大放小、先易后难、反复多次**
 
+## 本地浏览【推荐】
+
+由于平台、网络等原因，在线浏览容易出现加载面、加载不出来等常见问题，因此非常建议在本地进行浏览、学习；**下面指令默认你已经安装[Git](https://git-scm.com/download)、[NPM](https://www.npmjs.com/)、[PNPM](https://www.pnpm.cn/)、[Node](http://nodejs.cn)等环境，并对此有一定了解!**
+
+```bash:no-line-numbers
+## 进入cmd命令行，直接克隆仓库
+git clone https://github.com/mmdapl/408CSFamily.git
+
+## 进入408CSFamily文件夹中
+cd 408CSFamily
+
+## tips: 如果本地已经clone过仓库，建议执行pull指令，获取最新
+git pull
+
+## 下载依赖包
+pnpm install
+
+## 执行dev指令，本地启动项目，打开http://localhost:4200即可访问文档
+pnpm dev
+```
+
+查看项目启动日志并访问：[http://127.0.0.1:4200](http://localhost:4200)，开启学习之旅吧~
+
 ## 在线浏览
 
 - 稳定版： <https://408.142vip.cn>
@@ -81,8 +104,8 @@
 
 ### 学习视频
 
-> **不是王道工作人员，不做任何推销**，只是感觉看书不太行的话还是得找找视频辅助下，就发现了王道官方视频，
-> 我自己有时也会用这个，如果链接失效可以去B站搜！
+> **不是王道工作人员，不做任何推销**，只是感觉看书不太行的话还是得找找视频辅助下，就发现了王道官方视频。
+> **如果链接失效可以去B站搜！**
 
 - [数据结构](https://www.bilibili.com/video/BV1b7411N798)
 - [计算机组成原理](https://www.bilibili.com/video/BV1BE411D7ii)
@@ -320,8 +343,6 @@
 - HTTP协议
 
 <!-- #endregion quick-start -->
-
-[//]: # '宣传内容'
 
 <!-- #region we-media -->
 

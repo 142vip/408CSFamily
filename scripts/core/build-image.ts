@@ -1,6 +1,5 @@
+import { OPEN_SOURCE_ADDRESS, OPEN_SOURCE_AUTHOR } from '@142vip/open-source'
 import {
-  OPEN_SOURCE_ADDRESS,
-  OPEN_SOURCE_AUTHOR,
   VipConsole,
   VipDocker,
   VipGit,

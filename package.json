@@ -38,7 +38,7 @@
     "@142vip/vuepress": "0.0.1-alpha.17",
     "markmap-cli": "0.18.9",
     "only-allow": "1.2.1",
-    "simple-git-hooks": "2.11.1",
+    "simple-git-hooks": "2.13.0",
     "ts-node": "10.9.2",
     "xmind-embed-viewer": "1.2.0"
   },

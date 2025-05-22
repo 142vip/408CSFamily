@@ -1,0 +1,13 @@
+# 参考：https://wei.github.io/pull/
+version: '1'
+rules:
+  - base: main
+    upstream: 142vip:main
+    mergeMethod: hardreset
+  - base: next
+    upstream: 142vip:next
+    mergeMethod: hardreset
+  # 兼容master分支
+  - base: master
+    upstream: 142vip:master
+    mergeMethod: hardreset

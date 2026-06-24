@@ -3,12 +3,11 @@
 # - 用法: docker build -f Dockerfile --build-arg APP_VERSION=0.0.1  -t 408CSFamily-0.0.1  .
 # - 参数:
 #   APP_VERSION: 版本
-#   CONTAINER_BUILD: 采用容器构建
 #
 # 注意：vite构建需要支持node14以上，安装node16较为稳妥
 
-FROM registry.cn-hangzhou.aliyuncs.com/142vip/node:20.17.0-alpine AS build_base
-ARG CONTAINER_BUILD
+FROM registry.cn-hangzhou.aliyuncs.com/142vip-infra/node:25.9.0-base AS build_base
+ARG NEED_PROXY
 
 ## 设置环境变量，支持容器构建时使用layer缓存，参考：https://pnpm.io/zh/docker
 ENV PNPM_HOME="/pnpm"
@@ -16,8 +15,6 @@ ENV PATH="$PNPM_HOME:$PATH"
 
 WORKDIR /apps
 COPY . .
-
-RUN echo $CONTAINER_BUILD;
 
 ## 基于容器自动构建
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store sh ./scripts/ci && if [ "$NEED_PROXY" = "false" ];  \
@@ -27,8 +24,7 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store sh ./scripts/ci && if [ "$NEED
      pnpm build:proxy; \
   fi;
 
-FROM --platform=linux/amd64 registry.cn-hangzhou.aliyuncs.com/142vip/nginx:1.27.0-alpine
-#FROM --platform=linux/amd64 ,linux/arm64 nginx:1.27.0-alpine
+FROM --platform=linux/amd64 registry.cn-hangzhou.aliyuncs.com/142vip-infra/nginx:1.29.0-alpine
 
 ARG APP_NAME
 ARG APP_VERSION

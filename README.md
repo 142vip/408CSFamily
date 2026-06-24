@@ -1,6 +1,6 @@
 <div align="center">
     <p>
-        <img alt="408Logo图片" width="240" src="https://cdn.statically.io/gh/142vip/cdn_service@main/doc_book/408/408_logo.png" style="text-align: center;">
+        <img alt="408Logo图片" width="240" src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/408/logo-408.png" style="text-align: center;">
     </p>
     <p style="font-size: 30px">
         <strong>✨计算机408全家桶✨</strong>
@@ -399,7 +399,7 @@ pnpm dev
 
 <div style="text-align: center;margin: 10px" id="we-media-container">
     <div align="center" >
-            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/media/main-code.png"
+            <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/media/wechat/main-code.png"
                 width="auto"
                 style="margin:5px;border-radius: 5px"
                 title="关注微信公众号或添加好友联系储凡" alt="关注微信公众号或添加好友联系储凡"/>
@@ -411,7 +411,7 @@ pnpm dev
           target="_blank"
           title="点击跳转Github主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/github.svg" alt="CSDN" title="CSDN"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/media/svg/github.svg" alt="CSDN" title="CSDN"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -420,7 +420,7 @@ pnpm dev
           target="_blank"
           title="点击跳转码云主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/gitee.svg" alt="Gitee" title="Gitee"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/media/svg/gitee.svg" alt="Gitee" title="Gitee"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -429,7 +429,7 @@ pnpm dev
           target="_blank"
           title="点击跳转掘金主页"
         >
-          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/juejin.svg" alt="掘金"
+          <img src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/media/svg/juejin.svg" alt="掘金"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
         <a
@@ -439,7 +439,7 @@ pnpm dev
           title="点击跳转B站主页"
         >
           <img
-            src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/bilibili.svg"
+            src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/media/svg/bilibili.svg"
             alt="Bilibili"
             style="margin: 5px;width: 24px;height: 24px;">
         </a>
@@ -450,7 +450,7 @@ pnpm dev
           title="点击跳转CSDN博客主页"
         >
           <img
-            src="https://cdn.statically.io/gh/142vip/cdn_service@main/main-vip/svg/csdn.svg"
+            src="https://cdn.statically.io/gh/142vip/cdn_service@main/apps/media/svg/csdn.svg"
             title="点击跳转CSDN博客主页" alt="CSDN"
             style="margin: 5px;width: 24px;height: 24px;"
           >

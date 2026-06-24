@@ -6,13 +6,35 @@
 #   ./scripts/ci
 #
 
-NPM_REGISTRY="https://mirrors.tencent.com/npm/"
+set -euo pipefail
 
-## 获取所有参数
-echo "运行命令: export COREPACK_NPM_REGISTRY=$NPM_REGISTRY && corepack enable pnpm && pnpm i --registry $NPM_REGISTRY --frozen-lockfile $*"
+NPM_REGISTRY="${NPM_REGISTRY:-https://registry.npmmirror.com}"
+COREPACK_REGISTRY="${COREPACK_REGISTRY:-https://registry.npmjs.org}"
 
-# 导出corepack环境变量，安装pnpm版本
-export COREPACK_NPM_REGISTRY=$NPM_REGISTRY COREPACK_INTEGRITY_KEYS=0 && corepack enable pnpm
+echo "运行命令: pnpm i --registry $NPM_REGISTRY --frozen-lockfile --force $*"
+echo "COREPACK_REGISTRY: $COREPACK_REGISTRY"
 
-# 安装项目依赖
-pnpm i  --registry $NPM_REGISTRY --frozen-lockfile "$@"
+if ! command -v corepack >/dev/null 2>&1; then
+  echo "未检测到 corepack，正在安装..."
+  npm i -g corepack@latest --force
+else
+  echo "corepack 已安装，版本: $(corepack --version)"
+fi
+
+export COREPACK_ENABLE_DOWNLOAD_PROMPT=0
+export COREPACK_NPM_REGISTRY="$COREPACK_REGISTRY"
+
+if pnpm --version >/dev/null 2>&1; then
+  echo "pnpm 已安装，版本: $(pnpm --version)"
+else
+  echo "正在通过 corepack 启用 pnpm..."
+  corepack enable pnpm || true
+  if ! pnpm --version >/dev/null 2>&1; then
+    echo "corepack 版本过低，正在升级..."
+    npm i -g corepack@latest --force
+    corepack enable pnpm
+  fi
+  echo "pnpm 已安装，版本: $(pnpm --version)"
+fi
+
+pnpm i --registry "$NPM_REGISTRY" --frozen-lockfile --force "$@"

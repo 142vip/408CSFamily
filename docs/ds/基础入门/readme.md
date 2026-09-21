@@ -1,3 +1,8 @@
+---
+title: 基础入门
+permalink: /ds/introduction/
+---
+
 # 基础入门
 
-![](basic_introduction.png)
+![](images/basic_introduction.png)

@@ -1,5 +1,6 @@
 ---
 title: 计算机网络
+permalink: /cn/
 ---
 
 # 计算机网络

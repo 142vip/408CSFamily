@@ -1,5 +1,6 @@
 ---
 title: 数据结构
+permalink: /ds/
 ---
 
 ![打好基础推荐学习这本](images/ds-base.png)

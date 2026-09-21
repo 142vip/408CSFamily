@@ -1,5 +1,6 @@
 ---
 title: 操作系统
+permalink: /os/
 ---
 
 # 操作系统

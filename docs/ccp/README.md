@@ -1,5 +1,6 @@
 ---
 title: 计算机组成原理
+permalink: /ccp/
 ---
 
 # 计算机组成原理

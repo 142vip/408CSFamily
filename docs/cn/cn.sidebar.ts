@@ -1,7 +1,9 @@
+import type { SubjectSidebarConfig } from '../../.vuepress/config/plugins/resolve-sidebar-links'
+
 /**
  * 计算机网络
  */
-export const cnSidebar = [
+export const cnSidebar: SubjectSidebarConfig = [
   {
     text: '体系结构',
     prefix: '体系结构',

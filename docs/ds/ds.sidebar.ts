@@ -1,7 +1,9 @@
+import type { SubjectSidebarConfig } from '../../.vuepress/config/plugins/resolve-sidebar-links'
+
 /**
  * 数据结构
  */
-export const dsSidebar = [
+export const dsSidebar: SubjectSidebarConfig = [
   {
     text: '基础入门',
     prefix: '基础入门',

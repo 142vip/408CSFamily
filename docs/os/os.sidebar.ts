@@ -1,7 +1,9 @@
+import type { SubjectSidebarConfig } from '../../.vuepress/config/plugins/resolve-sidebar-links'
+
 /**
  * 操作系统
  */
-export const osSidebar = [
+export const osSidebar: SubjectSidebarConfig = [
   {
     text: '系统概述',
     prefix: '系统概述',

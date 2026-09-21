@@ -1,7 +1,9 @@
+import type { SubjectSidebarConfig } from '../../.vuepress/config/plugins/resolve-sidebar-links'
+
 /**
  * 计算机组成原理
  */
-export const cppSidebar = [
+export const cppSidebar: SubjectSidebarConfig = [
   {
     text: '计算机引论',
     prefix: '计算机引论',

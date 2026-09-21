@@ -1,3 +1,0 @@
-#!/bin/bash
-
-npx node --loader ts-node/esm --no-warnings scripts/core/mark-map.ts

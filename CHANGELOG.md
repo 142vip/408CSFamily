@@ -4,6 +4,27 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-alpha -->
 
+## v0.0.1-alpha.20 (2026-09-21)
+
+### ✨ Features
+
+- 支持`pull`流水线，升级`@142vip`工具依赖版本 &nbsp;-&nbsp; by **142vip.cn** in https://github.com/mmdapl/408CSFamily/issues/152 [<samp>(d5855)</samp>](https://github.com/mmdapl/408CSFamily/commit/d5855e3)
+
+### 🐛 Bug Fixes
+
+- 修复流水线构建`Docker`镜像异常 &nbsp;-&nbsp; by **chufan** [<samp>(1dbc4)</samp>](https://github.com/mmdapl/408CSFamily/commit/1dbc4ed)
+- 升级ci脚本依赖，修复构建、部署异常 &nbsp;-&nbsp; by **chufan** [<samp>(ec4f1)</samp>](https://github.com/mmdapl/408CSFamily/commit/ec4f19d)
+- 升级ci脚本依赖，修复构建、部署异常 &nbsp;-&nbsp; by **chufan** [<samp>(5c8c3)</samp>](https://github.com/mmdapl/408CSFamily/commit/5c8c34c)
+- 修复首页`git`仓库提交折线图显示异常 &nbsp;-&nbsp; by **chufan** [<samp>(1a097)</samp>](https://github.com/mmdapl/408CSFamily/commit/1a097e2)
+- **vuepress**:
+  - 精简站点配置并修复多环境 head 脚本 404 &nbsp;-&nbsp; by **chufan** [<samp>(dbb07)</samp>](https://github.com/mmdapl/408CSFamily/commit/dbb077b)
+
+### 📖 Documentation
+
+- 更新三要素文档 &nbsp;-&nbsp; by **小白小帅** [<samp>(3a4e4)</samp>](https://github.com/mmdapl/408CSFamily/commit/3a4e4f2)
+
+**Release New Version v0.0.1-alpha.20 [👉 View Changes On GitHub](https://github.com/mmdapl/408CSFamily/compare/v0.0.1-alpha.19...v0.0.1-alpha.20)**
+
 ## v0.0.1-alpha.19 (2025-05-18)
 
 ### ✨ Features

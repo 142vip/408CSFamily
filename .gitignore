@@ -15,4 +15,7 @@ typings/
 .nuxt
 dist
 .temp
+.vuepress/dist
+.vuepress/.temp
+.vuepress/.cache
 .vercel

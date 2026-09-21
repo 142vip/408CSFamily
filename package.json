@@ -22,10 +22,9 @@
     "clean:hooks": "npx fa clean --git-hooks --all --ignore-tips",
     "lint": "npx fa lint",
     "lint:fix": "npx fa lint --fix",
-    "dev": "pnpm build:mark-map && npx vuepress dev docs",
-    "build": "npx vuepress build docs --clean-temp --clean-cache",
-    "build:proxy": "NEED_PROXY=true npx vuepress build docs --clean-temp --clean-cache",
-    "build:mark-map": "npx node --loader ts-node/esm --no-warnings scripts/core/mark-map.ts",
+    "dev": "npx vuepress dev",
+    "build": "npx vuepress build --clean-temp --clean-cache",
+    "build:proxy": "NEED_PROXY=true npx vuepress build --clean-temp --clean-cache",
     "release": "npx fa release --vip --check-branch next --check-branch main",
     "check:commit": "npx node --loader ts-node/esm --no-warnings scripts/core/verify-commit.ts"
   },
@@ -36,11 +35,9 @@
     "@142vip/open-source": "0.0.1-alpha.4",
     "@142vip/utils": "0.0.1-alpha.58",
     "@142vip/vuepress": "0.0.1-alpha.24",
-    "markmap-cli": "0.18.11",
     "only-allow": "1.2.1",
     "simple-git-hooks": "2.13.0",
-    "ts-node": "10.9.2",
-    "xmind-embed-viewer": "1.2.0"
+    "ts-node": "10.9.2"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint:fix",

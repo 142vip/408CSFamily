@@ -65,7 +65,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vuepress/dist
+          path: .vuepress/dist
 
       # 部署
       - name: Deploy to GitHub Pages

@@ -1,14 +1,39 @@
+import type { UserConfig } from '@vuepress/cli'
 import { OPEN_SOURCE_ADDRESS, OPEN_SOURCE_AUTHOR } from '@142vip/open-source'
-import { GitGeneralBranch, vipDocSite, VipPackageJSON } from '@142vip/utils'
+import { vipDocSite, VipNodeJS, VipPackageJSON } from '@142vip/utils'
 import {
   defineVipVuepressConfig,
   getVipHopeTheme,
   handleImportCodePath,
-  VUEPRESS_DEFAULT_DOCS_DIR,
 } from '@142vip/vuepress'
 import { navbarConfig, sidebarConfig } from './docs/theme.config'
 
 const pkg = VipPackageJSON.getPackageJSON<{ description: string }>()
+
+/**
+ * 站点 head 配置
+ * - Vercel 统计：仅 Vercel 构建注入（`/_vercel/insights/script.js` 仅该平台托管时存在）
+ * - 百度统计
+ */
+const siteHead: NonNullable<UserConfig['head']> = [
+  ['link', { rel: 'icon', href: 'favicon.ico' }],
+  [
+    'script',
+    {},
+    `var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3515cc46ae60747b778140f0e5e22dfe";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();`,
+  ],
+]
+
+// vercel 统计
+if (VipNodeJS.getProcessEnv('VERCEL') === '1') {
+  siteHead.push(['script', { type: 'text/javascript', src: '/_vercel/insights/script.js' }])
+}
 
 /**
  * 页脚
@@ -71,7 +96,8 @@ const copyrightHtmlStr = `
 /**
  * 用户自定义配置
  * 注意：
- *  - 环境变量中的PROXY_DOMAIN字段，用于区分是否nginx代理
+ *  - 环境变量 NEED_PROXY=true 时，base 为 /{pkg.name}/，否则为 /
+ *  - locales / lang / bundler / favicon 等由 defineVipVuepressConfig 默认注入
  */
 export default defineVipVuepressConfig({
   base: vipDocSite.getBase(pkg.name),
@@ -79,23 +105,7 @@ export default defineVipVuepressConfig({
   description: '磨刀不误砍柴工，读完硕士再打工',
   port: 4200,
   source: '',
-  head: [
-    ['link', { rel: 'icon', href: 'favicon.ico' }],
-    // vercel统计 相关配置
-    ['script', { type: 'text/javascript', src: '/_vercel/insights/script.js' }],
-    // 百度统计
-    [
-      'script',
-      {},
-      `var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?3515cc46ae60747b778140f0e5e22dfe";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();`,
-    ],
-  ],
+  head: siteHead,
   markdown: {
     importCode: {
       handleImportPath: handleImportCodePath([
@@ -128,16 +138,10 @@ export default defineVipVuepressConfig({
     copyright: copyrightHtmlStr,
     // 仓库 142vip/408CSFamily
     repo: `${OPEN_SOURCE_ADDRESS.GITHUB_ORGANIZATION_NAME}/${pkg.name}`,
-
     // 作者信息
     author: OPEN_SOURCE_AUTHOR,
-
-    // 文档路径，开启编辑功能
-    docsDir: VUEPRESS_DEFAULT_DOCS_DIR,
-    docsBranch: GitGeneralBranch.NEXT,
     // 主题布局选项
     docsRepo: OPEN_SOURCE_ADDRESS.GITHUB_REPO_408,
-
     contributors: true,
     // 插件
     plugins: {
@@ -150,4 +154,7 @@ export default defineVipVuepressConfig({
       },
     },
   }),
+}, {
+  // 浏览器控制台打印版本与构建时间
+  appBuildLog: { version: pkg.version },
 })

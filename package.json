@@ -2,7 +2,7 @@
   "name": "408CSFamily",
   "type": "module",
   "version": "0.0.1-alpha.20",
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.15.0",
   "description": "研究生考试408考点、工作面试计算机基础知识合集",
   "authorInfo": {
     "name": "微信公众号：储凡",
@@ -13,7 +13,7 @@
   "license": "MIT",
   "engines": {
     "node": ">=18.x",
-    "pnpm": "9.6.0"
+    "pnpm": "9.15.0"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm && chmod +x ./scripts/*",
@@ -22,9 +22,9 @@
     "clean:hooks": "npx fa clean --git-hooks --all --ignore-tips",
     "lint": "npx fa lint",
     "lint:fix": "npx fa lint --fix",
-    "dev": "npx vuepress dev",
-    "build": "npx vuepress build --clean-temp --clean-cache",
-    "build:proxy": "NEED_PROXY=true npx vuepress build --clean-temp --clean-cache",
+    "dev": "vuepress dev",
+    "build": "vuepress build --clean-temp --clean-cache",
+    "build:proxy": "NEED_PROXY=true vuepress build --clean-temp --clean-cache",
     "release": "npx fa release --vip --check-branch next --check-branch main",
     "check:commit": "npx node --loader ts-node/esm --no-warnings scripts/core/verify-commit.ts"
   },
@@ -34,7 +34,7 @@
     "@142vip/fairy-cli": "0.0.3-alpha.33",
     "@142vip/open-source": "0.0.1-alpha.4",
     "@142vip/utils": "0.0.1-alpha.58",
-    "@142vip/vuepress": "0.0.1-alpha.24",
+    "@142vip/vuepress": "0.0.1-alpha.25",
     "only-allow": "1.2.1",
     "simple-git-hooks": "2.13.0",
     "ts-node": "10.9.2"

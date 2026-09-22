@@ -22,6 +22,9 @@ export const siteBase = vipDocSite.getBase(pkg.name)
 /** 站点首页绝对地址 */
 export const homeUrl = new URL(siteBase || '/', `${siteOrigin}/`).href
 
+/** 本地开发端口 */
+export const siteDevPort = 4200
+
 /** 站点 Logo（深浅色导航栏通用，`.vuepress/public/logo.png`） */
 export const siteLogo = '/logo.png'
 

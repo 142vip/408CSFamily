@@ -3,7 +3,7 @@ import { cppSidebar } from '../../docs/ccp/cpp.sidebar'
 import { cnSidebar } from '../../docs/cn/cn.sidebar'
 import { dsSidebar } from '../../docs/ds/ds.sidebar'
 import { osSidebar } from '../../docs/os/os.sidebar'
-import { resolveSidebarPermalinks } from './plugins/resolve-sidebar-links'
+import { resolveSidebarPermalinks } from './sidebar.resolve'
 
 /** 顶部导航栏 */
 export const navbarConfig = defineVipNavbarConfig([
@@ -33,7 +33,11 @@ export const navbarConfig = defineVipNavbarConfig([
   },
 ])
 
-/** 各学科侧边栏（路径与 `docs/` 下目录对应） */
+/**
+ * 各学科侧边栏
+ * - 路径键与 Hope 路由前缀一致
+ * - `.md` 链接通过 `resolveSidebarPermalinks` 自动对齐 frontmatter `permalink`
+ */
 export const sidebarConfig = defineVipSidebarConfig({
   '/ds': resolveSidebarPermalinks(dsSidebar, 'ds'),
   '/os': resolveSidebarPermalinks(osSidebar, 'os'),

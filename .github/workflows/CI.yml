@@ -22,11 +22,14 @@ env:
   #  阿里云仓库信息
   REGISTRY: registry.cn-hangzhou.aliyuncs.com
   UserName: 142vip
+  # Node / pnpm 版本与 package.json、.nvmrc 保持一致
+  NODE_VERSION: 25.9.0
+  PNPM_VERSION: 9.15.0
 
 jobs:
   Base-Build:
     name: 基础编译构建
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # 主库且拉取PR时触发
     if: github.repository == '142vip/408CSFamily' &&  github.event_name == 'pull_request'
     permissions:
@@ -35,27 +38,26 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           persist-credentials: false
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      # 安装PNPM
+      # 安装 PNPM（版本与 package.json packageManager 一致）
       - name: PNPM Install
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v5
         with:
-          version: 9.6.0
+          version: ${{ env.PNPM_VERSION }}
 
-      # 安装Node环境
+      # 安装 Node 环境（版本与 .nvmrc / engines.node 一致）
       - name: Install Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 20.16.0
-          # # 缓存
+          node-version: ${{ env.NODE_VERSION }}
           cache: pnpm
 
-      # 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
+      # 下载依赖，并执行初始化脚本
       - name: Install Dependencies
         run: |
           ./scripts/ci
@@ -74,7 +76,7 @@ jobs:
 
   Build-Docker-Image:
     name: 构建Docker镜像
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # 主库且tag更新时执行
     if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
     permissions:
@@ -83,7 +85,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           persist-credentials: false
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
@@ -104,21 +106,20 @@ jobs:
           --password=${{ secrets.DOCKER_PASSWORD }} \
           ${{env.REGISTRY}}
 
-      # 安装PNPM
+      # 安装 PNPM（版本与 package.json packageManager 一致）
       - name: PNPM Install
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v5
         with:
-          version: 9.6.0
+          version: ${{ env.PNPM_VERSION }}
 
-      # 安装Node环境
+      # 安装 Node 环境（版本与 .nvmrc / engines.node 一致）
       - name: Install Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 20.16.0
-          # # 缓存
+          node-version: ${{ env.NODE_VERSION }}
           cache: pnpm
 
-      # 下载依赖，并执行初始化脚本：钩子函数、思维导图构建
+      # 下载依赖，并执行初始化脚本
       - name: Install Dependencies
         run: |
           ./scripts/ci

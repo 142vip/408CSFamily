@@ -11,10 +11,12 @@ on:
       - next
   workflow_dispatch:
 
-# # vercel 环境变量
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  # Node / pnpm 版本与 package.json、.nvmrc 保持一致
+  NODE_VERSION: 25.9.0
+  PNPM_VERSION: 9.15.0
 
 # 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
 permissions:
@@ -26,7 +28,7 @@ jobs:
   # 部署到Github-Pages
   deploy-github:
     name: 部署到Github-Pages
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -34,24 +36,23 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           persist-credentials: false
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      # 安装PNPM
+      # 安装 PNPM（版本与 package.json packageManager 一致）
       - name: PNPM Install
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v5
         with:
-          version: 9.6.0
+          version: ${{ env.PNPM_VERSION }}
 
-      # 安装Node环境
+      # 安装 Node 环境（版本与 .nvmrc / engines.node 一致）
       - name: Install Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 20.16.0
-          # 缓存
+          node-version: ${{ env.NODE_VERSION }}
           cache: pnpm
 
       - name: Install Dependencies
@@ -63,42 +64,41 @@ jobs:
         run: pnpm build:proxy
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: .vuepress/dist
 
       # 部署
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
     # 版本发布
   release:
     name: Github版本发布
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # # 主库main、next且执行release更新时执行
     if: github.repository == '142vip/408CSFamily' && startsWith(github.event.head_commit.message, 'chore(release):')
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           persist-credentials: false
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      # 安装PNPM
+      # 安装 PNPM（版本与 package.json packageManager 一致）
       - name: PNPM Install
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v5
         with:
-          version: 9.6.0
+          version: ${{ env.PNPM_VERSION }}
 
-      # 安装Node环境
+      # 安装 Node 环境（版本与 .nvmrc / engines.node 一致）
       - name: Install Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 20.16.0
-          # 缓存
+          node-version: ${{ env.NODE_VERSION }}
           cache: pnpm
 
       - name: Install Dependencies
